@@ -9,7 +9,7 @@ Set up done; waiting for the brief. First step once it arrives: paste it into do
 
 ## 0. Setup
 - [x] Repo, .NET 10 API skeleton, React/Vite skeleton, CI
-- [ ] `npm install` in `frontend/` and commit `package-lock.json`
+- [x] `npm install` in `frontend/` and commit `package-lock.json` (lint, build and end-to-end proxy check all pass)
 - [ ] Paste brief into `docs/EXERCISE.md`
 - [ ] Break the brief into tasks below (backend + frontend per feature, plus README/final checks)
 
