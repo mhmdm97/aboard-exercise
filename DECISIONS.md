@@ -59,13 +59,24 @@ Production follow-ups: CSRF tokens; per-account lockout and a shared (Redis) rat
 
 **How it was verified.** Every task had to pass lint, typecheck, build and tests before commit. Backend behaviour is covered by integration tests on a real Postgres. UI flows were exercised in a real browser with Playwright runs. The Docker setup was verified by actually running `docker compose up`: images built, services healthy, migrate and seed on first start and on restart, SPA fallback and `/api` proxy through nginx, login, and Swagger (recorded in `docs/DECISIONS.md`).
 
-**Where AI output was corrected, and why** (each is visible in the history or `docs/DECISIONS.md`):
+**Where AI output was corrected, and why** 
 
-- **Relevance sorting.** The list endpoint needed a way to rank by relevance when searching. The shortcut was a hack in the request itself; I had it replaced by making `sort` optional in the shared schema, so the service picks relevance (with `q`) or title, and an explicit `sort` always wins. The frontend omits `sort` until the user picks one. See commit `4a4d8ff`.
-- **`useFieldArray` did not fit.** The natural choice for the repeating author field is `useFieldArray`, but it only holds arrays of objects and `authorNames` is a `string[]` in the shared schema. The form controls the list with `useWatch`/`setValue` instead of reshaping the shared contract to suit the form library.
-- **Docker was initially unverifiable.** The Dockerfiles and compose were first written without a run to prove them. I did not accept the task until a real `docker compose up` worked; the result, including the `node:22-slim` choice and the `COOKIE_SECURE` setting for plain http, is in the decisions log.
-- **Seed data.** The first seed was written from memory (the sandbox could not reach Open Library) and some ISBNs did not match real editions, so covers were missing. I had it replaced with data fetched from Open Library by a committed script, using cover IDs instead of ISBN lookups, and checked a random sample of covers against the live service.
-- **Unrequested major version.** I asked for react-router 7; the agent installed 8 without flagging it. The APIs used are unchanged, so I kept it, but logged it rather than letting the drift pass silently.
-- **Lockfile churn.** An early `npm install` in the sandbox rewrote `package-lock.json` for a different npm version (dropping platform `libc` metadata). It was unrelated to the change, so I reverted it before committing.
+- **Missing correlation id.** The AI-built backend logged every request with Fastify's internal per-process ids (`req-1`, `req-2`, …). It neither accepted nor returned an `X-Request-Id`, so one request couldn't be traced from nginx to the API logs. Fix: read or validate an incoming `X-Request-Id`, otherwise generate a UUID; return it in the response; nginx forwards its `$request_id`.
 
-> **TODO (author):** add your own examples of AI output you rejected or rewrote, and why.
+- **Fuzzy search couldn't use its own index.** The AI created GIN trigram indexes on `books.title` and `authors.name`. It then wrote the fuzzy filter as `word_similarity(q, title) > 0.4`, a *function* comparison that Postgres can't serve from a GIN index. The index only helped the `ILIKE` branch. Invisible at 351 rows, but a full table scan at scale. Caught during the search walkthrough. Fix: filter with the index-supported operator `q <% title`, with the threshold set transaction-locally (`set_config('pg_trgm.word_similarity_threshold', '0.4', true)`); keep `word_similarity()` only for ranking. Confirmed with `EXPLAIN` (Bitmap Index Scan).
+
+- **The AI's own security fix broke login in dev, and its review claimed it couldn't.** The security pass added an Origin check for unsafe methods: reject if `Origin` doesn't match `Host`. It explicitly reasoned that the Vite dev proxy has "no `changeOrigin`" so it would pass. That was wrong: Vite's string-form proxy target implies `changeOrigin: true`, so the backend saw `Host: localhost:5000` against `Origin: localhost:5173`, and every login/POST in `npm run dev` returned 403. Its tests passed because `app.inject()` and curl send no `Origin` header. A later agent hit it while driving a real browser. Lesson: verify security changes end-to-end in a real browser, not only via injected requests. Fix: object proxy with `changeOrigin: false`.
+
+- **Anonymous `/api/auth/me` returned 401**, which every guest page load logged as a console error (Lighthouse Best Practices 100 → 92). Changed to `200 { user: null }`.
+
+## Found by the AI security review of AI-written code
+
+- `coverUrl` accepted `javascript:` / `data:` URLs (`z.url()` allows any scheme) → http(s) only.
+- No log redaction for cookies / `set-cookie` → pino `redact`.
+- Expired sessions never purged → cleanup on login.
+- nginx sent no security headers → CSP, nosniff, frame-blocking, `server_tokens off`.
+
+## Found via my Lighthouse runs
+
+- **CSP violation from Zod 4.** The unexplained "Content security policy" issue was Zod 4's JIT probe (`new Function('')` in a try/catch), blocked by our `script-src 'self'` and reported by Chrome on every page. Fixed with `z.config({ jitless: true })` before any schema is built, rather than loosening the CSP with `unsafe-eval`.
+- **LCP:** covers above the fold were `loading="lazy"`; fixed with eager loading + `fetchpriority="high"` for the first row, preconnect, and route-level code-splitting (main bundle 156 → 108 kB gzip). Performance 83 → 95.
