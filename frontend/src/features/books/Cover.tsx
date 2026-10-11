@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { CSSProperties } from 'react'
 import type { BookDto } from '@library/shared'
 import { useCoverTransitionName } from '../../hooks/viewTransition'
@@ -9,6 +9,12 @@ import styles from './Cover.module.css'
 /** Covers at or before this index in a list load eagerly (above the fold); the first few also get high fetch priority. */
 const EAGER_COVERS = 8
 export const HIGH_PRIORITY_COVERS = 4
+
+/**
+ * Open Library covers redirect to slow Internet Archive hosts that throttle bursts; some requests hang for over a
+ * minute before the browser gives up. After this long without a successful load we show the generated cover.
+ */
+export const COVER_TIMEOUT_MS = 4000
 
 interface Props {
   book: BookDto
@@ -24,13 +30,31 @@ interface Props {
 export function Cover({ book, index = Infinity, priority = false, morph = false }: Props) {
   const eager = priority || index < EAGER_COVERS
   const high = priority || index < HIGH_PRIORITY_COVERS
-  const [failed, setFailed] = useState(false)
+  const src = book.coverUrl ? coverSrc(book.coverUrl) : null
+  // Remember WHICH src failed, so a new src (form preview) starts fresh without a reset effect.
+  const [failedSrc, setFailedSrc] = useState<string | null>(null)
+  const failed = src !== null && failedSrc === src
+  const imgRef = useRef<HTMLImageElement>(null)
+  const timer = useRef<number | undefined>(undefined)
+  const showImage = src !== null && !failed
+
+  useEffect(() => {
+    if (!src || !showImage) return
+    const img = imgRef.current
+    // Served from cache: already decoded before React attached onLoad, so no load event will come.
+    if (img?.complete && img.naturalWidth > 1) return
+    // Give up for this mount: a late success would swap the cover under the user's eyes. Removing the <img>
+    // from the DOM lets browsers drop the pending request (they generally cancel or deprioritize it, but this
+    // is not guaranteed), freeing connections for the other covers.
+    timer.current = window.setTimeout(() => setFailedSrc(src), COVER_TIMEOUT_MS)
+    return () => window.clearTimeout(timer.current)
+  }, [src, showImage])
   const transitionName = useCoverTransitionName(morph ? book.id : null)
   const transition = transitionName
     ? { className: styles.morphing, style: { viewTransitionName: transitionName } satisfies CSSProperties }
     : { className: '', style: undefined }
 
-  if (!book.coverUrl || failed) {
+  if (!showImage) {
     return (
       <div
         className={`${styles.cover} ${transition.className}`}
@@ -55,16 +79,21 @@ export function Cover({ book, index = Infinity, priority = false, morph = false 
     <div className={`${styles.cover} ${styles.photo} ${transition.className}`} style={transition.style}>
       <img
         className={styles.image}
-        src={coverSrc(book.coverUrl)}
+        ref={imgRef}
+        src={src}
         alt={`Cover of ${book.title}`}
         width={200}
         height={300}
         loading={eager ? 'eager' : 'lazy'}
         fetchPriority={high ? 'high' : undefined}
         decoding="async"
-        onError={() => setFailed(true)}
+        onError={() => {
+          window.clearTimeout(timer.current)
+          setFailedSrc(src)
+        }}
         onLoad={(e) => {
-          if (e.currentTarget.naturalWidth <= 1) setFailed(true)
+          window.clearTimeout(timer.current)
+          if (e.currentTarget.naturalWidth <= 1) setFailedSrc(src)
         }}
       />
     </div>
