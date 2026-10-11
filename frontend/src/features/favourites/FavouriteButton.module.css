@@ -1,0 +1,5 @@
+.heart { font: inherit; cursor: pointer; color: var(--color-text); background: var(--color-surface); border: 1px solid var(--color-border); }
+.heart:hover { color: var(--color-danger); }
+.active { color: var(--color-danger); }
+.icon { position: absolute; top: var(--space-2); right: var(--space-2); width: 2.5rem; height: 2.5rem; border-radius: 50%; font-size: 1.25rem; line-height: 1; }
+.full { padding: var(--space-2) var(--space-4); border-radius: var(--radius-md); }

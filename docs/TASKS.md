@@ -36,15 +36,15 @@ Backend: scaffold, schema, seed, auth/roles and book read endpoints done. Books 
 
 ## 2. Frontend (React + TypeScript) (R)
 - [x] App shell: routing, layout, nav, server-state library, API client with auth
-- [ ] Auth pages: login, register; auth context; logout; protected routes
+- [x] Auth pages: login, register; auth context; logout; protected routes
 - [x] Library page: grid/list of books with covers, loading / error / empty states
 - [x] Search box (debounced) wired to API (R)
 - [x] Filter panel (genre, year, rating, sort); state kept in URL query params (R)
 - [x] Pagination or infinite scroll (S: infinite scroll)
-- [ ] Item detail page
+- [x] Item detail page (favourites heart + /favourites page included)
 - [ ] Create / edit form with client-side validation (admin only) (R)
-- [ ] Delete with confirmation (admin only) (R)
-- [ ] Role-aware UI: hide/disable actions the user can't perform (R)
+- [x] Delete with confirmation (admin only) (R)
+- [x] Role-aware UI: hide/disable actions the user can't perform (R)
 - [ ] Responsive design: mobile, tablet, desktop (R)
 - [ ] Accessibility pass: labels, focus states, keyboard nav, alt text, contrast (S)
 - [ ] UI polish / animation (S)
