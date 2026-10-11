@@ -20,9 +20,9 @@ _One or two lines for the next agent: what to do next, anything half-done._
 ## 1. Backend (Node + TypeScript) (R)
 - [x] Scaffold npm workspaces (`frontend`, `backend`, `shared`) + `backend/` (Fastify, TS strict, lint, Vitest, health, env config, Swagger) + dev Postgres in docker-compose + CI backend job
 - [x] DB schema + migrations: users, items (books), authors, genres, book↔genre, book↔author, favourites
-- [x] Seed script: ≥ 200 books with covers, creators, genres (R). Demo users (admin@library.local / member@library.local) still TODO: add in the auth task once argon2 is in
-- [ ] Auth: register, login, logout/me; password hashing; session or JWT (R)
-- [ ] Role-based authorization middleware; protect write endpoints (R)
+- [x] Seed script: ≥ 200 books with covers, creators, genres (R). Demo users added in the auth task (`seed-users.ts`)
+- [x] Auth: register, login, logout/me; password hashing; session or JWT (R)
+- [x] Role-based authorization middleware; protect write endpoints (R)
 - [ ] Books: list endpoint with pagination (R)
 - [ ] Books: search (title / author) (R)
 - [ ] Books: filtering (genre, year range, rating…) + sorting (R)

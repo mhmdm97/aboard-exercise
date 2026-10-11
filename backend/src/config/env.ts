@@ -7,6 +7,7 @@ const envSchema = z.object({
   DATABASE_URL: z.string().min(1),
   SESSION_SECRET: z.string().min(1).optional(),
   COOKIE_SECRET: z.string().min(1).optional(),
+  SESSION_TTL_DAYS: z.coerce.number().positive().default(7),
   CORS_ORIGIN: z.string().min(1).optional(),
 })
 
