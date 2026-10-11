@@ -80,7 +80,8 @@ export const bookListQuerySchema = z.object({
   yearFrom: z.coerce.number().int().optional(),
   yearTo: z.coerce.number().int().optional(),
   minRating: z.coerce.number().min(0).max(5).optional(),
-  sort: bookSortSchema.default('title'),
+  /** Omitted: relevance when `q` is given, otherwise title. */
+  sort: bookSortSchema.optional(),
   order: z.enum(['asc', 'desc']).default('asc'),
   page: z.coerce.number().int().min(1).default(1),
   pageSize: z.coerce.number().int().min(1).max(100).default(24),

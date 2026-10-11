@@ -25,7 +25,7 @@ export function toBookDto(row: BookRow, bookAuthorList: AuthorDto[], bookGenreLi
 }
 
 /** Loads authors (ordered by position) and genres for the given rows in 2 queries and maps to DTOs. */
-async function hydrateBooks(db: Database, rows: BookRow[]): Promise<BookDto[]> {
+export async function hydrateBooks(db: Database, rows: BookRow[]): Promise<BookDto[]> {
   if (rows.length === 0) return []
   const ids = rows.map((r) => r.id)
 
@@ -91,17 +91,8 @@ function searchConditions(q: string) {
   return { match, relevance }
 }
 
-export interface ListBooksOptions {
-  /** Order by relevance when searching (set by the route when the caller gave no explicit sort). */
-  relevance?: boolean
-}
-
-export async function listBooks(
-  db: Database,
-  query: BookListQuery,
-  { relevance: useRelevance = false }: ListBooksOptions = {},
-): Promise<BookListResponse> {
-  const { q, genre, author, yearFrom, yearTo, minRating, sort, order, page, pageSize } = query
+export async function listBooks(db: Database, query: BookListQuery): Promise<BookListResponse> {
+  const { q, genre, author, yearFrom, yearTo, minRating, order, page, pageSize } = query
   const conditions: (SQL | undefined)[] = []
   const search = q ? searchConditions(q) : null
 
@@ -121,9 +112,11 @@ export async function listBooks(
   if (minRating !== undefined) conditions.push(gte(books.averageRating, minRating))
   const where = and(...conditions)
 
+  // No explicit sort: rank by relevance when searching, otherwise by title.
+  const sort = query.sort ?? 'title'
   const sortColumn = { title: books.title, year: books.publishedYear, rating: books.averageRating, newest: books.createdAt }[sort]
   const orderBy: SQL[] = []
-  if (search && useRelevance) orderBy.push(sql`${search.relevance} desc`)
+  if (search && query.sort === undefined) orderBy.push(sql`${search.relevance} desc`)
   // NULLs always last, whatever the direction.
   orderBy.push(sql`${sortColumn} ${sql.raw(order === 'desc' ? 'desc' : 'asc')} nulls last`)
   if (sort !== 'title') orderBy.push(order === 'desc' ? desc(books.title) : asc(books.title))

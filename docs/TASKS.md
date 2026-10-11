@@ -6,7 +6,7 @@ Brief: `docs/EXERCISE.md`. Tags: **(R)** = required by the brief, **(S)** = sugg
 
 ## Next up
 _One or two lines for the next agent: what to do next, anything half-done._
-Backend: scaffold, schema, seed, auth/roles and book read endpoints done. Next: books create/update/delete (admin) + favourites; frontend auth pages, detail page, forms; Docker.
+Backend: scaffold, schema, seed, auth/roles and book read endpoints done. Books write endpoints and favourites done. Next: frontend auth pages, detail page, forms; Docker.
 
 ## 0. Setup & decisions
 - [x] Repo, React/Vite skeleton, CI (frontend)
@@ -27,10 +27,10 @@ Backend: scaffold, schema, seed, auth/roles and book read endpoints done. Next: 
 - [x] Books: search (title / author) (R)
 - [x] Books: filtering (genre, year range, rating…) + sorting (R)
 - [x] Books: get by id
-- [ ] Books: create / update / delete with request validation (R)
+- [x] Books: create / update / delete with request validation (R)
 - [x] Genres / authors lookup endpoints (for filters and form dropdowns)
-- [ ] Consistent error format (validation 400, 401, 403, 404)
-- [ ] Favourites: add / remove / list mine (member)
+- [x] Consistent error format (validation 400, 401, 403, 404)
+- [x] Favourites: add / remove / list mine (member)
 - [ ] Integration tests for every endpoint: happy path + main error case, incl. role checks (R)
 - [ ] API documentation: OpenAPI spec + Swagger UI (S)
 

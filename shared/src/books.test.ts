@@ -34,7 +34,8 @@ describe('bookInputSchema', () => {
 
 describe('bookListQuerySchema', () => {
   it('applies defaults', () => {
-    expect(bookListQuerySchema.parse({})).toMatchObject({ sort: 'title', order: 'asc', page: 1, pageSize: 24 })
+    expect(bookListQuerySchema.parse({})).toMatchObject({ order: 'asc', page: 1, pageSize: 24 })
+    expect(bookListQuerySchema.parse({}).sort).toBeUndefined()
   })
 
   it('coerces numbers and splits genres', () => {
