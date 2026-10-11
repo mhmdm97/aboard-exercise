@@ -1,2 +1,2 @@
-// Tables are added in the schema task.
-export {}
+export * from './users.js'
+export * from './books.js'

@@ -53,6 +53,7 @@ Run from the repo root (npm workspaces; one `npm ci` / `npm install` at the root
 | Lint / typecheck / build / test, all workspaces | `npm run lint`, `npm run typecheck`, `npm run build`, `npm test` |
 | Backend tests only | `npm test -w @library/backend` (uses `DATABASE_URL`, default `.../library_test`) |
 | Generate / apply migrations | `npm run db:generate -w @library/backend`, `npm run db:migrate -w @library/backend` |
+| Seed (idempotent, 350 books) / migrate + seed | `npm run db:seed -w @library/backend` / `npm run db:reset -w @library/backend` |
 | Swagger UI | http://localhost:5000/api/docs |
 
 `dev` servers are long-running: start them in the background or in a separate terminal, never block on them.

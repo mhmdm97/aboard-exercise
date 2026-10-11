@@ -6,7 +6,7 @@ Brief: `docs/EXERCISE.md`. Tags: **(R)** = required by the brief, **(S)** = sugg
 
 ## Next up
 _One or two lines for the next agent: what to do next, anything half-done._
-.NET removed, stack decided (see docs/DECISIONS.md). Workspaces + backend scaffold done. Next: §1 DB schema + migrations, then seed.
+.NET removed, stack decided (see docs/DECISIONS.md). Workspaces + backend scaffold done. Schema, migrations and book seed done. Next: Auth (also seed the demo users).
 
 ## 0. Setup & decisions
 - [x] Repo, React/Vite skeleton, CI (frontend)
@@ -19,8 +19,8 @@ _One or two lines for the next agent: what to do next, anything half-done._
 
 ## 1. Backend (Node + TypeScript) (R)
 - [x] Scaffold npm workspaces (`frontend`, `backend`, `shared`) + `backend/` (Fastify, TS strict, lint, Vitest, health, env config, Swagger) + dev Postgres in docker-compose + CI backend job
-- [ ] DB schema + migrations: users, items (books), authors, genres, book↔genre, book↔author, favourites
-- [ ] Seed script: ≥ 200 books with covers, creators, genres + demo users per role (R)
+- [x] DB schema + migrations: users, items (books), authors, genres, book↔genre, book↔author, favourites
+- [x] Seed script: ≥ 200 books with covers, creators, genres (R). Demo users (admin@library.local / member@library.local) still TODO: add in the auth task once argon2 is in
 - [ ] Auth: register, login, logout/me; password hashing; session or JWT (R)
 - [ ] Role-based authorization middleware; protect write endpoints (R)
 - [ ] Books: list endpoint with pagination (R)
