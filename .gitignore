@@ -22,3 +22,6 @@ npm-debug.log*
 .DS_Store
 Thumbs.db
 *.swp
+
+# Claude Code agent worktrees
+.claude/worktrees/
