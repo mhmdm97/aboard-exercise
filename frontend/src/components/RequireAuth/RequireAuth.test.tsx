@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
-import { admin, member, mockApi, unauthorized } from '../../test/mockApi'
+import { anonymous, admin, member, mockApi } from '../../test/mockApi'
 import { renderWithProviders } from '../../test/renderWithProviders'
 import { RequireAuth, RequireRole } from './RequireAuth'
 
@@ -12,20 +12,20 @@ const secret = (
 
 describe('RequireRole', () => {
   it('shows the 403 page to a member', async () => {
-    mockApi({ 'GET /api/auth/me': { body: member } })
+    mockApi({ 'GET /api/auth/me': { body: { user: member } } })
     renderWithProviders(secret)
     expect(await screen.findByRole('heading', { name: "You don't have access" })).toBeInTheDocument()
     expect(screen.queryByText('Secret admin content')).not.toBeInTheDocument()
   })
 
   it('shows the content to an admin', async () => {
-    mockApi({ 'GET /api/auth/me': { body: admin } })
+    mockApi({ 'GET /api/auth/me': { body: { user: admin } } })
     renderWithProviders(secret)
     expect(await screen.findByText('Secret admin content')).toBeInTheDocument()
   })
 
   it('redirects anonymous users to login, remembering where they were', async () => {
-    mockApi({ 'GET /api/auth/me': unauthorized })
+    mockApi({ 'GET /api/auth/me': anonymous })
     const { router } = renderWithProviders(secret, {
       route: '/?page=2',
       routes: [{ path: '/login', element: <p>Login page</p> }],
@@ -38,7 +38,7 @@ describe('RequireRole', () => {
 
 describe('RequireAuth', () => {
   it('lets any logged-in user through', async () => {
-    mockApi({ 'GET /api/auth/me': { body: member } })
+    mockApi({ 'GET /api/auth/me': { body: { user: member } } })
     renderWithProviders(
       <RequireAuth>
         <p>Members area</p>

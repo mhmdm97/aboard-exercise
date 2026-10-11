@@ -34,7 +34,7 @@ export function Cover({ book, index = Infinity, priority = false, morph = false 
     return (
       <div
         className={`${styles.cover} ${transition.className}`}
-        style={{ '--c': coverColor(book.title), ...transition.style } as CSSProperties}
+        style={{ '--c': coverColor(book.title, book.authors[0]?.name), ...transition.style } as CSSProperties}
         role="img"
         aria-label={`Cover of ${book.title}`}
         data-testid="fallback-cover"

@@ -28,7 +28,5 @@ export const calls = (fetchMock: ReturnType<typeof mockApi>) =>
 
 export const member = { id: '44444444-4444-4444-8444-444444444441', email: 'm@x.io', name: 'Mia', role: 'member' as const }
 export const admin = { id: '44444444-4444-4444-8444-444444444442', email: 'a@x.io', name: 'Ada', role: 'admin' as const }
-export const unauthorized: Reply = {
-  status: 401,
-  body: { error: { code: 'UNAUTHENTICATED', message: 'Not logged in' } },
-}
+/** `GET /api/auth/me` for a visitor who is not logged in. */
+export const anonymous: Reply = { body: { user: null } }

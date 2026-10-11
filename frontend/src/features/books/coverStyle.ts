@@ -17,15 +17,18 @@ export const COVER_PALETTE = [
   '#1E4A6B', // petrol
 ] as const
 
-/** djb2 over the title, folded onto the palette: stable per title. */
-export function coverColorIndex(title: string): number {
+/** djb2 (plus a final mix) over title + first author, folded onto the palette: stable per book, and similar titles still spread out. */
+export function coverColorIndex(title: string, firstAuthor = ''): number {
   let hash = 5381
-  for (const ch of title) hash = ((hash << 5) + hash + ch.charCodeAt(0)) | 0
-  return Math.abs(hash) % COVER_PALETTE.length
+  for (const ch of `${title}\u0000${firstAuthor}`) hash = ((hash << 5) + hash + ch.charCodeAt(0)) | 0
+  // final avalanche step: plain djb2 % 12 bunches near-identical strings onto few slots
+  hash = Math.imul(hash ^ (hash >>> 15), 0x2c1b3c6d)
+  hash ^= hash >>> 12
+  return (hash >>> 0) % COVER_PALETTE.length
 }
 
-export function coverColor(title: string): string {
-  return COVER_PALETTE[coverColorIndex(title)]
+export function coverColor(title: string, firstAuthor = ''): string {
+  return COVER_PALETTE[coverColorIndex(title, firstAuthor)]
 }
 
 /** One author as-is, several as "First et al." so it fits on the cover. */

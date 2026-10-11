@@ -1,3 +1,4 @@
+import './zodConfig' // must stay first: it runs before the shared schemas are built
 import { QueryClientProvider } from '@tanstack/react-query'
 import { StrictMode, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'

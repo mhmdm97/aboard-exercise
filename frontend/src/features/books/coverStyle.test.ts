@@ -23,16 +23,21 @@ describe('cover colour', () => {
     }
   })
 
-  it('matches the design reference hashes', () => {
-    // Values from the design mockup's own hash function (djb2 % 12), so covers match the spec.
-    expect(coverColorIndex('Circe')).toBe(7)
-    expect(coverColorIndex('Dune')).toBe(1)
-    expect(coverColorIndex('The Hobbit')).toBe(2)
+  it('hashes title and first author to fixed palette slots', () => {
+    // djb2 over `${title}\0${firstAuthor}` (with a final mix) % 12
+    expect(coverColorIndex('Circe', 'Madeline Miller')).toBe(10)
+    expect(coverColorIndex('Dune', 'Frank Herbert')).toBe(7)
+    expect(coverColorIndex('The Hobbit', 'J.R.R. Tolkien')).toBe(10)
+    expect(coverColor('Dune', 'Frank Herbert')).toBe(COVER_PALETTE[7])
+  })
+
+  it('lets the author change the colour of an identical title', () => {
+    expect(coverColorIndex('Dune', 'Frank Herbert')).not.toBe(coverColorIndex('Dune', 'Someone Else'))
   })
 
   it('spreads titles across the palette', () => {
     const titles = Array.from({ length: 200 }, (_, i) => `Book number ${i}`)
-    expect(new Set(titles.map(coverColorIndex)).size).toBeGreaterThanOrEqual(10)
+    expect(new Set(titles.map((t) => coverColorIndex(t))).size).toBeGreaterThanOrEqual(10)
   })
 
   it('gives white text at least WCAG AA contrast on every cloth colour', () => {

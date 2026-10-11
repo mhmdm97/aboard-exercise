@@ -40,14 +40,14 @@ export function FavouriteButton({ bookId, title, variant = 'icon' }: Props) {
       type="button"
       className={classes.filter(Boolean).join(' ')}
       aria-pressed={active}
-      aria-label={`Favourite ${title}`}
+      aria-label={variant === 'icon' ? `Favourite ${title}` : undefined}
       onClick={() => {
         setMotion(active ? 'off' : 'on')
         toggle.mutate(!active)
       }}
     >
       <HeartIcon />
-      {variant === 'full' && <span aria-hidden="true">{active ? 'In your favourites' : 'Add to favourites'}</span>}
+      {variant === 'full' && <span>{active ? 'In your favourites' : 'Add to favourites'}</span>}
     </button>
   )
 }

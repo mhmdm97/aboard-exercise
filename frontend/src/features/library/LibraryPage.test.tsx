@@ -18,7 +18,7 @@ function list(items: unknown[]) {
 function mockApi(items: unknown[]) {
   fetchMock.mockImplementation((input) => {
     const url = String(input)
-    if (url.startsWith('/api/auth/me')) return Promise.resolve(new Response('{}', { status: 401 }))
+    if (url.startsWith('/api/auth/me')) return Promise.resolve(new Response('{"user":null}'))
     if (url.startsWith('/api/genres')) {
       return json([{ id: '33333333-3333-4333-8333-333333333331', name: 'Science Fiction', slug: 'sci-fi' }])
     }

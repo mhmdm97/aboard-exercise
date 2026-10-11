@@ -1,17 +1,12 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
-import type { LoginInput, RegisterInput, UserDto } from '@library/shared'
-import { ApiError, apiGet, apiPost } from '../../api/client'
+import type { LoginInput, MeResponse, RegisterInput, UserDto } from '@library/shared'
+import { apiGet, apiPost } from '../../api/client'
 
 export const authKeys = { me: ['auth', 'me'] as const }
 
-/** `null` means "not logged in" (a 401 is an expected answer, not an error). */
+/** `null` means "not logged in" (the endpoint answers 200 with `user: null`). */
 async function fetchMe(): Promise<UserDto | null> {
-  try {
-    return await apiGet<UserDto>('/api/auth/me')
-  } catch (error) {
-    if (error instanceof ApiError && error.status === 401) return null
-    throw error
-  }
+  return (await apiGet<MeResponse>('/api/auth/me')).user
 }
 
 export function useCurrentUser() {

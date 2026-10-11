@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event'
 import { createMemoryRouter } from 'react-router'
 import { RouterProvider } from 'react-router/dom'
 import { describe, expect, it } from 'vitest'
-import { admin, calls, member, mockApi, unauthorized } from '../../test/mockApi'
+import { anonymous, admin, calls, member, mockApi } from '../../test/mockApi'
 import { Layout } from './Layout'
 
 function renderLayout() {
@@ -21,7 +21,7 @@ function renderLayout() {
 
 describe('Layout', () => {
   it('renders navigation, skip link, content and footer', async () => {
-    mockApi({ 'GET /api/auth/me': unauthorized })
+    mockApi({ 'GET /api/auth/me': anonymous })
     renderLayout()
     expect(screen.getByRole('link', { name: 'Skip to content' })).toHaveAttribute('href', '#main')
     expect(screen.getByRole('navigation', { name: 'Primary' })).toBeInTheDocument()
@@ -33,7 +33,7 @@ describe('Layout', () => {
   })
 
   it('links the logo to the library and marks the current page', async () => {
-    mockApi({ 'GET /api/auth/me': unauthorized })
+    mockApi({ 'GET /api/auth/me': anonymous })
     renderLayout()
     expect(screen.getByRole('link', { name: 'Shelf, go to library' })).toHaveAttribute('href', '/')
     expect(screen.getByRole('link', { name: 'Library' })).toHaveAttribute('aria-current', 'page')
@@ -41,7 +41,7 @@ describe('Layout', () => {
   })
 
   it('shows name, role, favourites and logout for a member, but no Add book', async () => {
-    const fetchMock = mockApi({ 'GET /api/auth/me': { body: member }, 'POST /api/auth/logout': { status: 204 } })
+    const fetchMock = mockApi({ 'GET /api/auth/me': { body: { user: member } }, 'POST /api/auth/logout': { status: 204 } })
     renderLayout()
     expect(await screen.findByText('Mia')).toBeInTheDocument()
     expect(screen.getByText('member')).toBeInTheDocument()
@@ -53,7 +53,7 @@ describe('Layout', () => {
   })
 
   it('shows Add book for an admin', async () => {
-    mockApi({ 'GET /api/auth/me': { body: admin } })
+    mockApi({ 'GET /api/auth/me': { body: { user: admin } } })
     renderLayout()
     expect(await screen.findByRole('link', { name: 'Add book' })).toBeInTheDocument()
   })

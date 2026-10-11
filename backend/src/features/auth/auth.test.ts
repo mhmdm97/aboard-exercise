@@ -47,7 +47,7 @@ describe('POST /api/auth/register', () => {
 
     const me = await app.inject({ method: 'GET', url: '/api/auth/me', headers: { cookie: sidCookie(res) } })
     expect(me.statusCode).toBe(200)
-    expect(me.json()).toMatchObject({ email: 'new@example.com', role: 'member' })
+    expect(me.json().user).toMatchObject({ email: 'new@example.com', role: 'member' })
   })
 
   it('returns 409 for a duplicate email', async () => {
@@ -100,14 +100,14 @@ describe('POST /api/auth/login', () => {
 })
 
 describe('logout and sessions', () => {
-  it('logout deletes the session; /me is then 401; logout is idempotent', async () => {
+  it('logout deletes the session; /me then reports no user; logout is idempotent', async () => {
     const reg = await post('/api/auth/register', newUser)
     const cookie = sidCookie(reg)
     const out = await post('/api/auth/logout', undefined, cookie)
     expect(out.statusCode).toBe(204)
     expect(await db.select().from(sessions)).toHaveLength(0)
     const me = await app.inject({ method: 'GET', url: '/api/auth/me', headers: { cookie } })
-    expect(me.statusCode).toBe(401)
+    expect(me.json()).toEqual({ user: null })
     expect((await post('/api/auth/logout')).statusCode).toBe(204)
   })
 
@@ -119,14 +119,14 @@ describe('logout and sessions', () => {
       url: '/api/auth/me',
       headers: { cookie: sidCookie(reg) },
     })
-    expect(me.statusCode).toBe(401)
+    expect(me.json()).toEqual({ user: null })
     expect(await db.select().from(sessions).where(eq(sessions.userId, reg.json().id))).toHaveLength(0)
   })
 
-  it('GET /me is 401 when anonymous', async () => {
+  it('GET /me is 200 with a null user when anonymous', async () => {
     const res = await app.inject({ method: 'GET', url: '/api/auth/me' })
-    expect(res.statusCode).toBe(401)
-    expect(res.json()).toMatchObject({ error: { code: 'UNAUTHORIZED' } })
+    expect(res.statusCode).toBe(200)
+    expect(res.json()).toEqual({ user: null })
   })
 })
 

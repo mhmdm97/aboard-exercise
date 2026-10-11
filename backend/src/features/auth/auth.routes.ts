@@ -6,6 +6,7 @@ import { z } from 'zod'
 import {
   loginInputSchema,
   registerInputSchema,
+  meResponseSchema,
   userDtoSchema,
   type UserDto,
 } from '@library/shared'
@@ -112,14 +113,13 @@ export const authRoutes: FastifyPluginAsyncZod<AuthRouteOptions> = async (app, {
   app.get(
     '/me',
     {
-      preHandler: app.requireAuth,
       schema: {
         tags: ['auth'],
-        summary: 'The current user',
-        security: [{ cookieAuth: [] }],
-        response: { 200: userDtoSchema, 401: errorResponseSchema },
+        summary: 'The current user, or null when anonymous',
+        security: [{ cookieAuth: [] }, {}],
+        response: { 200: meResponseSchema },
       },
     },
-    async (req) => req.user as UserDto,
+    async (req) => ({ user: req.user }),
   )
 }

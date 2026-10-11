@@ -16,7 +16,7 @@
 
 **Roles.** `admin` has full book CRUD; `member` browses and keeps favourites. Self-registration always creates a `member`; admins exist only via the seed. Authorisation is enforced in the API (`requireRole` pre-handlers); the UI hides actions only as a convenience.
 
-**Frontend state.** TanStack Query for server state, including auth (`["auth","me"]`, 401 mapped to `null`), with no extra context layer. Library filters live in URL search params, so views are shareable and survive reload. Paging is not in the URL: infinite scroll restarts at page 1 whenever a filter changes. Forms use react-hook-form with the shared Zod schemas.
+**Frontend state.** TanStack Query for server state, including auth (`["auth","me"]`; `/api/auth/me` returns 200 with `user: null` for anonymous visitors), with no extra context layer. Library filters live in URL search params, so views are shareable and survive reload. Paging is not in the URL: infinite scroll restarts at page 1 whenever a filter changes. Forms use react-hook-form with the shared Zod schemas.
 
 **Testing.** Backend integration tests run `app.inject()` against a real Postgres (`library_test`), not mocks, because the interesting behaviour (trigram search, transactions, unique constraints) lives in the database. The cost is that tests need a running Postgres; CI uses a service container, and test files run serially because they share one DB. Shared schemas have unit tests, and the frontend has Vitest + React Testing Library component tests.
 

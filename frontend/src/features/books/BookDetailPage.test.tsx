@@ -2,7 +2,7 @@ import { screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { describe, expect, it } from 'vitest'
 import { sampleBook } from '../../test/fixtures'
-import { admin, calls, member, mockApi, unauthorized } from '../../test/mockApi'
+import { anonymous, admin, calls, member, mockApi } from '../../test/mockApi'
 import { renderWithProviders } from '../../test/renderWithProviders'
 import { BookDetailPage } from './BookDetailPage'
 
@@ -17,7 +17,7 @@ const render = (extra = {}) =>
 
 describe('BookDetailPage', () => {
   it('renders the book with genre chips linking to the library filter', async () => {
-    mockApi({ [`GET ${bookPath}`]: { body: sampleBook }, 'GET /api/auth/me': unauthorized })
+    mockApi({ [`GET ${bookPath}`]: { body: sampleBook }, 'GET /api/auth/me': anonymous })
     render()
     expect(await screen.findByRole('heading', { name: 'Dune' })).toBeInTheDocument()
     expect(screen.getByRole('link', { name: 'Frank Herbert' })).toHaveAttribute(
@@ -31,15 +31,15 @@ describe('BookDetailPage', () => {
   })
 
   it('shows a not-found state on 404', async () => {
-    mockApi({ 'GET /api/auth/me': unauthorized })
+    mockApi({ 'GET /api/auth/me': anonymous })
     render()
     expect(await screen.findByRole('heading', { name: 'Book not found' })).toBeInTheDocument()
   })
 
   it('hides Edit and Delete from members', async () => {
-    mockApi({ [`GET ${bookPath}`]: { body: sampleBook }, 'GET /api/auth/me': { body: member }, 'GET /api/me/favourites/ids': { body: [] } })
+    mockApi({ [`GET ${bookPath}`]: { body: sampleBook }, 'GET /api/auth/me': { body: { user: member } }, 'GET /api/me/favourites/ids': { body: [] } })
     render()
-    await screen.findByRole('button', { name: 'Favourite Dune' })
+    await screen.findByRole('button', { name: /favourites/i })
     expect(screen.queryByRole('link', { name: 'Edit' })).not.toBeInTheDocument()
     expect(screen.queryByRole('button', { name: 'Delete' })).not.toBeInTheDocument()
   })
@@ -48,7 +48,7 @@ describe('BookDetailPage', () => {
     const fetchMock = mockApi({
       [`GET ${bookPath}`]: { body: sampleBook },
       [`DELETE ${bookPath}`]: { status: 204 },
-      'GET /api/auth/me': { body: admin },
+      'GET /api/auth/me': { body: { user: admin } },
       'GET /api/me/favourites/ids': { body: [] },
     })
     const { router } = render()
@@ -73,7 +73,7 @@ describe('BookDetailPage', () => {
     const ids: string[] = []
     const fetchMock = mockApi({
       [`GET ${bookPath}`]: { body: sampleBook },
-      'GET /api/auth/me': { body: member },
+      'GET /api/auth/me': { body: { user: member } },
       'GET /api/me/favourites/ids': () => ({ body: [...ids] }),
       [`PUT ${bookPath}/favourite`]: () => {
         ids.push(sampleBook.id)
@@ -85,7 +85,7 @@ describe('BookDetailPage', () => {
       },
     })
     render()
-    const heart = await screen.findByRole('button', { name: 'Favourite Dune' })
+    const heart = await screen.findByRole('button', { name: /favourites/i })
     await waitFor(() => expect(calls(fetchMock)).toContain('GET /api/me/favourites/ids'))
     expect(heart).toHaveAttribute('aria-pressed', 'false')
 

@@ -88,7 +88,7 @@ All routes are under `/api`. Errors always look like `{ "error": { "code", "mess
 | POST | `/auth/register` | public (rate limited) | Create a member account and log in |
 | POST | `/auth/login` | public (rate limited) | Log in (sets httpOnly `sid` cookie) |
 | POST | `/auth/logout` | public | Log out (idempotent) |
-| GET | `/auth/me` | logged in | Current user |
+| GET | `/auth/me` | public | `{ user }`, with `user: null` when anonymous (always 200) |
 | GET | `/books` | public | List with `q`, `genre`, `author`, year range, rating, `sort`, pagination |
 | GET | `/books/:id` | public | Book detail |
 | POST | `/books` | admin | Create a book |
