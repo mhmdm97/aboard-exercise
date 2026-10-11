@@ -40,7 +40,6 @@
 - **Migrate and seed on container start.** Fine for one container, racy with several replicas.
 - **No end-to-end tests in CI.** I ran the app in a real browser with Playwright, but those runs are not committed.
 - **Book updates are a full replace (PUT), last write wins**, with no optimistic concurrency.
-- **Test coverage is uneven.** Every endpoint has integration tests, but the frontend has no end-to-end tests in CI: the full flows were checked with throwaway Playwright scripts, not a committed suite.
 - **Accessibility and polish are partial.** Labels and semantics are in place, but I did no systematic audit and skipped animation.
 - **Helmet CSP is disabled outside production** so Swagger UI works.
 - **Deployment skipped.** The brief marks it optional.
