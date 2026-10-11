@@ -9,6 +9,11 @@ const envSchema = z.object({
   COOKIE_SECRET: z.string().min(1).optional(),
   SESSION_TTL_DAYS: z.coerce.number().positive().default(7),
   CORS_ORIGIN: z.string().min(1).optional(),
+  // Defaults to true in production; set false to allow login over plain http (local Docker).
+  COOKIE_SECURE: z
+    .enum(['true', 'false'])
+    .transform((v) => v === 'true')
+    .optional(),
 })
 
 export type Env = z.infer<typeof envSchema>

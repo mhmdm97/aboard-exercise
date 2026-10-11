@@ -51,10 +51,10 @@ Backend: scaffold, schema, seed, auth/roles and book read endpoints done. Books 
 - [ ] Frontend tests: Vitest + React Testing Library for key components/hooks (R)
 
 ## 3. Docker & CI (R)
-- [ ] Backend Dockerfile (multi-stage)
-- [ ] Frontend Dockerfile (build, then serve static files via nginx, proxying `/api`)
-- [ ] `docker-compose.yml`: db + backend + frontend; migrate + seed on start; `.env.example`
-- [ ] CI: add backend job (lint, build, test); frontend tests job
+- [x] Backend Dockerfile (multi-stage)
+- [x] Frontend Dockerfile (build, then serve static files via nginx, proxying `/api`)
+- [x] `docker-compose.yml`: db + backend + frontend; migrate + seed on start; `.env.example`
+- [x] CI: add backend job (lint, build, test); frontend tests job
 - [ ] Deployment (S, only if time allows)
 
 ## 4. Deliverables & wrap-up (reserve the last ~45 min)

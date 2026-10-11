@@ -3,10 +3,10 @@ services:
     image: postgres:16-alpine
     environment:
       POSTGRES_USER: library
-      POSTGRES_PASSWORD: library
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-library}
       POSTGRES_DB: library
     ports:
-      - '5432:5432'
+      - '${DB_PORT:-5432}:5432'
     volumes:
       - pgdata:/var/lib/postgresql/data
       - ./db-init:/docker-entrypoint-initdb.d:ro
@@ -15,6 +15,34 @@ services:
       interval: 5s
       timeout: 3s
       retries: 10
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: postgres://library:${POSTGRES_PASSWORD:-library}@db:5432/library
+      SESSION_TTL_DAYS: ${SESSION_TTL_DAYS:-7}
+      CORS_ORIGIN: ${CORS_ORIGIN:-http://localhost:8080}
+      SEED_ON_START: ${SEED_ON_START:-true}
+      # Plain http on localhost: secure cookies would never be sent back by the browser.
+      COOKIE_SECURE: ${COOKIE_SECURE:-false}
+    ports:
+      - '${BACKEND_PORT:-5000}:5000'
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - '${FRONTEND_PORT:-8080}:80'
 
 volumes:
   pgdata:
