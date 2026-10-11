@@ -8,7 +8,7 @@ import styles from './Cover.module.css'
 
 /** Covers at or before this index in a list load eagerly (above the fold); the first few also get high fetch priority. */
 const EAGER_COVERS = 8
-const HIGH_PRIORITY_COVERS = 4
+export const HIGH_PRIORITY_COVERS = 4
 
 interface Props {
   book: BookDto

@@ -1,17 +1,17 @@
 import { Link } from 'react-router'
-import type { CSSProperties } from 'react'
+import type { Ref } from 'react'
 import type { BookDto } from '@library/shared'
 import { FavouriteButton } from '../favourites/FavouriteButton'
 import { canViewTransition } from '../../hooks/viewTransition'
-import { Cover } from './Cover'
+import { Cover, HIGH_PRIORITY_COVERS } from './Cover'
 import styles from './BookCard.module.css'
 
 interface Props {
   book: BookDto
   /** Position in the list; drives cover loading priority. */
   index?: number
-  /** Stagger position for the entrance animation (restarts at 0 for each loaded page). */
-  enterIndex?: number
+  /** Ref callback from `useRevealOnScroll`; when given, the card enters (fades/rises in) as it scrolls into view. */
+  revealRef?: Ref<HTMLElement>
 }
 
 function StarIcon() {
@@ -23,13 +23,16 @@ function StarIcon() {
 }
 
 /** The whole card is one link (stretched title link); the heart is a separate button above it. */
-export function BookCard({ book, index, enterIndex }: Props) {
+export function BookCard({ book, index, revealRef }: Props) {
   const authors = book.authors.map((a) => a.name).join(', ')
-  const enter = enterIndex !== undefined
+  const enter = revealRef !== undefined
+  // The first row holds the LCP covers: it rises without an opacity fade so it is never hidden (see BookCard.module.css).
+  const eager = enter && index !== undefined && index < HIGH_PRIORITY_COVERS
   return (
     <article
       className={enter ? `${styles.card} ${styles.enter}` : styles.card}
-      style={enter ? ({ '--i': enterIndex } as CSSProperties) : undefined}
+      ref={revealRef}
+      data-eager={eager ? '' : undefined}
     >
       <div className={styles.coverWrap}>
         <Cover book={book} index={index} morph />

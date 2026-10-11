@@ -12,7 +12,7 @@ interface Shown extends ActiveChip {
   leaving: boolean
 }
 
-const LEAVE_MS = 140
+const LEAVE_MS = 250 // = --dur-base
 
 /** Current chips in their old positions, removed ones kept (flagged) until their exit animation ends. */
 function merge(shown: Shown[], chips: ActiveChip[]): Shown[] {

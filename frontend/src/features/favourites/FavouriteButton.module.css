@@ -50,7 +50,7 @@
 
 /* Heart pop and six-dot burst when switched on; a gentle dip when switched off. */
 .popOn .svg {
-  animation: pop var(--dur-morph) var(--ease-spring);
+  animation: pop var(--dur-pop) var(--ease-spring);
 }
 
 .popOn::before {
@@ -65,7 +65,7 @@
     0 17px 0 -5px var(--accent),
     -15px 8px 0 -5px var(--accent),
     -15px -8px 0 -5px var(--accent);
-  animation: burst 560ms var(--ease-out) both;
+  animation: burst var(--dur-pop) var(--ease-out) both;
   pointer-events: none;
 }
 
@@ -76,7 +76,7 @@
 }
 
 .popOff .svg {
-  animation: unpop 200ms var(--ease-out);
+  animation: unpop var(--dur-base) var(--ease-out);
 }
 
 @keyframes pop {

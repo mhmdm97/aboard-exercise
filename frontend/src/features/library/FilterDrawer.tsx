@@ -14,7 +14,7 @@ interface Props {
 }
 
 /** Must match the drawer's closing animation in the CSS module. */
-const CLOSE_MS = 220
+const CLOSE_MS = 250 // = --dur-base (drawerOut)
 const DESKTOP_QUERY = '(min-width: 768px)'
 
 /**

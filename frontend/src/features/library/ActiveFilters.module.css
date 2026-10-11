@@ -19,7 +19,7 @@
 .leaving {
   overflow: hidden;
   pointer-events: none;
-  animation: chipOut var(--dur-fast) var(--ease-in) forwards;
+  animation: chipOut var(--dur-base) var(--ease-in) forwards;
 }
 
 @keyframes chipIn {

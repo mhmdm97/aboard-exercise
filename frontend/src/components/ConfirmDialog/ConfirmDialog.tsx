@@ -14,7 +14,7 @@ interface Props {
 }
 
 /** Must match `--dur-fast` in index.css (the exit animation length). */
-const EXIT_MS = 140
+const EXIT_MS = 180 // = --dur-fast (dialog-out)
 
 /**
  * Modal confirm built on native `<dialog>`: focus starts on Cancel; Escape, Cancel and a click on the backdrop

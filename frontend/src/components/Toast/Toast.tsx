@@ -4,7 +4,7 @@ import styles from './Toast.module.css'
 /** How long the message stays before it leaves (the clock restarts after a hover or focus). */
 const HOLD_MS = 4000
 /** Must match `--dur-base` (the exit animation length). */
-const EXIT_MS = 220
+const EXIT_MS = 250 // = --dur-base (toast-out)
 
 type Phase = 'shown' | 'leaving' | 'gone'
 

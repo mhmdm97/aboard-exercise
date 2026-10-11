@@ -4,6 +4,7 @@ import { ErrorMessage } from '../../components/ErrorMessage/ErrorMessage'
 import { HeartIcon } from '../../components/icons'
 import { Spinner } from '../../components/Spinner/Spinner'
 import { useDocumentTitle } from '../../hooks/useDocumentTitle'
+import { useRevealOnScroll } from '../../hooks/useRevealOnScroll'
 import { canViewTransition } from '../../hooks/viewTransition'
 import { BookCard } from '../books/BookCard'
 import gridStyles from '../library/BookGrid.module.css'
@@ -13,6 +14,7 @@ import styles from './FavouritesPage.module.css'
 export function FavouritesPage() {
   useDocumentTitle('Favourites')
   const { data: books, isPending, error, refetch } = useFavourites()
+  const revealRef = useRevealOnScroll()
 
   return (
     <section>
@@ -49,7 +51,7 @@ export function FavouritesPage() {
       ) : (
         <div className={gridStyles.grid}>
           {books.map((book, i) => (
-            <BookCard key={book.id} book={book} index={i} enterIndex={Math.min(i, 11)} />
+            <BookCard key={book.id} book={book} index={i} revealRef={revealRef} />
           ))}
         </div>
       )}

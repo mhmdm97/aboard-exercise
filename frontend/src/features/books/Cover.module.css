@@ -23,8 +23,8 @@
   box-shadow: var(--shadow-md);
   transform-origin: 50% 100%;
   transition:
-    transform var(--dur-base) var(--ease-out),
-    box-shadow var(--dur-base) var(--ease-out);
+    transform var(--dur-hover) var(--ease-out),
+    box-shadow var(--dur-hover) var(--ease-out);
 }
 
 .photo {

@@ -3,7 +3,7 @@ import type { BookDto } from '@library/shared'
 import { EmptyState } from '../../components/EmptyState/EmptyState'
 import { ErrorMessage } from '../../components/ErrorMessage/ErrorMessage'
 import { BookCard } from '../books/BookCard'
-import { PAGE_SIZE } from '../books/api'
+import { useRevealOnScroll } from '../../hooks/useRevealOnScroll'
 import styles from './BookGrid.module.css'
 
 interface Props {
@@ -18,9 +18,6 @@ interface Props {
   fetchNextPage: () => void
   onClearFilters: () => void
 }
-
-/** At most this many cards per page get a stagger delay (max 330ms), so long pages do not drag. */
-const MAX_STAGGER = 11
 
 function SkeletonCard() {
   return (
@@ -45,6 +42,7 @@ export function BookGrid({
   onClearFilters,
 }: Props) {
   const sentinel = useRef<HTMLDivElement>(null)
+  const revealRef = useRevealOnScroll()
 
   useEffect(() => {
     const node = sentinel.current
@@ -90,8 +88,7 @@ export function BookGrid({
     <div aria-busy={isRefreshing}>
       <div className={`${styles.grid} ${isRefreshing ? styles.refreshing : ''}`}>
         {books.map((book, index) => (
-          // --i restarts at 0 for every page, so a newly appended page staggers from its own first card.
-          <BookCard key={book.id} book={book} index={index} enterIndex={Math.min(index % PAGE_SIZE, MAX_STAGGER)} />
+          <BookCard key={book.id} book={book} index={index} revealRef={revealRef} />
         ))}
       </div>
       {isFetchingNextPage && (

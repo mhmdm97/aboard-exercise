@@ -6,10 +6,29 @@
   min-width: 0;
 }
 
-/* Entrance: only cards that mount (new results, newly appended pages) animate. */
+/*
+ * Entrance, scroll-triggered: `useRevealOnScroll` sets data-revealed (and --i, the stagger within the batch of
+ * cards revealed together) the first time the card is visible. Until then it waits in its "from" state.
+ * First-row cards (data-eager, the LCP covers) never hide: they only rise, so their paint is not delayed.
+ */
 .enter {
-  animation: rise var(--dur-slow) var(--ease-out) backwards;
+  opacity: 0;
+  transform: translateY(18px) scale(0.97);
+}
+
+.enter[data-eager] {
+  opacity: 1;
+}
+
+.enter[data-revealed] {
+  opacity: 1;
+  transform: none;
+  animation: rise var(--dur-reveal) var(--ease-out) backwards;
   animation-delay: calc(var(--i, 0) * var(--stagger));
+}
+
+.enter[data-eager][data-revealed] {
+  animation-name: riseOnly;
 }
 
 .coverWrap {
@@ -127,11 +146,15 @@
   }
 }
 
-/* Reduced motion: fade only (no rise, no stagger, no tilt). Hover keeps shadow + underline. */
+/* Reduced motion: no hidden state, no rise, no stagger, no tilt. Hover keeps shadow + underline. */
 @media (prefers-reduced-motion: reduce) {
   .enter {
-    animation: fadeIn var(--dur-fast) linear backwards;
-    animation-delay: 0s;
+    opacity: 1;
+    transform: none;
+  }
+
+  .enter[data-revealed] {
+    animation: none;
   }
 
   .card:hover .coverWrap > :first-child {
@@ -142,12 +165,12 @@
 @keyframes rise {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(18px) scale(0.97);
   }
 }
 
-@keyframes fadeIn {
+@keyframes riseOnly {
   from {
-    opacity: 0;
+    transform: translateY(18px) scale(0.97);
   }
 }
