@@ -21,7 +21,7 @@ const FIELDS =
   'key,title,subtitle,author_name,first_publish_year,number_of_pages_median,isbn,cover_i,ratings_average,ratings_count,edition_count,readinglog_count,subject,language'
 
 const PER_GENRE_PICKS = 16 // primary picks per genre, on top of the must-have titles
-const SEARCH_LIMIT = 100
+const SEARCH_LIMIT = 150
 const MAX_GENRES_PER_BOOK = 3
 const MIN_RATINGS = 5
 const MIN_SECONDARY_HITS = 3 // subject matches needed to add a genre besides the queried one
@@ -56,13 +56,13 @@ const GENRES: GenreConfig[] = [
   { name: 'Poetry', subjects: ['poetry'], patterns: [/poetry/, /poems/] },
   {
     name: 'History',
-    subjects: ['history'],
+    subjects: ['history', 'world_history', 'ancient_history', 'military_history'],
     patterns: [/^history$/, /^history, /, /^world history/, /^(ancient|modern|european|american) history/],
   },
   { name: 'Non-Fiction', subjects: ['nonfiction'], patterns: [/non-?fiction/] },
   {
     name: 'Science',
-    subjects: ['science'],
+    subjects: ['science', 'physics', 'astronomy', 'biology', 'popular_works'],
     patterns: [/^science\b(?! fiction)/, /^physics/, /^biology/, /^astronomy/, /^cosmology/],
   },
   { name: 'Biography', subjects: ['biography'], patterns: [/^biography/, /^autobiography/, /^memoirs?$/] },
@@ -197,7 +197,7 @@ interface SearchResponse {
 const searchUrl = (query: string) => `https://openlibrary.org/search.json?${query}&fields=${FIELDS}`
 
 const JUNK_TITLE =
-  /summary|study guide|sparknotes|cliffsnotes|box(ed)? set|collection|omnibus|books? 1-|workbook|analysis|a novel by|\bcomplete\b|\bsampler\b|\bcompanion\b|^novels\b|bachman books|graphic novel|mein kampf|\[\d+ (novels|stories)|\)\s*\/\s*|\w \/ \w/i
+  /summary|study guide|sparknotes|cliffsnotes|box(ed)? set|collection|omnibus|books? 1-|workbook|analysis|a novel by|\bcomplete\b|\bsampler\b|\bcompanion\b|^novels\b|bachman books|adaptation|graphic novel|mein kampf|\[\d+ (novels|stories)|\)\s*\/\s*|\w \/ \w/i
 
 /** Titles in other scripts, or with common German/French/Spanish/Italian function words. */
 const NON_ENGLISH_TITLE = /[^\p{Script=Latin}\P{L}]|\b(und|der|das|het|trotzdem|les|des|une|della|los|las|el|del|le|la|verden|bumi|cien|culpa|alquimista|gorin)\b/iu
@@ -207,7 +207,7 @@ const SCRIPTURE = /\b(bible|quran|koran|torah|talmud|vedas?|bhagavad|gita|testam
 
 /** Textbooks: a single generic academic word, or a "Principles of ..." style title. */
 const GENERIC_TEXTBOOK_TITLE =
-  /^(micro|macro)?(biology|chemistry|physics|economics|psychology|sociology|calculus|algebra|geometry|statistics|anatomy|physiology|genetics|biochemistry|science|history|mathematics|geography|astronomy)$|^(principles|fundamentals|introduction|essentials) of /i
+  /^(micro|macro)?(biology|chemistry|physics|economics|psychology|sociology|calculus|algebra|geometry|statistics|anatomy|physiology|genetics|biochemistry|science|history|mathematics|geography|astronomy)$|^(principles|fundamentals|introduction|essentials) of |^campbell biology|^concepts of physics|principia mathematica|^de rerum natura/i
 
 /** Accented letters in a title almost always mean a translated edition (kept apart: /i would fold ſ into s). */
 const ACCENTED_LETTER = /[À-ɏ]/
@@ -239,6 +239,9 @@ function pickIsbn(doc: OlDoc, used: Set<string>): string | null {
   return all.find((i) => !used.has(i)) ?? null
 }
 
+const hasFictionSubject = (doc: OlDoc): boolean =>
+  (doc.subject ?? []).some((s) => /\b(fiction|novels?)\b/i.test(s) && !/non-?fiction/i.test(s))
+
 function isUsable(doc: OlDoc): boolean {
   if (!doc.cover_i || !doc.author_name?.length || !doc.first_publish_year) return false
   if (doc.first_publish_year > new Date().getFullYear()) return false
@@ -246,7 +249,9 @@ function isUsable(doc: OlDoc): boolean {
   if (doc.language && !doc.language.includes('eng')) return false
   if (NON_ENGLISH_TITLE.test(doc.title) || ACCENTED_LETTER.test(doc.title)) return false
   if (SCRIPTURE.test(doc.title) || SCRIPTURE.test(doc.author_name.join(' '))) return false
-  if (GENERIC_TEXTBOOK_TITLE.test(doc.title) || doc.subject?.some((x) => /textbook/i.test(x))) return false
+  // "Textbooks" is also a subject of graded readers of novels, so only fiction is exempt.
+  const textbookSubject = doc.subject?.some((x) => /textbook/i.test(x)) && !hasFictionSubject(doc)
+  if (GENERIC_TEXTBOOK_TITLE.test(doc.title) || textbookSubject) return false
   return true
 }
 
@@ -259,17 +264,96 @@ const normalise = (s: string) =>
 const byPopularity = (a: OlDoc, b: OlDoc) =>
   (b.readinglog_count ?? 0) - (a.readinglog_count ?? 0) || (b.edition_count ?? 0) - (a.edition_count ?? 0)
 
+const NON_FICTION_GENRES = new Set([
+  'Business',
+  'Science',
+  'Self-Help',
+  'Biography',
+  'History',
+  'Philosophy',
+  'Non-Fiction',
+])
+const FIRST_SUBJECTS = 10 // a match among a book's first subjects counts as strong support
+
+/**
+ * Genres for a book found via a subject search. The queried genre is only kept when the book's
+ * own subjects support it (2+ matches, or a match among its first subjects); an empty result
+ * means "not confident": the caller skips the book. Non-fiction genres are never given to books
+ * with a "fiction" or "novel" subject.
+ */
 function mapGenres(doc: OlDoc, queried?: string): string[] {
   const subjects = (doc.subject ?? []).map((s) => s.toLowerCase())
-  const scored = GENRES.map((g, index) => ({
-    name: g.name,
-    index,
-    hits: subjects.filter((s) => g.patterns.some((p) => p.test(s))).length,
-  }))
+  const isFiction = hasFictionSubject(doc)
+  const scored = GENRES.map((g, index) => {
+    const matches = subjects.map((s, i) => (g.patterns.some((p) => p.test(s)) ? i : -1)).filter((i) => i >= 0)
+    return { name: g.name, index, hits: matches.length, early: matches.some((i) => i < FIRST_SUBJECTS) }
+  }).filter((g) => !(isFiction && NON_FICTION_GENRES.has(g.name)))
+  const first = queried ? scored.find((g) => g.name === queried) : undefined
+  if (queried && !(first && (first.hits >= 2 || first.early))) return []
+  const others = scored
     .filter((g) => g.hits >= MIN_SECONDARY_HITS && g.name !== queried)
     .sort((a, b) => b.hits - a.hits || a.index - b.index)
     .map((g) => g.name)
-  return [...(queried ? [queried] : []), ...scored].slice(0, MAX_GENRES_PER_BOOK)
+  return [...(queried ? [queried] : []), ...others].slice(0, MAX_GENRES_PER_BOOK)
+}
+
+/** Hand-set genres keyed by Open Library work key, for books the subject mapping gets wrong. */
+const GENRE_OVERRIDES: Record<string, string[]> = {
+  'OL17332479W': ['Fantasy', 'Young Adult'], // Six of Crows
+  'OL5720022W': ['Young Adult', 'Romance', 'Fantasy'], // Breaking Dawn
+  'OL5720027W': ['Young Adult', 'Romance', 'Fantasy'], // New Moon
+  'OL71056W': ['Philosophy', 'Non-Fiction'], // Mere Christianity
+  'OL5749849W': ['Non-Fiction', 'Business'], // Blink
+  'OL1968364W': ['Self-Help', 'Non-Fiction'], // The Art of Seduction
+  'OL16085155W': ['Biography', 'Business'], // Steve Jobs
+  'OL13850788W': ['Science', 'Non-Fiction'], // The Immortal Life of Henrietta Lacks
+  'OL23746568W': ['Self-Help', 'Non-Fiction'], // 101 Essays That Will Change The Way You Think
+  'OL1968368W': ['Self-Help', 'Business'], // The 48 Laws of Power
+  'OL24620443W': ['Self-Help', 'Philosophy'], // You're Too Good to Feel This Bad
+  'OL17356252W': ['Biography', 'Non-Fiction'], // When Breath Becomes Air
+  'OL25799307W': ['Self-Help', 'Non-Fiction'], // Why Has Nobody Told Me This Before?
+  'OL2392324W': ['Self-Help', 'Business'], // Eat That Frog! 21 Great Ways to Stop Procrastinating and Get More Done in Less Time
+  'OL17710052W': ['Self-Help', 'Non-Fiction'], // Make Your Bed
+  'OL1905682W': ['Biography', 'History', 'Science'], // American Prometheus
+  'OL4288870W': ['Biography', 'Science'], // Einstein
+  'OL1673205W': ['Thriller', 'Literary Fiction'], // The Godfather
+  'OL28114312W': ['Romance', 'Thriller'], // Does It Hurt?
+  'OL24341413W': ['Romance', 'Young Adult'], // Our Fault
+  'OL20090688W': ['Romance'], // Red, White & Royal Blue
+  'OL20032935W': ['Romance'], // The Hating Game
+  'OL1865528W': ['Literary Fiction', 'Classics'], // The Bell Jar
+  'OL259010W': ['Classics', 'Romance', 'Fantasy'], // A Midsummer Night's Dream
+  'OL261794W': ['Dystopian', 'Science Fiction', 'Classics'], // A Clockwork Orange
+  'OL17373843W': ['Science Fiction'], // Children of Time
+  'OL52267W': ['Science Fiction', 'Classics'], // The Time Machine
+  'OL46881W': ['Science Fiction', 'Thriller'], // Jurassic Park
+  'OL21745884W': ['Science Fiction', 'Adventure'], // Project Hail Mary
+  'OL455327W': ['Classics', 'Adventure'], // Lord of the Flies
+  'OL265501W': ['Fantasy', 'Adventure', 'Young Adult'], // Into the Wild
+  'OL98459W': ['Science Fiction', 'Classics'], // Slaughterhouse-Five
+  'OL86318W': ['Classics', 'Literary Fiction'], // Ulysses
+  'OL114967W': ['Classics', 'Historical Fiction'], // The Jungle
+  'OL23166W': ['Classics', 'Literary Fiction'], // East of Eden
+  'OL45089W': ['Classics', 'Adventure'], // Robinson Crusoe
+  'OL471724W': ['Mystery', 'Classics'], // Death on the Nile
+  'OL14873315W': ['Thriller', 'Mystery', 'Adventure'], // The Lost Symbol
+  'OL18012166W': ['Fantasy', 'Historical Fiction'], // Circe
+  'OL1089297W': ['Philosophy', 'Classics'], // The Prince
+  'OL472715W': ['Mystery', 'Classics'], // The Mysterious Affair at Styles
+  'OL471509W': ['Mystery', 'Classics'], // The A.B.C. Murders
+  'OL81601W': ['Non-Fiction', 'Biography'], // On Writing
+  'OL1812933W': ['Thriller', 'Horror'], // American Psycho
+  'OL8193416W': ['Classics', 'Horror'], // The Picture of Dorian Gray
+  'OL24156W': ['Classics', 'Horror'], // The Strange Case of Dr. Jekyll and Mr. Hyde
+  'OL6027236W': ['Dystopian', 'Young Adult'], // The Maze Runner
+  'OL9170454W': ['Classics', 'Literary Fiction'], // Hamlet
+  'OL258902W': ['Classics', 'Literary Fiction'], // Macbeth
+  'OL38663W': ['Classics', 'Literary Fiction'], // Heart of Darkness
+  'OL151406W': ['Classics', 'Fantasy'], // Through the Looking-Glass
+  'OL24034W': ['Adventure', 'Classics'], // Treasure Island
+  'OL74504W': ['Adventure', 'Classics'], // White Fang
+  'OL455305W': ['Classics', 'Historical Fiction'], // The Scarlet Letter
+  'OL1898309W': ['Humour'], // The Cat in the Hat
 }
 
 // ---------------------------------------------------------------------------------------------
@@ -343,8 +427,10 @@ async function main() {
   const usedTitles = new Set<string>()
   const picked: Picked[] = []
 
-  const tryAdd = (doc: OlDoc, genres: string[]): boolean => {
-    const titleKey = `${normalise(doc.title)}|${normalise(doc.author_name?.[0] ?? '')}`
+  const tryAdd = (doc: OlDoc, mapped: string[]): boolean => {
+    const genres = GENRE_OVERRIDES[doc.key.replace('/works/', '')] ?? mapped
+    // Ignore "; or, ..." and ": subtitle" parts so editions with longer titles count as duplicates.
+    const titleKey = `${normalise(doc.title.split(/[;:]/)[0] ?? '')}|${normalise(doc.author_name?.[0] ?? '')}`
     if (usedWorks.has(doc.key) || usedTitles.has(titleKey) || !isUsable(doc)) return false
     const isbn = pickIsbn(doc, used)
     if (!isbn || genres.length === 0) return false
@@ -358,14 +444,22 @@ async function main() {
   // 1. Must-have titles.
   const missing: string[] = []
   for (const m of MUST_HAVES) {
-    const res = await getJson<SearchResponse>(
-      searchUrl(`title=${encodeURIComponent(m.title)}&author=${encodeURIComponent(m.author)}&limit=10`),
-    )
     const wanted = normalise(m.title)
-    // Exact title matches first (avoids parodies and adaptations), then titles that contain it.
-    const matches = res.docs.filter((d) => normalise(d.title).includes(wanted)).sort(byPopularity)
-    const candidates = [...matches.filter((d) => normalise(d.title) === wanted), ...matches]
-    if (!candidates.some((d) => tryAdd(d, m.genres))) missing.push(m.title)
+    // The structured search can miss a title; a free-text query is the fallback.
+    const queries = [
+      `title=${encodeURIComponent(m.title)}&author=${encodeURIComponent(m.author)}&limit=20`,
+      `q=${encodeURIComponent(`${m.title} ${m.author}`)}&limit=20`,
+    ]
+    let added = false
+    for (const query of queries) {
+      const res = await getJson<SearchResponse>(searchUrl(query))
+      // Exact title matches first (avoids parodies and adaptations), then titles that contain it.
+      const matches = res.docs.filter((d) => normalise(d.title).includes(wanted)).sort(byPopularity)
+      const candidates = [...matches.filter((d) => normalise(d.title) === wanted), ...matches]
+      added = candidates.some((d) => tryAdd(d, m.genres))
+      if (added) break
+    }
+    if (!added) missing.push(m.title)
   }
 
   // 2. Per-genre candidate pools, then round-robin picks so popular crossovers are not hoarded.

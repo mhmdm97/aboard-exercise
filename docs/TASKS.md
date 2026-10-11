@@ -7,7 +7,7 @@ Brief: `docs/EXERCISE.md`. Tags: **(R)** = required by the brief, **(S)** = sugg
 ## Next up
 _Everything is built and verified (full Docker stack re-checked with zero CSP violations, backend tests stable over 5 runs, README and root DECISIONS refreshed). Left for the author:_
 - Write the `## AI usage` section of root `DECISIONS.md` from `docs/AI-USAGE-NOTES.md` (replace the TODO block), then delete `docs/AI-USAGE-NOTES.md`.
-- Optional: replace the hand-written seed with real data via a local agent (the sandbox cannot reach Open Library).
+- Done: the hand-written seed was replaced with real Open Library data (see section 5).
 - Optional: deploy it (brief marks it optional).
 - Write the submission email: frontend vs backend focus and why. Reply-all confirming receipt.
 - Final push and check CI is green (`gh run list --limit 1`).
@@ -72,4 +72,4 @@ _Everything is built and verified (full Docker stack re-checked with zero CSP vi
 - [x] Part 1: tokens + self-hosted fonts, shared primitives (`components/ui/ui.css`), header, generated cloth covers, book card, Library page (search, sidebar, mobile drawer, active chips, grid, load more, skeletons, states) and their motion
 - [x] Part 2: Detail, BookForm, Auth, States, MobileScreens pages + View Transitions (card to detail cover, route cross-fade, results re-flow); restyle `ConfirmDialog` and the success toast; migrate remaining legacy token names (`--color-*`, `--space-*`) to the new ones
 
-- [x] Replace the hand-written seed with real Open Library data: `backend/scripts/fetch-seed-books.ts` (`npm run seed:fetch -w @library/backend`), 380 books, real ratings and cover IDs; `SeedBook` is explicit and `subtitle` is stored
+- [x] Replace the hand-written seed with real Open Library data: `backend/scripts/fetch-seed-books.ts` (`npm run seed:fetch -w @library/backend`), 383 books, real ratings and cover IDs; `SeedBook` is explicit and `subtitle` is stored
