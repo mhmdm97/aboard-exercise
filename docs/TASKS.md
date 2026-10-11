@@ -5,8 +5,11 @@ Keep tasks small (≤ ~30 min). Update this file and commit after every task. Se
 Brief: `docs/EXERCISE.md`. Tags: **(R)** = required by the brief, **(S)** = suggested/optional.
 
 ## Next up
-_One or two lines for the next agent: what to do next, anything half-done._
-Backend: scaffold, schema, seed, auth/roles and book read endpoints done. Books write endpoints and favourites done. Next: frontend auth pages, detail page, forms; Docker.
+_Everything is built and the README run-through is done. Left for the author (all in the repo's Section 4):_
+- Fill in the `TODO (author)` block in root `DECISIONS.md` (own examples of AI output you rejected or rewrote).
+- Write the email note on frontend vs backend focus and why.
+- Reply-all to the email confirming receipt.
+- Final push and check CI is green (`gh run list --limit 1`).
 
 ## 0. Setup & decisions
 - [x] Repo, React/Vite skeleton, CI (frontend)
@@ -61,5 +64,5 @@ Backend: scaffold, schema, seed, auth/roles and book read endpoints done. Books 
 - [x] Root `DECISIONS.md` with exactly two sections: "Architecture & trade-offs" and "AI usage" (R). Source: docs/DECISIONS.md log + notes (draft; author to review, TODO block to fill)
 - [x] README: overview, setup + run (Docker and local), demo credentials, tests, how it was built (R) (draft; author to review)
 - [ ] Note for the submission email: frontend vs backend focus and why
-- [ ] Clean-clone run-through using only the README (`docker compose up`)
+- [x] Clean-clone run-through using only the README (`docker compose up`). Local path verified from a fresh clone (npm ci, db:reset, dev, login via :5173 proxy, lint/typecheck/build/test all green: 17+53+46 tests); Docker path checked via `docker compose config` (ports, env vars, credentials match README); no README/DECISIONS inaccuracies found
 - [ ] Final commit + push, CI green
