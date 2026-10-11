@@ -4,7 +4,7 @@ import { defineConfig } from 'vitest/config'
 // Forward API calls to the backend API (dev server and `vite preview`).
 // changeOrigin must stay false: the backend's CSRF check compares the browser's Origin header to Host,
 // and rewriting Host to localhost:5000 would make every login/POST from localhost:5173 a 403.
-const proxy = { '/api': { target: 'http://localhost:5000', changeOrigin: false } }
+const proxy = { '/api': { target: process.env.API_PROXY_TARGET ?? 'http://localhost:5000', changeOrigin: false } }
 
 // https://vite.dev/config/
 export default defineConfig({
