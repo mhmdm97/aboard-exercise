@@ -2,7 +2,7 @@
 
 ## Architecture & trade-offs
 
-**Books, not movies.** Open Library has real book metadata and serves covers by cover ID, so 383 seeded records get real covers without hosting images. Movie posters would have needed an API key and licensing thought.
+**Books, not movies.** Open Library has real book metadata and serves covers by cover ID, so 380 seeded records get real covers without hosting images. Movie posters would have needed an API key and licensing thought.
 
 **npm-workspaces monorepo with a `shared` Zod package.** `@library/shared` holds the schemas and DTO types. One definition drives API request validation, response serialisation, the OpenAPI document and the frontend form validation, so the two sides cannot drift. The alternative was hand-synced types plus a generated client, which is more moving parts for a one-day project. The cost is that `shared` ships as TS source, so the backend bundles it with tsup.
 
@@ -40,8 +40,8 @@ Production follow-ups: CSRF tokens; per-account lockout and a shared (Redis) rat
 
 ### Shortcuts I took and why
 
-- **Seed data is a snapshot.** `books.json` (383 books, 21 genres) is real Open Library data, fetched by a committed script (`npm run seed:fetch -w @library/backend`) and then checked in, so normal development and CI need no network. Titles, authors, years, page counts, descriptions and cover IDs come from Open Library; genres are mapped from its subjects with a fixed list of must-have titles, so they are my approximation. A few descriptions fall back to a one-line summary where Open Library has none. Pre-1 AD works would have `publishedYear = null`.
-- **Ratings are Open Library community averages** where a book has at least 5 ratings (all but 2 of the 383 here); the rest get a deterministic synthetic value (2.50 to 5.00 from a SHA-256 of the ISBN) so the rating filter and sort always have data.
+- **Seed data is a snapshot.** `books.json` (380 books, 21 genres) is real Open Library data, fetched by a committed script (`npm run seed:fetch -w @library/backend`) and then checked in, so normal development and CI need no network. Titles, authors, years, page counts, descriptions and cover IDs come from Open Library; genres are mapped from its subjects with a fixed list of must-have titles, so they are my approximation. A few descriptions fall back to a one-line summary where Open Library has none. Pre-1 AD works would have `publishedYear = null`.
+- **Ratings are Open Library community averages** where a book has at least 5 ratings (all but 5 of the 380 here); the rest get a deterministic synthetic value (2.50 to 5.00 from a SHA-256 of the ISBN) so the rating filter and sort always have data.
 - **Offset pagination.** Simple and fine for 351 rows; it degrades on deep pages and can skip or repeat rows if data changes mid-scroll.
 - **No email verification or password reset**, and no admin management UI. The demo users are committed in the seed and README on purpose.
 - **Migrate and seed on container start.** Fine for one container, racy with several replicas.

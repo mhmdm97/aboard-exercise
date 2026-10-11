@@ -24,7 +24,7 @@ const PER_GENRE_PICKS = 16 // primary picks per genre, on top of the must-have t
 const SEARCH_LIMIT = 100
 const MAX_GENRES_PER_BOOK = 3
 const MIN_RATINGS = 5
-const MIN_SECONDARY_HITS = 2 // subject matches needed to add a genre besides the queried one
+const MIN_SECONDARY_HITS = 3 // subject matches needed to add a genre besides the queried one
 
 // ---------------------------------------------------------------------------------------------
 // Genre configuration
@@ -63,10 +63,10 @@ const GENRES: GenreConfig[] = [
   {
     name: 'Science',
     subjects: ['science'],
-    patterns: [/\bscience\b(?! fiction)/, /physics/, /biology/, /astronomy/, /evolution/],
+    patterns: [/^science\b(?! fiction)/, /^physics/, /^biology/, /^astronomy/, /^cosmology/],
   },
-  { name: 'Biography', subjects: ['biography'], patterns: [/biograph/, /memoir/] },
-  { name: 'Business', subjects: ['business'], patterns: [/business/, /economics/, /entrepreneur/, /management/] },
+  { name: 'Biography', subjects: ['biography'], patterns: [/^biography/, /^autobiography/, /^memoirs?$/] },
+  { name: 'Business', subjects: ['business'], patterns: [/^business/, /^economics/, /^entrepreneurship/, /^management/] },
   {
     name: 'Self-Help',
     subjects: ['self-help'],
@@ -77,58 +77,58 @@ const GENRES: GenreConfig[] = [
 interface MustHave {
   title: string
   author: string
-  /** Used only when the subject mapping yields no genre. */
-  fallback: string[]
+  /** Explicit genres (max 3, fixed names): subject mapping is unreliable for famous titles. */
+  genres: string[]
 }
 
 const MUST_HAVES: MustHave[] = [
-  { title: 'The Hobbit', author: 'Tolkien', fallback: ['Fantasy', 'Adventure'] },
-  { title: 'The Fellowship of the Ring', author: 'Tolkien', fallback: ['Fantasy', 'Adventure'] },
-  { title: 'The Two Towers', author: 'Tolkien', fallback: ['Fantasy', 'Adventure'] },
-  { title: 'The Return of the King', author: 'Tolkien', fallback: ['Fantasy', 'Adventure'] },
-  { title: 'Pride and Prejudice', author: 'Austen', fallback: ['Classics', 'Romance'] },
-  { title: 'Emma', author: 'Austen', fallback: ['Classics', 'Romance'] },
-  { title: 'Sense and Sensibility', author: 'Austen', fallback: ['Classics', 'Romance'] },
-  { title: 'Nineteen Eighty-Four', author: 'Orwell', fallback: ['Dystopian', 'Classics'] },
-  { title: 'Animal Farm', author: 'Orwell', fallback: ['Classics', 'Dystopian'] },
-  { title: "Harry Potter and the Philosopher's Stone", author: 'Rowling', fallback: ['Fantasy', 'Young Adult'] },
-  { title: 'Harry Potter and the Chamber of Secrets', author: 'Rowling', fallback: ['Fantasy', 'Young Adult'] },
-  { title: 'Harry Potter and the Prisoner of Azkaban', author: 'Rowling', fallback: ['Fantasy', 'Young Adult'] },
-  { title: 'Dune', author: 'Herbert', fallback: ['Science Fiction'] },
-  { title: 'A Wizard of Earthsea', author: 'Le Guin', fallback: ['Fantasy', 'Young Adult'] },
-  { title: 'The Left Hand of Darkness', author: 'Le Guin', fallback: ['Science Fiction'] },
-  { title: 'The Dispossessed', author: 'Le Guin', fallback: ['Science Fiction'] },
-  { title: 'Murder on the Orient Express', author: 'Christie', fallback: ['Mystery', 'Classics'] },
-  { title: 'And Then There Were None', author: 'Christie', fallback: ['Mystery', 'Classics'] },
-  { title: 'The Murder of Roger Ackroyd', author: 'Christie', fallback: ['Mystery', 'Classics'] },
-  { title: 'Good Omens', author: 'Gaiman', fallback: ['Fantasy', 'Humour'] },
-  { title: 'The Great Gatsby', author: 'Fitzgerald', fallback: ['Classics', 'Literary Fiction'] },
-  { title: 'To Kill a Mockingbird', author: 'Harper Lee', fallback: ['Classics', 'Literary Fiction'] },
-  { title: 'Brave New World', author: 'Huxley', fallback: ['Dystopian', 'Classics'] },
-  { title: 'Frankenstein', author: 'Shelley', fallback: ['Horror', 'Classics'] },
-  { title: 'Dracula', author: 'Stoker', fallback: ['Horror', 'Classics'] },
-  { title: 'Jane Eyre', author: 'Bronte', fallback: ['Classics', 'Romance'] },
-  { title: 'Wuthering Heights', author: 'Bronte', fallback: ['Classics', 'Romance'] },
-  { title: 'Moby Dick', author: 'Melville', fallback: ['Classics', 'Adventure'] },
-  { title: "The Hitchhiker's Guide to the Galaxy", author: 'Douglas Adams', fallback: ['Science Fiction', 'Humour'] },
-  { title: 'Fahrenheit 451', author: 'Bradbury', fallback: ['Dystopian', 'Science Fiction'] },
-  { title: "The Handmaid's Tale", author: 'Atwood', fallback: ['Dystopian', 'Literary Fiction'] },
-  { title: 'Sapiens', author: 'Harari', fallback: ['History', 'Non-Fiction'] },
-  { title: 'A Brief History of Time', author: 'Hawking', fallback: ['Science', 'Non-Fiction'] },
-  { title: 'The Catcher in the Rye', author: 'Salinger', fallback: ['Classics', 'Literary Fiction'] },
-  { title: 'Crime and Punishment', author: 'Dostoyevsky', fallback: ['Classics', 'Literary Fiction'] },
-  { title: 'The Lion, the Witch and the Wardrobe', author: 'Lewis', fallback: ['Fantasy', 'Young Adult'] },
-  { title: 'The Diary of a Young Girl', author: 'Frank', fallback: ['Biography', 'History'] },
-  { title: 'Meditations', author: 'Marcus Aurelius', fallback: ['Philosophy', 'Classics'] },
-  { title: 'The Art of War', author: 'Sun Tzu', fallback: ['Philosophy', 'History'] },
-  { title: 'How to Win Friends and Influence People', author: 'Carnegie', fallback: ['Self-Help', 'Business'] },
-  { title: 'Atomic Habits', author: 'James Clear', fallback: ['Self-Help', 'Non-Fiction'] },
-  { title: 'The Hunger Games', author: 'Suzanne Collins', fallback: ['Dystopian', 'Young Adult'] },
-  { title: 'The Da Vinci Code', author: 'Dan Brown', fallback: ['Thriller', 'Mystery'] },
-  { title: 'The Silence of the Lambs', author: 'Thomas Harris', fallback: ['Thriller', 'Horror'] },
-  { title: 'The Odyssey', author: 'Homer', fallback: ['Classics', 'Poetry'] },
-  { title: 'Leaves of Grass', author: 'Whitman', fallback: ['Poetry', 'Classics'] },
-  { title: 'Cosmos', author: 'Carl Sagan', fallback: ['Science', 'Non-Fiction'] },
+  { title: 'The Hobbit', author: 'Tolkien', genres: ['Fantasy', 'Adventure', 'Classics'] },
+  { title: 'The Fellowship of the Ring', author: 'Tolkien', genres: ['Fantasy', 'Adventure', 'Classics'] },
+  { title: 'The Two Towers', author: 'Tolkien', genres: ['Fantasy', 'Adventure', 'Classics'] },
+  { title: 'The Return of the King', author: 'Tolkien', genres: ['Fantasy', 'Adventure', 'Classics'] },
+  { title: 'Pride and Prejudice', author: 'Austen', genres: ['Romance', 'Classics'] },
+  { title: 'Emma', author: 'Austen', genres: ['Romance', 'Classics'] },
+  { title: 'Sense and Sensibility', author: 'Austen', genres: ['Romance', 'Classics'] },
+  { title: 'Nineteen Eighty-Four', author: 'Orwell', genres: ['Dystopian', 'Classics', 'Science Fiction'] },
+  { title: 'Animal Farm', author: 'Orwell', genres: ['Classics', 'Dystopian'] },
+  { title: "Harry Potter and the Philosopher's Stone", author: 'Rowling', genres: ['Fantasy', 'Young Adult'] },
+  { title: 'Harry Potter and the Chamber of Secrets', author: 'Rowling', genres: ['Fantasy', 'Young Adult'] },
+  { title: 'Harry Potter and the Prisoner of Azkaban', author: 'Rowling', genres: ['Fantasy', 'Young Adult'] },
+  { title: 'Dune', author: 'Herbert', genres: ['Science Fiction', 'Adventure'] },
+  { title: 'A Wizard of Earthsea', author: 'Le Guin', genres: ['Fantasy', 'Young Adult'] },
+  { title: 'The Left Hand of Darkness', author: 'Le Guin', genres: ['Science Fiction', 'Literary Fiction'] },
+  { title: 'The Dispossessed', author: 'Le Guin', genres: ['Science Fiction', 'Literary Fiction'] },
+  { title: 'Murder on the Orient Express', author: 'Agatha Christie', genres: ['Mystery', 'Classics'] },
+  { title: 'And Then There Were None', author: 'Christie', genres: ['Mystery', 'Classics'] },
+  { title: 'The Murder of Roger Ackroyd', author: 'Christie', genres: ['Mystery', 'Classics'] },
+  { title: 'Good Omens', author: 'Gaiman', genres: ['Fantasy', 'Humour'] },
+  { title: 'The Great Gatsby', author: 'Fitzgerald', genres: ['Classics', 'Literary Fiction'] },
+  { title: 'To Kill a Mockingbird', author: 'Harper Lee', genres: ['Classics', 'Literary Fiction'] },
+  { title: 'Brave New World', author: 'Huxley', genres: ['Dystopian', 'Classics', 'Science Fiction'] },
+  { title: 'Frankenstein', author: 'Shelley', genres: ['Horror', 'Classics', 'Science Fiction'] },
+  { title: 'Dracula', author: 'Stoker', genres: ['Horror', 'Classics'] },
+  { title: 'Jane Eyre', author: 'Bronte', genres: ['Romance', 'Classics'] },
+  { title: 'Wuthering Heights', author: 'Bronte', genres: ['Romance', 'Classics'] },
+  { title: 'Moby Dick', author: 'Melville', genres: ['Classics', 'Adventure'] },
+  { title: "The Hitchhiker's Guide to the Galaxy", author: 'Douglas Adams', genres: ['Science Fiction', 'Humour', 'Adventure'] },
+  { title: 'Fahrenheit 451', author: 'Bradbury', genres: ['Dystopian', 'Science Fiction', 'Classics'] },
+  { title: "The Handmaid's Tale", author: 'Atwood', genres: ['Dystopian', 'Literary Fiction', 'Classics'] },
+  { title: 'Sapiens', author: 'Harari', genres: ['History', 'Non-Fiction'] },
+  { title: 'A Brief History of Time', author: 'Hawking', genres: ['Science', 'Non-Fiction'] },
+  { title: 'The Catcher in the Rye', author: 'Salinger', genres: ['Classics', 'Literary Fiction'] },
+  { title: 'Crime and Punishment', author: 'Dostoyevsky', genres: ['Classics', 'Literary Fiction'] },
+  { title: 'The Lion, the Witch and the Wardrobe', author: 'Lewis', genres: ['Fantasy', 'Young Adult', 'Classics'] },
+  { title: 'The Diary of a Young Girl', author: 'Frank', genres: ['Biography', 'History'] },
+  { title: 'Meditations', author: 'Marcus Aurelius', genres: ['Philosophy', 'Classics'] },
+  { title: 'The Art of War', author: 'Sun Tzu', genres: ['Philosophy', 'History'] },
+  { title: 'How to Win Friends and Influence People', author: 'Carnegie', genres: ['Self-Help', 'Business'] },
+  { title: 'Atomic Habits', author: 'James Clear', genres: ['Self-Help', 'Non-Fiction'] },
+  { title: 'The Hunger Games', author: 'Suzanne Collins', genres: ['Dystopian', 'Young Adult', 'Science Fiction'] },
+  { title: 'The Da Vinci Code', author: 'Dan Brown', genres: ['Thriller', 'Mystery'] },
+  { title: 'The Silence of the Lambs', author: 'Thomas Harris', genres: ['Thriller', 'Horror'] },
+  { title: 'The Odyssey', author: 'Homer', genres: ['Classics', 'Poetry', 'Adventure'] },
+  { title: 'Leaves of Grass', author: 'Whitman', genres: ['Poetry', 'Classics'] },
+  { title: 'Cosmos', author: 'Carl Sagan', genres: ['Science', 'Non-Fiction'] },
 ]
 
 // ---------------------------------------------------------------------------------------------
@@ -197,10 +197,20 @@ interface SearchResponse {
 const searchUrl = (query: string) => `https://openlibrary.org/search.json?${query}&fields=${FIELDS}`
 
 const JUNK_TITLE =
-  /summary|study guide|sparknotes|cliffsnotes|box(ed)? set|collection|omnibus|books? 1-|workbook|analysis|a novel by|\bcomplete works\b|\bsampler\b|\bcompanion\b/i
+  /summary|study guide|sparknotes|cliffsnotes|box(ed)? set|collection|omnibus|books? 1-|workbook|analysis|a novel by|\bcomplete\b|\bsampler\b|\bcompanion\b|^novels\b|bachman books|graphic novel|mein kampf|\[\d+ (novels|stories)|\)\s*\/\s*|\w \/ \w/i
 
 /** Titles in other scripts, or with common German/French/Spanish/Italian function words. */
-const NON_ENGLISH_TITLE = /[^\p{Script=Latin}\P{L}]|\b(und|der|trotzdem|les|des|une|della|los|las|el|del|le)\b/iu
+const NON_ENGLISH_TITLE = /[^\p{Script=Latin}\P{L}]|\b(und|der|das|het|trotzdem|les|des|une|della|los|las|el|del|le|la|verden|bumi|cien|culpa|alquimista|gorin)\b/iu
+
+/** Religious scripture is not what this library is about. */
+const SCRIPTURE = /\b(bible|quran|koran|torah|talmud|vedas?|bhagavad|gita|testament)\b/i
+
+/** Textbooks: a single generic academic word, or a "Principles of ..." style title. */
+const GENERIC_TEXTBOOK_TITLE =
+  /^(micro|macro)?(biology|chemistry|physics|economics|psychology|sociology|calculus|algebra|geometry|statistics|anatomy|physiology|genetics|biochemistry|science|history|mathematics|geography|astronomy)$|^(principles|fundamentals|introduction|essentials) of /i
+
+/** Accented letters in a title almost always mean a translated edition (kept apart: /i would fold ſ into s). */
+const ACCENTED_LETTER = /[À-ɏ]/
 
 function isbn13CheckDigit(first12: string): string {
   let sum = 0
@@ -234,7 +244,9 @@ function isUsable(doc: OlDoc): boolean {
   if (doc.first_publish_year > new Date().getFullYear()) return false
   if (JUNK_TITLE.test(doc.title) || (doc.subtitle && JUNK_TITLE.test(doc.subtitle))) return false
   if (doc.language && !doc.language.includes('eng')) return false
-  if (NON_ENGLISH_TITLE.test(doc.title)) return false
+  if (NON_ENGLISH_TITLE.test(doc.title) || ACCENTED_LETTER.test(doc.title)) return false
+  if (SCRIPTURE.test(doc.title) || SCRIPTURE.test(doc.author_name.join(' '))) return false
+  if (GENERIC_TEXTBOOK_TITLE.test(doc.title) || doc.subject?.some((x) => /textbook/i.test(x))) return false
   return true
 }
 
@@ -277,6 +289,8 @@ function cleanDescription(raw: unknown): string {
   s = s.replace(/\(\s*source\s*\)/gi, '')
   s = s.replace(/^from wikipedia:\s*/i, '')
   s = s.replace(/\[\d+\]/g, '')
+  s = s.replace(/\(\s*\/[^)]*\/\s*\)/g, '')
+  s = s.replace(/\[[^\]]*\]/g, '')
   s = s.replace(/<[^>]+>/g, ' ')
   s = s.replace(/https?:\/\/\S+/g, '')
   s = s.replace(/^\s*#+\s*/gm, '')
@@ -348,12 +362,10 @@ async function main() {
       searchUrl(`title=${encodeURIComponent(m.title)}&author=${encodeURIComponent(m.author)}&limit=10`),
     )
     const wanted = normalise(m.title)
-    const candidates = res.docs.filter((d) => normalise(d.title).includes(wanted)).sort(byPopularity)
-    const genresFor = (doc: OlDoc) => {
-      // Subject mapping first; the manual list tops up books the mapping barely covers.
-      return [...new Set([...mapGenres(doc), ...m.fallback])].slice(0, mapGenres(doc).length >= 2 ? 3 : 2)
-    }
-    if (!candidates.some((d) => tryAdd(d, genresFor(d)))) missing.push(m.title)
+    // Exact title matches first (avoids parodies and adaptations), then titles that contain it.
+    const matches = res.docs.filter((d) => normalise(d.title).includes(wanted)).sort(byPopularity)
+    const candidates = [...matches.filter((d) => normalise(d.title) === wanted), ...matches]
+    if (!candidates.some((d) => tryAdd(d, m.genres))) missing.push(m.title)
   }
 
   // 2. Per-genre candidate pools, then round-robin picks so popular crossovers are not hoarded.

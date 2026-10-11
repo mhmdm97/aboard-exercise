@@ -25,10 +25,24 @@
     "pageCount": 440,
     "description": "> \"101 Essays That Will Change The Way You Think, the global bestseller and social media phenomenon, is a collection of author Brianna Wiest's most beloved pieces of writing. Her meditations include why you should pursue purpose over passion, embrace negative thinking, see the wisdom in daily routine, and become aware of the cognitive biases that are creating the way you see your life.",
     "genres": [
-      "Philosophy",
-      "Self-Help"
+      "Philosophy"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/10524689-M.jpg",
+    "averageRating": 4.09
+  },
+  {
+    "title": "11/22/63",
+    "authors": [
+      "Stephen King"
+    ],
+    "isbn": "9780307951434",
+    "publishedYear": 1925,
+    "pageCount": 849,
+    "description": "11/22/63 is a novel by Stephen King about a time traveller who attempts to prevent the assassination of United States President John F. Kennedy, which occurred on November 22, 1963 (the novel's titular date). It is the 60th book published by Stephen King, his 49th novel and the 42nd under his own name.",
+    "genres": [
+      "History"
+    ],
+    "coverUrl": "https://covers.openlibrary.org/b/id/10713447-M.jpg",
     "averageRating": 4.09
   },
   {
@@ -58,7 +72,6 @@
     "description": "Stephen Hawking's ‘A Brief History of Time has become an international publishing phenomenon. Translated into thirty languages, it has sold over ten million copies worldwide and lives on as a science book that continues to captivate and inspire new readers each year. When it was first published in 1988 the ideas discussed in it were at the cutting edge of what was then known about the universe.",
     "genres": [
       "Science",
-      "Philosophy",
       "Non-Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/10432365-M.jpg",
@@ -75,11 +88,26 @@
     "description": "A reprinting of the 1843 first edition, complete with the original illustrations, is supplemented by over eighty related sketches and annotations on and analyses of the text and historical notes on the writing of \"The Christmas Carol.\"",
     "genres": [
       "Poetry",
-      "Classics",
-      "Fantasy"
+      "Classics"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/12875748-M.jpg",
     "averageRating": 3.95
+  },
+  {
+    "title": "A Clash of Kings",
+    "authors": [
+      "George R. R. Martin"
+    ],
+    "isbn": "9780002245852",
+    "publishedYear": 1998,
+    "pageCount": 761,
+    "description": "In this thrilling sequel to A Game of Thrones, George R. R. Martin has created a work of unsurpassed vision, power, and imagination.",
+    "genres": [
+      "Science Fiction",
+      "Fantasy"
+    ],
+    "coverUrl": "https://covers.openlibrary.org/b/id/8231751-M.jpg",
+    "averageRating": 4.29
   },
   {
     "title": "A Clockwork Orange",
@@ -92,8 +120,7 @@
     "description": "A Clockwork Orange is a dystopian satirical black comedy novel by English writer Anthony Burgess, published in 1962. It is set in a near-future society that has a youth subculture of extreme violence. The teenage protagonist, Alex, narrates his violent exploits and his experiences with state authorities intent on reforming him.",
     "genres": [
       "Dystopian",
-      "Humour",
-      "Science Fiction"
+      "Humour"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/14430663-M.jpg",
     "averageRating": 4.01
@@ -125,11 +152,25 @@
     "description": "When nineteen-year-old huntress Feyre kills a wolf in the woods, a terrifying creature arrives to demand retribution. Dragged to a treacherous magical land she knows about only from legends, Feyre discovers that her captor is not truly a beast, but one of the lethal, immortal faeries who once ruled her world. At least, he's not a beast all the time.",
     "genres": [
       "Fantasy",
-      "Young Adult",
-      "Romance"
+      "Young Adult"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/15254465-M.jpg",
     "averageRating": 3.91
+  },
+  {
+    "title": "A Court of Wings and Ruin",
+    "authors": [
+      "Sarah J. Maas"
+    ],
+    "isbn": "9780606410823",
+    "publishedYear": 2017,
+    "pageCount": 720,
+    "description": "Looming war threatens all Feyre holds dear in the third volume of the #1 New York Times bestselling A Court of Thorns and Roses series. Feyre has returned to the Spring Court, determined to gather information on Tamlin's manoeuvrings and the invading king threatening to bring Prythian to its knees.",
+    "genres": [
+      "Fantasy"
+    ],
+    "coverUrl": "https://covers.openlibrary.org/b/id/8506724-M.jpg",
+    "averageRating": 4.3
   },
   {
     "title": "A Game of Thrones",
@@ -160,6 +201,21 @@
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/14424196-M.jpg",
     "averageRating": 3.97
+  },
+  {
+    "title": "A Gentleman in Moscow",
+    "authors": [
+      "Amor Towles"
+    ],
+    "isbn": "9780091944247",
+    "publishedYear": 2016,
+    "pageCount": 511,
+    "description": "A Gentleman in Moscow is a 2016 novel by Amor Towles. It is his second novel, published five years after his New York Times best seller, Rules of Civility (2011).",
+    "genres": [
+      "Literary Fiction"
+    ],
+    "coverUrl": "https://covers.openlibrary.org/b/id/11326818-M.jpg",
+    "averageRating": 3.89
   },
   {
     "title": "A Good Girl's Guide to Murder",
@@ -220,8 +276,6 @@
     "pageCount": 388,
     "description": "A Tale of Two Cities is a historical novel published in 1859 by Charles Dickens, set in London and Paris before and during the French Revolution. The novel tells the story of the French Doctor Manette, his 18-year-long imprisonment in the Bastille in Paris, and his release to live in London with his daughter Lucie whom he had never met.",
     "genres": [
-      "Literary Fiction",
-      "Science",
       "Classics"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/13301713-M.jpg",
@@ -254,8 +308,7 @@
     "description": "A Wrinkle in Time is a science fiction fantasy novel by American writer Madeleine L'Engle, first published in 1962. It is about Meg And Charles Walence. Their father, who was working on a interesting project called a tesseract, goes missing!",
     "genres": [
       "Classics",
-      "Science Fiction",
-      "Fantasy"
+      "Science Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/8709146-M.jpg",
     "averageRating": 3.88
@@ -270,8 +323,7 @@
     "pageCount": 168,
     "description": "This book chronicles the unforgettable account of one of the most severe child abuse cases in California history. It is the story of Dave Pelzer, who was brutally beaten and starved by his emotionally unstable, alcoholic mother: a mother who played tortuous, unpredictable games--games that left him nearly dead.",
     "genres": [
-      "Biography",
-      "Self-Help"
+      "Biography"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/14559604-M.jpg",
     "averageRating": 4.57
@@ -310,23 +362,6 @@
     "averageRating": 3.97
   },
   {
-    "title": "Alice's Adventures in Wonderland",
-    "authors": [
-      "Lewis Carroll"
-    ],
-    "isbn": "9780001004733",
-    "publishedYear": 1865,
-    "pageCount": 133,
-    "description": "Alice's Adventures in Wonderland (commonly Alice in Wonderland) is an 1865 English children's novel by Lewis Carroll. A young girl named Alice falls through a rabbit hole into a fantasy world of anthropomorphic creatures. It is seen as an example of the literary nonsense genre.",
-    "genres": [
-      "Classics",
-      "Fantasy",
-      "Adventure"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10527843-M.jpg",
-    "averageRating": 4.05
-  },
-  {
     "title": "All the Bright Places",
     "authors": [
       "Jennifer Niven"
@@ -336,8 +371,7 @@
     "pageCount": 402,
     "description": "Theodore Finch is fascinated by death, and he constantly thinks of ways he might kill himself. But each time, something good, no matter how small, stops him. Violet Markey lives for the future, counting the days until graduation, when she can escape her Indiana town and her aching grief in the wake of her sister’s recent death.",
     "genres": [
-      "Young Adult",
-      "Romance"
+      "Young Adult"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/14559665-M.jpg",
     "averageRating": 4.18
@@ -381,7 +415,7 @@
     "isbn": "9780307278630",
     "publishedYear": 1991,
     "pageCount": 477,
-    "description": "American Psycho is a novel by Bret Easton Ellis, published in 1991. The story is told in the first person by Patrick Bateman, a serial killer and Manhattan investment banker.",
+    "description": "American Psycho is a novel by Bret Easton Ellis, published in 1991. The story is told in the first person by Patrick Bateman, a serial killer and Manhattan investment banker. Alison Kelly of The Observer notes that while \"some countries so potentially disturbing that it can only be sold shrink-wrapped\", \"critics rave about it\" and \"academics revel in its transgressive and postmodern qualities\".",
     "genres": [
       "Horror"
     ],
@@ -431,8 +465,8 @@
     "pageCount": 128,
     "description": "Animal Farm is a brilliant political satire and a powerful and affecting story of revolutions and idealism, power and corruption. 'All animals are equal. But some animals are more equal than others.'",
     "genres": [
-      "Humour",
-      "Classics"
+      "Classics",
+      "Dystopian"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/11261770-M.jpg",
     "averageRating": 4.17
@@ -477,9 +511,7 @@
     "pageCount": 44,
     "description": "As a Man Thinketh by James Allen, first published in 1902.",
     "genres": [
-      "Philosophy",
-      "Business",
-      "Self-Help"
+      "Philosophy"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/6268048-M.jpg",
     "averageRating": 4.68
@@ -494,8 +526,8 @@
     "pageCount": 323,
     "description": "No matter your goals, Atomic Habits offers a proven framework for improving every day. James Clear, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.",
     "genres": [
-      "Business",
-      "Self-Help"
+      "Self-Help",
+      "Non-Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/12539702-M.jpg",
     "averageRating": 3.97
@@ -510,6 +542,7 @@
     "pageCount": 514,
     "description": "The autobiography of Paramahansa Yogananda (1893 - 1952) details his search for a guru, during which he encountered many spiritual leaders and world-renowned scientists.",
     "genres": [
+      "Non-Fiction",
       "Biography"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/805448-M.jpg",
@@ -540,8 +573,7 @@
     "pageCount": 321,
     "description": "Toni Morrison--author of Song of Solomon and Tar Baby--is a writer of remarkable powers: her novels, brilliantly acclaimed for their passion, their dazzling language and their lyric and emotional force, combine the unassailable truths of experience and emotion with the vision of legend and imagination.",
     "genres": [
-      "Historical Fiction",
-      "Literary Fiction"
+      "Historical Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/8261367-M.jpg",
     "averageRating": 3.91
@@ -562,35 +594,37 @@
     "averageRating": 3.72
   },
   {
-    "title": "Bible",
+    "title": "Blood Meridian",
+    "subtitle": "Or the Evening Redness in the West",
     "authors": [
-      "Bible"
+      "Cormac McCarthy"
     ],
-    "isbn": "9780002201117",
-    "publishedYear": 1200,
-    "pageCount": 1462,
-    "description": "\"Readers who desire a more intimate knowledge of the historical context of the Bible will appreciate the NIV Archaeological Study Bible. Full of informative articles and full-color photographs of places and objects from biblical times, this Bible examines the archaeological record surrounding God’s Word and brings the biblical world to life.",
+    "isbn": "9780307741172",
+    "publishedYear": 1985,
+    "pageCount": 353,
+    "description": "An epic novel of the violence and depravity that attended America's westward expansion, Blood Meridian brilliantly subverts the conventions of the Western novel and the mythology of the \"wild west.\"",
     "genres": [
-      "History"
+      "Historical Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12707846-M.jpg",
-    "averageRating": 4.07
+    "coverUrl": "https://covers.openlibrary.org/b/id/419991-M.jpg",
+    "averageRating": 3.94
   },
   {
-    "title": "Biology",
+    "title": "Born a Crime",
+    "subtitle": "Stories from a South African Childhood",
     "authors": [
-      "Neil Alexander Campbell"
+      "Trevor Noah"
     ],
-    "isbn": "9780130625922",
-    "publishedYear": 1987,
-    "pageCount": 1267,
-    "description": "A comprehensive text for undergraduate-level biology courses that covers cells, genetics, mechanisms and evolution, biological diversity, plant and animal forms and functions, and ecology; and includes review questions, activities, figures, chapter summaries, and a CD-ROM which provides access to online materials.",
+    "isbn": "9780385689229",
+    "publishedYear": 2016,
+    "pageCount": 304,
+    "description": "Born a Crime is the story of a mischievous young boy who grows into a restless young man as he struggles to find himself in a world where he was never supposed to exist.",
     "genres": [
-      "Non-Fiction",
-      "Science"
+      "Biography",
+      "Humour"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/581911-M.jpg",
-    "averageRating": 3.89
+    "coverUrl": "https://covers.openlibrary.org/b/id/8294078-M.jpg",
+    "averageRating": 4.55
   },
   {
     "title": "Brave New World",
@@ -602,9 +636,9 @@
     "pageCount": 240,
     "description": "Originally published in 1932, this outstanding work of literature is more crucial and relevant today than ever before. Cloning, feel-good drugs, antiaging programs, and total social control through politics, programming, and media -- has Aldous Huxley accurately predicted our future?",
     "genres": [
-      "Science",
-      "Science Fiction",
-      "Dystopian"
+      "Dystopian",
+      "Classics",
+      "Science Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/8231823-M.jpg",
     "averageRating": 3.97
@@ -619,8 +653,8 @@
     "pageCount": 756,
     "description": "To be irrevocably in love with a vampire is both fantasy and nightmare woven into a dangerously heightened reality for Bella Swan. Pulled in one direction by her intense passion for Edward Cullen, and in another by her profound connection to werewolf Jacob Black, she has endured a tumultuous year of temptation, loss, and strife to reach the ultimate turning point.",
     "genres": [
-      "Horror",
-      "Mystery"
+      "Mystery",
+      "Horror"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/12643419-M.jpg",
     "averageRating": 3.46
@@ -657,21 +691,6 @@
     "averageRating": 4.03
   },
   {
-    "title": "Bumi Manusia",
-    "authors": [
-      "Pramoedya Ananta Toer"
-    ],
-    "isbn": "9780140063349",
-    "publishedYear": 1972,
-    "pageCount": 360,
-    "description": "Bumi Manusia by Pramoedya Ananta Toer, first published in 1972.",
-    "genres": [
-      "History"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/6643692-M.jpg",
-    "averageRating": 4.42
-  },
-  {
     "title": "Cabin Fever",
     "authors": [
       "Jeff Kinney"
@@ -685,21 +704,6 @@
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/7247522-M.jpg",
     "averageRating": 4.47
-  },
-  {
-    "title": "Cadáver exquisito",
-    "authors": [
-      "Agustina Bazterrica"
-    ],
-    "isbn": "9781782275572",
-    "publishedYear": 2015,
-    "pageCount": 228,
-    "description": "Working at the local processing plant, Marcos is in the business of slaughtering humans—though no one calls them that anymore. His wife has left him, his father is sinking into dementia, and Marcos tries not to think too hard about how he makes a living. After all, it happened so quickly.",
-    "genres": [
-      "Dystopian"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8169547-M.jpg",
-    "averageRating": 3.83
   },
   {
     "title": "Call Me by Your Name",
@@ -758,7 +762,6 @@
     "pageCount": 436,
     "description": "A legendary competition. A mesmerizing romance. An unbreakable bond between two sisters.",
     "genres": [
-      "Young Adult",
       "Fantasy"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/7990753-M.jpg",
@@ -774,7 +777,7 @@
     "pageCount": 254,
     "description": "The story of misfit high-school girl, Carrie White, who gradually discovers that she has telekinetic powers. Repressed by a domineering, ultra-religious mother and tormented by her peers at school, her efforts to fit in lead to a dramatic confrontation during the senior prom.",
     "genres": [
-      "Science",
+      "Science Fiction",
       "Horror",
       "Thriller"
     ],
@@ -791,8 +794,7 @@
     "pageCount": 463,
     "description": "Catch-22 is like no other novel. It has its own rationale, its own extraordinary character. It moves back and forth from hilarity to horror.",
     "genres": [
-      "Historical Fiction",
-      "Humour"
+      "Historical Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/6468653-M.jpg",
     "averageRating": 4.1
@@ -841,44 +843,10 @@
     "pageCount": 184,
     "description": "Charlotte's Web is a book of children's literature by American author E. B. White and illustrated by Garth Williams; it was published on October 15, 1952, by Harper & Brothers.",
     "genres": [
-      "Humour",
-      "Fantasy"
+      "Humour"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/8461797-M.jpg",
     "averageRating": 4.04
-  },
-  {
-    "title": "Chemistry",
-    "subtitle": "The Central Science",
-    "authors": [
-      "Theodore L. Brown",
-      "H. Eugene Lemay",
-      "Bruce E. Bursten"
-    ],
-    "isbn": "9780130097941",
-    "publishedYear": 1977,
-    "pageCount": 1088,
-    "description": "The book provides the basis of modern chemistry that every student needs for their professional development and as preparation for more complex chemistry courses. It also offers features that facilitate learning and serve as a guide for students to acquire a conceptual understanding and the skills needed to solve problems.",
-    "genres": [
-      "Non-Fiction"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9407725-M.jpg",
-    "averageRating": 4.09
-  },
-  {
-    "title": "Cien años de soledad",
-    "authors": [
-      "Gabriel García Márquez"
-    ],
-    "isbn": "9780060114183",
-    "publishedYear": 1967,
-    "pageCount": 432,
-    "description": "Cien años de soledad es una novela del escritor colombiano Gabriel García Márquez, ganador del Premio Nobel de Literatura en 1982. Es considerada una obra maestra de la literatura hispanoamericana y universal, cumbre del denominado \"realismo mágico\". Es asimismo una de las obras más traducidas y leídas en español.",
-    "genres": [
-      "Fantasy"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12627383-M.jpg",
-    "averageRating": 4.1
   },
   {
     "title": "Cinder",
@@ -891,8 +859,7 @@
     "description": "Humans and androids crowd the raucous streets of New Beijing. A deadly plague ravages the population. From space, a ruthless lunar people watch, waiting to make their move.",
     "genres": [
       "Dystopian",
-      "Young Adult",
-      "Fantasy"
+      "Young Adult"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/6998634-M.jpg",
     "averageRating": 4.11
@@ -907,9 +874,7 @@
     "pageCount": 404,
     "description": "In the house of Helios, god of the sun and mightiest of the Titans, a daughter is born. But Circe is a strange child--not powerful, like her father, nor viciously alluring like her mother. Turning to the world of mortals for companionship, she discovers that she does possess power--the power of witchcraft, which can transform rivals into monsters and menace the gods themselves.",
     "genres": [
-      "Historical Fiction",
-      "Fantasy",
-      "Literary Fiction"
+      "Historical Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/8739376-M.jpg",
     "averageRating": 4.16
@@ -957,8 +922,7 @@
     "pageCount": 231,
     "description": "We oftentimes look towards the outside world to find the roots of our problems. However, most of the times, we should be looking inwards. Our mind and our emotions determine our state of being in the present moment.",
     "genres": [
-      "Self-Help",
-      "Business"
+      "Self-Help"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/12009823-M.jpg",
     "averageRating": 3.82
@@ -973,9 +937,7 @@
     "pageCount": 176,
     "description": "When Coraline steps through a door to find another house strangely similar to her own (only better), things seem marvelous. But there's another mother there, and another father, and they want her to stay and be their little girl. They want to change her and never let her go.",
     "genres": [
-      "Horror",
-      "Fantasy",
-      "Young Adult"
+      "Horror"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/14171421-M.jpg",
     "averageRating": 4.06
@@ -1028,37 +990,6 @@
     "coverUrl": "https://covers.openlibrary.org/b/id/13116014-M.jpg"
   },
   {
-    "title": "Culpa mía",
-    "authors": [
-      "Mercedes Ron"
-    ],
-    "isbn": "9781464240010",
-    "publishedYear": 2014,
-    "pageCount": 416,
-    "description": "Fast-paced and sizzling with a forbidden enemies-to-lovers romance, My Fault is the first book in Mercedes Ron's Culpable trilogy. This suspenseful YA series untangles the threads of love, trauma, and secrets, perfect for fans of Ugly Love and After. Seventeen-year-old Noah Morgan loves her quiet, normal life in Toronto.",
-    "genres": [
-      "Mystery"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10512957-M.jpg",
-    "averageRating": 3.97
-  },
-  {
-    "title": "Das Parfum",
-    "subtitle": "Die Geschichte eines Mörders",
-    "authors": [
-      "Patrick Süskind"
-    ],
-    "isbn": "9780140092448",
-    "publishedYear": 1985,
-    "pageCount": 263,
-    "description": "INTERNATIONAL BESTSELLER • Set in eighteenth-century France, the classic novel that provokes a terrifying examination of what happens when one man’s indulgence in his greatest passion—his sense of smell—leads to murder. In the slums of eighteenth-century France, the infant Jean-Baptiste Grenouille is born with one sublime gift—an absolute sense of smell.",
-    "genres": [
-      "Thriller"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10910286-M.jpg",
-    "averageRating": 3.9
-  },
-  {
     "title": "Deep Work",
     "subtitle": "Rules for Focused Success in a Distracted World",
     "authors": [
@@ -1085,8 +1016,7 @@
     "description": "In Shatter Me, Juliette escaped from The Reestablishment by seducing Warner -- and then putting a bullet in his shoulder. But as she'll learn in Destroy Me, Warner is not that easy to get rid of . . . Back at the base and recovering from his near-fatal wound, Warner must do everything in his power to keep his soldiers in check and suppress any mention of a rebellion in the sector.",
     "genres": [
       "Science Fiction",
-      "Romance",
-      "Dystopian"
+      "Romance"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/14427908-M.jpg",
     "averageRating": 4.09
@@ -1117,8 +1047,7 @@
     "description": "‘Divergent’ is the first in a trilogy of dystopian, YA novels by Veronica Roth. The book is written from Beatrice Prior’s (Tris), point of view and is written in short chapters making it easy to put down and pick up again. The story is fast paced with full on action throughout.",
     "genres": [
       "Dystopian",
-      "Science Fiction",
-      "Young Adult"
+      "Science Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/13274634-M.jpg",
     "averageRating": 3.97
@@ -1133,7 +1062,7 @@
     "pageCount": 224,
     "description": "It was January 2021, and Rick Deckard had a license to kill. Somewhere among the hordes of humans out there, lurked several rogue androids. Deckard's assignment--find them and then...\"retire\" them.",
     "genres": [
-      "Science",
+      "Literary Fiction",
       "Science Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/207515-M.jpg",
@@ -1179,6 +1108,7 @@
     "pageCount": 220,
     "description": "In Dog Days, book 4 of the Diary of a Wimpy Kid series from #1 international bestselling author Jeff Kinney, it's summer vacation, the weather's great, and all the kids are having fun outside. So where's Greg Heffley? Inside his house, playing video games with the shades drawn.",
     "genres": [
+      "History",
       "Humour"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/12366143-M.jpg",
@@ -1194,28 +1124,10 @@
     "pageCount": 240,
     "description": "Get ready for Action, Suspense, Romance... and Laffs! George and Harold have created a new breed of justice. When Greg the police dog and his cop companion are injured on the job, a life-saving surgery changes the course of history, and Dog Man is born.",
     "genres": [
-      "Humour",
-      "Adventure"
+      "Humour"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/7894142-M.jpg",
     "averageRating": 4.43
-  },
-  {
-    "title": "Don Quijote de la Mancha",
-    "authors": [
-      "Miguel de Cervantes Saavedra"
-    ],
-    "isbn": "9780023205200",
-    "publishedYear": 1600,
-    "pageCount": 519,
-    "description": "Don Quijote de la Mancha es una novela escrita por el español Miguel de Cervantes Saavedra. Publicada su primera parte con el título de El ingenioso hidalgo don Quijote de la Mancha a comienzos de 1605, es la obra más destacada de la literatura española y una de las principales de la literatura universal.",
-    "genres": [
-      "Philosophy",
-      "Classics",
-      "Adventure"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14428305-M.jpg",
-    "averageRating": 3.9
   },
   {
     "title": "Don't Believe Everything You Think",
@@ -1248,21 +1160,20 @@
     "averageRating": 4.5
   },
   {
-    "title": "Dracula",
+    "title": "Dracula's Guest and Other Weird Stories",
     "authors": [
-      "Bram Stoker"
+      "Bram Stoker",
+      "Bram Bram Stoker"
     ],
-    "isbn": "9780003302240",
-    "publishedYear": 1897,
-    "pageCount": 384,
-    "description": "Na história, um casal e seus amigos são atormentados por Conde Drácula, uma entidade sobrenatural e hematófoga que, presa em uma maldição contagiosa, pretende se mudar de seu recluso castelo na Transilvânia para a efervescente Londres do século XIX. Com a ajuda do professor Van Helsing, o grupo de amigos pretende enfrentar o morto-vivo, mesmo com todos os perigos que a ofensiva trará.",
+    "isbn": "9780090801701",
+    "publishedYear": 1937,
+    "pageCount": 114,
+    "description": "Dracula’s Guest (1914) is a collection of short stories by Irish author Bram Stoker. Edited and published by Florence, the author’s wife, following Stoker’s death only two years prior, Dracula’s Guest helped to establish the Irish master of Gothic horror’s reputation as a leading writer of the early-twentieth century.",
     "genres": [
       "Horror",
-      "Fantasy",
-      "Science Fiction"
+      "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12216503-M.jpg",
-    "averageRating": 3.99
+    "coverUrl": "https://covers.openlibrary.org/b/id/2039484-M.jpg"
   },
   {
     "title": "Dune",
@@ -1274,7 +1185,8 @@
     "pageCount": 608,
     "description": "Set on the desert planet Arrakis, Dune is the story of the boy Paul Atreides, heir to a noble family tasked with ruling an inhospitable world where the only thing of value is the \"spice\" melange, a drug capable of extending life and enhancing consciousness. Coveted across the known universe, melange is a prize worth killing for...",
     "genres": [
-      "Science Fiction"
+      "Science Fiction",
+      "Adventure"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/11481354-M.jpg",
     "averageRating": 4.3
@@ -1289,8 +1201,7 @@
     "pageCount": 613,
     "description": "Steinbeck considered East of Eden to be his masterpiece.",
     "genres": [
-      "Historical Fiction",
-      "Classics"
+      "Historical Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/11386937-M.jpg",
     "averageRating": 4.1
@@ -1305,8 +1216,7 @@
     "pageCount": 128,
     "description": "There just isn't enough time for everything on our to-do list—and there never will be. Successful people don't try to do everything. They learn to focus on the most important tasks and make sure those get done.",
     "genres": [
-      "Self-Help",
-      "Business"
+      "Self-Help"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/847534-M.jpg",
     "averageRating": 3.94
@@ -1327,6 +1237,23 @@
     "averageRating": 3.8
   },
   {
+    "title": "Eleanor & Park",
+    "authors": [
+      "Rainbow Rowell"
+    ],
+    "isbn": "9780385368261",
+    "publishedYear": 2012,
+    "pageCount": 336,
+    "description": "Two misfits. One extraordinary love. ##",
+    "genres": [
+      "Philosophy",
+      "Romance",
+      "Young Adult"
+    ],
+    "coverUrl": "https://covers.openlibrary.org/b/id/12917595-M.jpg",
+    "averageRating": 4.11
+  },
+  {
     "title": "Elon Musk",
     "subtitle": "Tesla, SpaceX, and the Quest for a Fantastic Future",
     "authors": [
@@ -1337,9 +1264,8 @@
     "pageCount": 396,
     "description": "In the spirit of Steve Jobs and Moneyball, Elon Musk is both an illuminating and authorized look at the extraordinary life of one of Silicon Valley's most exciting, unpredictable, and ambitious entrepreneurs -- a real-life Tony Stark -- and a fascinating exploration of the renewal of American invention and its new \"makers.\"",
     "genres": [
-      "Non-Fiction",
-      "Business",
-      "Biography"
+      "Biography",
+      "Business"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/8463846-M.jpg",
     "averageRating": 4.07
@@ -1355,7 +1281,6 @@
     "description": "Emma, by Jane Austen, is a novel about youthful hubris and the perils of misconstrued romance. The novel was first published in December 1815. As in her other novels, Austen explores the concerns and difficulties of genteel women living in Georgian-Regency England; she also creates a lively comedy of manners among her characters.",
     "genres": [
       "Romance",
-      "Humour",
       "Classics"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/9278312-M.jpg",
@@ -1371,8 +1296,7 @@
     "pageCount": 376,
     "description": "¿Por qué algunas personas parecen dotadas de un don especial que les permite vivir bien, aunque no sean las que más se destacan por su inteligencia? ¿Por qué no siempre el alumno más inteligente termina siendo el más exitoso? ¿Por qué unos son más capaces que otros para enfrentar contratiempos, superar obstáculos y ver las dificultades bajo una óptica distinta?",
     "genres": [
-      "Non-Fiction",
-      "Self-Help"
+      "Non-Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/1359485-M.jpg",
     "averageRating": 3.94
@@ -1420,8 +1344,9 @@
     "pageCount": 188,
     "description": "Fahrenheit 451 is a 1953 dystopian novel by American writer Ray Bradbury. Often regarded as one of his best works, the novel presents a future American society where books are outlawed and \"firemen\" burn any that are found. The book's tagline explains the title as \"'the temperature at which book paper catches fire, and burns\": the autoignition temperature of paper.",
     "genres": [
+      "Dystopian",
       "Science Fiction",
-      "Dystopian"
+      "Classics"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/12993656-M.jpg",
     "averageRating": 3.98
@@ -1451,8 +1376,7 @@
     "pageCount": 544,
     "description": "When literature student Anastasia Steele goes to interview young entrepreneur Christian Grey, she encounters a man who is beautiful, brilliant, and intimidating. The unworldly, innocent Ana is startled to realize she wants this man and, despite his enigmatic reserve, finds she is desperate to get close to him.",
     "genres": [
-      "Romance",
-      "Business"
+      "Romance"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/12648183-M.jpg",
     "averageRating": 3.93
@@ -1544,7 +1468,6 @@
     "pageCount": 240,
     "description": "One of the great masterworks of science fiction, the Foundation novels of Isaac Asimov are unsurpassed for their unique blend of nonstop action, daring ideas, and extensive world-building. The story of our future begins with the history of Foundation and its greatest psychohistorian: Hari Seldon. For twelve thousand years the Galactic Empire has ruled supreme.",
     "genres": [
-      "Science",
       "Science Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/14612610-M.jpg",
@@ -1566,6 +1489,23 @@
     "averageRating": 4.24
   },
   {
+    "title": "Frankenstein",
+    "subtitle": "ou O Prometeu Moderno",
+    "authors": [
+      "Mary Shelley"
+    ],
+    "isbn": "9788594540188",
+    "publishedYear": 2017,
+    "pageCount": 304,
+    "description": "Narra a história do Dr. Victor Frankenstein, um cientista ambicioso que cria uma criatura de forma monstruosa a partir de partes de cadáveres, e a subsequente tragédia que assola suas vidas após a criatura ser rejeitada e abandonada por seu criador.",
+    "genres": [
+      "Horror",
+      "Classics",
+      "Science Fiction"
+    ],
+    "coverUrl": "https://covers.openlibrary.org/b/id/15118068-M.jpg"
+  },
+  {
     "title": "Frankenstein; or, The Modern Prometheus",
     "authors": [
       "Mary Shelley"
@@ -1575,8 +1515,8 @@
     "pageCount": 240,
     "description": "Frankenstein; or, The Modern Prometheus is an 1818 novel written by English author Mary Shelley. Frankenstein tells the story of Victor Frankenstein, a young scientist who creates a sapient creature in an unorthodox scientific experiment. Shelley started writing the story when she was 18, and the first edition was published anonymously in London on 1 January 1818, when she was 20.",
     "genres": [
-      "Horror",
       "Science Fiction",
+      "Horror",
       "Classics"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/12356249-M.jpg",
@@ -1658,28 +1598,11 @@
     "pageCount": 400,
     "description": "Armageddon only happens once, you know. They don't let you go around again until you get it right. According to the Nice and Accurate Prophecies of Agnes Nutter, Witch - the world's only totally reliable guide to the future, written in 1655, before she exploded - the world will end on a Saturday.",
     "genres": [
-      "Humour",
-      "Fantasy"
+      "Fantasy",
+      "Humour"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/10482258-M.jpg",
     "averageRating": 4.42
-  },
-  {
-    "title": "Gorin no sho",
-    "authors": [
-      "Miyamoto Musashi"
-    ],
-    "isbn": "9780006384342",
-    "publishedYear": 1963,
-    "pageCount": 124,
-    "description": "A psychological guide to strategy applicable to business, philosophy, or martial arts, written by sixteenth-century warrior Miyamoto Musashi as a means of explaining his success as a practitioner of Japanese swordfighting, or Kendo.",
-    "genres": [
-      "Biography",
-      "Science",
-      "Philosophy"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/6621293-M.jpg",
-    "averageRating": 3.83
   },
   {
     "title": "Great Expectations",
@@ -1722,28 +1645,10 @@
     "pageCount": 32,
     "description": "Welcome the family classic with an elegant, refreshed cover — the quintessential picture book, just waiting to be shared. Sometimes, when you love someone very, very much, you want to find a way of describing how much you treasure them. But, as Little Nutbrown Hare and Big Nutbrown Hare discover, love is not an easy thing to measure!",
     "genres": [
-      "Classics",
-      "Romance"
+      "Classics"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/13282906-M.jpg",
     "averageRating": 4.34
-  },
-  {
-    "title": "Gulliver's Travels",
-    "authors": [
-      "Jonathan Swift"
-    ],
-    "isbn": "9780004246468",
-    "publishedYear": 1726,
-    "pageCount": 278,
-    "description": "A parody of traveler’s tales and a satire of human nature, “Gulliver’s Travels” is Jonathan Swift’s most famous work which was first published in 1726. An immensely popular tale ever since its original publication, “Gulliver’s Travels” is the story of its titular character, Lemuel Gulliver, a man who loves to travel.",
-    "genres": [
-      "Biography",
-      "Humour",
-      "Adventure"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12717083-M.jpg",
-    "averageRating": 3.62
   },
   {
     "title": "Guns, Germs, and Steel",
@@ -1756,26 +1661,10 @@
     "pageCount": 528,
     "description": "An epic detective story that offers a gripping expose on why the world is so unequal. Professor Jared Diamond traveled the globe for over 30 years trying to answer this question.",
     "genres": [
-      "History",
-      "Science"
+      "History"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/7884018-M.jpg",
     "averageRating": 4.13
-  },
-  {
-    "title": "Hamlet",
-    "authors": [
-      "William Shakespeare"
-    ],
-    "isbn": "9780001973176",
-    "publishedYear": 1603,
-    "pageCount": 192,
-    "description": "In this quintessential Shakespeare tragedy, a young prince's halting pursuit of revenge for the murder of his father unfolds in a series of highly charged confrontations that have held audiences spellbound for nearly four centuries. Those fateful exchanges, and the anguished soliloquies that precede and follow them, probe depths of human feeling rarely sounded in any art.",
-    "genres": [
-      "Historical Fiction"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8281954-M.jpg",
-    "averageRating": 4
   },
   {
     "title": "Harry Potter and the Chamber of Secrets",
@@ -1788,7 +1677,6 @@
     "description": "Throughout the summer holidays after his first year at Hogwarts School of Witchcraft and Wizardry, Harry Potter has been receiving sinister warnings from a house-elf called Dobby. Now, back at school to start his second year, Harry hears unintelligible whispers echoing through the corridors. Before long the attacks begin: students are found as if turned to stone.",
     "genres": [
       "Fantasy",
-      "Adventure",
       "Young Adult"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/15158664-M.jpg",
@@ -1886,7 +1774,6 @@
     "description": "Turning the envelope over, his hand trembling, Harry saw a purple wax seal bearing a coat of arms; a lion, an eagle, a badger and a snake surrounding a large letter 'H'. HARRY POTTER has never even heard of Hogwarts when the LETTERS start dropping on the doormat at number four, Privet Drive.",
     "genres": [
       "Fantasy",
-      "Adventure",
       "Young Adult"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/15155833-M.jpg",
@@ -1903,7 +1790,6 @@
     "description": "For Harry Potter, it’s the start of another far-from-ordinary year at Hogwarts when the Knight Bus crashes through the darkness and comes to an abrupt halt in front of him. It turns out that Sirius Black, mass-murderer and follower of Lord Voldemort, has escaped – and they say he is coming after Harry. In his first Divination class, Professor Trelawney sees an omen of death in Harry’s tea leaves.",
     "genres": [
       "Fantasy",
-      "Adventure",
       "Young Adult"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/10580435-M.jpg",
@@ -1936,27 +1822,10 @@
     "description": "The Manipulator I can manipulate the emotions of anyone who lets me. I will make you hurt, make you cry, make you laugh and sigh. But my words don't affect him.",
     "genres": [
       "Horror",
-      "Romance",
-      "Fantasy"
+      "Romance"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/12992962-M.jpg",
     "averageRating": 3.6
-  },
-  {
-    "title": "Heart of Darkness",
-    "authors": [
-      "Joseph Conrad"
-    ],
-    "isbn": "9780007424573",
-    "publishedYear": 1899,
-    "pageCount": 136,
-    "description": "Heart of Darkness (1899) is a novella by Polish-English novelist Joseph Conrad, about a voyage up the Congo River into the Congo Free State, in the heart of Africa, by the story's narrator Charles Marlow. Marlow tells his story to friends aboard a boat anchored on the River Thames. Joseph Conrad is one of the greatest English writers, and Heart of Darkness is considered his best.",
-    "genres": [
-      "Literary Fiction",
-      "Mystery"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12307847-M.jpg",
-    "averageRating": 3.59
   },
   {
     "title": "Heartstopper, Volume 1",
@@ -1972,21 +1841,6 @@
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/9020805-M.jpg",
     "averageRating": 4.35
-  },
-  {
-    "title": "Het Achterhuis",
-    "authors": [
-      "Anne Frank"
-    ],
-    "isbn": "9780090549405",
-    "publishedYear": 1944,
-    "pageCount": 285,
-    "description": "Het Achterhuis is de titel van het dagboek van Anne Frank (1929-1945) voor het eerst uitgegeven op 25 juni 1947. Het is genoemd naar het onderduikpand Het Achterhuis op de Prinsengracht en is het verhaal van een ondergedoken jong Joods meisje ten tijde van de Tweede Wereldoorlog. Het is wereldwijd een van de meest gelezen boeken.",
-    "genres": [
-      "Biography"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8584021-M.jpg",
-    "averageRating": 4.18
   },
   {
     "title": "Holes",
@@ -2013,8 +1867,7 @@
     "pageCount": 597,
     "description": "Hazel stands at a crossroads. She and the remaining crew of the Argo II could return home with the Athena Parthenos statue and try to stop Camp Half-Blood and Camp Jupiter from going to war.",
     "genres": [
-      "Adventure",
-      "Fantasy"
+      "Humour"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/8057334-M.jpg",
     "averageRating": 4.3
@@ -2076,8 +1929,7 @@
     "pageCount": 304,
     "description": "As the oldest daughter, willful, outspoken Sophie knew that her life could lead to nothing but mistakes. When her father dies, her stepmother sends her two sisters out to make their fortunes while Sophie continues to work in the family hattery. As she whispers her thoughts to the hats she trims, the shop begins to grow in popularity, until she offends the Wicked Witch of the Waste.",
     "genres": [
-      "Young Adult",
-      "Fantasy"
+      "Young Adult"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/8783945-M.jpg",
     "averageRating": 4.41
@@ -2092,8 +1944,7 @@
     "pageCount": 685,
     "description": "The final installment to the Cat and Mouse Duet... The Diamond: Death walks alongside me, But the reaper is no match for me. I'm trapped in a world full of monsters dressed as men, and those who aren't as they seem.",
     "genres": [
-      "Horror",
-      "Romance"
+      "Horror"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/14614757-M.jpg",
     "averageRating": 3.87
@@ -2138,7 +1989,7 @@
     "pageCount": 178,
     "description": "This is a story set in a post-apocalyptic future. The Cold War progressed until it was too complicated for humans to manage, so the three major superpowers each developed a computer program to help run the war. When one of the programs becomes sentient it eliminates all of the human race except five persons, which it tortures for eternity.",
     "genres": [
-      "Science Fiction"
+      "Science"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/5540875-M.jpg",
     "averageRating": 4.19
@@ -2153,8 +2004,7 @@
     "pageCount": 130,
     "description": "A collection of modern poetic-style prose to cradle, comfort, guide and hold space for emotions big and small. Fans of Brianna Wiest, Bianca Sparacino, and Yung Pueblo are sure to enjoy. I Have to Tell You Something is Zara Bas's first book of pieces written from the most tender depths of a healing heart exploring themes of love, loss, grief, loneliness and self-worth.",
     "genres": [
-      "Poetry",
-      "Self-Help"
+      "Poetry"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/13945571-M.jpg",
     "averageRating": 3.73
@@ -2169,8 +2019,7 @@
     "pageCount": 281,
     "description": "She was born Marguerite, but her brother Bailey nicknamed her Maya (\"mine\"). As little children they were sent to live with their grandmother in Stamps, Arkansas. Their early world revolved around this remarkable woman and the Store she ran for the black community.",
     "genres": [
-      "Biography",
-      "Non-Fiction"
+      "Biography"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/9367075-M.jpg",
     "averageRating": 4.1
@@ -2232,8 +2081,7 @@
     "pageCount": 368,
     "description": "A New York Times Bestseller A BookTok Viral Sensation An achingly authentic and raw portrait of love, regret, and the life-altering impact of the relationships we hold closest to us, this YA romance bestseller is perfect for fans of Colleen Hoover, Jenny Han, and You've Reached Sam. If he had been with me, everything would have been different… Autumn and Finn used to be inseparable.",
     "genres": [
-      "Young Adult",
-      "Romance"
+      "Young Adult"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/14339089-M.jpg",
     "averageRating": 4.19
@@ -2331,6 +2179,22 @@
     "averageRating": 3.86
   },
   {
+    "title": "Insurgent",
+    "authors": [
+      "Veronica Roth"
+    ],
+    "isbn": "9780007442911",
+    "publishedYear": 2011,
+    "pageCount": 525,
+    "description": "One choice can transform you--or it can destroy you. But every choice has consequences, and as unrest surges in the factions all around her, Tris Prior must continue trying to save those she loves--and herself--while grappling with haunting questions of grief and forgiveness, identity and loyalty, politics and love.",
+    "genres": [
+      "Dystopian",
+      "Romance"
+    ],
+    "coverUrl": "https://covers.openlibrary.org/b/id/7083755-M.jpg",
+    "averageRating": 3.95
+  },
+  {
     "title": "Interview With the Vampire",
     "authors": [
       "Anne Rice"
@@ -2355,8 +2219,7 @@
     "pageCount": 295,
     "description": "A fantastic book about a house cat named Rusty who joins a Clan of wild cat's and fights through taunting, terrible events, and a suspicious warrior named Tigerclaw. But a prophecy given to the leader Bluestar garentees Fire alone will save our Clan Jenseits der Menschen, tief verborgen im Wald, leben die ungezähmten Katzen in Clans zusammen.",
     "genres": [
-      "Adventure",
-      "Fantasy"
+      "Adventure"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/12720669-M.jpg",
     "averageRating": 4.5
@@ -2372,8 +2235,7 @@
     "description": "\"It\" is a 1986 horror novel by American author Stephen King. \"It\" was his 22nd book and his 17th novel written under his own name. The story follows the experiences of seven children as they are terrorized by an evil entity that exploits the fears of its victims to disguise itself while hunting its prey.",
     "genres": [
       "Literary Fiction",
-      "Horror",
-      "Thriller"
+      "Horror"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/8569284-M.jpg",
     "averageRating": 4.09
@@ -2435,8 +2297,7 @@
     "pageCount": 144,
     "description": "Roald Dahl's first and most widely celebrated book for young people continues to thrill readers around the world. When James accidentally drops some magic crystals by the old peach tree, strange things start to happen. The peach at the top of the tree begins to grow, and before long it's as big as a house.",
     "genres": [
-      "Humour",
-      "Fantasy"
+      "Humour"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/8252454-M.jpg",
     "averageRating": 3.93
@@ -2444,18 +2305,18 @@
   {
     "title": "Jane Eyre",
     "authors": [
-      "Charlotte Brontë"
+      "Charlotte Brontë",
+      "Naunerle C. Farr"
     ],
-    "isbn": "9780004244327",
+    "isbn": "9780486853864",
     "publishedYear": 1847,
-    "pageCount": 480,
-    "description": "The novel is set somewhere in the north of England.",
+    "pageCount": 386,
+    "description": "Jane Eyre by Charlotte Brontë, first published in 1847.",
     "genres": [
       "Romance",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8235363-M.jpg",
-    "averageRating": 4.04
+    "coverUrl": "https://covers.openlibrary.org/b/id/14751355-M.jpg"
   },
   {
     "title": "Jurassic Park",
@@ -2467,8 +2328,7 @@
     "pageCount": 455,
     "description": "Jurassic Park is a 1990 science fiction novel written by Michael Crichton. A cautionary tale about genetic engineering, it presents the collapse of an amusement park showcasing genetically re-created dinosaurs to illustrate the mathematical concept of chaos theory and its real-world implications. A sequel titled The Lost World, also written by Crichton, was published in 1995.",
     "genres": [
-      "Thriller",
-      "Science Fiction"
+      "Thriller"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/12882940-M.jpg",
     "averageRating": 4.17
@@ -2487,23 +2347,6 @@
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/13588136-M.jpg",
     "averageRating": 4.25
-  },
-  {
-    "title": "La Peste",
-    "authors": [
-      "Albert Camus"
-    ],
-    "isbn": "9780075415411",
-    "publishedYear": 1942,
-    "pageCount": 278,
-    "description": "The Plague (French: La Peste) is a novel by Albert Camus, published in 1947, that tells the story of a plague sweeping the French Algerian city of Oran. It asks a number of questions relating to the nature of destiny and the human condition. The characters in the book, ranging from doctors to vacationers to fugitives, all help to show the effects the plague has on a populace.",
-    "genres": [
-      "Literary Fiction",
-      "Classics",
-      "Romance"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13151272-M.jpg",
-    "averageRating": 4.18
   },
   {
     "title": "Leaves of Grass",
@@ -2533,7 +2376,6 @@
     "pageCount": 140,
     "description": "Bill Gates bought the Codex Leicester a notebook of Leonardo da Vinci's scientific observations and theories in 1994 from the estate of Armand Hammer for $30.8 million. Last year Gates loaned the work to Australia's Powerhouse Museum, which prepared this companion to its exhibition.",
     "genres": [
-      "Science",
       "Biography"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/919361-M.jpg",
@@ -2550,8 +2392,7 @@
     "description": "After the tragic sinking of a cargo ship, one solitary lifeboat remains bobbing on the wild, blue Pacific. The only survivors from the wreck are a sixteen-year-old boy named Pi, a hyena, a zebra (with a broken leg), a female orang-utan… and a 450-pound Royal Bengal tiger. The scene is set for one of the most extraordinary works of fiction in recent years.",
     "genres": [
       "Literary Fiction",
-      "Adventure",
-      "Young Adult"
+      "Adventure"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/12840573-M.jpg",
     "averageRating": 3.95
@@ -2583,8 +2424,7 @@
     "description": "Louisa May Alcotts classic novel, set during the Civil War, has always captivated even the most reluctant readers. Little girls, especially, love following the adventures of the four March sisters--Meg, Beth, Amy, and most of all, the tomboy Jo--as they experience the joys and disappointments, tragedies and triumphs, of growing up.",
     "genres": [
       "Historical Fiction",
-      "Classics",
-      "Romance"
+      "Classics"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/8775559-M.jpg",
     "averageRating": 4.06
@@ -2600,8 +2440,7 @@
     "description": "Lolita is a 1955 novel written by Russian-American novelist Vladimir Nabokov. The novel is notable for its controversial subject: the protagonist and unreliable narrator, a middle-aged literature professor under the pseudonym Humbert Humbert, is obsessed with a 12-year-old girl, Dolores Haze, whom he sexually molests after he becomes her stepfather. \"Lolita\" is his private nickname for Dolores.",
     "genres": [
       "Classics",
-      "Romance",
-      "Young Adult"
+      "Romance"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/12984540-M.jpg",
     "averageRating": 3.97
@@ -2632,45 +2471,11 @@
     "pageCount": 243,
     "description": "Lord of the Flies is a 1954 novel by Nobel Prize–winning British author William Golding. The book focuses on a group of British boys stranded on an uninhabited island and their disastrous attempt to govern themselves. Themes include the tension between groupthink and individuality, between rational and emotional reactions, and between morality and immorality.",
     "genres": [
-      "Thriller",
+      "Classics",
       "Adventure"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/8684447-M.jpg",
     "averageRating": 3.67
-  },
-  {
-    "title": "L’étranger",
-    "authors": [
-      "Albert Camus"
-    ],
-    "isbn": "9780075478126",
-    "publishedYear": 1942,
-    "pageCount": 143,
-    "description": "L'Étranger est le premier roman publié d’Albert Camus, paru en 1942. Il prend place dans la tétralogie que Camus nommera « cycle de l’absurde » qui décrit les fondements de la philosophie camusienne : l’absurde. Le roman a été traduit en soixante-huit langues.",
-    "genres": [
-      "Classics",
-      "Adventure",
-      "Literary Fiction"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13151269-M.jpg",
-    "averageRating": 4.11
-  },
-  {
-    "title": "Macbeth",
-    "authors": [
-      "William Shakespeare"
-    ],
-    "isbn": "9780003252538",
-    "publishedYear": 1508,
-    "pageCount": 135,
-    "description": "The play concerns a trusted general who secretly lusts for power. Encouraged by the prophecies of three witches and urged on by his ambitious wife Macbeth commits regicide. Left fearful and superstitious by this desperate act he is driven to a spiralling course of murder and outrage, almost inevitably culminating in his own death.",
-    "genres": [
-      "Poetry",
-      "Young Adult",
-      "Literary Fiction"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/872432-M.jpg",
-    "averageRating": 4
   },
   {
     "title": "Matilda",
@@ -2698,9 +2503,7 @@
     "pageCount": 295,
     "description": "A story of a Jewish survivor of Hitler's Europe and his son, a cartoonist who tries to come to terms with his father's story and history itself.",
     "genres": [
-      "Biography",
-      "History",
-      "Non-Fiction"
+      "Biography"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/10210168-M.jpg",
     "averageRating": 4.49
@@ -2738,23 +2541,6 @@
     "averageRating": 4.1
   },
   {
-    "title": "Mein Kampf",
-    "authors": [
-      "Adolf Hitler"
-    ],
-    "isbn": "9780091009007",
-    "publishedYear": 1922,
-    "pageCount": 615,
-    "description": "1925 autobiographical book \"My Struggle\" (USA: \"My Battle\") by Nazi Party leader Adolf Hitler On April 1, 1924, because of the sentence handed down by the People's Court of Munich, I had to begin that day, serving my term in the fortress at Landsberg on the Lech.",
-    "genres": [
-      "Biography",
-      "History",
-      "Science"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12724015-M.jpg",
-    "averageRating": 4.07
-  },
-  {
     "title": "Men are From Mars, Women are From Venus",
     "authors": [
       "John Gray"
@@ -2770,40 +2556,6 @@
     "averageRating": 3.81
   },
   {
-    "title": "Metamorphosis",
-    "authors": [
-      "Franz Kafka"
-    ],
-    "isbn": "9780131941748",
-    "publishedYear": 1915,
-    "pageCount": 88,
-    "description": "Metamorphosis (German: Die Verwandlung) is a novella written by Franz Kafka which was first published in 1915. One of Kafka's best-known works, Metamorphosis tells the story of salesman Gregor Samsa, who wakes one morning to find himself inexplicably transformed into a huge insect (German: ungeheueres Ungeziefer, lit. \"monstrous vermin\") and subsequently struggles to adjust to this new condition.",
-    "genres": [
-      "Classics",
-      "Literary Fiction"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12820198-M.jpg",
-    "averageRating": 4.16
-  },
-  {
-    "title": "Microbiology",
-    "subtitle": "an introduction",
-    "authors": [
-      "Gerard J. Tortora",
-      "Berdell R. Funke",
-      "Christine L. Case"
-    ],
-    "isbn": "9780133905526",
-    "publishedYear": 1982,
-    "pageCount": 945,
-    "description": "This #1 selling non-majors microbiology textbook is praised for its straightforward presentation of complex topics, careful balance of concepts and applications, and proven art that teaches. In its Tenth Edition, Tortora/Funke/Case responds to the #1 challenge of the microbiology course: teaching a wide range of student levels, while still addressing student under-preparedness.",
-    "genres": [
-      "Science"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10146469-M.jpg",
-    "averageRating": 4.29
-  },
-  {
     "title": "Milk and Honey",
     "authors": [
       "Rupi Kaur"
@@ -2813,8 +2565,7 @@
     "pageCount": 226,
     "description": "The book is divided into four chapters, each chapter serves a different purpose. They deal with different pains; heal different heartaches. Milk and honey takes readers through a journey of the most bitter moments in life and finds sweetness in them, because there is sweetness everywhere If you are just willing to look.",
     "genres": [
-      "Poetry",
-      "Romance"
+      "Poetry"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/8743595-M.jpg",
     "averageRating": 4.02
@@ -2844,7 +2595,7 @@
     "pageCount": 382,
     "description": "Novelist Paul Sheldon has plans to make the difficult transition from writing historical romances featuring heroine Misery Chastain to publishing literary fiction. Annie Wilkes, Sheldon's number one fan, rescues the author from the scene of a car accident.",
     "genres": [
-      "Science Fiction",
+      "Science",
       "Horror",
       "Thriller"
     ],
@@ -2861,9 +2612,8 @@
     "pageCount": 452,
     "description": "\"Command the murderous chalices! Drink ye harpooners! Drink and swear, ye men that man the deathful whaleboat's bow -- Death to Moby Dick!\"",
     "genres": [
-      "Adventure",
-      "Fantasy",
-      "Classics"
+      "Classics",
+      "Adventure"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/10544254-M.jpg",
     "averageRating": 3.96
@@ -2878,28 +2628,10 @@
     "pageCount": 424,
     "description": "The last book in the Hunger Games Series. This book is filled with excitement and action regarding the ongoing war with the capital.",
     "genres": [
-      "Dystopian",
-      "Young Adult",
-      "Science Fiction"
+      "Dystopian"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/12646459-M.jpg",
     "averageRating": 3.8
-  },
-  {
-    "title": "Murder on the Orient Express",
-    "authors": [
-      "Agatha Christie"
-    ],
-    "isbn": "9780002315395",
-    "publishedYear": 1933,
-    "pageCount": 240,
-    "description": "While en route from Syria to Paris, in the middle of a freezing winter's night, the Orient Express is stopped dead in its tracks by a snowdrift. Passengers awake to find the train still stranded and to discover that a wealthy American has been brutally stabbed to death in his private compartment. Incredibly, that compartment is locked from the inside.",
-    "genres": [
-      "Mystery",
-      "Classics"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/11100465-M.jpg",
-    "averageRating": 4.15
   },
   {
     "title": "Neuromancer",
@@ -2911,7 +2643,6 @@
     "pageCount": 317,
     "description": "The first of William Gibson's Sprawl trilogy, Neuromancer is the classic cyberpunk novel. The winner of the Hugo, Nebula, and Philip K.",
     "genres": [
-      "Business",
       "Science Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/283860-M.jpg",
@@ -2927,7 +2658,7 @@
     "pageCount": 319,
     "description": "Ishiguro explores what it means to have a soul and how art distinguishes man from other life forms. But above all, Never Let Me Go is a study of friendship and the bonds we form which make or break while we come of age.",
     "genres": [
-      "Science Fiction"
+      "Science"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/1047334-M.jpg",
     "averageRating": 3.84
@@ -2942,7 +2673,6 @@
     "pageCount": 328,
     "description": "Newlyweds Tricia and Ethan are searching for the house of their dreams. But when they visit the remote manor that once belonged to Dr. Adrienne Hale, a renowned psychiatrist who vanished without a trace four years earlier, a violent winter storm traps them at the estate… with no chance of escape until the blizzard comes to an end.",
     "genres": [
-      "Mystery",
       "Thriller"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/13198561-M.jpg",
@@ -3063,22 +2793,6 @@
     "averageRating": 4.15
   },
   {
-    "title": "O Alquimista",
-    "authors": [
-      "Paulo Coelho"
-    ],
-    "isbn": "9780007155668",
-    "publishedYear": 1988,
-    "pageCount": 197,
-    "description": "The Alchemist details the journey of a young Andalusian shepherd boy named Santiago. Santiago, believing a recurring dream to be prophetic, decides to travel to the pyramids of Egypt to find treasure. On the way, he encounters love, danger, opportunity and disaster.",
-    "genres": [
-      "Fantasy",
-      "Literary Fiction"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7414780-M.jpg",
-    "averageRating": 3.8
-  },
-  {
     "title": "Of Mice and Men",
     "authors": [
       "John Steinbeck"
@@ -3088,9 +2802,8 @@
     "pageCount": 119,
     "description": "The second book in John Steinbeck’s labor trilogy, Of Mice and Men is a touching tale of two migrant laborers in search of work and eventual liberation from their social circumstances. Fiercely devoted to one another, George and Lennie plan to save up to finance their dream of someday owning a small piece of land.",
     "genres": [
-      "Historical Fiction",
-      "Classics",
-      "Literary Fiction"
+      "Literary Fiction",
+      "Classics"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/14319003-M.jpg",
     "averageRating": 4
@@ -3120,8 +2833,7 @@
     "pageCount": 414,
     "description": "Oliver Twist; or, The Parish Boy's Progress, is the second novel by English author Charles Dickens. It was originally published as a serial from 1837 to 1839, and as a three-volume book in 1838.",
     "genres": [
-      "History",
-      "Classics"
+      "History"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/13300802-M.jpg",
     "averageRating": 4.1
@@ -3137,8 +2849,7 @@
     "description": "On Writing is both a textbook for writers and a memoir of Stephen's life and will, thus, appeal even to those who are not aspiring writers. If you've always wondered what led Steve to become a writer and how he came to be the success he is today, this will answer those questions.",
     "genres": [
       "Biography",
-      "Horror",
-      "Literary Fiction"
+      "Horror"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/9255939-M.jpg",
     "averageRating": 4.13
@@ -3153,9 +2864,8 @@
     "pageCount": 416,
     "description": "How far would you go for happily ever after? For as long as she can remember, Evangeline Fox has believed in true love and happy endings... until she learns that the love of her life will marry another. Desperate to stop the wedding and to heal her wounded heart, Evangeline strikes a deal with the charismatic but wicked Prince of Hearts.",
     "genres": [
-      "Fantasy",
       "Young Adult",
-      "Romance"
+      "Fantasy"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/11427092-M.jpg",
     "averageRating": 3.84
@@ -3180,6 +2890,21 @@
     "averageRating": 4.17
   },
   {
+    "title": "Our Fault",
+    "authors": [
+      "Mercedes Ron"
+    ],
+    "isbn": "9781728290799",
+    "publishedYear": 2014,
+    "pageCount": 448,
+    "description": "Nick and Noah's rocky relationship is struggling through its worst moment, and it seems that nothing can go back to the way it was before. They will have to surmount a new and frightening set of challenges to finally understand if they are really made for each other or if being apart is their only chance to be happy.",
+    "genres": [
+      "Mystery"
+    ],
+    "coverUrl": "https://covers.openlibrary.org/b/id/10864780-M.jpg",
+    "averageRating": 3.28
+  },
+  {
     "title": "Outlander",
     "authors": [
       "Diana Gabaldon"
@@ -3190,8 +2915,7 @@
     "description": "Unrivaled storytelling. Unforgettable characters. Rich historical detail.",
     "genres": [
       "History",
-      "Romance",
-      "Fantasy"
+      "Romance"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/14428230-M.jpg",
     "averageRating": 4.11
@@ -3228,6 +2952,21 @@
     "averageRating": 4.36
   },
   {
+    "title": "Paradise Lost",
+    "authors": [
+      "John Milton"
+    ],
+    "isbn": "9780020701705",
+    "publishedYear": 1667,
+    "pageCount": 333,
+    "description": "John Milton's Paradise Lost is one of the greatest epic poems in the English language. It tells the story of the Fall of Man, a tale of immense drama and excitement, of rebellion and treachery, of innocence pitted against corruption, in which God and Satan fight a bitter battle for control of mankind's destiny.",
+    "genres": [
+      "Poetry"
+    ],
+    "coverUrl": "https://covers.openlibrary.org/b/id/5992814-M.jpg",
+    "averageRating": 3.84
+  },
+  {
     "title": "Percy Jackson's Greek Gods",
     "authors": [
       "Rick Riordan"
@@ -3244,6 +2983,22 @@
     "averageRating": 4.7
   },
   {
+    "title": "Persuasion",
+    "authors": [
+      "Jane Austen"
+    ],
+    "isbn": "9780007368617",
+    "publishedYear": 1789,
+    "pageCount": 268,
+    "description": "Persuasion tells the love story of Anne Elliot and Captain Frederick Wentworth, whose sister rents Miss Elliot's father's house, after the Napoleonic Wars come to an end. The story is set in 1814. The book itself is Jane Austen's last published book, published posthumously in December of 1818.",
+    "genres": [
+      "Literary Fiction",
+      "Romance"
+    ],
+    "coverUrl": "https://covers.openlibrary.org/b/id/12824691-M.jpg",
+    "averageRating": 4.15
+  },
+  {
     "title": "Pet Sematary",
     "authors": [
       "Stephen King"
@@ -3253,11 +3008,28 @@
     "pageCount": 422,
     "description": "Pet Sematary is a 1983 horror novel by American writer Stephen King. The novel was nominated for a World Fantasy Award for Best Novel in 1986",
     "genres": [
-      "Horror",
-      "Thriller"
+      "Thriller",
+      "Horror"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/12015500-M.jpg",
     "averageRating": 4.04
+  },
+  {
+    "title": "Picasso",
+    "authors": [
+      "Pablo Picasso",
+      "Jean-Louis Andral",
+      "Pierre Daix"
+    ],
+    "isbn": "9780151719006",
+    "publishedYear": 1926,
+    "pageCount": 107,
+    "description": "In 1946, when Picasso received the offer to use one of the great rooms in the castle at Antibes as a studio, he exclaimed enthusiastically: “I'm not only going to paint, I'll decorate the museum too.” The result was a series of paintings and drawings that reflected the jubilant spirit, the joie de vivre, of a country that was free once more.",
+    "genres": [
+      "Biography"
+    ],
+    "coverUrl": "https://covers.openlibrary.org/b/id/2238306-M.jpg",
+    "averageRating": 3.91
   },
   {
     "title": "Powerless",
@@ -3279,16 +3051,16 @@
     "authors": [
       "Jane Austen"
     ],
-    "isbn": "9780003700756",
+    "isbn": "9780241734889",
     "publishedYear": 1813,
-    "pageCount": 351,
-    "description": "Pride and Prejudice is an 1813 novel of manners written by Jane Austen. The novel follows the character development of Elizabeth Bennet, the dynamic protagonist of the book who learns about the repercussions of hasty judgments and comes to appreciate the difference between superficial goodness and actual goodness. Mr.",
+    "pageCount": 358,
+    "description": "The first edition of the novel (1813). Introductory materials and revised and expanded footnotes by Donald Gray and Mary A. Favret.",
     "genres": [
       "Romance",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14348537-M.jpg",
-    "averageRating": 4.21
+    "coverUrl": "https://covers.openlibrary.org/b/id/13148521-M.jpg",
+    "averageRating": 4
   },
   {
     "title": "Project Hail Mary",
@@ -3300,9 +3072,7 @@
     "pageCount": 496,
     "description": "Ryland Grace is the sole survivor on a desperate, last-chance mission–and if he fails, humanity and the earth itself will perish. Except that right now, he doesn’t know that. He can’t even remember his own name, let alone the nature of his assignment or how to complete it.",
     "genres": [
-      "Science Fiction",
-      "Adventure",
-      "Science"
+      "Science Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/11200092-M.jpg",
     "averageRating": 4.52
@@ -3365,7 +3135,7 @@
     "pageCount": 428,
     "description": "Mare Barrow's world is divided by blood--those with red and those with silver. Mare and her family are lowly Reds, destined to serve the Silver elite whose supernatural abilities make them nearly gods. Mare steals what she can to help her family survive, but when her best friend is conscripted into the army she gambles everything to win his freedom.",
     "genres": [
-      "Science Fiction",
+      "Mystery",
       "Fantasy",
       "Young Adult"
     ],
@@ -3415,10 +3185,25 @@
     "description": "This special just-for-teens edition builds a foundation of self-confidence from which readers can realize their dreams of financial security in an increasingly challenging and unreliable job market. Teen-friendly advice, examples, sidebars and straight talk will supplement all of Rich Dad's core advice: Work to learn, not to earn.",
     "genres": [
       "Non-Fiction",
-      "Business",
-      "Young Adult"
+      "Business"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/1174758-M.jpg",
+    "averageRating": 4
+  },
+  {
+    "title": "Robinson Crusoe",
+    "authors": [
+      "Daniel Defoe"
+    ],
+    "isbn": "9780001034372",
+    "publishedYear": 1686,
+    "pageCount": 274,
+    "description": "During one of his several adventurous voyages in the 1600's, an Englishman becomes the sole survivor of a shipwreck and lives for nearly thirty years on a deserted island.",
+    "genres": [
+      "Poetry",
+      "Adventure"
+    ],
+    "coverUrl": "https://covers.openlibrary.org/b/id/368541-M.jpg",
     "averageRating": 4
   },
   {
@@ -3462,8 +3247,7 @@
     "pageCount": 168,
     "description": "Romeo and Juliet is a tragedy written by William Shakespeare early in his career about two young Italian star-crossed lovers whose deaths ultimately reconcile their feuding families. It was among Shakespeare's most popular plays during his lifetime and, along with Hamlet, is one of his most frequently performed plays. Today, the title characters are regarded as archetypal young lovers.",
     "genres": [
-      "History",
-      "Romance"
+      "Classics"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/8257991-M.jpg",
     "averageRating": 3.68
@@ -3479,9 +3263,8 @@
     "pageCount": 456,
     "description": "From a renowned historian comes a groundbreaking narrative of humanity’s creation and evolution—a #1 international bestseller—that explores the ways in which biology and history have defined us and enhanced our understanding of what it means to be “human.” One hundred thousand years ago, at least six different species of humans inhabited Earth. Yet today there is only one—homo sapiens.",
     "genres": [
-      "Science",
-      "Non-Fiction",
-      "History"
+      "History",
+      "Non-Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/8634250-M.jpg",
     "averageRating": 4.19
@@ -3491,17 +3274,15 @@
     "authors": [
       "Jane Austen"
     ],
-    "isbn": "9780003395761",
-    "publishedYear": 1811,
-    "pageCount": 352,
-    "description": "When Mr. Dashwood dies, he must leave the bulk of his estate to the son by his first marriage, which leaves his second wife and three daughters (Elinor, Marianne, and Margaret) in straitened circumstances. They are taken in by a kindly cousin, but their lack of fortune affects the marriageability of both practical Elinor and romantic Marianne.",
+    "isbn": "9789380914589",
+    "publishedYear": 1813,
+    "description": "This is a story of the English moneyed class and its eternal struggle for creating \"sense and sensibility\" in its world. A potential marriage prospect must make \"sense\" by bringing with it enough assets and income to permit the couple to continue to live in happy, idle leisure, complete with servants and a prestigious address.",
     "genres": [
       "Romance",
-      "Classics",
-      "Humour"
+      "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9278292-M.jpg",
-    "averageRating": 3.93
+    "coverUrl": "https://covers.openlibrary.org/b/id/15215039-M.jpg",
+    "averageRating": 5
   },
   {
     "title": "Shatter Me",
@@ -3513,8 +3294,7 @@
     "pageCount": 357,
     "description": "Juliette hasn't touched anyone in exactly 264 days. The last time she did, it was an accident, but The Reestablishment locked her up for murder. No one knows why Juliette's touch is fatal.",
     "genres": [
-      "Science Fiction",
-      "Romance"
+      "Science Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/6974992-M.jpg",
     "averageRating": 3.95
@@ -3562,9 +3342,7 @@
     "pageCount": 512,
     "description": "BOOK ONE of the Six of Crows Duology Six of Crows is a fantasy novel written by the Israeli-American author Leigh Bardugo published by Henry Holt and Co. in 2015. The story follows a thieving crew and is primarily set in the city of Ketterdam, loosely inspired by Dutch Republic–era Amsterdam. The plot is told from third-person viewpoints of seven different characters.",
     "genres": [
-      "Science Fiction",
-      "Fantasy",
-      "Young Adult"
+      "Mystery"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/12667417-M.jpg",
     "averageRating": 4.54
@@ -3596,8 +3374,7 @@
     "pageCount": 203,
     "description": "Slaughterhouse-Five is one of the world's great anti-war books. Centering on the infamous fire-bombing of Dresden, Billy Pilgrim's odyssey through time reflects the mythic journey of our own fractured lives as we search for meaning in what we are afraid to know.",
     "genres": [
-      "Historical Fiction",
-      "Science Fiction"
+      "Historical Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/12727001-M.jpg",
     "averageRating": 4.17
@@ -3612,28 +3389,10 @@
     "pageCount": 214,
     "description": "A true story from Raina's early years. One day after girl scouts raina trips and falls damaging her two front teeth. Even after she gets her braces off she isn't treated the same.",
     "genres": [
-      "Biography",
-      "Young Adult"
+      "Biography"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/9147132-M.jpg",
     "averageRating": 4.42
-  },
-  {
-    "title": "Sofies verden",
-    "authors": [
-      "Jostein Gaarder",
-      "Helene Hervieu",
-      "Marine Laffon"
-    ],
-    "isbn": "9780001050464",
-    "publishedYear": 1991,
-    "pageCount": 523,
-    "description": "A page-turning novel that is also an exploration of the great philosophical concepts of Western thought, Sophie's World has fired the imagination of readers all over the world, with more than twenty million copies in print.",
-    "genres": [
-      "Philosophy"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/223463-M.jpg",
-    "averageRating": 3.96
   },
   {
     "title": "Start with why",
@@ -3663,8 +3422,7 @@
     "description": "Based on more than forty interviews with Jobs conducted over two years -- as well as interviews with more than a hundred family members, friends, adversaries, competitors, and colleagues -- Walter Isaacson has written a riveting story of the roller-coaster life and searingly intense personality of a creative entrepreneur whose passion for perfection and ferocious drive revolutionized six…",
     "genres": [
       "Biography",
-      "Business",
-      "Non-Fiction"
+      "Business"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/12374726-M.jpg",
     "averageRating": 4.18
@@ -3679,9 +3437,7 @@
     "pageCount": 400,
     "description": "As the day dawns on the fiftieth annual Hunger Games, fear grips the districts of Panem. This year, in honor of the Quarter Quell, twice as many tributes will be taken from their homes. Back in District 12, Haymitch Abernathy is trying not to think too hard about his chances.",
     "genres": [
-      "Dystopian",
-      "Fantasy",
-      "Science Fiction"
+      "Dystopian"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/14847912-M.jpg",
     "averageRating": 4.62
@@ -3760,8 +3516,7 @@
     "pageCount": 341,
     "description": "The New York Times bestselling how-to and why-to guide to throwing out the old tools and methods for success and replacing them with a whole new way of living Tim Ferriss has trouble defining what he does for a living.",
     "genres": [
-      "Non-Fiction",
-      "Business"
+      "Non-Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/539652-M.jpg",
     "averageRating": 3.71
@@ -3776,9 +3531,7 @@
     "pageCount": 452,
     "description": "Amoral, cunning, ruthless, and instructive, this piercing work distills three thousand years of the history of power in to forty-eight well explicated laws. As attention--grabbing in its design as it is in its content, this bold volume outlines the laws of power in their unvarnished essence, synthesizing the philosophies of Machiavelli, Sun-tzu, Carl von Clausewitz, and other great thinkers.",
     "genres": [
-      "Philosophy",
-      "Science",
-      "Non-Fiction"
+      "Philosophy"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/6424160-M.jpg",
     "averageRating": 4.03
@@ -3808,45 +3561,11 @@
     "pageCount": 227,
     "description": "There's a serial killer on the loose, bent on working his way though the alphabet. There seems little chance of the murderer being caught - until her makes the crucial and vain mistake of challenging Hercule Poirot to frustrate his plans . . .",
     "genres": [
-      "Mystery",
-      "Humour"
+      "Classics",
+      "Mystery"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/14573514-M.jpg",
     "averageRating": 4.03
-  },
-  {
-    "title": "The Adventures of Sherlock Holmes [12 stories]",
-    "authors": [
-      "Arthur Conan Doyle"
-    ],
-    "isbn": "9780004247267",
-    "publishedYear": 1892,
-    "pageCount": 309,
-    "description": "The Adventures of Sherlock Holmes is a collection of twelve short stories by Arthur Conan Doyle, first published on 14 October 1892. It contains the earliest short stories featuring the consulting detective Sherlock Holmes, which had been published in twelve monthly issues of The Strand Magazine from July 1891 to June 1892.",
-    "genres": [
-      "Historical Fiction",
-      "Mystery",
-      "Classics"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/6717853-M.jpg",
-    "averageRating": 4.16
-  },
-  {
-    "title": "The Adventures of Tom Sawyer",
-    "authors": [
-      "Mark Twain"
-    ],
-    "isbn": "9780007420117",
-    "publishedYear": 1817,
-    "pageCount": 253,
-    "description": "Mark Twain created the memorable characters Tom Sawyer and Huckleberry Finn drawing from the experiences of boys he grew up with in Missouri. Set by the Mississippi River in the 1840's, it follows these boys as they get into predicament after predicament.",
-    "genres": [
-      "Classics",
-      "Adventure",
-      "Humour"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12043351-M.jpg",
-    "averageRating": 3.98
   },
   {
     "title": "The Art of Loving",
@@ -3889,9 +3608,8 @@
     "pageCount": 90,
     "description": "The Art of War is an ancient Chinese military treatise dating from the Late Spring and Autumn Period. The work, which is attributed to the ancient Chinese military strategist Sun Tzu",
     "genres": [
-      "Business",
-      "Science",
-      "Philosophy"
+      "Philosophy",
+      "History"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/4849549-M.jpg",
     "averageRating": 4.07
@@ -3912,6 +3630,22 @@
     "averageRating": 3.64
   },
   {
+    "title": "The Awakening",
+    "authors": [
+      "Lisa Jane Smith"
+    ],
+    "isbn": "9780061020001",
+    "publishedYear": 1991,
+    "pageCount": 264,
+    "description": "It talks about a human whose in love with a vampire whose vampire brother loves her too.",
+    "genres": [
+      "Horror",
+      "Romance"
+    ],
+    "coverUrl": "https://covers.openlibrary.org/b/id/13210058-M.jpg",
+    "averageRating": 4.03
+  },
+  {
     "title": "The BFG",
     "authors": [
       "Roald Dahl"
@@ -3922,28 +3656,10 @@
     "description": "This book is a great book for all ages. It is a fantasy/adventure book.The BFG stands for 'Big Friendly Giant'. He isn't like other giants, instead of going out to different countries to eat children he catches dreams.",
     "genres": [
       "Humour",
-      "Young Adult",
-      "Fantasy"
+      "Young Adult"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/9176033-M.jpg",
     "averageRating": 4.11
-  },
-  {
-    "title": "The Bachman Books (Long Walk / Rage / Roadwork / Running Man)",
-    "authors": [
-      "Stephen King"
-    ],
-    "isbn": "9780340952252",
-    "publishedYear": 1985,
-    "pageCount": 902,
-    "description": "Omnibus collection of four early Bachman novels (Rage, The Long Walk, Roadwork, The Running Man) and the essay \"Why I Was Bachman\"",
-    "genres": [
-      "Dystopian",
-      "Horror",
-      "Thriller"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8565607-M.jpg",
-    "averageRating": 3.86
   },
   {
     "title": "The Ballad of Songbirds and Snakes",
@@ -3971,9 +3687,7 @@
     "pageCount": 367,
     "description": "Percy Jackson isn't expecting freshman orientation to be any fun, but when a mysterious mortal acquaintance appears, pursued by demon cheerleaders, things quickly go from bad to worse. Time is running out for Percy. War between the gods and the Titans is drawing near.",
     "genres": [
-      "Adventure",
-      "Fantasy",
-      "Young Adult"
+      "Adventure"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/6274739-M.jpg",
     "averageRating": 4.42
@@ -3988,11 +3702,25 @@
     "pageCount": 262,
     "description": "The Bell Jar is the only novel written by American poet Sylvia Plath. It is an intensely realistic and emotional record of a successful and talented young woman's descent into madness.",
     "genres": [
-      "Poetry",
-      "Biography"
+      "Poetry"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/8477115-M.jpg",
     "averageRating": 4.16
+  },
+  {
+    "title": "The Blood of Olympus",
+    "authors": [
+      "Rick Riordan"
+    ],
+    "isbn": "9780141339221",
+    "publishedYear": 2001,
+    "pageCount": 525,
+    "description": "Nico had warned them. Going through the House of Hades would stir the demigods' worst memories. Their ghosts would become restless.",
+    "genres": [
+      "Adventure"
+    ],
+    "coverUrl": "https://covers.openlibrary.org/b/id/7303498-M.jpg",
+    "averageRating": 4.45
   },
   {
     "title": "The Body Keeps the Score",
@@ -4042,6 +3770,22 @@
     "averageRating": 3.92
   },
   {
+    "title": "The Call of the Wild",
+    "authors": [
+      "Jack London"
+    ],
+    "isbn": "9780007420230",
+    "publishedYear": 1903,
+    "pageCount": 128,
+    "description": "As Buck, a mixed breed dog, is taken away from his home, instead of facing a feast for breakfast and the comforts of home, he faces the hardships of being a sled dog. Soon he lands in the wrong hands, being forced to keep going when it is too rough for him and the other dogs in his pack.",
+    "genres": [
+      "History",
+      "Adventure"
+    ],
+    "coverUrl": "https://covers.openlibrary.org/b/id/12393037-M.jpg",
+    "averageRating": 3.93
+  },
+  {
     "title": "The Cat in the Hat",
     "authors": [
       "Dr. Seuss",
@@ -4052,9 +3796,7 @@
     "pageCount": 63,
     "description": "Two children sitting at home on a rainy day are visited by the Cat in the Hat, who shows them some tricks and games. Includes a Latin-English glossary and a note on the verse form and rhythm.",
     "genres": [
-      "Poetry",
-      "Fantasy",
-      "Humour"
+      "Poetry"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/11342-M.jpg",
     "averageRating": 4.08
@@ -4070,8 +3812,8 @@
     "pageCount": 240,
     "description": "Story of Holden Caufield with his idiosyncrasies, penetrating insight, confusion, sensitivity and negativism. Holden, knowing he is to be expelled from school, decides to leave early. He spends three days in New York City and tells the story of what he did and suffered there.",
     "genres": [
-      "Young Adult",
-      "Classics"
+      "Classics",
+      "Literary Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/9273490-M.jpg",
     "averageRating": 3.59
@@ -4155,22 +3897,6 @@
     "averageRating": 4.36
   },
   {
-    "title": "The Diary of a Young Girl- Anne Frank",
-    "authors": [
-      "Anne Frank"
-    ],
-    "isbn": "9780141007212",
-    "publishedYear": 2001,
-    "pageCount": 320,
-    "description": "The Diary of a Young Girl, also known as The Diary of Anne Frank, is a book of the writings from the Dutch-language diary kept by Anne Frank while she was in hiding for two years with her family during the Nazi occupation of the Netherlands. The family was apprehended in 1944, and Anne Frank died of typhus in the Bergen-Belsen concentration camp in 1945.",
-    "genres": [
-      "Biography",
-      "History"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13526331-M.jpg",
-    "averageRating": 4.21
-  },
-  {
     "title": "The Dispossessed",
     "subtitle": "An Ambiguous Utopia",
     "authors": [
@@ -4181,7 +3907,8 @@
     "pageCount": 352,
     "description": "Shevek, a brilliant physicist, decides to take action. He will seek answers, question the unquestionable, and attempt to tear down the walls of hatred that have isolated his planet of anarchists from the rest of the civilized universe. To do this dangerous task will mean giving up his family and possibly his life.",
     "genres": [
-      "Science Fiction"
+      "Science Fiction",
+      "Literary Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/6979680-M.jpg",
     "averageRating": 4.49
@@ -4212,7 +3939,7 @@
     "pageCount": 782,
     "description": "The Wheel of Time turns and Ages come and go, leaving memories that become legend. Legend fades to myth, and even myth is long forgotten when the Age that gave it birth returns again. In the Third Age, an Age of Prophecy, the World and Time themselves hang in the balance.",
     "genres": [
-      "Science",
+      "Science Fiction",
       "Fantasy"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/980232-M.jpg",
@@ -4261,7 +3988,8 @@
     "description": "One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them.",
     "genres": [
       "Fantasy",
-      "Adventure"
+      "Adventure",
+      "Classics"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/14627060-M.jpg",
     "averageRating": 4.34
@@ -4322,8 +4050,7 @@
     "pageCount": 450,
     "description": "Publication Date: January 16, 2008 A preeminent scientist—and the world's most prominent atheist—asserts the irrationality of belief in God and the grievous harm religion has inflicted on society, from the Crusades to 9/11.",
     "genres": [
-      "Philosophy",
-      "Science"
+      "Philosophy"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/386467-M.jpg",
     "averageRating": 3.88
@@ -4383,9 +4110,8 @@
     "pageCount": 185,
     "description": "Here is a novel, glamorous, ironical, compassionate – a marvelous fusion into unity of the curious incongruities of the life of the period – which reveals a hero like no other – one who could live at no other time and in no other place. But he will live as a character, we surmise, as long as the memory of any reader lasts.",
     "genres": [
-      "Romance",
-      "Young Adult",
-      "Classics"
+      "Classics",
+      "Literary Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/10590366-M.jpg",
     "averageRating": 3.99
@@ -4400,9 +4126,7 @@
     "pageCount": 465,
     "description": "The Green Mile is a 1996 serial novel by American writer Stephen King. It tells the story of death row supervisor Paul Edgecombe's encounter with John Coffey, an unusual inmate who displays inexplicable healing and empathetic abilities. The serial novel was originally released in six volumes before being republished as a single-volume work.",
     "genres": [
-      "Thriller",
-      "Horror",
-      "Mystery"
+      "Horror"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/9334567-M.jpg",
     "averageRating": 4.31
@@ -4418,8 +4142,7 @@
     "description": "The Dark Tower I The Gunslinger is a dark-fantasy by American author Stephen King. It is the first volume in the Dark Tower series. The Gunslinger was first published in 1982 as a fix-up novel, joining five short stories that had been published between 1978 and 1981.",
     "genres": [
       "Horror",
-      "Fantasy",
-      "Adventure"
+      "Fantasy"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/8396638-M.jpg",
     "averageRating": 4.03
@@ -4434,9 +4157,9 @@
     "pageCount": 352,
     "description": "The Handmaid's Tale is a dystopian novel by Canadian author Margaret Atwood, published in 1985. It is set in a near-future New England, in a strongly patriarchal, totalitarian theonomic state, known as the Republic of Gilead, which has overthrown the United States government.",
     "genres": [
-      "Fantasy",
       "Dystopian",
-      "Science Fiction"
+      "Literary Fiction",
+      "Classics"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/8231851-M.jpg",
     "averageRating": 3.97
@@ -4500,8 +4223,7 @@
     "description": "Ever since the untimely death of her mother, 14 year-old Joan Skraggs has been desperately unhappy. Under the thumb of her cruel father and three sullen brothers, Joan lives like a servant on their farm just outside of Lancaster, forever cooking, cleaning, and attending to the many demands of the home.",
     "genres": [
       "History",
-      "Young Adult",
-      "Historical Fiction"
+      "Young Adult"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/11610624-M.jpg",
     "averageRating": 4.32
@@ -4516,8 +4238,8 @@
     "pageCount": 216,
     "description": "The Hitchhiker's Guide to the Galaxy is the first of six books in the Hitchhiker's Guide to the Galaxy comedy science fiction \"hexalogy\" by Douglas Adams. The novel is an adaptation of the first four parts of Adams's radio series of the same name. The novel was first published in London on 12 October 1979.",
     "genres": [
-      "Humour",
       "Science Fiction",
+      "Humour",
       "Adventure"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/12986869-M.jpg",
@@ -4534,7 +4256,7 @@
     "description": "The Hobbit is a tale of high adventure, undertaken by a company of dwarves in search of dragon-guarded gold. A reluctant partner in this perilous quest is Bilbo Baggins, a comfort-loving unambitious hobbit, who surprises even himself by his resourcefulness and skill as a burglar.",
     "genres": [
       "Fantasy",
-      "Young Adult",
+      "Adventure",
       "Classics"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/14627509-M.jpg",
@@ -4566,9 +4288,9 @@
     "pageCount": 397,
     "description": "The Hunger Games is a 2008 dystopian novel by the American writer Suzanne Collins. It is written in the perspective of 16-year-old Katniss Everdeen, who lives in the future, post-apocalyptic nation of Panem in North America. The Capitol, a highly advanced metropolis, exercises political control over the rest of the nation.",
     "genres": [
-      "Young Adult",
       "Dystopian",
-      "Adventure"
+      "Young Adult",
+      "Science Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/12646537-M.jpg",
     "averageRating": 4.12
@@ -4645,8 +4367,7 @@
     "description": "All year the half-bloods have been preparing for battle against the Titans, knowing the odds of victory are grim. Kronos's army is stronger than ever, and with every god and half-blood he recruits, the evil Titan's power only grows. While the Olympians struggle to contain the rampaging monster Typhon, Kronos begins his advance on New York City, where Mount Olympus stands virtually unguarded.",
     "genres": [
       "Adventure",
-      "Young Adult",
-      "Fantasy"
+      "Young Adult"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/6624107-M.jpg",
     "averageRating": 4.41
@@ -4677,7 +4398,7 @@
     "description": "Comment by Kim Stanley Robinson, on The Guardian's website: The Left Hand of Darkness by Ursula K Le Guin (1969) > One of my favorite novels is The Left Hand of Darkness, by Ursula K Le Guin. For more than 40 years I've been recommending this book to people who want to try science fiction for the first time, and it still serves very well for that.",
     "genres": [
       "Science Fiction",
-      "Fantasy"
+      "Literary Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/10618463-M.jpg",
     "averageRating": 4.27
@@ -4693,8 +4414,7 @@
     "description": "Twelve-year-old Percy Jackson is on the most dangerous quest of his life. With the help of a satyr and a daughter of Athena, Percy must journey across the United States to catch a thief who has stolen the original weapon of mass destruction—Zeus’ master bolt. Along the way, he must face a host of mythological enemies determined to stop him.",
     "genres": [
       "Science",
-      "Fantasy",
-      "Adventure"
+      "Fantasy"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/7239831-M.jpg",
     "averageRating": 4.29
@@ -4710,7 +4430,7 @@
     "description": "Four adventurous siblings—Peter, Susan, Edmund, and Lucy Pevensie—step through a wardrobe door and into the land of Narnia, a land frozen in eternal winter and enslaved by the power of the White Witch. But when almost all hope is lost, the return of the Great Lion, Aslan, signals a great change . . . and a great sacrifice. Journey into the land beyond the wardrobe!",
     "genres": [
       "Fantasy",
-      "Adventure",
+      "Young Adult",
       "Classics"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/8441376-M.jpg",
@@ -4730,6 +4450,22 @@
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/7316502-M.jpg",
     "averageRating": 4.35
+  },
+  {
+    "title": "The Long Walk",
+    "authors": [
+      "Stephen King"
+    ],
+    "isbn": "9780142427835",
+    "publishedYear": 1979,
+    "pageCount": 352,
+    "description": "The Long Walk is a dystopian horror novel by American writer Stephen King, published in 1979, under the pseudonym Richard Bachman. It was collected in 1985 in the hardcover omnibus The Bachman Books, and has seen several reprints since, as both paperback and hardback.",
+    "genres": [
+      "Dystopian",
+      "Horror"
+    ],
+    "coverUrl": "https://covers.openlibrary.org/b/id/14653609-M.jpg",
+    "averageRating": 3.84
   },
   {
     "title": "The Lord of the Rings",
@@ -4756,12 +4492,26 @@
     "pageCount": 556,
     "description": "Jason has a problem. He doesn’t remember anything before waking up on a school bus holding hands with a girl. Apparently she’s his girlfriend Piper, his best friend is a kid named Leo, and they’re all students in the Wilderness School, a boarding school for “bad kids.”",
     "genres": [
-      "Adventure",
-      "Fantasy",
-      "Young Adult"
+      "Adventure"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/12848687-M.jpg",
     "averageRating": 4.43
+  },
+  {
+    "title": "The Lost Symbol",
+    "authors": [
+      "Dan Brown"
+    ],
+    "isbn": "9780132268318",
+    "publishedYear": 2009,
+    "pageCount": 604,
+    "description": "The Lost Symbol is a 2009 novel written by American writer Dan Brown. It is a thriller set in Washington, D.C., after the events of The Da Vinci Code, and relies on Freemasonry for both its recurring theme and its major characters.",
+    "genres": [
+      "Thriller",
+      "Adventure"
+    ],
+    "coverUrl": "https://covers.openlibrary.org/b/id/8373389-M.jpg",
+    "averageRating": 3.63
   },
   {
     "title": "The Love Hypothesis",
@@ -4773,8 +4523,7 @@
     "pageCount": 398,
     "description": "The Instant New York Times Best Seller and TikTok Sensation! As seen on The View! A BuzzFeed Best Summer Read of 2021 When a fake relationship between scientists meets the irresistible force of attraction, it throws one woman's carefully calculated theories on love into chaos.",
     "genres": [
-      "Young Adult",
-      "Romance"
+      "Young Adult"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/10601402-M.jpg",
     "averageRating": 4.11
@@ -4789,8 +4538,7 @@
     "pageCount": 331,
     "description": "She fears the dark. He rules it. Her dresses are too tight, her heels too tall.",
     "genres": [
-      "Thriller",
-      "Romance"
+      "Thriller"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/11699161-M.jpg",
     "averageRating": 4.11
@@ -4811,6 +4559,22 @@
     "averageRating": 4.13
   },
   {
+    "title": "The Magician's Nephew",
+    "authors": [
+      "C. S. Lewis"
+    ],
+    "isbn": "9780001016194",
+    "publishedYear": 1955,
+    "pageCount": 186,
+    "description": "Digory let out a scream. “What's happened to Polly?” “Congratulate me, my dear boy,” said Uncle Andrew, rubbing his hands.",
+    "genres": [
+      "Science Fiction",
+      "Fantasy"
+    ],
+    "coverUrl": "https://covers.openlibrary.org/b/id/1072931-M.jpg",
+    "averageRating": 4.03
+  },
+  {
     "title": "The Mark of Athena",
     "authors": [
       "Rick Riordan"
@@ -4820,8 +4584,7 @@
     "pageCount": 582,
     "description": "Annabeth is terrified. Just when she's about to be reunited with Percy—after six months of being apart, thanks to Hera—it looks like Camp Jupiter is preparing for war. As Annabeth and her friends Jason, Piper, and Leo fly in on the Argo II, she can't blame the Roman demigods for thinking the ship is a Greek weapon.",
     "genres": [
-      "Adventure",
-      "Fantasy"
+      "Adventure"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/12848680-M.jpg",
     "averageRating": 4.46
@@ -4837,8 +4600,7 @@
     "description": "The Martian is a 2011 science fiction novel written by Andy Weir. It was his debut novel under his own name. It was originally self-published in 2011; Crown Publishing purchased the rights and re-released it in 2014.",
     "genres": [
       "Thriller",
-      "Science Fiction",
-      "Fantasy"
+      "Science Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/11447888-M.jpg",
     "averageRating": 4.4
@@ -4868,9 +4630,7 @@
     "pageCount": 304,
     "description": "Between life and death there is a library, and within that library, the shelves go on forever. Every book provides a chance to try another life you could have lived. To see how things would be if you had made other choices . . .",
     "genres": [
-      "Literary Fiction",
-      "Science Fiction",
-      "Fantasy"
+      "Science Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/10313767-M.jpg",
     "averageRating": 4.03
@@ -4948,8 +4708,9 @@
     "pageCount": 352,
     "description": "A new translation of the epic poem retells the story of Odysseus's ten-year voyage home to Ithaca after the Trojan War.",
     "genres": [
+      "Classics",
       "Poetry",
-      "Classics"
+      "Adventure"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/12474938-M.jpg"
   },
@@ -5012,7 +4773,7 @@
     "pageCount": 246,
     "description": "The Picture of Dorian Gray is a philosophical novel by Irish writer Oscar Wilde. A shorter novella-length version was published in the July 1890 issue of the American periodical Lippincott’s Monthly Magazine. The novel-length version was published in April 1891.",
     "genres": [
-      "Science Fiction",
+      "Classics",
       "Horror",
       "Philosophy"
     ],
@@ -5075,8 +4836,7 @@
     "pageCount": 222,
     "description": "Examines the connection between the mental dynamics of thinking in relation to one's quality of life while offering simple techniques designed to create new, more innovative thought processes and stimulate creativity, in a revised and expanded edition of the best-selling work.",
     "genres": [
-      "Non-Fiction",
-      "Self-Help"
+      "Non-Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/6553019-M.jpg",
     "averageRating": 3.91
@@ -5089,11 +4849,10 @@
     "isbn": "9780007420070",
     "publishedYear": 1515,
     "pageCount": 156,
-    "description": "The Prince (Italian: Il Principe [il ˈprintʃipe]; Latin: De Principatibus) is a 16th-century political treatise written by Italian diplomat and political theorist Niccolò Machiavelli as an instruction guide for new princes and royals. The general theme of The Prince is of accepting that the aims of princes – such as glory and survival – can justify the use of immoral means to achieve those ends.",
+    "description": "The Prince (Italian: Il Principe ; Latin: De Principatibus) is a 16th-century political treatise written by Italian diplomat and political theorist Niccolò Machiavelli as an instruction guide for new princes and royals. The general theme of The Prince is of accepting that the aims of princes – such as glory and survival – can justify the use of immoral means to achieve those ends.",
     "genres": [
-      "Science Fiction",
-      "Philosophy",
-      "Science"
+      "Science",
+      "Philosophy"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/12726168-M.jpg",
     "averageRating": 3.89
@@ -5124,7 +4883,8 @@
     "description": "THE RETURN OF THE KING, which brings to a close the great epic of war and adventure begun in The Fellowship of the Ring and continued in The Two Towers, is the third and final part of J. R. R.",
     "genres": [
       "Fantasy",
-      "Adventure"
+      "Adventure",
+      "Classics"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/14627062-M.jpg",
     "averageRating": 4.45
@@ -5139,8 +4899,7 @@
     "pageCount": 124,
     "description": "To bring your dreams and desires to fulfillment, you must be successful with money. This book shows you how to amass personal wealth by sharing the secrets of the ancient Babylonians, who were the first to discover the universal laws of prosperity.",
     "genres": [
-      "Self-Help",
-      "Business"
+      "Self-Help"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/10491331-M.jpg",
     "averageRating": 4.2
@@ -5155,28 +4914,10 @@
     "pageCount": 256,
     "description": "Cormac McCarthy's tenth novel, The Road, is his most harrowing yet deeply personal work. Some unnamed catastrophe has scourged the world to a burnt-out cinder, inhabited by the last remnants of mankind and a very few surviving dogs and fungi. The sky is perpetually shrouded by dust and toxic particulates; the seasons are merely varied intensities of cold and dampness.",
     "genres": [
-      "Dystopian",
-      "Science Fiction"
+      "Dystopian"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/198120-M.jpg",
     "averageRating": 3.89
-  },
-  {
-    "title": "The Scarlet Letter",
-    "authors": [
-      "Nathaniel Hawthorne"
-    ],
-    "isbn": "9780007350926",
-    "publishedYear": 1800,
-    "pageCount": 272,
-    "description": "A stark and allegorical tale of adultery, guilt, and social repression in Puritan New England, The Scarlet Letter is a foundational work of American literature.",
-    "genres": [
-      "Historical Fiction",
-      "Literary Fiction",
-      "Classics"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/5654516-M.jpg",
-    "averageRating": 3.42
   },
   {
     "title": "The Sea of Monsters",
@@ -5210,23 +4951,6 @@
     "averageRating": 3.66
   },
   {
-    "title": "The Secret Garden",
-    "authors": [
-      "Frances Hodgson Burnett"
-    ],
-    "isbn": "9780001847699",
-    "publishedYear": 1911,
-    "pageCount": 256,
-    "description": "A ten-year-old orphan comes to live in a lonely house on the Yorkshire moors where she discovers an invalid cousin and the mysteries of a locked garden.",
-    "genres": [
-      "Classics",
-      "Mystery",
-      "Fantasy"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12622062-M.jpg",
-    "averageRating": 3.91
-  },
-  {
     "title": "The Secret History",
     "authors": [
       "Donna Tartt"
@@ -5236,9 +4960,8 @@
     "pageCount": 608,
     "description": "Under the influence of their charismatic classics professor, a group of clever, eccentric misfits at an elite New England college discover a way of thinking and living that is a world away from the humdrum existence of their contemporaries. But when they go beyond the boundaries of normal morality they slip gradually from obsession to corruption and betrayal, and at last - inexorably - into evil.",
     "genres": [
-      "Mystery",
-      "Classics",
-      "Thriller"
+      "Literary Fiction",
+      "Mystery"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/744854-M.jpg",
     "averageRating": 4.04
@@ -5253,8 +4976,7 @@
     "pageCount": 328,
     "description": "For thirty-five girls, the Selection is the chance of a lifetime. The opportunity to escape the life laid out for them since birth. To be swept up in a world of glittering gowns and priceless jewels.",
     "genres": [
-      "Dystopian",
-      "Romance"
+      "Dystopian"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/7101900-M.jpg",
     "averageRating": 4.34
@@ -5269,8 +4991,7 @@
     "pageCount": 400,
     "description": "Aging and reclusive Hollywood movie icon Evelyn Hugo is finally ready to tell the truth about her glamorous and scandalous life. But when she chooses unknown magazine reporter Monique Grant for the job, no one is more astounded than Monique herself. Why her?",
     "genres": [
-      "Biography",
-      "Romance"
+      "Biography"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/8354226-M.jpg",
     "averageRating": 4.13
@@ -5301,7 +5022,6 @@
     "pageCount": 352,
     "description": "The Silence of the Lambs is a psychological horror novel by Thomas Harris. First published in 1988, it is the sequel to Harris's 1981 novel Red Dragon. Both novels feature the cannibalistic serial killer Dr.",
     "genres": [
-      "Mystery",
       "Thriller",
       "Horror"
     ],
@@ -5412,8 +5132,7 @@
     "description": "One man escapes from a biological weapon facility after an accident, carrying with him the deadly virus known as Captain Tripps, a rapidly mutating flu that - in the ensuing weeks - wipes out most of the world's population. In the aftermath, survivors choose between following an elderly black woman to Boulder or the dark man, Randall Flagg, who has set up his command post in Las Vegas.",
     "genres": [
       "Horror",
-      "Thriller",
-      "Science Fiction"
+      "Thriller"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/9255992-M.jpg",
     "averageRating": 4.3
@@ -5428,9 +5147,8 @@
     "pageCount": 131,
     "description": "Mr. Gabriel Utterson is a serious, austere lawyer living a humdrum life in Victorian London. Yet there is a strange clause in his friend, Dr.",
     "genres": [
-      "Classics",
-      "Horror",
-      "Science Fiction"
+      "Literary Fiction",
+      "Horror"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/295773-M.jpg",
     "averageRating": 3.94
@@ -5446,8 +5164,7 @@
     "description": "The Time Traveller, a dreamer obsessed with traveling through time, builds himself a time machine and, much to his surprise, travels over 800,000 years into the future. He lands in the year 802701: the world has been transformed by a society living in apparent harmony and bliss, but as the Traveler stays in the future he discovers a hidden barbaric and depraved subterranean class.",
     "genres": [
       "Dystopian",
-      "Science Fiction",
-      "Classics"
+      "Science Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/9009316-M.jpg",
     "averageRating": 4.04
@@ -5478,7 +5195,8 @@
     "description": "The Lord of the Rings, J.R.R. Tolkien's three-volume epic, is set in the imaginary world of Middle-earth -- home to many strange beings, and most notably hobbits, a peace-loving \"little people,\" cheerful and shy. Since its original British publication in 1954-55, the saga has entranced readers of all ages.",
     "genres": [
       "Fantasy",
-      "Adventure"
+      "Adventure",
+      "Classics"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/14627564-M.jpg",
     "averageRating": 4.35
@@ -5499,6 +5217,21 @@
     "averageRating": 4.02
   },
   {
+    "title": "The Viscount Who Loved Me",
+    "authors": [
+      "Julia Quinn"
+    ],
+    "isbn": "9780060751234",
+    "publishedYear": 2000,
+    "pageCount": 392,
+    "description": "1814 promises to be another eventful season, but not, This Author believes, for Anthony Bridgerton, London's most elusive bachelor, who has shown no indication that he plans to marry. And in all truth, why should he? When it comes to playing the consummate rake, nobody does it better... --Lady Whistledown's Society Papers, April 1814 But this time the gossip columnists have it wrong.",
+    "genres": [
+      "Historical Fiction"
+    ],
+    "coverUrl": "https://covers.openlibrary.org/b/id/492893-M.jpg",
+    "averageRating": 4.42
+  },
+  {
     "title": "The Way I Used To Be",
     "authors": [
       "Amber Smith"
@@ -5512,6 +5245,37 @@
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/7434787-M.jpg",
     "averageRating": 3.87
+  },
+  {
+    "title": "The Wicked King",
+    "authors": [
+      "Holly Black"
+    ],
+    "isbn": "9780316310321",
+    "publishedYear": 2019,
+    "pageCount": 332,
+    "description": "YOU MUST BE STRONG ENOUGH TO STRIKE AND STRIKE AND STRIKE AGAIN WITHOUT TIRING. THE FIRST LESSON IS TO MAKE YOURSELF THAT STRONG. JUDE HAS BOUND THE WICKED KING, Cardan, to her, and made herself the power behind the throne.",
+    "genres": [
+      "Philosophy",
+      "Fantasy"
+    ],
+    "coverUrl": "https://covers.openlibrary.org/b/id/8361788-M.jpg",
+    "averageRating": 4.22
+  },
+  {
+    "title": "The Witches",
+    "authors": [
+      "Roald Dahl"
+    ],
+    "isbn": "9780060536169",
+    "publishedYear": 1983,
+    "pageCount": 208,
+    "description": "A young boy and his Norwegian grandmother, who is an expert on witches, together foil a witches' plot to destroy the world's children by turning them into mice.",
+    "genres": [
+      "Classics"
+    ],
+    "coverUrl": "https://covers.openlibrary.org/b/id/12374442-M.jpg",
+    "averageRating": 4.17
   },
   {
     "title": "The Wonderful Wizard of Oz",
@@ -5529,6 +5293,38 @@
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/552443-M.jpg",
     "averageRating": 3.95
+  },
+  {
+    "title": "The art of thinking clearly",
+    "authors": [
+      "Rolf Dobelli"
+    ],
+    "isbn": "9780062219688",
+    "publishedYear": 2013,
+    "pageCount": 384,
+    "description": "The Art of Thinking Clearly by world-class thinker and entrepreneur Rolf Dobelli is an eye-opening look at human psychology and reasoning — essential reading for anyone who wants to avoid “cognitive errors” and make better choices in all aspects of their lives. Have you ever: Invested time in something that, with hindsight, just wasn’t worth it?",
+    "genres": [
+      "Non-Fiction"
+    ],
+    "coverUrl": "https://covers.openlibrary.org/b/id/8270423-M.jpg",
+    "averageRating": 4.04
+  },
+  {
+    "title": "The diary of a young girl",
+    "authors": [
+      "Cherry Gilchrist",
+      "Anne Frank"
+    ],
+    "isbn": "9780140816556",
+    "publishedYear": 1998,
+    "pageCount": 58,
+    "description": "The diary of a young girl by Cherry Gilchrist, first published in 1998.",
+    "genres": [
+      "Biography",
+      "History"
+    ],
+    "coverUrl": "https://covers.openlibrary.org/b/id/13521319-M.jpg",
+    "averageRating": 2.17
   },
   {
     "title": "The personal MBA",
@@ -5557,11 +5353,25 @@
     "pageCount": 102,
     "description": "As featured in the bestselling book The Secret, here is the landmark guide to wealth creation republished with the classic essay How to Get What You Want.Wallace D. Wattles spent a lifetime considering the laws of success as he found them in the work of the worlds great philosophers.",
     "genres": [
-      "Business",
-      "Self-Help"
+      "Business"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/854989-M.jpg",
     "averageRating": 4.14
+  },
+  {
+    "title": "The untethered soul",
+    "authors": [
+      "Michael A. Singer"
+    ],
+    "isbn": "9780369304360",
+    "publishedYear": 2007,
+    "pageCount": 200,
+    "description": "What would it be like to be free from limitations and soar beyond your boundaries? What can you do each day to find this kind of inner peace and freedom? The Untethered Soul offers a simple, profoundly intuitive answer to these questions.",
+    "genres": [
+      "Philosophy"
+    ],
+    "coverUrl": "https://covers.openlibrary.org/b/id/10630553-M.jpg",
+    "averageRating": 4.41
   },
   {
     "title": "The way of the superior man",
@@ -5603,10 +5413,26 @@
     "pageCount": 192,
     "description": "Things Fall Apart is the debut novel by Nigerian author Chinua Achebe, first published in 1958. It depicts pre-colonial life in the southeastern part of Nigeria and the arrival of Europeans during the late 19th century. It is seen as the archetypal modern African novel in English, and one of the first to receive global critical acclaim.",
     "genres": [
+      "Historical Fiction",
       "Literary Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/12816943-M.jpg",
     "averageRating": 3.94
+  },
+  {
+    "title": "Think Again",
+    "authors": [
+      "Adam Grant"
+    ],
+    "isbn": "9780593298749",
+    "publishedYear": 2021,
+    "pageCount": 320,
+    "description": "Think Again is a book about the benefit of doubt, and about how we can get better at embracing the unknown and the joy of being wrong. Evidence has shown that creative geniuses are not attached to one identity, but constantly willing to rethink their stances and that leaders who admit they don't know something and seek critical feedback lead more productive and innovative teams.",
+    "genres": [
+      "Non-Fiction"
+    ],
+    "coverUrl": "https://covers.openlibrary.org/b/id/10470266-M.jpg",
+    "averageRating": 3.71
   },
   {
     "title": "Think Like a Monk",
@@ -5694,8 +5520,7 @@
     "pageCount": 373,
     "description": "What if all the crushes you ever had found out how you felt about them… all at once? Sixteen-year-old Lara Jean Covey keeps her love letters in a hatbox her mother gave her. They aren’t love letters that anyone else wrote for her; these are ones she’s written.",
     "genres": [
-      "Young Adult",
-      "Romance"
+      "Young Adult"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/7370711-M.jpg",
     "averageRating": 4.4
@@ -5732,23 +5557,6 @@
     "averageRating": 4.26
   },
   {
-    "title": "Treasure Island",
-    "authors": [
-      "Robert Louis Stevenson"
-    ],
-    "isbn": "9780001204041",
-    "publishedYear": 1880,
-    "pageCount": 248,
-    "description": "Traditionally considered a coming-of-age story, Treasure Island is an adventure tale known for its atmosphere, characters and action, and also as a wry commentary on the ambiguity of morality — as seen in Long John Silver — unusual for children's literature then and now. It is one of the most frequently dramatized of all novels.",
-    "genres": [
-      "Poetry",
-      "Adventure",
-      "Classics"
-    ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13859660-M.jpg",
-    "averageRating": 3.78
-  },
-  {
     "title": "Tuesdays with Morrie",
     "authors": [
       "Mitch Albom"
@@ -5758,7 +5566,6 @@
     "pageCount": 199,
     "description": "Tuesdays with Morrie is a memoir by American author Mitch Albom about a series of visits Albom made to his former sociology professor Morrie Schwartz, as Schwartz gradually dies of ALS. The book topped the New York Times Non-Fiction Best-Sellers List for 23 combined weeks in 2000, and remained on the New York Times best-selling list for more than four years after.",
     "genres": [
-      "Philosophy",
       "Biography"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/12560417-M.jpg",
@@ -5774,7 +5581,7 @@
     "pageCount": 498,
     "description": "About three things I was absolutely positive. First, Edward was a vampire. Second, there was a part of him -- and I didn't know how dominant that part might be -- that thirsted for my blood.",
     "genres": [
-      "Science Fiction",
+      "Fantasy",
       "Young Adult",
       "Horror"
     ],
@@ -5960,8 +5767,7 @@
     "description": "When Breath Becomes Air is a non-fiction autobiographical book written by American neurosurgeon Paul Kalanithi. It is a memoir about his life and illness, battling stage IV metastatic lung cancer. It was posthumously published by Random House on January 12, 2016.",
     "genres": [
       "Philosophy",
-      "Biography",
-      "Science"
+      "Biography"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/11463139-M.jpg",
     "averageRating": 4.24
@@ -5990,7 +5796,7 @@
     "pageCount": 416,
     "description": "For years, rumors of the “Marsh Girl” have haunted Barkley Cove, a quiet town on the North Carolina coast. So in late 1969, when handsome Chase Andrews is found dead, the locals immediately suspect Kya Clark, the so-called Marsh Girl. But Kya is not what they say.",
     "genres": [
-      "Literary Fiction"
+      "Historical Fiction"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/8362947-M.jpg",
     "averageRating": 4.31
@@ -6005,9 +5811,7 @@
     "pageCount": 42,
     "description": "This is an inspired children's book about a boy's passage through tempestuous aspects of life. Max, a naughty little boy, sent to bed without his supper, sails to the land of the wild things, where he becomes their king.",
     "genres": [
-      "Classics",
-      "Fantasy",
-      "Adventure"
+      "Classics"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/50842-M.jpg",
     "averageRating": 4.13
@@ -6026,6 +5830,21 @@
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/9153819-M.jpg",
     "averageRating": 4.26
+  },
+  {
+    "title": "Women Who Run with the Wolves",
+    "authors": [
+      "Clarissa Pinkola Estés"
+    ],
+    "isbn": "9780345377449",
+    "publishedYear": 1982,
+    "pageCount": 561,
+    "description": "Within every woman there is a wild and natural creature, a powerful force, filled with good instincts, passionate creativity, and ageless knowing. Her name is Wild Woman, but she is an endangered species.",
+    "genres": [
+      "Business"
+    ],
+    "coverUrl": "https://covers.openlibrary.org/b/id/207915-M.jpg",
+    "averageRating": 3.8
   },
   {
     "title": "Wonder",
@@ -6068,8 +5887,7 @@
     "description": "Wuthering Heights is an 1847 novel by Emily Brontë, initially published under the pseudonym Ellis Bell. It concerns two families of the landed gentry living on the West Yorkshire moors, the Earnshaws and the Lintons, and their turbulent relationships with Earnshaw's adopted son, Heathcliff. The novel was influenced by Romanticism and Gothic fiction.",
     "genres": [
       "Romance",
-      "Classics",
-      "Horror"
+      "Classics"
     ],
     "coverUrl": "https://covers.openlibrary.org/b/id/12818862-M.jpg",
     "averageRating": 4.1

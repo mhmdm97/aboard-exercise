@@ -7,7 +7,7 @@ Mapped to the brief:
 - **Auth and roles**: register, log in, log out. `admin` can create, edit and delete books; `member` can browse and keep favourites. Routes and UI actions are guarded on both sides.
 - **Search**: debounced search over title, subtitle and author, typo tolerant (Postgres `pg_trgm`), ordered by relevance.
 - **Filtering and sorting**: genre (multi), author, year range, minimum rating, sort. Filters live in the URL, so views are shareable.
-- **Seeding**: 383 real books from Open Library (with covers and ratings), 21 genres, plus two demo users. Idempotent.
+- **Seeding**: 380 real books from Open Library (with covers and ratings), 21 genres, plus two demo users. Idempotent.
 - **CRUD forms** (admin): create, edit, delete with confirmation, client-side validation from the same Zod schemas the API uses.
 - **Favourites** (any logged-in user), infinite scroll, book detail page.
 - **Design**: a custom editorial look. Fraunces and Instrument Sans (self-hosted, so the strict CSP stays tight), a paper/oxblood light theme and an ink/rose dark theme, and generated cloth-style covers as the fallback for missing images. It follows the OS colour scheme, with a header toggle (System, Light, Dark) that is remembered and applied before first paint.
