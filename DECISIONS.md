@@ -22,6 +22,9 @@
 
 **Docker.** Multi-stage images on `node:22-slim` (glibc, so the argon2 prebuilds work) and `nginx:alpine`. nginx serves the SPA with fallback and proxies `/api`, which keeps the browser same-origin and avoids CORS. The backend entrypoint migrates, optionally seeds (`SEED_ON_START`, idempotent), then starts, as the non-root `node` user. `COOKIE_SECURE` defaults to true in production, but compose sets it false because secure cookies are never returned over plain http on localhost.
 
+**Security.** Sessions: 32 random bytes, only the SHA-256 stored, httpOnly + SameSite=Lax cookie (`Secure` in production unless `COOKIE_SECURE=false`), expiry enforced server-side, logout deletes the row, every login mints a new token and purges expired rows. Argon2 plus a dummy-hash verify and a generic error for unknown emails; login/register are rate limited (10/min/IP). `role` is never read from register input. Guards: `requireRole('admin')` on book writes, `requireAuth` on favourites, which are always keyed by `req.user.id` (no IDOR). All SQL is parameterised (`ilike` input is escaped; the only `sql.raw` is a fixed `asc`/`desc`). Zod bounds every param, query and body field; `coverUrl` must be http(s) and is only rendered as `<img src>`; there is no `dangerouslySetInnerHTML`; the body limit is Fastify's 1 MB default. CSRF: SameSite=Lax means browsers send no session cookie on cross-site POST/PUT/DELETE, JSON-only bodies stop form posts (415), and an `Origin` hook (`app.ts`) rejects unsafe methods from a foreign origin, which also covers bodyless logout and favourite PUT/DELETE. Production helmet CSP works with Swagger UI (it ships no inline scripts), so docs stay on. nginx adds nosniff, frame deny, referrer policy and a CSP (`img-src` allows any https host because admins may enter arbitrary cover URLs and Open Library redirects to archive.org) and hides its version. Pino redacts the cookie, authorization and set-cookie headers; 500s return a generic message. `npm audit --omit=dev` reports 0 vulnerabilities. Compose DB credentials are local-only defaults; `.env` is git-ignored.
+Production follow-ups: CSRF tokens; per-account lockout and a shared (Redis) rate-limit store behind a trusted-proxy setting; session rotation, a per-user session cap and a scheduled expiry job; password breach check, email verification and reset; HSTS at the TLS edge; secrets from a secret manager and a non-default DB password; audit logging of admin writes; an image proxy if hotlinking covers is a concern.
+
 ### What I'd do differently in production
 
 - Run migrations as a separate release step, not on container start.
@@ -41,7 +44,7 @@
 - **No end-to-end tests in CI.** I ran the app in a real browser with Playwright, but those runs are not committed.
 - **Book updates are a full replace (PUT), last write wins**, with no optimistic concurrency.
 - **Accessibility and polish are partial.** Labels and semantics are in place, but I did no systematic audit and skipped animation.
-- **Helmet CSP is disabled outside production** so Swagger UI works.
+- **Helmet CSP is disabled outside production** so Swagger UI works (it is compatible with the production CSP too, covered by a test).
 - **Deployment skipped.** The brief marks it optional.
 
 ## AI usage

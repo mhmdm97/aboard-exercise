@@ -54,12 +54,13 @@ export const bookInputSchema = z.object({
   subtitle: optionalText(300),
   description: optionalText(5000),
   isbn: isbnSchema,
-  coverUrl: z.url().nullish().transform((v) => v ?? null),
+  // http(s) only: rejects javascript:/data: URLs.
+  coverUrl: z.url({ protocol: /^https?$/ }).max(2048).nullish().transform((v) => v ?? null),
   publishedYear: optionalInt(0, new Date().getFullYear() + 1),
   pageCount: optionalInt(1, 20000),
   averageRating: z.number().min(0).max(5).nullish().transform((v) => v ?? null),
   authorNames: z.array(z.string().trim().min(1).max(200)).min(1).max(10),
-  genreSlugs: z.array(z.string().trim().min(1)).max(10).default([]),
+  genreSlugs: z.array(z.string().trim().min(1).max(100)).max(10).default([]),
 })
 export type BookInput = z.infer<typeof bookInputSchema>
 
@@ -74,7 +75,7 @@ export const bookSortSchema = z.enum(['title', 'year', 'rating', 'newest'])
 export type BookSort = z.infer<typeof bookSortSchema>
 
 export const bookListQuerySchema = z.object({
-  q: z.string().trim().min(1).optional(),
+  q: z.string().trim().min(1).max(200).optional(),
   genre: stringList.optional(),
   author: z.uuid().optional(),
   yearFrom: z.coerce.number().int().optional(),

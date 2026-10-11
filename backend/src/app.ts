@@ -32,12 +32,23 @@ export async function buildApp({ env, db }: AppOptions): Promise<FastifyInstance
         ? false
         : env.NODE_ENV === 'development'
           ? { transport: { target: 'pino-pretty' } }
-          : true,
+          : {
+              // Never log credentials: session cookie, Set-Cookie, auth headers.
+              redact: ['req.headers.cookie', 'req.headers.authorization', 'res.headers["set-cookie"]'],
+            },
   })
 
   app.setValidatorCompiler(validatorCompiler)
   app.setSerializerCompiler(serializerCompiler)
   registerErrorHandling(app)
+
+  // CSRF defence in depth on top of SameSite=Lax: reject unsafe requests whose Origin is another site.
+  app.addHook('onRequest', async (req) => {
+    const origin = req.headers.origin
+    if (!origin || ['GET', 'HEAD', 'OPTIONS'].includes(req.method)) return
+    const sameHost = URL.canParse(origin) && new URL(origin).host === req.headers.host
+    if (!sameHost && origin !== env.CORS_ORIGIN) throw app.httpErrors.forbidden('Cross-origin request rejected')
+  })
 
   await app.register(helmet, {
     // Swagger UI needs inline scripts/styles
