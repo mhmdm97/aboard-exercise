@@ -5,8 +5,10 @@ import { Spinner } from '../../components/Spinner/Spinner'
 import { BookCard } from '../books/BookCard'
 import gridStyles from '../library/BookGrid.module.css'
 import { useFavourites } from './api'
+import { useDocumentTitle } from '../../hooks/useDocumentTitle'
 
 export function FavouritesPage() {
+  useDocumentTitle('Favourites')
   const { data: books, isPending, error, refetch } = useFavourites()
 
   return (

@@ -31,8 +31,8 @@ Backend: scaffold, schema, seed, auth/roles and book read endpoints done. Books 
 - [x] Genres / authors lookup endpoints (for filters and form dropdowns)
 - [x] Consistent error format (validation 400, 401, 403, 404)
 - [x] Favourites: add / remove / list mine (member)
-- [ ] Integration tests for every endpoint: happy path + main error case, incl. role checks (R)
-- [ ] API documentation: OpenAPI spec + Swagger UI (S)
+- [x] Integration tests for every endpoint: happy path + main error case, incl. role checks (R)
+- [x] API documentation: OpenAPI spec + Swagger UI (S) (`/api/docs`, all 16 routes tagged and summarised)
 
 ## 2. Frontend (React + TypeScript) (R)
 - [x] App shell: routing, layout, nav, server-state library, API client with auth
@@ -46,9 +46,9 @@ Backend: scaffold, schema, seed, auth/roles and book read endpoints done. Books 
 - [x] Delete with confirmation (admin only) (R)
 - [x] Role-aware UI: hide/disable actions the user can't perform (R)
 - [x] Responsive design: mobile, tablet, desktop (R)
-- [ ] Accessibility pass: labels, focus states, keyboard nav, alt text, contrast (S)
+- [x] Accessibility pass: labels, focus states, keyboard nav, alt text, contrast (S) (axe clean on /, detail, login, register, /books/new, /favourites in light + dark; per-route titles; reduced motion)
 - [ ] UI polish / animation (S)
-- [ ] Frontend tests: Vitest + React Testing Library for key components/hooks (R)
+- [x] Frontend tests: Vitest + React Testing Library for key components/hooks (R)
 
 ## 3. Docker & CI (R)
 - [x] Backend Dockerfile (multi-stage)

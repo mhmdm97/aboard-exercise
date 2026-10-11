@@ -5,8 +5,10 @@ import { FilterPanel } from './FilterPanel'
 import { SearchBar } from './SearchBar'
 import { useLibraryFilters } from './useLibraryFilters'
 import styles from './LibraryPage.module.css'
+import { useDocumentTitle } from '../../hooks/useDocumentTitle'
 
 export function LibraryPage() {
+  useDocumentTitle('Library')
   const { filters, setFilters, clearFilters, activeCount } = useLibraryFilters()
   const query = useBooksInfinite(filters)
   const state: unknown = useLocation().state

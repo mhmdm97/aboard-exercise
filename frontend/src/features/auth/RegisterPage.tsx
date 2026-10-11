@@ -7,8 +7,10 @@ import { ApiError } from '../../api/client'
 import { TextField } from '../../components/TextField/TextField'
 import { safeRedirect, useRegister } from './api'
 import styles from './AuthForm.module.css'
+import { useDocumentTitle } from '../../hooks/useDocumentTitle'
 
 export function RegisterPage() {
+  useDocumentTitle('Create account')
   const [params] = useSearchParams()
   const redirect = safeRedirect(params.get('redirect'))
   const navigate = useNavigate()

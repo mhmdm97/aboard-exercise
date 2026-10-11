@@ -5,6 +5,7 @@ import { ErrorMessage } from '../../components/ErrorMessage/ErrorMessage'
 import { Spinner } from '../../components/Spinner/Spinner'
 import { useBook } from './api'
 import { BookForm } from './BookForm'
+import { useDocumentTitle } from '../../hooks/useDocumentTitle'
 
 function EditBook({ id }: { id: string }) {
   const { data: book, isPending, error, refetch } = useBook(id)
@@ -25,6 +26,7 @@ function EditBook({ id }: { id: string }) {
 /** `/books/new` and `/books/:id/edit` (admin only; guarded in `routes.tsx`). */
 export function BookFormPage() {
   const { id } = useParams()
+  useDocumentTitle(id ? 'Edit book' : 'New book')
   return (
     <section>
       <h1>{id ? 'Edit book' : 'New book'}</h1>

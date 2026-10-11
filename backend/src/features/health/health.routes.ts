@@ -11,6 +11,8 @@ export const healthRoutes: FastifyPluginAsyncZod<{ db: Database }> = async (
   app.get(
     '/health',
     {
+      // The Docker healthcheck polls this every 10s; keep it out of the request logs.
+      logLevel: 'warn',
       schema: {
         tags: ['health'],
         summary: 'Liveness and database connectivity check',

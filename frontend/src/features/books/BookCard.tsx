@@ -19,7 +19,7 @@ export function Cover({ book }: { book: BookDto }) {
     return (
       <div
         className={styles.fallback}
-        style={{ background: `hsl(${hueFromTitle(book.title)} 45% 32%)` }}
+        style={{ background: `hsl(${hueFromTitle(book.title)} 45% 26%)` }}
         data-testid="fallback-cover"
       >
         <span className={styles.fallbackTitle}>{book.title}</span>
@@ -50,7 +50,7 @@ export function BookCard({ book }: { book: BookDto }) {
           <Cover book={book} />
         </div>
         <div className={styles.body}>
-          <h3 className={styles.title}>{book.title}</h3>
+          <h2 className={styles.title}>{book.title}</h2>
           {authors && <p className={styles.authors}>{authors}</p>}
           <p className={styles.meta}>
             {book.publishedYear !== null && <span>{book.publishedYear}</span>}

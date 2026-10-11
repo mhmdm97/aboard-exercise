@@ -10,6 +10,7 @@ import { FavouriteButton } from '../favourites/FavouriteButton'
 import { useBook, useDeleteBook } from './api'
 import { Cover } from './BookCard'
 import styles from './BookDetailPage.module.css'
+import { useDocumentTitle } from '../../hooks/useDocumentTitle'
 
 function BackLink() {
   const navigate = useNavigate()
@@ -37,6 +38,7 @@ export function BookDetailPage() {
   const { data: user } = useCurrentUser()
   const { data: book, isPending, error, refetch } = useBook(id)
   const deleteBook = useDeleteBook(id)
+  useDocumentTitle(book?.title ?? 'Book')
   const [confirming, setConfirming] = useState(false)
 
   if (isPending) return <Spinner label="Loading book…" />

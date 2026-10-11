@@ -100,6 +100,14 @@ describe('PUT /api/books/:id', () => {
     expect((await send('PUT', `/api/books/${missing}`, admin, valid)).statusCode).toBe(404)
     expect((await send('PUT', `/api/books/${missing}`, member, valid)).statusCode).toBe(403)
   })
+
+  it('returns 401 when anonymous and 400 for an invalid body', async () => {
+    const book = await create()
+    expect((await send('PUT', `/api/books/${book.id}`, undefined, valid)).statusCode).toBe(401)
+    const res = await send('PUT', `/api/books/${book.id}`, admin, { title: '' })
+    expect(res.statusCode).toBe(400)
+    expect(res.json()).toMatchObject({ error: { code: 'VALIDATION_ERROR' } })
+  })
 })
 
 describe('DELETE /api/books/:id', () => {
@@ -111,6 +119,7 @@ describe('DELETE /api/books/:id', () => {
 
   it('returns 404 for a missing book and 403 for a member', async () => {
     const book = await create()
+    expect((await send('DELETE', `/api/books/${book.id}`)).statusCode).toBe(401)
     expect((await send('DELETE', `/api/books/${book.id}`, member)).statusCode).toBe(403)
     expect((await send('DELETE', '/api/books/00000000-0000-4000-8000-000000000000', admin)).statusCode).toBe(404)
   })

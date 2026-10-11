@@ -6,8 +6,10 @@ import type { LoginInput } from '@library/shared'
 import { TextField } from '../../components/TextField/TextField'
 import { safeRedirect, useLogin } from './api'
 import styles from './AuthForm.module.css'
+import { useDocumentTitle } from '../../hooks/useDocumentTitle'
 
 export function LoginPage() {
+  useDocumentTitle('Sign in')
   const [params] = useSearchParams()
   const redirect = safeRedirect(params.get('redirect'))
   const navigate = useNavigate()
