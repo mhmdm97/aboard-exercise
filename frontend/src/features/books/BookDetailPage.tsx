@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Fragment, useState } from 'react'
 import { Link, useLocation, useNavigate, useParams } from 'react-router'
 import { ApiError } from '../../api/client'
 import { ConfirmDialog } from '../../components/ConfirmDialog/ConfirmDialog'
@@ -69,8 +69,17 @@ export function BookDetailPage() {
           <h1 className={styles.title}>{book.title}</h1>
           {book.subtitle && <p className={styles.subtitle}>{book.subtitle}</p>}
           {book.authors.length > 0 && (
-            // Plain text: the library filters have no `author` param yet.
-            <p className={styles.authors}>by {book.authors.map((a) => a.name).join(', ')}</p>
+            <p className={styles.authors}>
+              by{' '}
+              {book.authors.map((a, i) => (
+                <Fragment key={a.id}>
+                  {i > 0 && ', '}
+                  <Link to={`/?author=${encodeURIComponent(a.id)}`} className={styles.authorLink}>
+                    {a.name}
+                  </Link>
+                </Fragment>
+              ))}
+            </p>
           )}
           {book.genres.length > 0 && (
             <ul className={styles.genres} aria-label="Genres">

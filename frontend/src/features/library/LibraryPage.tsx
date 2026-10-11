@@ -15,6 +15,8 @@ export function LibraryPage() {
       ? state.message
       : ''
   const books = query.data?.pages.flatMap((p) => p.items) ?? []
+  // The URL only carries the author id; the name comes from any loaded book by that author.
+  const authorName = books.flatMap((b) => b.authors).find((a) => a.id === filters.author)?.name
   const total = query.data?.pages[0]?.total ?? 0
 
   return (
@@ -29,6 +31,18 @@ export function LibraryPage() {
           <FilterPanel filters={filters} activeCount={activeCount} onChange={setFilters} onClear={clearFilters} />
         </div>
         <div className={styles.results}>
+          {filters.author && (
+            <p className={styles.activeFilter}>
+              <span>Author: {authorName ?? '…'}</span>
+              <button
+                type="button"
+                aria-label="Remove author filter"
+                onClick={() => setFilters({ author: undefined })}
+              >
+                ×
+              </button>
+            </p>
+          )}
           <BookGrid
             books={books}
             total={total}

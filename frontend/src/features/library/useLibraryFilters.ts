@@ -15,6 +15,7 @@ export function parseFilters(params: URLSearchParams): BookFilters {
   return {
     q: params.get('q')?.trim() ?? '',
     genres: params.getAll('genre').filter(Boolean),
+    author: params.get('author') || undefined,
     yearFrom: parseNumber(params.get('yearFrom')),
     yearTo: parseNumber(params.get('yearTo')),
     minRating: parseNumber(params.get('minRating')),
@@ -27,6 +28,7 @@ export function serializeFilters(filters: BookFilters): URLSearchParams {
   const params = new URLSearchParams()
   if (filters.q) params.set('q', filters.q)
   for (const genre of filters.genres) params.append('genre', genre)
+  if (filters.author) params.set('author', filters.author)
   if (filters.yearFrom !== undefined) params.set('yearFrom', String(filters.yearFrom))
   if (filters.yearTo !== undefined) params.set('yearTo', String(filters.yearTo))
   if (filters.minRating !== undefined) params.set('minRating', String(filters.minRating))
@@ -39,7 +41,7 @@ export function serializeFilters(filters: BookFilters): URLSearchParams {
 export function countActiveFilters(f: BookFilters): number {
   return (
     f.genres.length +
-    [f.yearFrom, f.yearTo, f.minRating, f.sort].filter((v) => v !== undefined).length
+    [f.author, f.yearFrom, f.yearTo, f.minRating, f.sort].filter((v) => v !== undefined).length
   )
 }
 

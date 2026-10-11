@@ -20,6 +20,13 @@ describe('parseFilters / serializeFilters', () => {
     })
   })
 
+  it('round-trips the author id', () => {
+    const id = '22222222-2222-4222-8222-222222222222'
+    const filters = parseFilters(new URLSearchParams(`author=${id}`))
+    expect(filters.author).toBe(id)
+    expect(serializeFilters(filters).toString()).toBe(`author=${id}`)
+  })
+
   it('ignores invalid values', () => {
     const f = parseFilters(new URLSearchParams('sort=bogus&order=up&yearFrom=abc'))
     expect(f.sort).toBeUndefined()

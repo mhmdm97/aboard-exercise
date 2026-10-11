@@ -20,7 +20,10 @@ describe('BookDetailPage', () => {
     mockApi({ [`GET ${bookPath}`]: { body: sampleBook }, 'GET /api/auth/me': unauthorized })
     render()
     expect(await screen.findByRole('heading', { name: 'Dune' })).toBeInTheDocument()
-    expect(screen.getByText('by Frank Herbert')).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: 'Frank Herbert' })).toHaveAttribute(
+      'href',
+      `/?author=${sampleBook.authors[0].id}`,
+    )
     expect(screen.getByText('9780441172719')).toBeInTheDocument()
     expect(screen.getByRole('link', { name: 'Science Fiction' })).toHaveAttribute('href', '/?genre=sci-fi')
     expect(screen.queryByRole('button', { name: /Favourite/ })).not.toBeInTheDocument()

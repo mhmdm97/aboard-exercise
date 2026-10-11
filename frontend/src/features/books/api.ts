@@ -1,10 +1,12 @@
 import { keepPreviousData, useInfiniteQuery, useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
-import type { BookDto, BookListResponse, BookSort, GenreDto } from '@library/shared'
-import { apiDelete, apiGet } from '../../api/client'
+import type { AuthorDto, BookDto, BookInput, BookListResponse, BookSort, GenreDto } from '@library/shared'
+import { apiDelete, apiGet, apiPost, apiPut } from '../../api/client'
 
 export interface BookFilters {
   q: string
   genres: string[]
+  /** Author id (uuid). */
+  author?: string
   yearFrom?: number
   yearTo?: number
   minRating?: number
@@ -19,6 +21,7 @@ export const bookKeys = {
   all: ['books'] as const,
   list: (filters: BookFilters) => ['books', 'list', filters] as const,
   genres: ['genres'] as const,
+  authors: (q: string) => ['authors', q] as const,
   detail: (id: string) => ['books', 'detail', id] as const,
 }
 
@@ -26,6 +29,7 @@ export function buildBooksQuery(filters: BookFilters, page: number): string {
   const params = new URLSearchParams()
   if (filters.q) params.set('q', filters.q)
   for (const genre of filters.genres) params.append('genre', genre)
+  if (filters.author) params.set('author', filters.author)
   if (filters.yearFrom !== undefined) params.set('yearFrom', String(filters.yearFrom))
   if (filters.yearTo !== undefined) params.set('yearTo', String(filters.yearTo))
   if (filters.minRating !== undefined) params.set('minRating', String(filters.minRating))
@@ -65,6 +69,29 @@ export function useDeleteBook(id: string) {
     mutationFn: () => apiDelete(`/api/books/${id}`),
     onSuccess: () => {
       // Not awaited: the page navigates away right after, and refetches happen in the background.
+      void queryClient.invalidateQueries({ queryKey: ['books', 'list'] })
+      void queryClient.invalidateQueries({ queryKey: ['favourites'] })
+    },
+  })
+}
+
+export function useAuthorSuggestions(q: string) {
+  return useQuery({
+    queryKey: bookKeys.authors(q),
+    queryFn: () => apiGet<AuthorDto[]>(`/api/authors?${new URLSearchParams({ q, limit: '8' })}`),
+    enabled: q.length >= 2,
+    staleTime: 60 * 1000,
+  })
+}
+
+/** Creates a book, or fully replaces `id` when given. */
+export function useSaveBook(id?: string) {
+  const queryClient = useQueryClient()
+  return useMutation({
+    mutationFn: (input: BookInput) =>
+      id ? apiPut<BookDto>(`/api/books/${id}`, input) : apiPost<BookDto>('/api/books', input),
+    onSuccess: (book) => {
+      queryClient.setQueryData(bookKeys.detail(book.id), book)
       void queryClient.invalidateQueries({ queryKey: ['books', 'list'] })
       void queryClient.invalidateQueries({ queryKey: ['favourites'] })
     },

@@ -18,3 +18,5 @@
 @media (min-width: 640px) {
   .layout { grid-template-columns: 16rem 1fr; }
 }
+.authorLink { color: inherit; text-decoration-color: var(--color-border); text-underline-offset: 0.2em; }
+.authorLink:hover { color: var(--color-primary); }

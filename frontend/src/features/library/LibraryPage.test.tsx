@@ -43,6 +43,18 @@ describe('LibraryPage', () => {
     expect(await screen.findByRole('checkbox', { name: 'Science Fiction' })).toBeInTheDocument()
   })
 
+  it('sends the author filter and shows a removable chip with the author name', async () => {
+    const id = sampleBook.authors[0].id
+    mockApi([sampleBook])
+    const { router } = renderWithProviders(<LibraryPage />, { route: `/?author=${id}` })
+    expect(await screen.findByText('Author: Frank Herbert')).toBeInTheDocument()
+    expect(booksCalls()[0]).toContain(`author=${id}`)
+
+    await userEvent.click(screen.getByRole('button', { name: 'Remove author filter' }))
+    expect(screen.queryByText(/Author: /)).not.toBeInTheDocument()
+    expect(router.state.location.search).toBe('')
+  })
+
   it('sends the typed search term (debounced) as q and keeps it in the URL', async () => {
     mockApi([sampleBook])
     const { router } = renderWithProviders(<LibraryPage />)
