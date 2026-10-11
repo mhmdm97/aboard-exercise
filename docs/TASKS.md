@@ -23,12 +23,12 @@ _One or two lines for the next agent: what to do next, anything half-done._
 - [x] Seed script: ≥ 200 books with covers, creators, genres (R). Demo users (admin@library.local / member@library.local) still TODO: add in the auth task once argon2 is in
 - [ ] Auth: register, login, logout/me; password hashing; session or JWT (R)
 - [ ] Role-based authorization middleware; protect write endpoints (R)
-- [ ] Books: list endpoint with pagination (R)
-- [ ] Books: search (title / author) (R)
-- [ ] Books: filtering (genre, year range, rating…) + sorting (R)
-- [ ] Books: get by id
+- [x] Books: list endpoint with pagination (R)
+- [x] Books: search (title / author) (R)
+- [x] Books: filtering (genre, year range, rating…) + sorting (R)
+- [x] Books: get by id
 - [ ] Books: create / update / delete with request validation (R)
-- [ ] Genres / authors lookup endpoints (for filters and form dropdowns)
+- [x] Genres / authors lookup endpoints (for filters and form dropdowns)
 - [ ] Consistent error format (validation 400, 401, 403, 404)
 - [ ] Favourites: add / remove / list mine (member)
 - [ ] Integration tests for every endpoint: happy path + main error case, incl. role checks (R)

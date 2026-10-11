@@ -11,6 +11,8 @@ import {
 } from 'fastify-type-provider-zod'
 import type { Env } from './config/env.js'
 import type { Database } from './db/client.js'
+import { bookRoutes } from './features/books/books.routes.js'
+import { lookupRoutes } from './features/lookups/lookups.routes.js'
 import { healthRoutes } from './features/health/health.routes.js'
 import { registerErrorHandling } from './plugins/errors.js'
 
@@ -48,6 +50,8 @@ export async function buildApp({ env, db }: AppOptions): Promise<FastifyInstance
   await app.register(
     async (api) => {
       await api.register(healthRoutes, { db })
+      await api.register(bookRoutes, { db })
+      await api.register(lookupRoutes, { db })
     },
     { prefix: '/api' },
   )
