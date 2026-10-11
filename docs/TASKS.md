@@ -35,7 +35,7 @@ _One or two lines for the next agent: what to do next, anything half-done._
 - [ ] API documentation: OpenAPI spec + Swagger UI (S)
 
 ## 2. Frontend (React + TypeScript) (R)
-- [ ] App shell: routing, layout, nav, server-state library, API client with auth
+- [x] App shell: routing, layout, nav, server-state library, API client with auth
 - [ ] Auth pages: login, register; auth context; logout; protected routes
 - [ ] Library page: grid/list of books with covers, loading / error / empty states
 - [ ] Search box (debounced) wired to API (R)
