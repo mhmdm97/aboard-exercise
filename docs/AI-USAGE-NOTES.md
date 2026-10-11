@@ -28,3 +28,8 @@ Each entry is a place where AI-generated work was wrong, incomplete, or changed 
 - No log redaction for cookies / `set-cookie` → pino `redact`.
 - Expired sessions never purged → cleanup on login.
 - nginx sent no security headers → CSP, nosniff, frame-blocking, `server_tokens off`.
+
+## Found via my Lighthouse runs (optional to mention)
+
+- **CSP violation from Zod 4.** The unexplained "Content security policy" issue was Zod 4's JIT probe (`new Function('')` in a try/catch), blocked by our `script-src 'self'` and reported by Chrome on every page. Fixed with `z.config({ jitless: true })` before any schema is built, rather than loosening the CSP with `unsafe-eval`.
+- **LCP:** covers above the fold were `loading="lazy"`; fixed with eager loading + `fetchpriority="high"` for the first row, preconnect, and route-level code-splitting (main bundle 156 → 108 kB gzip). Performance 83 → 95.
