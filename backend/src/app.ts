@@ -13,6 +13,8 @@ import {
 import type { Env } from './config/env.js'
 import type { Database } from './db/client.js'
 import { authRoutes } from './features/auth/auth.routes.js'
+import { bookRoutes } from './features/books/books.routes.js'
+import { lookupRoutes } from './features/lookups/lookups.routes.js'
 import { healthRoutes } from './features/health/health.routes.js'
 import { authPlugin } from './plugins/auth.js'
 import { registerErrorHandling } from './plugins/errors.js'
@@ -61,6 +63,8 @@ export async function buildApp({ env, db }: AppOptions): Promise<FastifyInstance
     async (api) => {
       await api.register(authRoutes, { prefix: '/auth', db, env })
       await api.register(healthRoutes, { db })
+      await api.register(bookRoutes, { db })
+      await api.register(lookupRoutes, { db })
     },
     { prefix: '/api' },
   )

@@ -6,7 +6,7 @@ Brief: `docs/EXERCISE.md`. Tags: **(R)** = required by the brief, **(S)** = sugg
 
 ## Next up
 _One or two lines for the next agent: what to do next, anything half-done._
-.NET removed, stack decided (see docs/DECISIONS.md). Workspaces + backend scaffold done. Schema, migrations and book seed done. Next: Auth (also seed the demo users).
+Backend: scaffold, schema, seed, auth/roles and book read endpoints done. Next: books create/update/delete (admin) + favourites; frontend auth pages, detail page, forms; Docker.
 
 ## 0. Setup & decisions
 - [x] Repo, React/Vite skeleton, CI (frontend)
@@ -23,12 +23,12 @@ _One or two lines for the next agent: what to do next, anything half-done._
 - [x] Seed script: ≥ 200 books with covers, creators, genres (R). Demo users added in the auth task (`seed-users.ts`)
 - [x] Auth: register, login, logout/me; password hashing; session or JWT (R)
 - [x] Role-based authorization middleware; protect write endpoints (R)
-- [ ] Books: list endpoint with pagination (R)
-- [ ] Books: search (title / author) (R)
-- [ ] Books: filtering (genre, year range, rating…) + sorting (R)
-- [ ] Books: get by id
+- [x] Books: list endpoint with pagination (R)
+- [x] Books: search (title / author) (R)
+- [x] Books: filtering (genre, year range, rating…) + sorting (R)
+- [x] Books: get by id
 - [ ] Books: create / update / delete with request validation (R)
-- [ ] Genres / authors lookup endpoints (for filters and form dropdowns)
+- [x] Genres / authors lookup endpoints (for filters and form dropdowns)
 - [ ] Consistent error format (validation 400, 401, 403, 404)
 - [ ] Favourites: add / remove / list mine (member)
 - [ ] Integration tests for every endpoint: happy path + main error case, incl. role checks (R)
