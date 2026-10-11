@@ -85,3 +85,9 @@
   width: 30%;
   color: #e9d8a6;
 }
+
+/* While the cover is a shared-element transition group: hold still (no hover tilt, no transition in flight). */
+.morphing {
+  transform: none !important;
+  transition: none;
+}

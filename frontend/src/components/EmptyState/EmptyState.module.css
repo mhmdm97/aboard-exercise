@@ -1,3 +1,72 @@
-.empty { display: flex; flex-direction: column; align-items: center; text-align: center; padding: var(--sp-7) var(--sp-4); color: var(--ink-2); }
-.empty h2 { color: var(--ink); margin: 0 0 var(--sp-2); font-size: var(--fs-h3); }
-.empty p { margin: 0 0 var(--sp-4); max-width: 40ch; }
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: var(--sp-8) var(--sp-4);
+  text-align: center;
+  color: var(--ink-2);
+}
+
+.mark {
+  display: grid;
+  place-items: center;
+  color: var(--ink-2);
+}
+
+.title {
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.15;
+  color: var(--ink);
+}
+
+.page {
+  font-size: 32px;
+}
+
+.description {
+  margin: 0;
+  max-width: 40ch;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.big::before {
+  content: attr(data-text);
+}
+
+.big {
+  font: 600 120px / 1 var(--font-serif);
+  letter-spacing: -0.04em;
+  color: var(--surface-2);
+  /* The heading tucks up into the numeral. */
+  margin-bottom: -48px;
+}
+
+.circle {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--surface-2);
+  color: var(--ink);
+}
+
+@media (max-width: 480px) {
+  .big {
+    font-size: 112px;
+    margin-bottom: -40px;
+  }
+
+  .page {
+    font-size: 30px;
+  }
+}

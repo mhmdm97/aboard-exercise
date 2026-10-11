@@ -2,8 +2,9 @@ import type { ReactNode } from 'react'
 import { Link, Navigate, useLocation } from 'react-router'
 import type { UserRole } from '@library/shared'
 import { useCurrentUser } from '../../features/auth/api'
-import { EmptyState } from '../EmptyState/EmptyState'
+import { CircleMark, EmptyState } from '../EmptyState/EmptyState'
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage'
+import { LockIcon } from '../icons'
 import { Spinner } from '../Spinner/Spinner'
 
 interface Props {
@@ -26,9 +27,24 @@ export function RequireAuth({ role, children }: Props) {
   if (role && user.role !== role) {
     return (
       <EmptyState
+        level={1}
+        mark={
+          <CircleMark>
+            <LockIcon />
+          </CircleMark>
+        }
         title="You don't have access"
-        description="Your account is not allowed to view this page."
-        action={<Link to="/">Back to the library</Link>}
+        description={`Only ${role}s can use this page. You're logged in as a ${user.role}.`}
+        action={
+          <>
+            <Link to="/" className="btn btn-secondary">
+              Back to library
+            </Link>
+            <Link to="/login" className="btn btn-primary">
+              Switch account
+            </Link>
+          </>
+        }
       />
     )
   }

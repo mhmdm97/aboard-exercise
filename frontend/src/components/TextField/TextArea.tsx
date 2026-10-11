@@ -1,6 +1,7 @@
 import { useId } from 'react'
 import type { ComponentProps } from 'react'
 import styles from './TextField.module.css'
+import { ErrorIcon } from './TextField'
 
 interface Props extends ComponentProps<'textarea'> {
   label: string
@@ -9,8 +10,9 @@ interface Props extends ComponentProps<'textarea'> {
 }
 
 /** Labelled textarea with an inline error; same look and a11y wiring as `TextField`. */
-export function TextArea({ label, error, hint, className, ...input }: Props) {
-  const id = useId()
+export function TextArea({ label, error, hint, className, id: idProp, ...input }: Props) {
+  const generatedId = useId()
+  const id = idProp ?? generatedId
   const errorId = `${id}-error`
   const hintId = `${id}-hint`
   const describedBy = [error ? errorId : null, hint ? hintId : null].filter(Boolean).join(' ') || undefined
@@ -34,6 +36,7 @@ export function TextArea({ label, error, hint, className, ...input }: Props) {
       )}
       {error && (
         <p id={errorId} className={styles.error}>
+          <ErrorIcon />
           {error}
         </p>
       )}

@@ -69,19 +69,6 @@
   display: none;
 }
 
-.status:empty {
-  display: none;
-}
-
-.status {
-  margin: 0 0 16px;
-  padding: 12px 16px;
-  border-radius: var(--r-md);
-  background: var(--success-soft);
-  color: var(--success);
-  font-weight: 500;
-}
-
 @media (min-width: 768px) {
   .title {
     font-size: 48px;

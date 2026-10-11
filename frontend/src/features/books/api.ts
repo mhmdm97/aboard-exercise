@@ -1,3 +1,4 @@
+import type { InfiniteData, QueryClient } from '@tanstack/react-query'
 import { keepPreviousData, useInfiniteQuery, useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import type { AuthorDto, BookDto, BookInput, BookListResponse, BookSort, GenreDto } from '@library/shared'
 import { apiDelete, apiGet, apiPost, apiPut } from '../../api/client'
@@ -59,8 +60,26 @@ export function useGenres() {
   return useQuery({ queryKey: bookKeys.genres, queryFn: fetchGenres, staleTime: 60 * 60 * 1000 })
 }
 
-export function useBook(id: string) {
-  return useQuery({ queryKey: bookKeys.detail(id), queryFn: () => apiGet<BookDto>(`/api/books/${id}`) })
+/** A book already loaded by a list (library pages or favourites), so the detail page can render before its own fetch. */
+function findCachedBook(queryClient: QueryClient, id: string): BookDto | undefined {
+  for (const [, data] of queryClient.getQueriesData<InfiniteData<BookListResponse>>({ queryKey: ['books', 'list'] })) {
+    const hit = data?.pages.flatMap((p) => p.items).find((b) => b.id === id)
+    if (hit) return hit
+  }
+  return queryClient.getQueryData<BookDto[]>(['favourites', 'list'])?.find((b) => b.id === id)
+}
+
+/**
+ * `showCachedFirst`: render the copy from a loaded list straight away while the real fetch runs. The detail page uses it
+ * so the cover exists in the first frame of the card -> detail View Transition; forms must not (they copy the data once).
+ */
+export function useBook(id: string, { showCachedFirst = false } = {}) {
+  const queryClient = useQueryClient()
+  return useQuery({
+    queryKey: bookKeys.detail(id),
+    queryFn: () => apiGet<BookDto>(`/api/books/${id}`),
+    placeholderData: showCachedFirst ? () => findCachedBook(queryClient, id) : undefined,
+  })
 }
 
 export function useDeleteBook(id: string) {

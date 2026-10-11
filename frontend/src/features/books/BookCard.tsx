@@ -2,6 +2,7 @@ import { Link } from 'react-router'
 import type { CSSProperties } from 'react'
 import type { BookDto } from '@library/shared'
 import { FavouriteButton } from '../favourites/FavouriteButton'
+import { canViewTransition } from '../../hooks/viewTransition'
 import { Cover } from './Cover'
 import styles from './BookCard.module.css'
 
@@ -31,11 +32,11 @@ export function BookCard({ book, index, enterIndex }: Props) {
       style={enter ? ({ '--i': enterIndex } as CSSProperties) : undefined}
     >
       <div className={styles.coverWrap}>
-        <Cover book={book} index={index} />
+        <Cover book={book} index={index} morph />
         <FavouriteButton bookId={book.id} title={book.title} />
       </div>
       <h2 className={styles.title}>
-        <Link to={`/books/${book.id}`} className={styles.link}>
+        <Link to={`/books/${book.id}`} className={styles.link} viewTransition={canViewTransition()}>
           {book.title}
         </Link>
       </h2>

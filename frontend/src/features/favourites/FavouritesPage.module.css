@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-5);
+}
+
+.title {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.1;
+}
+
+.count {
+  margin: 4px 0 0;
+  color: var(--ink-2);
+  font-size: 16px;
+}
+
+/* The empty state already offers this action; on a phone the header button would crowd the title. */
+.browse {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 44px;
+    line-height: 1.05;
+  }
+
+  .count {
+    font-size: 17px;
+  }
+
+  .header {
+    margin-bottom: 28px;
+  }
+
+  .browse {
+    display: inline-flex;
+  }
+}

@@ -19,7 +19,39 @@ describe('LoginPage', () => {
     expect(screen.getByText('Enter your password.')).toBeInTheDocument()
     expect(screen.getByLabelText('Email')).toHaveAttribute('aria-invalid', 'true')
     expect(calls(fetchMock)).toEqual([])
-    expect(screen.getByText(/admin@library.local \/ Admin123!/)).toBeInTheDocument()
+    expect(screen.getByText(/admin@library.local · Admin123!/)).toBeInTheDocument()
+  })
+
+  it('shows and hides the password with the toggle', async () => {
+    mockApi({})
+    renderWithProviders(<LoginPage />)
+    const password = screen.getByLabelText('Password')
+    expect(password).toHaveAttribute('type', 'password')
+
+    await userEvent.type(password, 'secret-pw')
+    await userEvent.click(screen.getByRole('button', { name: 'Show password' }))
+    expect(screen.getByLabelText('Password')).toHaveAttribute('type', 'text')
+    expect(screen.getByLabelText('Password')).toHaveValue('secret-pw')
+
+    await userEvent.click(screen.getByRole('button', { name: 'Hide password' }))
+    expect(screen.getByLabelText('Password')).toHaveAttribute('type', 'password')
+  })
+
+  it('fills in the demo accounts with the Use buttons, which can then log in', async () => {
+    const fetchMock = mockApi({ 'POST /api/auth/login': { body: member } })
+    renderWithProviders(<LoginPage />, { route: '/?redirect=/home', routes: [home] })
+
+    await userEvent.click(screen.getByRole('button', { name: 'Fill in admin demo account' }))
+    expect(screen.getByLabelText('Email')).toHaveValue('admin@library.local')
+    expect(screen.getByLabelText('Password')).toHaveValue('Admin123!')
+
+    await userEvent.click(screen.getByRole('button', { name: 'Fill in member demo account' }))
+    expect(screen.getByLabelText('Email')).toHaveValue('member@library.local')
+    expect(screen.getByLabelText('Password')).toHaveValue('Member123!')
+
+    await userEvent.click(screen.getByRole('button', { name: 'Log in' }))
+    expect(await screen.findByText('Home page')).toBeInTheDocument()
+    expect(calls(fetchMock)).toContain('POST /api/auth/login')
   })
 
   it('logs in and redirects to the ?redirect= path', async () => {
@@ -64,6 +96,15 @@ describe('RegisterPage', () => {
       expect(screen.getByLabelText('Email')).toHaveAccessibleDescription('An account with this email already exists.'),
     )
     expect(screen.getByLabelText('Email')).toHaveAttribute('aria-invalid', 'true')
+  })
+})
+
+describe('RegisterPage password toggle', () => {
+  it('toggles the password visibility', async () => {
+    mockApi({})
+    renderWithProviders(<RegisterPage />)
+    await userEvent.click(screen.getByRole('button', { name: 'Show password' }))
+    expect(screen.getByLabelText('Password')).toHaveAttribute('type', 'text')
   })
 })
 

@@ -1,11 +1,14 @@
 import { Link } from 'react-router'
 import { EmptyState } from '../../components/EmptyState/EmptyState'
 import { ErrorMessage } from '../../components/ErrorMessage/ErrorMessage'
+import { HeartIcon } from '../../components/icons'
 import { Spinner } from '../../components/Spinner/Spinner'
+import { useDocumentTitle } from '../../hooks/useDocumentTitle'
+import { canViewTransition } from '../../hooks/viewTransition'
 import { BookCard } from '../books/BookCard'
 import gridStyles from '../library/BookGrid.module.css'
 import { useFavourites } from './api'
-import { useDocumentTitle } from '../../hooks/useDocumentTitle'
+import styles from './FavouritesPage.module.css'
 
 export function FavouritesPage() {
   useDocumentTitle('Favourites')
@@ -13,21 +16,40 @@ export function FavouritesPage() {
 
   return (
     <section>
-      <h1>Favourites</h1>
+      <div className={styles.header}>
+        <div>
+          <h1 className={styles.title}>Favourites</h1>
+          {books && books.length > 0 && (
+            <p className={styles.count}>
+              {books.length} {books.length === 1 ? 'book' : 'books'} you've saved
+            </p>
+          )}
+        </div>
+        {books && books.length > 0 && (
+          <Link to="/" className={`btn btn-secondary ${styles.browse}`} viewTransition={canViewTransition()}>
+            Browse the library
+          </Link>
+        )}
+      </div>
       {isPending ? (
         <Spinner label="Loading favourites…" />
       ) : error ? (
         <ErrorMessage error={error} onRetry={() => void refetch()} />
       ) : books.length === 0 ? (
         <EmptyState
-          title="No favourites yet"
-          description="Tap the heart on a book to save it here."
-          action={<Link to="/">Browse the library</Link>}
+          mark={<HeartIcon />}
+          title="Nothing saved yet"
+          description="Tap the heart on any book and it will wait for you here."
+          action={
+            <Link to="/" className="btn btn-primary" viewTransition={canViewTransition()}>
+              Browse the library
+            </Link>
+          }
         />
       ) : (
         <div className={gridStyles.grid}>
-          {books.map((book) => (
-            <BookCard key={book.id} book={book} />
+          {books.map((book, i) => (
+            <BookCard key={book.id} book={book} index={i} enterIndex={Math.min(i, 11)} />
           ))}
         </div>
       )}

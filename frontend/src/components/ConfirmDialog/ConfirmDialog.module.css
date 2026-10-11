@@ -1,9 +1,132 @@
-.dialog { max-width: 28rem; width: calc(100% - 2rem); padding: var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); color: var(--color-text); }
-.dialog::backdrop { background: rgb(0 0 0 / 0.5); }
-.title { margin: 0 0 var(--space-3); }
-.error { color: var(--color-danger); }
-.actions { display: flex; justify-content: flex-end; gap: var(--space-3); margin-top: var(--space-4); }
-.cancel, .danger { font: inherit; padding: var(--space-2) var(--space-4); border-radius: var(--radius-md); cursor: pointer; }
-.cancel { background: var(--color-surface-alt); color: var(--color-text); border: 1px solid var(--color-border); }
-.danger { background: var(--color-danger); color: var(--color-surface); border: 1px solid var(--color-danger); }
-.cancel:disabled, .danger:disabled { opacity: 0.6; cursor: not-allowed; }
+.dialog {
+  width: min(400px, calc(100% - 32px));
+  padding: 0;
+  border: 0;
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow-lg);
+  animation: dialog-in var(--dur-base) var(--ease-out) both;
+}
+
+.dialog::backdrop {
+  background: var(--backdrop);
+  animation: backdrop-in var(--dur-base) var(--ease-out) both;
+}
+
+/* Leaving: the parent unmounts the dialog once the exit animation has played. */
+.closing {
+  animation: dialog-out var(--dur-fast) var(--ease-in) both;
+}
+
+.closing::backdrop {
+  animation: backdrop-out var(--dur-fast) var(--ease-in) both;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px;
+}
+
+.title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.content {
+  color: var(--ink-2);
+}
+
+.content > :first-child {
+  margin-top: 0;
+}
+
+.content > :last-child {
+  margin-bottom: 0;
+}
+
+.error {
+  margin: 0;
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 900ms linear infinite;
+}
+
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.96);
+  }
+}
+
+@keyframes dialog-out {
+  to {
+    opacity: 0;
+    transform: translateY(8px) scale(0.96);
+  }
+}
+
+@keyframes dialog-fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes dialog-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes backdrop-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes backdrop-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Reduced motion: opacity only, fast. */
+@media (prefers-reduced-motion: reduce) {
+  .dialog {
+    animation: dialog-fade-in var(--dur-fast) linear both;
+  }
+
+  .closing {
+    animation: dialog-fade-out var(--dur-fast) linear both;
+  }
+
+  .spinner {
+    animation: none;
+    border-right-color: currentColor;
+    opacity: 0.5;
+  }
+}

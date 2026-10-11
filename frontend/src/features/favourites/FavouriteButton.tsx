@@ -47,7 +47,7 @@ export function FavouriteButton({ bookId, title, variant = 'icon' }: Props) {
       }}
     >
       <HeartIcon />
-      {variant === 'full' && <span aria-hidden="true">{active ? 'Favourited' : 'Favourite'}</span>}
+      {variant === 'full' && <span aria-hidden="true">{active ? 'In your favourites' : 'Add to favourites'}</span>}
     </button>
   )
 }

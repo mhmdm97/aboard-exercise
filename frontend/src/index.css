@@ -71,6 +71,9 @@
   --danger-ink: #ffffff;
   --skel-hi: #f8f3ea;
   --backdrop: rgba(30, 26, 21, 0.48);
+  --toast-bg: var(--ink);
+  --toast-ink: var(--bg);
+  --toast-ok: #7fc79f;
   --heart-bg: rgba(251, 248, 241, 0.94);
   --shadow-sm: 0 1px 2px rgba(60, 40, 20, 0.08), 0 1px 1px rgba(60, 40, 20, 0.04);
   --shadow-md: 0 6px 16px -4px rgba(60, 40, 20, 0.16), 0 2px 4px rgba(60, 40, 20, 0.06);
@@ -78,34 +81,6 @@
 
   --container: 80rem;
   --gutter: 16px;
-
-  /* Legacy names, still used by the pages that have not been restyled yet. */
-  --color-bg: var(--bg);
-  --color-surface: var(--surface);
-  --color-surface-alt: var(--surface-2);
-  --color-text: var(--ink);
-  --color-text-muted: var(--ink-2);
-  --color-border: var(--line-strong);
-  --color-primary: var(--accent);
-  --color-primary-hover: var(--accent-hover);
-  --color-on-primary: var(--accent-ink);
-  --color-danger: var(--danger);
-  --color-danger-bg: var(--danger-soft);
-  --space-1: 0.25rem;
-  --space-2: 0.5rem;
-  --space-3: 0.75rem;
-  --space-4: 1rem;
-  --space-5: 1.5rem;
-  --space-6: 2rem;
-  --space-7: 3rem;
-  --radius-sm: var(--r-sm);
-  --radius-md: var(--r-md);
-  --radius-lg: var(--r-lg);
-  --font-sm: 0.875rem;
-  --font-md: 1rem;
-  --font-lg: 1.25rem;
-  --font-xl: 1.75rem;
-  --font-family: var(--font-sans);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -131,6 +106,7 @@
     --danger-ink: #1e1a15;
     --skel-hi: #352f27;
     --backdrop: rgba(0, 0, 0, 0.62);
+    --toast-ok: #2d6a4a;
     --heart-bg: rgba(30, 26, 21, 0.9);
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
     --shadow-md: 0 8px 20px -6px rgba(0, 0, 0, 0.6), 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -202,6 +178,44 @@ a:hover {
   max-width: var(--container);
   margin-inline: auto;
   padding-inline: var(--gutter);
+}
+
+/*
+ * View Transitions (route changes and the card <-> detail cover morph). Only runs where
+ * document.startViewTransition exists and motion is allowed; see hooks/viewTransition.ts.
+ * The keyframes are global on purpose: CSS modules would rename them and the pseudo-elements could not find them.
+ */
+@keyframes vt-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes vt-fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+::view-transition-old(root) {
+  animation: vt-fade-out var(--dur-fast) var(--ease-in) both;
+}
+
+::view-transition-new(root) {
+  animation: vt-fade-in var(--dur-base) var(--ease-out) calc(var(--stagger) * 2) both;
+}
+
+::view-transition-group(*) {
+  animation-duration: var(--dur-morph);
+  animation-timing-function: var(--ease-in-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

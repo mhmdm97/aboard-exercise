@@ -1,4 +1,5 @@
 import { useLocation } from 'react-router'
+import { Toast } from '../../components/Toast/Toast'
 import { useBooksInfinite, useGenres } from '../books/api'
 import { ActiveFilters } from './ActiveFilters'
 import { buildActiveChips } from './activeChips'
@@ -33,9 +34,7 @@ export function LibraryPage() {
         <h1 className={styles.title}>The Library</h1>
         <p className={styles.lede}>Every book on the shelf. Filter by genre, year and rating, or just search.</p>
       </div>
-      <p role="status" aria-live="polite" className={styles.status}>
-        {message}
-      </p>
+      <Toast message={message} />
       <div className={styles.search}>
         <SearchBar q={filters.q} onChange={(q) => setFilters({ q })} />
       </div>

@@ -69,4 +69,4 @@ _Everything is built and the README run-through is done. Left for the author (al
 
 ## 5. "Shelf" visual redesign (spec in DECISIONS.md `[design]`)
 - [x] Part 1: tokens + self-hosted fonts, shared primitives (`components/ui/ui.css`), header, generated cloth covers, book card, Library page (search, sidebar, mobile drawer, active chips, grid, load more, skeletons, states) and their motion
-- [ ] Part 2: Detail, BookForm, Auth, States, MobileScreens pages + View Transitions (card to detail cover, route cross-fade, results re-flow); restyle `ConfirmDialog` and the success toast; migrate remaining legacy token names (`--color-*`, `--space-*`) to the new ones
+- [x] Part 2: Detail, BookForm, Auth, States, MobileScreens pages + View Transitions (card to detail cover, route cross-fade, results re-flow); restyle `ConfirmDialog` and the success toast; migrate remaining legacy token names (`--color-*`, `--space-*`) to the new ones

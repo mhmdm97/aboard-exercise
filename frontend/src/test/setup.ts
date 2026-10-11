@@ -14,6 +14,9 @@ if (typeof HTMLDialogElement !== 'undefined' && !HTMLDialogElement.prototype.sho
   }
 }
 
+// jsdom does not implement scrolling; React Router's <ScrollRestoration> calls it.
+window.scrollTo = () => {}
+
 afterEach(() => {
   cleanup()
   vi.unstubAllGlobals()

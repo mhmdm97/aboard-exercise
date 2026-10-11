@@ -1,5 +1,6 @@
-import { Link, NavLink, Outlet } from 'react-router'
+import { Link, NavLink, Outlet, ScrollRestoration, useLocation } from 'react-router'
 import { useCurrentUser, useLogout } from '../../features/auth/api'
+import { canViewTransition } from '../../hooks/viewTransition'
 import styles from './Layout.module.css'
 
 const navClass = ({ isActive }: { isActive: boolean }) =>
@@ -35,6 +36,8 @@ function PlusIcon() {
 export function Layout() {
   const { data: user } = useCurrentUser()
   const logout = useLogout()
+  const { pathname } = useLocation()
+  const viewTransition = canViewTransition()
 
   return (
     <div className={styles.shell}>
@@ -43,21 +46,21 @@ export function Layout() {
       </a>
       <header className={styles.header}>
         <div className={`container ${styles.bar}`}>
-          <Link to="/" className={styles.brand} aria-label="Shelf, go to library">
+          <Link to="/" className={styles.brand} aria-label="Shelf, go to library" viewTransition={viewTransition}>
             <LogoMark />
             <span className={styles.wordmark}>Shelf</span>
           </Link>
           <nav aria-label="Primary" className={styles.nav}>
-            <NavLink to="/" end className={navClass}>
+            <NavLink to="/" end className={navClass} viewTransition={viewTransition}>
               Library
             </NavLink>
             {user && (
-              <NavLink to="/favourites" className={navClass}>
+              <NavLink to="/favourites" className={navClass} viewTransition={viewTransition}>
                 Favourites
               </NavLink>
             )}
             {user?.role === 'admin' && (
-              <NavLink to="/books/new" className={navClass}>
+              <NavLink to="/books/new" className={navClass} viewTransition={viewTransition}>
                 <PlusIcon />
                 Add book
               </NavLink>
@@ -80,10 +83,10 @@ export function Layout() {
               </>
             ) : (
               <>
-                <Link to="/login" className="btn btn-ghost">
+                <Link to="/login" className="btn btn-ghost" viewTransition={viewTransition}>
                   Log in
                 </Link>
-                <Link to="/register" className="btn btn-primary">
+                <Link to="/register" className="btn btn-primary" viewTransition={viewTransition}>
                   Register
                 </Link>
               </>
@@ -92,11 +95,14 @@ export function Layout() {
         </div>
       </header>
       <main id="main" tabIndex={-1} className={`container ${styles.main}`}>
-        <Outlet />
+        <div key={pathname} className="page-in">
+          <Outlet />
+        </div>
       </main>
       <footer className={styles.footer}>
         <div className="container">Shelf: your book library</div>
       </footer>
+      <ScrollRestoration />
     </div>
   )
 }
