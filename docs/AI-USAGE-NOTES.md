@@ -9,6 +9,10 @@ Each entry is a place where AI-generated work was wrong, incomplete, or changed 
 
 - **Fuzzy search couldn't use its own index.** The AI created GIN trigram indexes on `books.title` and `authors.name`. It then wrote the fuzzy filter as `word_similarity(q, title) > 0.4`, a *function* comparison that Postgres can't serve from a GIN index. The index only helped the `ILIKE` branch. Invisible at 351 rows, but a full table scan at scale. Caught during the search walkthrough. Fix: filter with the index-supported operator `q <% title`, with the threshold set transaction-locally (`set_config('pg_trgm.word_similarity_threshold', '0.4', true)`); keep `word_similarity()` only for ranking. Confirmed with `EXPLAIN` (Bitmap Index Scan).
 
+- **The AI's own security fix broke login in dev, and its review claimed it couldn't.** The security pass added an Origin check for unsafe methods: reject if `Origin` doesn't match `Host`. It explicitly reasoned that the Vite dev proxy has "no `changeOrigin`" so it would pass. That was wrong: Vite's string-form proxy target implies `changeOrigin: true`, so the backend saw `Host: localhost:5000` against `Origin: localhost:5173`, and every login/POST in `npm run dev` returned 403. Its tests passed because `app.inject()` and curl send no `Origin` header. A later agent hit it while driving a real browser. Lesson: verify security changes end-to-end in a real browser, not only via injected requests. Fix: object proxy with `changeOrigin: false`.
+
+- **Anonymous `/api/auth/me` returned 401**, which every guest page load logged as a console error (Lighthouse Best Practices 100 → 92). Changed to `200 { user: null }`.
+
 ## Corrections already mentioned in DECISIONS.md (for reference)
 
 - react-router 8 installed instead of the requested 7 (kept, but logged).
