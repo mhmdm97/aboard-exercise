@@ -40,7 +40,7 @@
 - **Migrate and seed on container start.** Fine for one container, racy with several replicas.
 - **No end-to-end tests in CI.** I ran the app in a real browser with Playwright, but those runs are not committed.
 - **Book updates are a full replace (PUT), last write wins**, with no optimistic concurrency.
-- **Test coverage is uneven.** The genre and author lookup endpoints have no dedicated integration test yet.
+- **Test coverage is uneven.** Every endpoint has integration tests, but the frontend has no end-to-end tests in CI: the full flows were checked with throwaway Playwright scripts, not a committed suite.
 - **Accessibility and polish are partial.** Labels and semantics are in place, but I did no systematic audit and skipped animation.
 - **Helmet CSP is disabled outside production** so Swagger UI works.
 - **Deployment skipped.** The brief marks it optional.
@@ -59,5 +59,7 @@
 - **`useFieldArray` did not fit.** The natural choice for the repeating author field is `useFieldArray`, but it only holds arrays of objects and `authorNames` is a `string[]` in the shared schema. The form controls the list with `useWatch`/`setValue` instead of reshaping the shared contract to suit the form library.
 - **Docker was initially unverifiable.** The Dockerfiles and compose were first written without a run to prove them. I did not accept the task until a real `docker compose up` worked; the result, including the `node:22-slim` choice and the `COOKIE_SECURE` setting for plain http, is in the decisions log.
 - **Seed ISBNs.** The generated ISBNs had invalid check digits in places; they were validated and repaired by script. The remaining limitation (some editions or covers may not match) is stated above rather than hidden.
+- **Unrequested major version.** I asked for react-router 7; the agent installed 8 without flagging it. The APIs used are unchanged, so I kept it, but logged it rather than letting the drift pass silently.
+- **Lockfile churn.** An early `npm install` in the sandbox rewrote `package-lock.json` for a different npm version (dropping platform `libc` metadata). It was unrelated to the change, so I reverted it before committing.
 
 > **TODO (author):** add your own examples of AI output you rejected or rewrote, and why.
