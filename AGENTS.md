@@ -31,46 +31,33 @@ AGENTS.md                 ← you are here (CLAUDE.md / GEMINI.md just point her
 docs/EXERCISE.md          ← the exercise brief, verbatim
 docs/TASKS.md             ← task board / progress log
 docs/DECISIONS.md         ← decisions & assumptions log
-backend/                  ← .NET 10 minimal API, solution file Abroad.slnx
-  src/Abroad.Api/
-  tests/Abroad.Api.Tests/ ← xUnit + WebApplicationFactory integration tests
+backend/                  ← Node + TypeScript API (not created yet, see TASKS.md §1)
 frontend/                 ← React 19 + TypeScript + Vite
-.github/workflows/ci.yml  ← CI: dotnet test; npm lint + build
+.github/workflows/ci.yml  ← CI: npm lint + build (add backend job when backend exists)
 ```
+
+The original .NET boilerplate was removed: the brief requires a **Node** API.
 
 ## Commands
 
-The shell is Windows; Git Bash and PowerShell both work. Run from the repo root.
+Run from the repo root.
 
 | What | Command |
 | --- | --- |
-| Backend build | `dotnet build backend/Abroad.slnx` |
-| Backend tests | `dotnet test backend/Abroad.slnx` |
-| Backend run (http://localhost:5000) | `dotnet run --project backend/src/Abroad.Api` |
-| OpenAPI doc (dev) | http://localhost:5000/openapi/v1.json |
 | Frontend install | `npm install --prefix frontend` |
 | Frontend dev (http://localhost:5173) | `npm run dev --prefix frontend` |
 | Frontend checks | `npm run lint --prefix frontend` and `npm run build --prefix frontend` |
+| Backend | _TBD once the Node stack is scaffolded (TASKS.md §1); update this table then_ |
 
 `dev` servers are long-running: start them in the background or in a separate terminal, never block on them.
 **Definition of done for any task:** backend tests pass, frontend lint + build pass, the feature works when run.
 
-## Backend conventions (.NET 10, C# 14)
+## Backend conventions (Node + TypeScript)
 
-- **Minimal APIs, feature folders.** One folder per feature under `src/Abroad.Api/Features/<Feature>/`:
-  - `<Feature>Endpoints.cs` → `public static class` with `Map<Feature>Endpoints(this RouteGroupBuilder group)`,
-    registered from `Program.cs` on the `/api` group (e.g. `api.MapGroup("/orders").MapOrderEndpoints()`).
-  - Request/response DTOs as `record`s in the same folder (`<Feature>Dtos.cs` or alongside endpoints).
-  - Business logic in a service class (`<Feature>Service.cs`) registered in DI; endpoints stay thin.
-  - Shared things (persistence, errors) go in `src/Abroad.Api/Infrastructure/`.
-- Use `TypedResults` (`TypedResults.Ok(...)`, `NotFound()`, `ValidationProblem(...)`) so OpenAPI is accurate.
-- Errors: ProblemDetails is already wired (`AddProblemDetails` + `UseExceptionHandler`). Return `404`/`400` via TypedResults; don't throw for control flow.
-- Validation: prefer .NET 10 built-in minimal-API validation (`builder.Services.AddValidation();` + DataAnnotations on request records). No FluentValidation unless the brief demands complex rules.
-- Persistence: none yet. If needed, default to **EF Core + SQLite** (file db, `EnsureCreated()` on startup, seed data in code)
-  unless the brief says otherwise. Use **EF Core InMemory** or SQLite in-memory for tests. Log the choice in DECISIONS.md.
-- Async all the way (`async Task<…>`, pass `CancellationToken`). Nullable is enabled; keep it warning-free.
-- No extra layers/projects (no separate Domain/Application projects, no MediatR, no AutoMapper) unless the brief clearly needs them.
-- Ports are fixed in `Properties/launchSettings.json` (5000 http / 5001 https). The frontend proxy depends on 5000; don't change it.
+_To be written by the agent that scaffolds the backend (TASKS.md §1), once the stack is chosen and logged in DECISIONS.md._
+Until then: TypeScript strict, feature folders (`src/features/<feature>/` with routes, service, schemas, tests),
+thin route handlers with logic in services, validation at the edge, async all the way, no secrets in the repo.
+The API listens on port 5000 (the Vite proxy forwards `/api` there).
 
 ## Frontend conventions (React 19, TS, Vite)
 
@@ -87,8 +74,7 @@ The shell is Windows; Git Bash and PowerShell both work. Run from the repo root.
 
 ## Testing
 
-- Backend: every endpoint gets at least one integration test in `tests/Abroad.Api.Tests` using
-  `WebApplicationFactory<Program>` (see `HealthEndpointTests.cs`). Happy path plus the main error case. Unit-test non-trivial service logic.
+- Backend: every endpoint gets at least one integration test (happy path plus the main error case). Unit-test non-trivial service logic.
 - Frontend: no test runner is installed yet. If time allows, add Vitest + React Testing Library for key components; this is lower priority than features.
 
 ## Git

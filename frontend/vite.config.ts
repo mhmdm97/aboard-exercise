@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
-      // Forward API calls to the .NET backend (see backend launchSettings.json)
+      // Forward API calls to the backend API
       '/api': 'http://localhost:5000',
     },
   },
