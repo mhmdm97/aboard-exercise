@@ -5,15 +5,18 @@
  *
  * Needs internet; normal development does not (the JSON is committed). Requests are limited
  * to 1 per second, and successful responses are cached in backend/.cache/openlibrary/, so
- * re-runs are fast and deterministic.
+ * re-runs are fast and deterministic. Covers themselves come from `npm run seed:covers`; books
+ * whose cover file already exists keep their local /covers/<id>.jpg URL.
  */
 import { createHash } from 'node:crypto'
+import { existsSync } from 'node:fs'
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const BACKEND_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const CACHE_DIR = path.join(BACKEND_DIR, '.cache', 'openlibrary')
+const COVERS_DIR = path.resolve(BACKEND_DIR, '..', 'frontend', 'public', 'covers') // filled by seed:covers
 const OUTPUT = path.join(BACKEND_DIR, 'src', 'db', 'seed', 'books.json')
 const USER_AGENT = 'abroad-exercise-seed/1.0 (https://github.com/mhmdm97/abroad-exercise)'
 const MIN_INTERVAL_MS = 1100
@@ -411,6 +414,7 @@ interface SeedOut {
   pageCount?: number
   description: string
   genres: string[]
+  coverId: number
   coverUrl: string
   averageRating?: number
 }
@@ -511,7 +515,10 @@ async function main() {
       ...(doc.number_of_pages_median ? { pageCount: doc.number_of_pages_median } : {}),
       description,
       genres,
-      coverUrl: `https://covers.openlibrary.org/b/id/${doc.cover_i}-M.jpg`,
+      coverId: doc.cover_i!,
+      coverUrl: existsSync(path.join(COVERS_DIR, `${doc.cover_i}.jpg`))
+        ? `/covers/${doc.cover_i}.jpg`
+        : `https://covers.openlibrary.org/b/id/${doc.cover_i}-M.jpg`,
       ...(rated ? { averageRating: Math.min(5, Math.max(0, Math.round(doc.ratings_average! * 100) / 100)) } : {}),
     })
     if ((n + 1) % 50 === 0) console.log(`descriptions: ${n + 1}/${picked.length}`)

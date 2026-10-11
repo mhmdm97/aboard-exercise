@@ -59,8 +59,10 @@ The seed data is real Open Library data, committed as `backend/src/db/seed/books
 
 ```bash
 npm run seed:fetch -w @library/backend
+npm run seed:covers -w @library/backend   # downloads the cover images into frontend/public/covers (resumable)
 ```
 
+The seed covers are self-hosted (about 6 MB in `frontend/public/covers/`) because Open Library's archive.org backend throttles hotlinking. Reseeding an existing database updates the seed books' covers to the local files (covers an admin changed are kept).
 Seeding is idempotent and keyed on ISBN, so seeding an existing database adds the new books and leaves old ones in place. For a clean database run `docker compose down -v && docker compose up -d db`, then `npm run db:reset -w @library/backend`.
 
 ## Tests & checks
@@ -135,7 +137,7 @@ I built this with Claude Code. An orchestrator session planned the work as small
 
 ## What I'd do next
 
-- Self-host cover images instead of hotlinking Open Library.
+- Move cover images (self-hosted in git for the seed data) to object storage behind a CDN.
 - Image upload for covers in the admin form.
 - Broader e2e coverage: more browsers, a mobile viewport, visual checks.
 - Session hardening: rotating sessions, CSRF tokens, password reset and email verification.

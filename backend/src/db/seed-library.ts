@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto'
-import { inArray } from 'drizzle-orm'
+import { and, eq, inArray } from 'drizzle-orm'
 import type { Database } from './client.js'
 import { authors, bookAuthors, bookGenres, books, genres } from './schema/index.js'
 import seedBooks from './seed/books.json' with { type: 'json' }
@@ -13,6 +13,7 @@ interface SeedBook {
   pageCount?: number
   description: string
   genres: string[]
+  coverId?: number
   coverUrl: string
   averageRating?: number
 }
@@ -29,7 +30,11 @@ export function seedRating(key: string): number {
   return Math.round((2.5 + (n % 251) / 100) * 100) / 100
 }
 
-/** Idempotent: safe to run repeatedly (existing rows are left alone). */
+/**
+ * Idempotent: safe to run repeatedly. Existing rows are left alone, except that a seed book still
+ * pointing at its old Open Library cover URL is switched to the self-hosted /covers/<id>.jpg
+ * (covers an admin edited are never touched).
+ */
 export async function seedLibrary(db: Database): Promise<{ books: number }> {
   const data: SeedBook[] = seedBooks
   await db.transaction(async (tx) => {
@@ -58,6 +63,16 @@ export async function seedLibrary(db: Database): Promise<{ books: number }> {
         })),
       )
       .onConflictDoNothing({ target: books.isbn })
+
+    const localCovers = data.filter((b) => b.coverId && b.coverUrl === `/covers/${b.coverId}.jpg`)
+    for (const b of localCovers) {
+      await tx
+        .update(books)
+        .set({ coverUrl: b.coverUrl })
+        .where(
+          and(eq(books.isbn, b.isbn), eq(books.coverUrl, `https://covers.openlibrary.org/b/id/${b.coverId}-M.jpg`)),
+        )
+    }
 
     const genreIds = new Map(
       (await tx.select({ id: genres.id, name: genres.name }).from(genres).where(inArray(genres.name, genreNames))).map(

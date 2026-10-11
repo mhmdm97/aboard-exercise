@@ -54,8 +54,11 @@ export const bookInputSchema = z.object({
   subtitle: optionalText(300),
   description: optionalText(5000),
   isbn: isbnSchema,
-  // http(s) only: rejects javascript:/data: URLs.
-  coverUrl: z.url({ protocol: /^https?$/ }).max(2048).nullish().transform((v) => v ?? null),
+  // http(s) URLs or our own self-hosted seed covers (/covers/<id>.jpg); rejects javascript:/data: URLs.
+  coverUrl: z
+    .union([z.url({ protocol: /^https?$/ }).max(2048), z.string().regex(/^\/covers\/[0-9]+\.jpg$/)])
+    .nullish()
+    .transform((v) => v ?? null),
   publishedYear: optionalInt(0, new Date().getFullYear() + 1),
   pageCount: optionalInt(1, 20000),
   averageRating: z.number().min(0).max(5).nullish().transform((v) => v ?? null),

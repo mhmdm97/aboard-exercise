@@ -18,6 +18,22 @@ describe('bookInputSchema', () => {
     expect(r.pageCount).toBeNull()
   })
 
+  it('accepts self-hosted seed cover paths', () => {
+    expect(bookInputSchema.parse({ ...valid, coverUrl: '/covers/123.jpg' }).coverUrl).toBe('/covers/123.jpg')
+  })
+
+  it.each([
+    '/covers/../x',
+    '/covers/../x.jpg',
+    '//evil.com/x.jpg',
+    'javascript:alert(1)',
+    'data:image/png;base64,AAAA',
+    '/covers/1.jpg?x',
+    '/other/1.jpg',
+  ])('rejects cover URL %s', (coverUrl) => {
+    expect(bookInputSchema.safeParse({ ...valid, coverUrl }).success).toBe(false)
+  })
+
   it.each([
     ['empty title', { title: '  ' }],
     ['no authors', { authorNames: [] }],

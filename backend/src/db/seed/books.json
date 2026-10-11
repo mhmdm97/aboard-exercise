@@ -11,8 +11,9 @@
     "genres": [
       "Horror"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14654118-M.jpg",
-    "averageRating": 4
+    "averageRating": 4,
+    "coverId": 14654118,
+    "coverUrl": "/covers/14654118.jpg"
   },
   {
     "title": "101 Essays That Will Change The Way You Think",
@@ -28,8 +29,9 @@
       "Self-Help",
       "Non-Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10524689-M.jpg",
-    "averageRating": 4.09
+    "averageRating": 4.09,
+    "coverId": 10524689,
+    "coverUrl": "/covers/10524689.jpg"
   },
   {
     "title": "12 Rules for Life",
@@ -44,8 +46,9 @@
       "Self-Help",
       "Philosophy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8131760-M.jpg",
-    "averageRating": 3.82
+    "averageRating": 3.82,
+    "coverId": 8131760,
+    "coverUrl": "/covers/8131760.jpg"
   },
   {
     "title": "21 Lessons for the 21st Century",
@@ -59,8 +62,9 @@
     "genres": [
       "History"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10108277-M.jpg",
-    "averageRating": 4.04
+    "averageRating": 4.04,
+    "coverId": 10108277,
+    "coverUrl": "/covers/10108277.jpg"
   },
   {
     "title": "A Brief History of Time",
@@ -75,8 +79,9 @@
       "Science",
       "Non-Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10432365-M.jpg",
-    "averageRating": 4.14
+    "averageRating": 4.14,
+    "coverId": 10432365,
+    "coverUrl": "/covers/10432365.jpg"
   },
   {
     "title": "A Clockwork Orange",
@@ -92,8 +97,9 @@
       "Science Fiction",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14430663-M.jpg",
-    "averageRating": 4.01
+    "averageRating": 4.01,
+    "coverId": 14430663,
+    "coverUrl": "/covers/14430663.jpg"
   },
   {
     "title": "A Court of Mist and Fury",
@@ -107,8 +113,9 @@
     "genres": [
       "Fantasy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14315081-M.jpg",
-    "averageRating": 4.02
+    "averageRating": 4.02,
+    "coverId": 14315081,
+    "coverUrl": "/covers/14315081.jpg"
   },
   {
     "title": "A Court of Thorns and Roses",
@@ -123,8 +130,9 @@
       "Fantasy",
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/15254465-M.jpg",
-    "averageRating": 3.91
+    "averageRating": 3.91,
+    "coverId": 15254465,
+    "coverUrl": "/covers/15254465.jpg"
   },
   {
     "title": "A Game of Thrones",
@@ -138,8 +146,9 @@
     "genres": [
       "Fantasy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9269962-M.jpg",
-    "averageRating": 4.22
+    "averageRating": 4.22,
+    "coverId": 9269962,
+    "coverUrl": "/covers/9269962.jpg"
   },
   {
     "title": "A Gentle Reminder",
@@ -153,8 +162,9 @@
     "genres": [
       "Self-Help"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14424196-M.jpg",
-    "averageRating": 3.97
+    "averageRating": 3.97,
+    "coverId": 14424196,
+    "coverUrl": "/covers/14424196.jpg"
   },
   {
     "title": "A Gentleman in Moscow",
@@ -168,8 +178,9 @@
     "genres": [
       "Historical Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/11326818-M.jpg",
-    "averageRating": 3.89
+    "averageRating": 3.89,
+    "coverId": 11326818,
+    "coverUrl": "/covers/11326818.jpg"
   },
   {
     "title": "A Good Girl's Guide to Murder",
@@ -185,8 +196,9 @@
       "Young Adult",
       "Thriller"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13156188-M.jpg",
-    "averageRating": 4.04
+    "averageRating": 4.04,
+    "coverId": 13156188,
+    "coverUrl": "/covers/13156188.jpg"
   },
   {
     "title": "A Little Life",
@@ -200,8 +212,9 @@
     "genres": [
       "Literary Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12065783-M.jpg",
-    "averageRating": 3.96
+    "averageRating": 3.96,
+    "coverId": 12065783,
+    "coverUrl": "/covers/12065783.jpg"
   },
   {
     "title": "A Midsummer Night's Dream",
@@ -217,8 +230,9 @@
       "Romance",
       "Fantasy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7205924-M.jpg",
-    "averageRating": 3.93
+    "averageRating": 3.93,
+    "coverId": 7205924,
+    "coverUrl": "/covers/7205924.jpg"
   },
   {
     "title": "A Tale of Two Cities",
@@ -232,8 +246,9 @@
     "genres": [
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13301713-M.jpg",
-    "averageRating": 3.77
+    "averageRating": 3.77,
+    "coverId": 13301713,
+    "coverUrl": "/covers/13301713.jpg"
   },
   {
     "title": "A Wizard of Earthsea",
@@ -248,8 +263,9 @@
       "Fantasy",
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13617691-M.jpg",
-    "averageRating": 3.94
+    "averageRating": 3.94,
+    "coverId": 13617691,
+    "coverUrl": "/covers/13617691.jpg"
   },
   {
     "title": "A Wrinkle in Time",
@@ -264,8 +280,9 @@
       "Classics",
       "Science Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8709146-M.jpg",
-    "averageRating": 3.88
+    "averageRating": 3.88,
+    "coverId": 8709146,
+    "coverUrl": "/covers/8709146.jpg"
   },
   {
     "title": "A child called \"it\"",
@@ -279,8 +296,9 @@
     "genres": [
       "Biography"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14559604-M.jpg",
-    "averageRating": 4.57
+    "averageRating": 4.57,
+    "coverId": 14559604,
+    "coverUrl": "/covers/14559604.jpg"
   },
   {
     "title": "A short history of nearly everything",
@@ -295,8 +313,9 @@
       "Philosophy",
       "Science"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12725620-M.jpg",
-    "averageRating": 4.16
+    "averageRating": 4.16,
+    "coverId": 12725620,
+    "coverUrl": "/covers/12725620.jpg"
   },
   {
     "title": "Abraham Lincoln",
@@ -310,8 +329,9 @@
     "genres": [
       "History"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/2560515-M.jpg",
-    "averageRating": 4.08
+    "averageRating": 4.08,
+    "coverId": 2560515,
+    "coverUrl": "/covers/2560515.jpg"
   },
   {
     "title": "Adventures of Huckleberry Finn",
@@ -326,8 +346,9 @@
       "Adventure",
       "Humour"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8157718-M.jpg",
-    "averageRating": 3.97
+    "averageRating": 3.97,
+    "coverId": 8157718,
+    "coverUrl": "/covers/8157718.jpg"
   },
   {
     "title": "Alice's Adventures in Wonderland",
@@ -343,8 +364,9 @@
       "Fantasy",
       "Adventure"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10527843-M.jpg",
-    "averageRating": 4.05
+    "averageRating": 4.05,
+    "coverId": 10527843,
+    "coverUrl": "/covers/10527843.jpg"
   },
   {
     "title": "All the Light We Cannot See",
@@ -358,8 +380,9 @@
     "genres": [
       "Literary Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14559680-M.jpg",
-    "averageRating": 4.28
+    "averageRating": 4.28,
+    "coverId": 14559680,
+    "coverUrl": "/covers/14559680.jpg"
   },
   {
     "title": "Allegiant",
@@ -373,8 +396,9 @@
     "genres": [
       "Dystopian"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7276393-M.jpg",
-    "averageRating": 3.96
+    "averageRating": 3.96,
+    "coverId": 7276393,
+    "coverUrl": "/covers/7276393.jpg"
   },
   {
     "title": "American Prometheus",
@@ -391,8 +415,9 @@
       "History",
       "Science"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/6460516-M.jpg",
-    "averageRating": 3.91
+    "averageRating": 3.91,
+    "coverId": 6460516,
+    "coverUrl": "/covers/6460516.jpg"
   },
   {
     "title": "American Psycho",
@@ -408,8 +433,9 @@
       "Thriller",
       "Horror"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8401686-M.jpg",
-    "averageRating": 3.83
+    "averageRating": 3.83,
+    "coverId": 8401686,
+    "coverUrl": "/covers/8401686.jpg"
   },
   {
     "title": "Americanah",
@@ -423,8 +449,9 @@
     "genres": [
       "Literary Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8474037-M.jpg",
-    "averageRating": 3.85
+    "averageRating": 3.85,
+    "coverId": 8474037,
+    "coverUrl": "/covers/8474037.jpg"
   },
   {
     "title": "And Then There Were None",
@@ -439,8 +466,9 @@
       "Mystery",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/11172296-M.jpg",
-    "averageRating": 4.28
+    "averageRating": 4.28,
+    "coverId": 11172296,
+    "coverUrl": "/covers/11172296.jpg"
   },
   {
     "title": "Angels & Demons",
@@ -455,8 +483,9 @@
       "Thriller",
       "Adventure"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/11408459-M.jpg",
-    "averageRating": 3.63
+    "averageRating": 3.63,
+    "coverId": 11408459,
+    "coverUrl": "/covers/11408459.jpg"
   },
   {
     "title": "Animal Farm",
@@ -471,8 +500,9 @@
       "Classics",
       "Dystopian"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/11261770-M.jpg",
-    "averageRating": 4.17
+    "averageRating": 4.17,
+    "coverId": 11261770,
+    "coverUrl": "/covers/11261770.jpg"
   },
   {
     "title": "Aristotle and Dante discover the secrets of the universe",
@@ -487,8 +517,9 @@
       "Literary Fiction",
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12313804-M.jpg",
-    "averageRating": 4.21
+    "averageRating": 4.21,
+    "coverId": 12313804,
+    "coverUrl": "/covers/12313804.jpg"
   },
   {
     "title": "As Good As Dead",
@@ -502,8 +533,9 @@
     "genres": [
       "Thriller"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10716589-M.jpg",
-    "averageRating": 4.51
+    "averageRating": 4.51,
+    "coverId": 10716589,
+    "coverUrl": "/covers/10716589.jpg"
   },
   {
     "title": "As a Man Thinketh",
@@ -517,8 +549,9 @@
     "genres": [
       "Self-Help"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/6268048-M.jpg",
-    "averageRating": 4.68
+    "averageRating": 4.68,
+    "coverId": 6268048,
+    "coverUrl": "/covers/6268048.jpg"
   },
   {
     "title": "Astrophysics for People in a Hurry",
@@ -534,8 +567,9 @@
     "genres": [
       "Science"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7984709-M.jpg",
-    "averageRating": 3.98
+    "averageRating": 3.98,
+    "coverId": 7984709,
+    "coverUrl": "/covers/7984709.jpg"
   },
   {
     "title": "Atomic Habits",
@@ -550,8 +584,9 @@
       "Self-Help",
       "Non-Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12539702-M.jpg",
-    "averageRating": 3.97
+    "averageRating": 3.97,
+    "coverId": 12539702,
+    "coverUrl": "/covers/12539702.jpg"
   },
   {
     "title": "Autobiography of a Yogi",
@@ -565,8 +600,9 @@
     "genres": [
       "Biography"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/805448-M.jpg",
-    "averageRating": 4.19
+    "averageRating": 4.19,
+    "coverId": 805448,
+    "coverUrl": "/covers/805448.jpg"
   },
   {
     "title": "Behave",
@@ -581,8 +617,9 @@
     "genres": [
       "Science"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8814831-M.jpg",
-    "averageRating": 3.87
+    "averageRating": 3.87,
+    "coverId": 8814831,
+    "coverUrl": "/covers/8814831.jpg"
   },
   {
     "title": "Beloved",
@@ -596,8 +633,9 @@
     "genres": [
       "Literary Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8261367-M.jpg",
-    "averageRating": 3.91
+    "averageRating": 3.91,
+    "coverId": 8261367,
+    "coverUrl": "/covers/8261367.jpg"
   },
   {
     "title": "Better Than the Movies",
@@ -611,8 +649,9 @@
     "genres": [
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/11182600-M.jpg",
-    "averageRating": 3.72
+    "averageRating": 3.72,
+    "coverId": 11182600,
+    "coverUrl": "/covers/11182600.jpg"
   },
   {
     "title": "Blink",
@@ -628,8 +667,9 @@
       "Non-Fiction",
       "Business"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14421850-M.jpg",
-    "averageRating": 3.78
+    "averageRating": 3.78,
+    "coverId": 14421850,
+    "coverUrl": "/covers/14421850.jpg"
   },
   {
     "title": "Born a Crime",
@@ -645,8 +685,9 @@
       "Biography",
       "Humour"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8294078-M.jpg",
-    "averageRating": 4.55
+    "averageRating": 4.55,
+    "coverId": 8294078,
+    "coverUrl": "/covers/8294078.jpg"
   },
   {
     "title": "Brave New World",
@@ -662,8 +703,9 @@
       "Classics",
       "Science Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8231823-M.jpg",
-    "averageRating": 3.97
+    "averageRating": 3.97,
+    "coverId": 8231823,
+    "coverUrl": "/covers/8231823.jpg"
   },
   {
     "title": "Breaking Dawn",
@@ -679,8 +721,9 @@
       "Romance",
       "Fantasy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12643419-M.jpg",
-    "averageRating": 3.46
+    "averageRating": 3.46,
+    "coverId": 12643419,
+    "coverUrl": "/covers/12643419.jpg"
   },
   {
     "title": "Breaking the habit of being yourself",
@@ -694,8 +737,9 @@
     "genres": [
       "Self-Help"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/11348192-M.jpg",
-    "averageRating": 3.96
+    "averageRating": 3.96,
+    "coverId": 11348192,
+    "coverUrl": "/covers/11348192.jpg"
   },
   {
     "title": "Cabin Fever",
@@ -709,8 +753,9 @@
     "genres": [
       "Humour"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7247522-M.jpg",
-    "averageRating": 4.47
+    "averageRating": 4.47,
+    "coverId": 7247522,
+    "coverUrl": "/covers/7247522.jpg"
   },
   {
     "title": "Call Me by Your Name",
@@ -726,8 +771,9 @@
       "Young Adult",
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/11123807-M.jpg",
-    "averageRating": 4.13
+    "averageRating": 4.13,
+    "coverId": 11123807,
+    "coverUrl": "/covers/11123807.jpg"
   },
   {
     "title": "Can We Be Strangers Again?",
@@ -741,8 +787,9 @@
     "genres": [
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/15073759-M.jpg",
-    "averageRating": 3.54
+    "averageRating": 3.54,
+    "coverId": 15073759,
+    "coverUrl": "/covers/15073759.jpg"
   },
   {
     "title": "Carrie",
@@ -757,8 +804,9 @@
       "Thriller",
       "Horror"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9256043-M.jpg",
-    "averageRating": 4
+    "averageRating": 4,
+    "coverId": 9256043,
+    "coverUrl": "/covers/9256043.jpg"
   },
   {
     "title": "Catching Fire",
@@ -774,8 +822,9 @@
       "Adventure",
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12646539-M.jpg",
-    "averageRating": 4.12
+    "averageRating": 4.12,
+    "coverId": 12646539,
+    "coverUrl": "/covers/12646539.jpg"
   },
   {
     "title": "Charlie and the Chocolate Factory",
@@ -791,8 +840,9 @@
       "Humour",
       "Fantasy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12459564-M.jpg",
-    "averageRating": 4.05
+    "averageRating": 4.05,
+    "coverId": 12459564,
+    "coverUrl": "/covers/12459564.jpg"
   },
   {
     "title": "Charlotte's Web",
@@ -806,8 +856,9 @@
     "genres": [
       "Fantasy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8461797-M.jpg",
-    "averageRating": 4.04
+    "averageRating": 4.04,
+    "coverId": 8461797,
+    "coverUrl": "/covers/8461797.jpg"
   },
   {
     "title": "Children of Time",
@@ -821,8 +872,9 @@
     "genres": [
       "Science Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8264706-M.jpg",
-    "averageRating": 4.25
+    "averageRating": 4.25,
+    "coverId": 8264706,
+    "coverUrl": "/covers/8264706.jpg"
   },
   {
     "title": "Circe",
@@ -837,8 +889,9 @@
       "Fantasy",
       "Historical Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8739376-M.jpg",
-    "averageRating": 4.16
+    "averageRating": 4.16,
+    "coverId": 8739376,
+    "coverUrl": "/covers/8739376.jpg"
   },
   {
     "title": "City of Bones",
@@ -855,8 +908,9 @@
       "Young Adult",
       "Horror"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10121449-M.jpg",
-    "averageRating": 3.88
+    "averageRating": 3.88,
+    "coverId": 10121449,
+    "coverUrl": "/covers/10121449.jpg"
   },
   {
     "title": "Confessions",
@@ -872,8 +926,9 @@
       "Biography",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9022521-M.jpg",
-    "averageRating": 4.45
+    "averageRating": 4.45,
+    "coverId": 9022521,
+    "coverUrl": "/covers/9022521.jpg"
   },
   {
     "title": "Control Your Mind and Master Your Feelings",
@@ -887,8 +942,9 @@
     "genres": [
       "Self-Help"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12009823-M.jpg",
-    "averageRating": 3.82
+    "averageRating": 3.82,
+    "coverId": 12009823,
+    "coverUrl": "/covers/12009823.jpg"
   },
   {
     "title": "Coraline",
@@ -902,8 +958,9 @@
     "genres": [
       "Horror"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14171421-M.jpg",
-    "averageRating": 4.06
+    "averageRating": 4.06,
+    "coverId": 14171421,
+    "coverUrl": "/covers/14171421.jpg"
   },
   {
     "title": "Cosmos",
@@ -918,8 +975,9 @@
       "Science",
       "Non-Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8283901-M.jpg",
-    "averageRating": 4.58
+    "averageRating": 4.58,
+    "coverId": 8283901,
+    "coverUrl": "/covers/8283901.jpg"
   },
   {
     "title": "Crime and Punishment",
@@ -935,7 +993,8 @@
       "Classics",
       "Literary Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13116014-M.jpg"
+    "coverId": 13116014,
+    "coverUrl": "/covers/13116014.jpg"
   },
   {
     "title": "Cujo",
@@ -949,8 +1008,9 @@
     "genres": [
       "Horror"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8570003-M.jpg",
-    "averageRating": 3.72
+    "averageRating": 3.72,
+    "coverId": 8570003,
+    "coverUrl": "/covers/8570003.jpg"
   },
   {
     "title": "Death on the Nile",
@@ -965,8 +1025,9 @@
       "Mystery",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14066646-M.jpg",
-    "averageRating": 4.2
+    "averageRating": 4.2,
+    "coverId": 14066646,
+    "coverUrl": "/covers/14066646.jpg"
   },
   {
     "title": "Deep Work",
@@ -981,8 +1042,9 @@
     "genres": [
       "Business"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7988607-M.jpg",
-    "averageRating": 3.84
+    "averageRating": 3.84,
+    "coverId": 7988607,
+    "coverUrl": "/covers/7988607.jpg"
   },
   {
     "title": "Destroy Me",
@@ -997,8 +1059,9 @@
       "Science Fiction",
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14427908-M.jpg",
-    "averageRating": 4.09
+    "averageRating": 4.09,
+    "coverId": 14427908,
+    "coverUrl": "/covers/14427908.jpg"
   },
   {
     "title": "Diary of a Wimpy Kid",
@@ -1012,8 +1075,9 @@
     "genres": [
       "Humour"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14376136-M.jpg",
-    "averageRating": 4.1
+    "averageRating": 4.1,
+    "coverId": 14376136,
+    "coverUrl": "/covers/14376136.jpg"
   },
   {
     "title": "Divergent",
@@ -1028,8 +1092,9 @@
       "Dystopian",
       "Science Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13274634-M.jpg",
-    "averageRating": 3.97
+    "averageRating": 3.97,
+    "coverId": 13274634,
+    "coverUrl": "/covers/13274634.jpg"
   },
   {
     "title": "Do Epic Shit",
@@ -1043,8 +1108,9 @@
     "genres": [
       "Self-Help"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12550538-M.jpg",
-    "averageRating": 3.92
+    "averageRating": 3.92,
+    "coverId": 12550538,
+    "coverUrl": "/covers/12550538.jpg"
   },
   {
     "title": "Does It Hurt?",
@@ -1059,8 +1125,9 @@
       "Romance",
       "Thriller"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12860070-M.jpg",
-    "averageRating": 3.73
+    "averageRating": 3.73,
+    "coverId": 12860070,
+    "coverUrl": "/covers/12860070.jpg"
   },
   {
     "title": "Dog Days",
@@ -1074,8 +1141,9 @@
     "genres": [
       "Humour"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12366143-M.jpg",
-    "averageRating": 4.49
+    "averageRating": 4.49,
+    "coverId": 12366143,
+    "coverUrl": "/covers/12366143.jpg"
   },
   {
     "title": "Dog Man",
@@ -1089,8 +1157,9 @@
     "genres": [
       "Humour"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7894142-M.jpg",
-    "averageRating": 4.43
+    "averageRating": 4.43,
+    "coverId": 7894142,
+    "coverUrl": "/covers/7894142.jpg"
   },
   {
     "title": "Don't Believe Everything You Think",
@@ -1104,8 +1173,9 @@
     "genres": [
       "Self-Help"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/15260462-M.jpg",
-    "averageRating": 4.13
+    "averageRating": 4.13,
+    "coverId": 15260462,
+    "coverUrl": "/covers/15260462.jpg"
   },
   {
     "title": "Double Down",
@@ -1119,8 +1189,9 @@
     "genres": [
       "Humour"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7888937-M.jpg",
-    "averageRating": 4.5
+    "averageRating": 4.5,
+    "coverId": 7888937,
+    "coverUrl": "/covers/7888937.jpg"
   },
   {
     "title": "Dracula",
@@ -1135,8 +1206,9 @@
       "Horror",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12216503-M.jpg",
-    "averageRating": 3.99
+    "averageRating": 3.99,
+    "coverId": 12216503,
+    "coverUrl": "/covers/12216503.jpg"
   },
   {
     "title": "Dune",
@@ -1151,8 +1223,9 @@
       "Science Fiction",
       "Adventure"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/11481354-M.jpg",
-    "averageRating": 4.3
+    "averageRating": 4.3,
+    "coverId": 11481354,
+    "coverUrl": "/covers/11481354.jpg"
   },
   {
     "title": "East of Eden",
@@ -1167,8 +1240,9 @@
       "Classics",
       "Literary Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/11386937-M.jpg",
-    "averageRating": 4.1
+    "averageRating": 4.1,
+    "coverId": 11386937,
+    "coverUrl": "/covers/11386937.jpg"
   },
   {
     "title": "Eat That Frog! 21 Great Ways to Stop Procrastinating and Get More Done in Less Time",
@@ -1183,8 +1257,9 @@
       "Self-Help",
       "Business"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/847534-M.jpg",
-    "averageRating": 3.94
+    "averageRating": 3.94,
+    "coverId": 847534,
+    "coverUrl": "/covers/847534.jpg"
   },
   {
     "title": "Ego is the Enemy",
@@ -1198,8 +1273,9 @@
     "genres": [
       "Business"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12447129-M.jpg",
-    "averageRating": 3.8
+    "averageRating": 3.8,
+    "coverId": 12447129,
+    "coverUrl": "/covers/12447129.jpg"
   },
   {
     "title": "Elon Musk",
@@ -1215,8 +1291,9 @@
       "Biography",
       "Business"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8463846-M.jpg",
-    "averageRating": 4.07
+    "averageRating": 4.07,
+    "coverId": 8463846,
+    "coverUrl": "/covers/8463846.jpg"
   },
   {
     "title": "Elvis and me",
@@ -1230,8 +1307,9 @@
     "genres": [
       "Biography"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9736400-M.jpg",
-    "averageRating": 4.88
+    "averageRating": 4.88,
+    "coverId": 9736400,
+    "coverUrl": "/covers/9736400.jpg"
   },
   {
     "title": "Emma",
@@ -1246,8 +1324,9 @@
       "Romance",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9278312-M.jpg",
-    "averageRating": 3.97
+    "averageRating": 3.97,
+    "coverId": 9278312,
+    "coverUrl": "/covers/9278312.jpg"
   },
   {
     "title": "Emotional Intelligence",
@@ -1261,8 +1340,9 @@
     "genres": [
       "Self-Help"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/1359485-M.jpg",
-    "averageRating": 3.94
+    "averageRating": 3.94,
+    "coverId": 1359485,
+    "coverUrl": "/covers/1359485.jpg"
   },
   {
     "title": "Ender's Game",
@@ -1276,8 +1356,9 @@
     "genres": [
       "Science Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12996033-M.jpg",
-    "averageRating": 4.35
+    "averageRating": 4.35,
+    "coverId": 12996033,
+    "coverUrl": "/covers/12996033.jpg"
   },
   {
     "title": "Eragon",
@@ -1293,8 +1374,9 @@
       "Fantasy",
       "Adventure"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13921600-M.jpg",
-    "averageRating": 3.78
+    "averageRating": 3.78,
+    "coverId": 13921600,
+    "coverUrl": "/covers/13921600.jpg"
   },
   {
     "title": "Fahrenheit 451",
@@ -1310,8 +1392,9 @@
       "Science Fiction",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12993656-M.jpg",
-    "averageRating": 3.98
+    "averageRating": 3.98,
+    "coverId": 12993656,
+    "coverUrl": "/covers/12993656.jpg"
   },
   {
     "title": "Fear no evil",
@@ -1325,8 +1408,9 @@
     "genres": [
       "Biography"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9156872-M.jpg",
-    "averageRating": 4.58
+    "averageRating": 4.58,
+    "coverId": 9156872,
+    "coverUrl": "/covers/9156872.jpg"
   },
   {
     "title": "Fifty Shades of Grey",
@@ -1340,8 +1424,9 @@
     "genres": [
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12648183-M.jpg",
-    "averageRating": 3.93
+    "averageRating": 3.93,
+    "coverId": 12648183,
+    "coverUrl": "/covers/12648183.jpg"
   },
   {
     "title": "Fire & Blood",
@@ -1355,8 +1440,9 @@
     "genres": [
       "Fantasy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12063529-M.jpg",
-    "averageRating": 3.94
+    "averageRating": 3.94,
+    "coverId": 12063529,
+    "coverUrl": "/covers/12063529.jpg"
   },
   {
     "title": "Flowers for Algernon",
@@ -1370,8 +1456,9 @@
     "genres": [
       "Science Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12947700-M.jpg",
-    "averageRating": 4.3
+    "averageRating": 4.3,
+    "coverId": 12947700,
+    "coverUrl": "/covers/12947700.jpg"
   },
   {
     "title": "Flowers in the Attic",
@@ -1385,8 +1472,9 @@
     "genres": [
       "Horror"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14598487-M.jpg",
-    "averageRating": 4.04
+    "averageRating": 4.04,
+    "coverId": 14598487,
+    "coverUrl": "/covers/14598487.jpg"
   },
   {
     "title": "Forgotten Home Apothecary",
@@ -1400,8 +1488,9 @@
     "genres": [
       "Self-Help"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/15129769-M.jpg",
-    "averageRating": 4
+    "averageRating": 4,
+    "coverId": 15129769,
+    "coverUrl": "/covers/15129769.jpg"
   },
   {
     "title": "Foundation",
@@ -1415,8 +1504,9 @@
     "genres": [
       "Science Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14612610-M.jpg",
-    "averageRating": 4.09
+    "averageRating": 4.09,
+    "coverId": 14612610,
+    "coverUrl": "/covers/14612610.jpg"
   },
   {
     "title": "Fourth Wing",
@@ -1430,8 +1520,9 @@
     "genres": [
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14407898-M.jpg",
-    "averageRating": 4.24
+    "averageRating": 4.24,
+    "coverId": 14407898,
+    "coverUrl": "/covers/14407898.jpg"
   },
   {
     "title": "Frankenstein",
@@ -1448,7 +1539,8 @@
       "Classics",
       "Science Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/15118068-M.jpg"
+    "coverId": 15118068,
+    "coverUrl": "/covers/15118068.jpg"
   },
   {
     "title": "Freakonomics",
@@ -1464,8 +1556,9 @@
       "Non-Fiction",
       "Business"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/11172914-M.jpg",
-    "averageRating": 3.88
+    "averageRating": 3.88,
+    "coverId": 11172914,
+    "coverUrl": "/covers/11172914.jpg"
   },
   {
     "title": "Giovanni's Room",
@@ -1480,8 +1573,9 @@
       "Literary Fiction",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/97395-M.jpg",
-    "averageRating": 4.22
+    "averageRating": 4.22,
+    "coverId": 97395,
+    "coverUrl": "/covers/97395.jpg"
   },
   {
     "title": "Gone Girl",
@@ -1496,8 +1590,9 @@
       "Mystery",
       "Thriller"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8368314-M.jpg",
-    "averageRating": 3.78
+    "averageRating": 3.78,
+    "coverId": 8368314,
+    "coverUrl": "/covers/8368314.jpg"
   },
   {
     "title": "Gone With the Wind",
@@ -1511,8 +1606,9 @@
     "genres": [
       "Historical Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14817133-M.jpg",
-    "averageRating": 3.71
+    "averageRating": 3.71,
+    "coverId": 14817133,
+    "coverUrl": "/covers/14817133.jpg"
   },
   {
     "title": "Good Girl, Bad Blood",
@@ -1527,8 +1623,9 @@
       "Thriller",
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/11466695-M.jpg",
-    "averageRating": 4.15
+    "averageRating": 4.15,
+    "coverId": 11466695,
+    "coverUrl": "/covers/11466695.jpg"
   },
   {
     "title": "Good Omens",
@@ -1545,8 +1642,9 @@
       "Fantasy",
       "Humour"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10482258-M.jpg",
-    "averageRating": 4.42
+    "averageRating": 4.42,
+    "coverId": 10482258,
+    "coverUrl": "/covers/10482258.jpg"
   },
   {
     "title": "Great Expectations",
@@ -1560,8 +1658,9 @@
     "genres": [
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13322313-M.jpg",
-    "averageRating": 3.77
+    "averageRating": 3.77,
+    "coverId": 13322313,
+    "coverUrl": "/covers/13322313.jpg"
   },
   {
     "title": "Guess How Much I Love You",
@@ -1576,8 +1675,9 @@
     "genres": [
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13282906-M.jpg",
-    "averageRating": 4.34
+    "averageRating": 4.34,
+    "coverId": 13282906,
+    "coverUrl": "/covers/13282906.jpg"
   },
   {
     "title": "Guns, Germs, and Steel",
@@ -1592,8 +1692,9 @@
     "genres": [
       "History"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7884018-M.jpg",
-    "averageRating": 4.13
+    "averageRating": 4.13,
+    "coverId": 7884018,
+    "coverUrl": "/covers/7884018.jpg"
   },
   {
     "title": "Half of a Yellow Sun",
@@ -1607,8 +1708,9 @@
     "genres": [
       "Historical Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8472660-M.jpg",
-    "averageRating": 4.26
+    "averageRating": 4.26,
+    "coverId": 8472660,
+    "coverUrl": "/covers/8472660.jpg"
   },
   {
     "title": "Hamlet",
@@ -1623,8 +1725,9 @@
       "Classics",
       "Literary Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8281954-M.jpg",
-    "averageRating": 4
+    "averageRating": 4,
+    "coverId": 8281954,
+    "coverUrl": "/covers/8281954.jpg"
   },
   {
     "title": "Hard Luck",
@@ -1638,8 +1741,9 @@
     "genres": [
       "Humour"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10302464-M.jpg",
-    "averageRating": 4.15
+    "averageRating": 4.15,
+    "coverId": 10302464,
+    "coverUrl": "/covers/10302464.jpg"
   },
   {
     "title": "Harry Potter and the Chamber of Secrets",
@@ -1654,8 +1758,9 @@
       "Fantasy",
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/15158664-M.jpg",
-    "averageRating": 4.18
+    "averageRating": 4.18,
+    "coverId": 15158664,
+    "coverUrl": "/covers/15158664.jpg"
   },
   {
     "title": "Harry Potter and the Cursed Child",
@@ -1671,8 +1776,9 @@
     "genres": [
       "Fantasy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8763851-M.jpg",
-    "averageRating": 3.95
+    "averageRating": 3.95,
+    "coverId": 8763851,
+    "coverUrl": "/covers/8763851.jpg"
   },
   {
     "title": "Harry Potter and the Deathly Hallows",
@@ -1686,8 +1792,9 @@
     "genres": [
       "Fantasy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/15158660-M.jpg",
-    "averageRating": 4.27
+    "averageRating": 4.27,
+    "coverId": 15158660,
+    "coverUrl": "/covers/15158660.jpg"
   },
   {
     "title": "Harry Potter and the Goblet of Fire",
@@ -1702,8 +1809,9 @@
       "Adventure",
       "Fantasy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12059372-M.jpg",
-    "averageRating": 4.24
+    "averageRating": 4.24,
+    "coverId": 12059372,
+    "coverUrl": "/covers/12059372.jpg"
   },
   {
     "title": "Harry Potter and the Half-Blood Prince",
@@ -1717,8 +1825,9 @@
     "genres": [
       "Fantasy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10716273-M.jpg",
-    "averageRating": 4.37
+    "averageRating": 4.37,
+    "coverId": 10716273,
+    "coverUrl": "/covers/10716273.jpg"
   },
   {
     "title": "Harry Potter and the Order of the Phoenix",
@@ -1732,8 +1841,9 @@
     "genres": [
       "Fantasy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/15158666-M.jpg",
-    "averageRating": 4.23
+    "averageRating": 4.23,
+    "coverId": 15158666,
+    "coverUrl": "/covers/15158666.jpg"
   },
   {
     "title": "Harry Potter and the Philosopher's Stone",
@@ -1748,8 +1858,9 @@
       "Fantasy",
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/15155833-M.jpg",
-    "averageRating": 4.22
+    "averageRating": 4.22,
+    "coverId": 15155833,
+    "coverUrl": "/covers/15155833.jpg"
   },
   {
     "title": "Harry Potter and the Prisoner of Azkaban",
@@ -1764,8 +1875,9 @@
       "Fantasy",
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10580435-M.jpg",
-    "averageRating": 4.24
+    "averageRating": 4.24,
+    "coverId": 10580435,
+    "coverUrl": "/covers/10580435.jpg"
   },
   {
     "title": "Hatchet",
@@ -1780,8 +1892,9 @@
       "Adventure",
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/11240448-M.jpg",
-    "averageRating": 4.18
+    "averageRating": 4.18,
+    "coverId": 11240448,
+    "coverUrl": "/covers/11240448.jpg"
   },
   {
     "title": "Haunting Adeline",
@@ -1796,8 +1909,9 @@
       "Horror",
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12992962-M.jpg",
-    "averageRating": 3.6
+    "averageRating": 3.6,
+    "coverId": 12992962,
+    "coverUrl": "/covers/12992962.jpg"
   },
   {
     "title": "Heart of Darkness",
@@ -1812,8 +1926,9 @@
       "Classics",
       "Literary Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12307847-M.jpg",
-    "averageRating": 3.59
+    "averageRating": 3.59,
+    "coverId": 12307847,
+    "coverUrl": "/covers/12307847.jpg"
   },
   {
     "title": "Heartstopper, Volume 1",
@@ -1827,8 +1942,9 @@
     "genres": [
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9020805-M.jpg",
-    "averageRating": 4.35
+    "averageRating": 4.35,
+    "coverId": 9020805,
+    "coverUrl": "/covers/9020805.jpg"
   },
   {
     "title": "House of Hades",
@@ -1842,8 +1958,9 @@
     "genres": [
       "Adventure"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8057334-M.jpg",
-    "averageRating": 4.3
+    "averageRating": 4.3,
+    "coverId": 8057334,
+    "coverUrl": "/covers/8057334.jpg"
   },
   {
     "title": "House of Leaves",
@@ -1858,8 +1975,9 @@
       "Thriller",
       "Horror"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/6450442-M.jpg",
-    "averageRating": 4.32
+    "averageRating": 4.32,
+    "coverId": 6450442,
+    "coverUrl": "/covers/6450442.jpg"
   },
   {
     "title": "How to Talk to Anyone",
@@ -1873,8 +1991,9 @@
     "genres": [
       "Non-Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/58950-M.jpg",
-    "averageRating": 3.89
+    "averageRating": 3.89,
+    "coverId": 58950,
+    "coverUrl": "/covers/58950.jpg"
   },
   {
     "title": "How to Win Friends and Influence People",
@@ -1889,8 +2008,9 @@
       "Self-Help",
       "Business"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13314878-M.jpg",
-    "averageRating": 4.17
+    "averageRating": 4.17,
+    "coverId": 13314878,
+    "coverUrl": "/covers/13314878.jpg"
   },
   {
     "title": "Hunting Adeline",
@@ -1904,8 +2024,9 @@
     "genres": [
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14614757-M.jpg",
-    "averageRating": 3.87
+    "averageRating": 3.87,
+    "coverId": 14614757,
+    "coverUrl": "/covers/14614757.jpg"
   },
   {
     "title": "I Don't Love You Anymore",
@@ -1919,8 +2040,9 @@
     "genres": [
       "Poetry"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/15116470-M.jpg",
-    "averageRating": 3.59
+    "averageRating": 3.59,
+    "coverId": 15116470,
+    "coverUrl": "/covers/15116470.jpg"
   },
   {
     "title": "I Have No Mouth and I Must Scream",
@@ -1934,8 +2056,9 @@
     "genres": [
       "Science Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/5540875-M.jpg",
-    "averageRating": 4.19
+    "averageRating": 4.19,
+    "coverId": 5540875,
+    "coverUrl": "/covers/5540875.jpg"
   },
   {
     "title": "I Have to Tell You Something",
@@ -1949,8 +2072,9 @@
     "genres": [
       "Poetry"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13945571-M.jpg",
-    "averageRating": 3.73
+    "averageRating": 3.73,
+    "coverId": 13945571,
+    "coverUrl": "/covers/13945571.jpg"
   },
   {
     "title": "I Know Why the Caged Bird Sings",
@@ -1964,8 +2088,9 @@
     "genres": [
       "Biography"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9367075-M.jpg",
-    "averageRating": 4.1
+    "averageRating": 4.1,
+    "coverId": 9367075,
+    "coverUrl": "/covers/9367075.jpg"
   },
   {
     "title": "I will teach you to be rich",
@@ -1979,8 +2104,9 @@
     "genres": [
       "Business"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/6305971-M.jpg",
-    "averageRating": 4.27
+    "averageRating": 4.27,
+    "coverId": 6305971,
+    "coverUrl": "/covers/6305971.jpg"
   },
   {
     "title": "I'm Glad My Mom Died",
@@ -1995,8 +2121,9 @@
     "genres": [
       "Biography"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12855985-M.jpg",
-    "averageRating": 4.31
+    "averageRating": 4.31,
+    "coverId": 12855985,
+    "coverUrl": "/covers/12855985.jpg"
   },
   {
     "title": "I, Robot",
@@ -2010,8 +2137,9 @@
     "genres": [
       "Science Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12385229-M.jpg",
-    "averageRating": 4.25
+    "averageRating": 4.25,
+    "coverId": 12385229,
+    "coverUrl": "/covers/12385229.jpg"
   },
   {
     "title": "Icebreaker",
@@ -2025,8 +2153,9 @@
     "genres": [
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13180728-M.jpg",
-    "averageRating": 3.92
+    "averageRating": 3.92,
+    "coverId": 13180728,
+    "coverUrl": "/covers/13180728.jpg"
   },
   {
     "title": "If He Had Been With Me",
@@ -2040,8 +2169,9 @@
     "genres": [
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14339089-M.jpg",
-    "averageRating": 4.19
+    "averageRating": 4.19,
+    "coverId": 14339089,
+    "coverUrl": "/covers/14339089.jpg"
   },
   {
     "title": "If We Were Villains",
@@ -2056,8 +2186,9 @@
       "Mystery",
       "Thriller"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8835640-M.jpg",
-    "averageRating": 3.79
+    "averageRating": 3.79,
+    "coverId": 8835640,
+    "coverUrl": "/covers/8835640.jpg"
   },
   {
     "title": "Ignite Me",
@@ -2071,8 +2202,9 @@
     "genres": [
       "Science Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7272906-M.jpg",
-    "averageRating": 4.06
+    "averageRating": 4.06,
+    "coverId": 7272906,
+    "coverUrl": "/covers/7272906.jpg"
   },
   {
     "title": "In Cold Blood",
@@ -2086,8 +2218,9 @@
     "genres": [
       "Mystery"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/228066-M.jpg",
-    "averageRating": 4.06
+    "averageRating": 4.06,
+    "coverId": 228066,
+    "coverUrl": "/covers/228066.jpg"
   },
   {
     "title": "Inferno",
@@ -2102,8 +2235,9 @@
       "Poetry",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/6387077-M.jpg",
-    "averageRating": 4.28
+    "averageRating": 4.28,
+    "coverId": 6387077,
+    "coverUrl": "/covers/6387077.jpg"
   },
   {
     "title": "Influence",
@@ -2117,8 +2251,9 @@
     "genres": [
       "Non-Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/431011-M.jpg",
-    "averageRating": 3.95
+    "averageRating": 3.95,
+    "coverId": 431011,
+    "coverUrl": "/covers/431011.jpg"
   },
   {
     "title": "Insomnia",
@@ -2133,8 +2268,9 @@
       "Thriller",
       "Horror"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7886954-M.jpg",
-    "averageRating": 3.86
+    "averageRating": 3.86,
+    "coverId": 7886954,
+    "coverUrl": "/covers/7886954.jpg"
   },
   {
     "title": "Insurgent",
@@ -2149,8 +2285,9 @@
       "Dystopian",
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7083755-M.jpg",
-    "averageRating": 3.95
+    "averageRating": 3.95,
+    "coverId": 7083755,
+    "coverUrl": "/covers/7083755.jpg"
   },
   {
     "title": "Interview With the Vampire",
@@ -2164,8 +2301,9 @@
     "genres": [
       "Horror"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8401488-M.jpg",
-    "averageRating": 3.89
+    "averageRating": 3.89,
+    "coverId": 8401488,
+    "coverUrl": "/covers/8401488.jpg"
   },
   {
     "title": "Into the Wild",
@@ -2181,8 +2319,9 @@
       "Adventure",
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12720669-M.jpg",
-    "averageRating": 4.5
+    "averageRating": 4.5,
+    "coverId": 12720669,
+    "coverUrl": "/covers/12720669.jpg"
   },
   {
     "title": "Into the Wild",
@@ -2197,8 +2336,9 @@
       "Biography",
       "Adventure"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/1377482-M.jpg",
-    "averageRating": 3.86
+    "averageRating": 3.86,
+    "coverId": 1377482,
+    "coverUrl": "/covers/1377482.jpg"
   },
   {
     "title": "It",
@@ -2213,8 +2353,9 @@
       "Thriller",
       "Horror"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8569284-M.jpg",
-    "averageRating": 4.09
+    "averageRating": 4.09,
+    "coverId": 8569284,
+    "coverUrl": "/covers/8569284.jpg"
   },
   {
     "title": "It Ends With Us",
@@ -2228,8 +2369,9 @@
     "genres": [
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10473609-M.jpg",
-    "averageRating": 4.19
+    "averageRating": 4.19,
+    "coverId": 10473609,
+    "coverUrl": "/covers/10473609.jpg"
   },
   {
     "title": "It Starts with Us",
@@ -2244,8 +2386,9 @@
       "Young Adult",
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12749873-M.jpg",
-    "averageRating": 4.01
+    "averageRating": 4.01,
+    "coverId": 12749873,
+    "coverUrl": "/covers/12749873.jpg"
   },
   {
     "title": "It didn't start with you",
@@ -2260,8 +2403,9 @@
     "genres": [
       "Self-Help"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8849786-M.jpg",
-    "averageRating": 3.57
+    "averageRating": 3.57,
+    "coverId": 8849786,
+    "coverUrl": "/covers/8849786.jpg"
   },
   {
     "title": "James and the Giant Peach",
@@ -2275,8 +2419,9 @@
     "genres": [
       "Humour"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8252454-M.jpg",
-    "averageRating": 3.93
+    "averageRating": 3.93,
+    "coverId": 8252454,
+    "coverUrl": "/covers/8252454.jpg"
   },
   {
     "title": "Jane Eyre",
@@ -2291,8 +2436,9 @@
       "Romance",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8235363-M.jpg",
-    "averageRating": 4.04
+    "averageRating": 4.04,
+    "coverId": 8235363,
+    "coverUrl": "/covers/8235363.jpg"
   },
   {
     "title": "Jurassic Park",
@@ -2307,8 +2453,9 @@
       "Science Fiction",
       "Thriller"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12882940-M.jpg",
-    "averageRating": 4.17
+    "averageRating": 4.17,
+    "coverId": 12882940,
+    "coverUrl": "/covers/12882940.jpg"
   },
   {
     "title": "King of Wrath",
@@ -2322,8 +2469,9 @@
     "genres": [
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13588136-M.jpg",
-    "averageRating": 4.25
+    "averageRating": 4.25,
+    "coverId": 13588136,
+    "coverUrl": "/covers/13588136.jpg"
   },
   {
     "title": "Leaves of Grass",
@@ -2338,8 +2486,9 @@
       "Poetry",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9000447-M.jpg",
-    "averageRating": 3.93
+    "averageRating": 3.93,
+    "coverId": 9000447,
+    "coverUrl": "/covers/9000447.jpg"
   },
   {
     "title": "Leonardo",
@@ -2355,8 +2504,9 @@
     "genres": [
       "Biography"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/919361-M.jpg",
-    "averageRating": 3.95
+    "averageRating": 3.95,
+    "coverId": 919361,
+    "coverUrl": "/covers/919361.jpg"
   },
   {
     "title": "Life of Pi",
@@ -2370,8 +2520,9 @@
     "genres": [
       "Adventure"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12840573-M.jpg",
-    "averageRating": 3.95
+    "averageRating": 3.95,
+    "coverId": 12840573,
+    "coverUrl": "/covers/12840573.jpg"
   },
   {
     "title": "Lights Out",
@@ -2386,8 +2537,9 @@
       "Thriller",
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14641117-M.jpg",
-    "averageRating": 4.28
+    "averageRating": 4.28,
+    "coverId": 14641117,
+    "coverUrl": "/covers/14641117.jpg"
   },
   {
     "title": "Little Women",
@@ -2401,8 +2553,9 @@
     "genres": [
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8775559-M.jpg",
-    "averageRating": 4.06
+    "averageRating": 4.06,
+    "coverId": 8775559,
+    "coverUrl": "/covers/8775559.jpg"
   },
   {
     "title": "Lolita",
@@ -2417,8 +2570,9 @@
       "Classics",
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12984540-M.jpg",
-    "averageRating": 3.97
+    "averageRating": 3.97,
+    "coverId": 12984540,
+    "coverUrl": "/covers/12984540.jpg"
   },
   {
     "title": "Looking for Alaska",
@@ -2432,8 +2586,9 @@
     "genres": [
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12614602-M.jpg",
-    "averageRating": 3.98
+    "averageRating": 3.98,
+    "coverId": 12614602,
+    "coverUrl": "/covers/12614602.jpg"
   },
   {
     "title": "Lord of the Flies",
@@ -2448,8 +2603,9 @@
       "Classics",
       "Adventure"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8684447-M.jpg",
-    "averageRating": 3.67
+    "averageRating": 3.67,
+    "coverId": 8684447,
+    "coverUrl": "/covers/8684447.jpg"
   },
   {
     "title": "Macbeth",
@@ -2464,8 +2620,9 @@
       "Classics",
       "Literary Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/872432-M.jpg",
-    "averageRating": 4
+    "averageRating": 4,
+    "coverId": 872432,
+    "coverUrl": "/covers/872432.jpg"
   },
   {
     "title": "Make Your Bed",
@@ -2482,8 +2639,9 @@
       "Self-Help",
       "Non-Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7984714-M.jpg",
-    "averageRating": 3.73
+    "averageRating": 3.73,
+    "coverId": 7984714,
+    "coverUrl": "/covers/7984714.jpg"
   },
   {
     "title": "Matilda",
@@ -2497,8 +2655,9 @@
     "genres": [
       "Humour"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12889769-M.jpg",
-    "averageRating": 4.33
+    "averageRating": 4.33,
+    "coverId": 12889769,
+    "coverUrl": "/covers/12889769.jpg"
   },
   {
     "title": "Maybe You Should Talk to Someone",
@@ -2512,8 +2671,9 @@
     "genres": [
       "Biography"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8596019-M.jpg",
-    "averageRating": 3.83
+    "averageRating": 3.83,
+    "coverId": 8596019,
+    "coverUrl": "/covers/8596019.jpg"
   },
   {
     "title": "Me Before You",
@@ -2527,8 +2687,9 @@
     "genres": [
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14419339-M.jpg",
-    "averageRating": 4.07
+    "averageRating": 4.07,
+    "coverId": 14419339,
+    "coverUrl": "/covers/14419339.jpg"
   },
   {
     "title": "Meditations",
@@ -2543,8 +2704,9 @@
       "Philosophy",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/211529-M.jpg",
-    "averageRating": 4.1
+    "averageRating": 4.1,
+    "coverId": 211529,
+    "coverUrl": "/covers/211529.jpg"
   },
   {
     "title": "Men are From Mars, Women are From Venus",
@@ -2558,8 +2720,9 @@
     "genres": [
       "Non-Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10991-M.jpg",
-    "averageRating": 3.81
+    "averageRating": 3.81,
+    "coverId": 10991,
+    "coverUrl": "/covers/10991.jpg"
   },
   {
     "title": "Mere Christianity",
@@ -2574,8 +2737,9 @@
       "Philosophy",
       "Non-Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/6538891-M.jpg",
-    "averageRating": 4.28
+    "averageRating": 4.28,
+    "coverId": 6538891,
+    "coverUrl": "/covers/6538891.jpg"
   },
   {
     "title": "Metamorphosis",
@@ -2589,8 +2753,9 @@
     "genres": [
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12820198-M.jpg",
-    "averageRating": 4.16
+    "averageRating": 4.16,
+    "coverId": 12820198,
+    "coverUrl": "/covers/12820198.jpg"
   },
   {
     "title": "Michelle Obama in Her Own Words",
@@ -2606,8 +2771,9 @@
       "History",
       "Biography"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/6444263-M.jpg",
-    "averageRating": 4.6
+    "averageRating": 4.6,
+    "coverId": 6444263,
+    "coverUrl": "/covers/6444263.jpg"
   },
   {
     "title": "Milk and Honey",
@@ -2621,8 +2787,9 @@
     "genres": [
       "Poetry"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8743595-M.jpg",
-    "averageRating": 4.02
+    "averageRating": 4.02,
+    "coverId": 8743595,
+    "coverUrl": "/covers/8743595.jpg"
   },
   {
     "title": "Mindset",
@@ -2636,8 +2803,9 @@
     "genres": [
       "Non-Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/746414-M.jpg",
-    "averageRating": 3.75
+    "averageRating": 3.75,
+    "coverId": 746414,
+    "coverUrl": "/covers/746414.jpg"
   },
   {
     "title": "Misery",
@@ -2652,8 +2820,9 @@
       "Horror",
       "Thriller"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8259296-M.jpg",
-    "averageRating": 4.18
+    "averageRating": 4.18,
+    "coverId": 8259296,
+    "coverUrl": "/covers/8259296.jpg"
   },
   {
     "title": "Moby Dick",
@@ -2668,8 +2837,9 @@
       "Classics",
       "Adventure"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10544254-M.jpg",
-    "averageRating": 3.96
+    "averageRating": 3.96,
+    "coverId": 10544254,
+    "coverUrl": "/covers/10544254.jpg"
   },
   {
     "title": "Mockingjay",
@@ -2683,8 +2853,9 @@
     "genres": [
       "Dystopian"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12646459-M.jpg",
-    "averageRating": 3.8
+    "averageRating": 3.8,
+    "coverId": 12646459,
+    "coverUrl": "/covers/12646459.jpg"
   },
   {
     "title": "Murder on the Orient Express",
@@ -2699,8 +2870,9 @@
       "Mystery",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/11100465-M.jpg",
-    "averageRating": 4.15
+    "averageRating": 4.15,
+    "coverId": 11100465,
+    "coverUrl": "/covers/11100465.jpg"
   },
   {
     "title": "Neuromancer",
@@ -2714,8 +2886,9 @@
     "genres": [
       "Science Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/283860-M.jpg",
-    "averageRating": 4.06
+    "averageRating": 4.06,
+    "coverId": 283860,
+    "coverUrl": "/covers/283860.jpg"
   },
   {
     "title": "Never Lie",
@@ -2729,8 +2902,9 @@
     "genres": [
       "Thriller"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13198561-M.jpg",
-    "averageRating": 3.25
+    "averageRating": 3.25,
+    "coverId": 13198561,
+    "coverUrl": "/covers/13198561.jpg"
   },
   {
     "title": "Never Split the Difference",
@@ -2745,8 +2919,9 @@
     "genres": [
       "Business"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8365942-M.jpg",
-    "averageRating": 4.16
+    "averageRating": 4.16,
+    "coverId": 8365942,
+    "coverUrl": "/covers/8365942.jpg"
   },
   {
     "title": "New Moon",
@@ -2762,8 +2937,9 @@
       "Romance",
       "Fantasy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12643406-M.jpg",
-    "averageRating": 3.95
+    "averageRating": 3.95,
+    "coverId": 12643406,
+    "coverUrl": "/covers/12643406.jpg"
   },
   {
     "title": "Nineteen Eighty-Four",
@@ -2779,8 +2955,9 @@
       "Classics",
       "Science Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9267242-M.jpg",
-    "averageRating": 4.28
+    "averageRating": 4.28,
+    "coverId": 9267242,
+    "coverUrl": "/covers/9267242.jpg"
   },
   {
     "title": "Normal People",
@@ -2795,8 +2972,9 @@
       "Literary Fiction",
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8794265-M.jpg",
-    "averageRating": 4.02
+    "averageRating": 4.02,
+    "coverId": 8794265,
+    "coverUrl": "/covers/8794265.jpg"
   },
   {
     "title": "Northern Lights",
@@ -2812,8 +2990,9 @@
       "Fantasy",
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8747028-M.jpg",
-    "averageRating": 3.93
+    "averageRating": 3.93,
+    "coverId": 8747028,
+    "coverUrl": "/covers/8747028.jpg"
   },
   {
     "title": "November 9",
@@ -2827,8 +3006,9 @@
     "genres": [
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9219001-M.jpg",
-    "averageRating": 4.06
+    "averageRating": 4.06,
+    "coverId": 9219001,
+    "coverUrl": "/covers/9219001.jpg"
   },
   {
     "title": "Of Mice and Men",
@@ -2843,8 +3023,9 @@
       "Literary Fiction",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14319003-M.jpg",
-    "averageRating": 4
+    "averageRating": 4,
+    "coverId": 14319003,
+    "coverUrl": "/covers/14319003.jpg"
   },
   {
     "title": "Old School",
@@ -2858,8 +3039,9 @@
     "genres": [
       "Humour"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8314206-M.jpg",
-    "averageRating": 4.54
+    "averageRating": 4.54,
+    "coverId": 8314206,
+    "coverUrl": "/covers/8314206.jpg"
   },
   {
     "title": "Oliver Twist",
@@ -2873,8 +3055,9 @@
     "genres": [
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13300802-M.jpg",
-    "averageRating": 4.1
+    "averageRating": 4.1,
+    "coverId": 13300802,
+    "coverUrl": "/covers/13300802.jpg"
   },
   {
     "title": "On The Road",
@@ -2889,8 +3072,9 @@
       "Literary Fiction",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/34655-M.jpg",
-    "averageRating": 3.52
+    "averageRating": 3.52,
+    "coverId": 34655,
+    "coverUrl": "/covers/34655.jpg"
   },
   {
     "title": "On Writing",
@@ -2905,8 +3089,9 @@
       "Non-Fiction",
       "Biography"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9255939-M.jpg",
-    "averageRating": 4.13
+    "averageRating": 4.13,
+    "coverId": 9255939,
+    "coverUrl": "/covers/9255939.jpg"
   },
   {
     "title": "One Of Us Is Lying",
@@ -2923,8 +3108,9 @@
       "Mystery",
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12503935-M.jpg",
-    "averageRating": 4.17
+    "averageRating": 4.17,
+    "coverId": 12503935,
+    "coverUrl": "/covers/12503935.jpg"
   },
   {
     "title": "Our Fault",
@@ -2939,8 +3125,9 @@
       "Romance",
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10864780-M.jpg",
-    "averageRating": 3.28
+    "averageRating": 3.28,
+    "coverId": 10864780,
+    "coverUrl": "/covers/10864780.jpg"
   },
   {
     "title": "Outlander",
@@ -2955,8 +3142,9 @@
       "Historical Fiction",
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14428230-M.jpg",
-    "averageRating": 4.11
+    "averageRating": 4.11,
+    "coverId": 14428230,
+    "coverUrl": "/covers/14428230.jpg"
   },
   {
     "title": "Outliers",
@@ -2970,8 +3158,9 @@
     "genres": [
       "Business"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10021591-M.jpg",
-    "averageRating": 4.01
+    "averageRating": 4.01,
+    "coverId": 10021591,
+    "coverUrl": "/covers/10021591.jpg"
   },
   {
     "title": "Pale Blue Dot",
@@ -2985,8 +3174,9 @@
     "genres": [
       "Science"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14417175-M.jpg",
-    "averageRating": 4.57
+    "averageRating": 4.57,
+    "coverId": 14417175,
+    "coverUrl": "/covers/14417175.jpg"
   },
   {
     "title": "Parable of the Sower",
@@ -3001,8 +3191,9 @@
       "Dystopian",
       "Science Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10466266-M.jpg",
-    "averageRating": 4.36
+    "averageRating": 4.36,
+    "coverId": 10466266,
+    "coverUrl": "/covers/10466266.jpg"
   },
   {
     "title": "Paradise Lost",
@@ -3016,8 +3207,9 @@
     "genres": [
       "Poetry"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/5992814-M.jpg",
-    "averageRating": 3.84
+    "averageRating": 3.84,
+    "coverId": 5992814,
+    "coverUrl": "/covers/5992814.jpg"
   },
   {
     "title": "Percy Jackson's Greek Gods",
@@ -3032,8 +3224,9 @@
       "Classics",
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7396660-M.jpg",
-    "averageRating": 4.7
+    "averageRating": 4.7,
+    "coverId": 7396660,
+    "coverUrl": "/covers/7396660.jpg"
   },
   {
     "title": "Pet Sematary",
@@ -3048,8 +3241,9 @@
       "Thriller",
       "Horror"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12015500-M.jpg",
-    "averageRating": 4.04
+    "averageRating": 4.04,
+    "coverId": 12015500,
+    "coverUrl": "/covers/12015500.jpg"
   },
   {
     "title": "Powerless",
@@ -3063,8 +3257,9 @@
     "genres": [
       "Fantasy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14567864-M.jpg",
-    "averageRating": 3.99
+    "averageRating": 3.99,
+    "coverId": 14567864,
+    "coverUrl": "/covers/14567864.jpg"
   },
   {
     "title": "Pride and Prejudice",
@@ -3079,8 +3274,9 @@
       "Romance",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14348537-M.jpg",
-    "averageRating": 4.21
+    "averageRating": 4.21,
+    "coverId": 14348537,
+    "coverUrl": "/covers/14348537.jpg"
   },
   {
     "title": "Project Hail Mary",
@@ -3095,8 +3291,9 @@
       "Science Fiction",
       "Adventure"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/11200092-M.jpg",
-    "averageRating": 4.52
+    "averageRating": 4.52,
+    "coverId": 11200092,
+    "coverUrl": "/covers/11200092.jpg"
   },
   {
     "title": "Punk 57",
@@ -3111,8 +3308,9 @@
       "Young Adult",
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10107803-M.jpg",
-    "averageRating": 4.05
+    "averageRating": 4.05,
+    "coverId": 10107803,
+    "coverUrl": "/covers/10107803.jpg"
   },
   {
     "title": "Quiet",
@@ -3126,8 +3324,9 @@
     "genres": [
       "Non-Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7079753-M.jpg",
-    "averageRating": 4.12
+    "averageRating": 4.12,
+    "coverId": 7079753,
+    "coverUrl": "/covers/7079753.jpg"
   },
   {
     "title": "Ready Player One",
@@ -3143,8 +3342,9 @@
       "Young Adult",
       "Dystopian"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8737626-M.jpg",
-    "averageRating": 3.99
+    "averageRating": 3.99,
+    "coverId": 8737626,
+    "coverUrl": "/covers/8737626.jpg"
   },
   {
     "title": "Red Queen",
@@ -3160,8 +3360,9 @@
       "Fantasy",
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7434883-M.jpg",
-    "averageRating": 4.14
+    "averageRating": 4.14,
+    "coverId": 7434883,
+    "coverUrl": "/covers/7434883.jpg"
   },
   {
     "title": "Red Rising",
@@ -3175,8 +3376,9 @@
     "genres": [
       "Dystopian"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7316188-M.jpg",
-    "averageRating": 3.92
+    "averageRating": 3.92,
+    "coverId": 7316188,
+    "coverUrl": "/covers/7316188.jpg"
   },
   {
     "title": "Red, White & Royal Blue",
@@ -3190,8 +3392,9 @@
     "genres": [
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9171544-M.jpg",
-    "averageRating": 4.18
+    "averageRating": 4.18,
+    "coverId": 9171544,
+    "coverUrl": "/covers/9171544.jpg"
   },
   {
     "title": "Rich Dad, Poor Dad for Teens",
@@ -3206,8 +3409,9 @@
     "genres": [
       "Business"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/1174758-M.jpg",
-    "averageRating": 4
+    "averageRating": 4,
+    "coverId": 1174758,
+    "coverUrl": "/covers/1174758.jpg"
   },
   {
     "title": "Robinson Crusoe",
@@ -3222,8 +3426,9 @@
       "Classics",
       "Adventure"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/368541-M.jpg",
-    "averageRating": 4
+    "averageRating": 4,
+    "coverId": 368541,
+    "coverUrl": "/covers/368541.jpg"
   },
   {
     "title": "Rodrick Rules",
@@ -3237,8 +3442,9 @@
     "genres": [
       "Humour"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8542270-M.jpg",
-    "averageRating": 4.4
+    "averageRating": 4.4,
+    "coverId": 8542270,
+    "coverUrl": "/covers/8542270.jpg"
   },
   {
     "title": "Romeo and Juliet",
@@ -3252,8 +3458,9 @@
     "genres": [
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8257991-M.jpg",
-    "averageRating": 3.68
+    "averageRating": 3.68,
+    "coverId": 8257991,
+    "coverUrl": "/covers/8257991.jpg"
   },
   {
     "title": "Sapiens",
@@ -3269,8 +3476,9 @@
       "History",
       "Non-Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8634250-M.jpg",
-    "averageRating": 4.19
+    "averageRating": 4.19,
+    "coverId": 8634250,
+    "coverUrl": "/covers/8634250.jpg"
   },
   {
     "title": "Sense and Sensibility",
@@ -3285,8 +3493,9 @@
       "Romance",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9278292-M.jpg",
-    "averageRating": 3.93
+    "averageRating": 3.93,
+    "coverId": 9278292,
+    "coverUrl": "/covers/9278292.jpg"
   },
   {
     "title": "Shatter Me",
@@ -3300,8 +3509,9 @@
     "genres": [
       "Science Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/6974992-M.jpg",
-    "averageRating": 3.95
+    "averageRating": 3.95,
+    "coverId": 6974992,
+    "coverUrl": "/covers/6974992.jpg"
   },
   {
     "title": "She Is the Poem",
@@ -3314,8 +3524,9 @@
     "genres": [
       "Poetry"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13011134-M.jpg",
-    "averageRating": 4.6
+    "averageRating": 4.6,
+    "coverId": 13011134,
+    "coverUrl": "/covers/13011134.jpg"
   },
   {
     "title": "Shoe Dog",
@@ -3331,8 +3542,9 @@
       "Biography",
       "Business"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8858487-M.jpg",
-    "averageRating": 4.57
+    "averageRating": 4.57,
+    "coverId": 8858487,
+    "coverUrl": "/covers/8858487.jpg"
   },
   {
     "title": "Siddhartha",
@@ -3346,8 +3558,9 @@
     "genres": [
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/6562535-M.jpg",
-    "averageRating": 4.06
+    "averageRating": 4.06,
+    "coverId": 6562535,
+    "coverUrl": "/covers/6562535.jpg"
   },
   {
     "title": "Six of Crows",
@@ -3362,8 +3575,9 @@
       "Fantasy",
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12667417-M.jpg",
-    "averageRating": 4.54
+    "averageRating": 4.54,
+    "coverId": 12667417,
+    "coverUrl": "/covers/12667417.jpg"
   },
   {
     "title": "Slaughterhouse-Five",
@@ -3378,8 +3592,9 @@
       "Science Fiction",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12727001-M.jpg",
-    "averageRating": 4.17
+    "averageRating": 4.17,
+    "coverId": 12727001,
+    "coverUrl": "/covers/12727001.jpg"
   },
   {
     "title": "Start with why",
@@ -3394,8 +3609,9 @@
       "Non-Fiction",
       "Business"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/6395237-M.jpg",
-    "averageRating": 4.1
+    "averageRating": 4.1,
+    "coverId": 6395237,
+    "coverUrl": "/covers/6395237.jpg"
   },
   {
     "title": "Station Eleven",
@@ -3411,8 +3627,9 @@
       "Science Fiction",
       "Adventure"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7369961-M.jpg",
-    "averageRating": 4.11
+    "averageRating": 4.11,
+    "coverId": 7369961,
+    "coverUrl": "/covers/7369961.jpg"
   },
   {
     "title": "Steve Jobs",
@@ -3428,8 +3645,9 @@
       "Biography",
       "Business"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12374726-M.jpg",
-    "averageRating": 4.18
+    "averageRating": 4.18,
+    "coverId": 12374726,
+    "coverUrl": "/covers/12374726.jpg"
   },
   {
     "title": "Sunrise on the Reaping",
@@ -3443,8 +3661,9 @@
     "genres": [
       "Dystopian"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14847912-M.jpg",
-    "averageRating": 4.62
+    "averageRating": 4.62,
+    "coverId": 14847912,
+    "coverUrl": "/covers/14847912.jpg"
   },
   {
     "title": "Talk Like TED",
@@ -3458,8 +3677,9 @@
     "genres": [
       "Business"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7316010-M.jpg",
-    "averageRating": 3.79
+    "averageRating": 3.79,
+    "coverId": 7316010,
+    "coverUrl": "/covers/7316010.jpg"
   },
   {
     "title": "Talking With Psychopaths and Savages",
@@ -3474,8 +3694,9 @@
     "genres": [
       "Non-Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/15250270-M.jpg",
-    "averageRating": 4.13
+    "averageRating": 4.13,
+    "coverId": 15250270,
+    "coverUrl": "/covers/15250270.jpg"
   },
   {
     "title": "Thank You for Leaving",
@@ -3489,8 +3710,9 @@
     "genres": [
       "Poetry"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14847895-M.jpg",
-    "averageRating": 3.15
+    "averageRating": 3.15,
+    "coverId": 14847895,
+    "coverUrl": "/covers/14847895.jpg"
   },
   {
     "title": "The 33 Strategies of War",
@@ -3505,8 +3727,9 @@
     "genres": [
       "Business"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/1119676-M.jpg",
-    "averageRating": 3.91
+    "averageRating": 3.91,
+    "coverId": 1119676,
+    "coverUrl": "/covers/1119676.jpg"
   },
   {
     "title": "The 4-Hour Workweek",
@@ -3520,8 +3743,9 @@
     "genres": [
       "Non-Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/539652-M.jpg",
-    "averageRating": 3.71
+    "averageRating": 3.71,
+    "coverId": 539652,
+    "coverUrl": "/covers/539652.jpg"
   },
   {
     "title": "The 48 Laws of Power",
@@ -3536,8 +3760,9 @@
       "Self-Help",
       "Business"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/6424160-M.jpg",
-    "averageRating": 4.03
+    "averageRating": 4.03,
+    "coverId": 6424160,
+    "coverUrl": "/covers/6424160.jpg"
   },
   {
     "title": "The 7 Habits of Highly Effective People",
@@ -3551,8 +3776,9 @@
     "genres": [
       "Business"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10079937-M.jpg",
-    "averageRating": 4.04
+    "averageRating": 4.04,
+    "coverId": 10079937,
+    "coverUrl": "/covers/10079937.jpg"
   },
   {
     "title": "The A.B.C. Murders",
@@ -3567,8 +3793,9 @@
       "Mystery",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14573514-M.jpg",
-    "averageRating": 4.03
+    "averageRating": 4.03,
+    "coverId": 14573514,
+    "coverUrl": "/covers/14573514.jpg"
   },
   {
     "title": "The Adventures of Tom Sawyer",
@@ -3584,8 +3811,9 @@
       "Adventure",
       "Humour"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12043351-M.jpg",
-    "averageRating": 3.98
+    "averageRating": 3.98,
+    "coverId": 12043351,
+    "coverUrl": "/covers/12043351.jpg"
   },
   {
     "title": "The Art of Being Alone",
@@ -3600,8 +3828,9 @@
     "genres": [
       "Poetry"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9084881-M.jpg",
-    "averageRating": 2.17
+    "averageRating": 2.17,
+    "coverId": 9084881,
+    "coverUrl": "/covers/9084881.jpg"
   },
   {
     "title": "The Art of Seduction",
@@ -3616,8 +3845,9 @@
       "Self-Help",
       "Non-Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/917840-M.jpg",
-    "averageRating": 4.01
+    "averageRating": 4.01,
+    "coverId": 917840,
+    "coverUrl": "/covers/917840.jpg"
   },
   {
     "title": "The Art of War",
@@ -3632,8 +3862,9 @@
       "Philosophy",
       "History"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/4849549-M.jpg",
-    "averageRating": 4.07
+    "averageRating": 4.07,
+    "coverId": 4849549,
+    "coverUrl": "/covers/4849549.jpg"
   },
   {
     "title": "The Artist's Way",
@@ -3647,8 +3878,9 @@
     "genres": [
       "Non-Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10840008-M.jpg",
-    "averageRating": 3.64
+    "averageRating": 3.64,
+    "coverId": 10840008,
+    "coverUrl": "/covers/10840008.jpg"
   },
   {
     "title": "The Awakening",
@@ -3663,8 +3895,9 @@
       "Horror",
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13210058-M.jpg",
-    "averageRating": 4.03
+    "averageRating": 4.03,
+    "coverId": 13210058,
+    "coverUrl": "/covers/13210058.jpg"
   },
   {
     "title": "The BFG",
@@ -3679,8 +3912,9 @@
       "Humour",
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9176033-M.jpg",
-    "averageRating": 4.11
+    "averageRating": 4.11,
+    "coverId": 9176033,
+    "coverUrl": "/covers/9176033.jpg"
   },
   {
     "title": "The Ballad of Songbirds and Snakes",
@@ -3695,8 +3929,9 @@
       "Science Fiction",
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14421833-M.jpg",
-    "averageRating": 4.28
+    "averageRating": 4.28,
+    "coverId": 14421833,
+    "coverUrl": "/covers/14421833.jpg"
   },
   {
     "title": "The Battle of the Labyrinth",
@@ -3710,8 +3945,9 @@
     "genres": [
       "Fantasy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/6274739-M.jpg",
-    "averageRating": 4.42
+    "averageRating": 4.42,
+    "coverId": 6274739,
+    "coverUrl": "/covers/6274739.jpg"
   },
   {
     "title": "The Bell Jar",
@@ -3726,8 +3962,9 @@
       "Literary Fiction",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8477115-M.jpg",
-    "averageRating": 4.16
+    "averageRating": 4.16,
+    "coverId": 8477115,
+    "coverUrl": "/covers/8477115.jpg"
   },
   {
     "title": "The Bluest Eye",
@@ -3741,8 +3978,9 @@
     "genres": [
       "Literary Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/15152696-M.jpg",
-    "averageRating": 4.19
+    "averageRating": 4.19,
+    "coverId": 15152696,
+    "coverUrl": "/covers/15152696.jpg"
   },
   {
     "title": "The Boy in the Striped Pyjamas",
@@ -3757,8 +3995,9 @@
       "Historical Fiction",
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12720687-M.jpg",
-    "averageRating": 3.92
+    "averageRating": 3.92,
+    "coverId": 12720687,
+    "coverUrl": "/covers/12720687.jpg"
   },
   {
     "title": "The Cat in the Hat",
@@ -3773,8 +4012,9 @@
     "genres": [
       "Humour"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/11342-M.jpg",
-    "averageRating": 4.08
+    "averageRating": 4.08,
+    "coverId": 11342,
+    "coverUrl": "/covers/11342.jpg"
   },
   {
     "title": "The Catcher in the Rye",
@@ -3790,8 +4030,9 @@
       "Classics",
       "Literary Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9273490-M.jpg",
-    "averageRating": 3.59
+    "averageRating": 3.59,
+    "coverId": 9273490,
+    "coverUrl": "/covers/9273490.jpg"
   },
   {
     "title": "The Clan of the Cave Bear",
@@ -3805,8 +4046,9 @@
     "genres": [
       "Historical Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12529015-M.jpg",
-    "averageRating": 4.08
+    "averageRating": 4.08,
+    "coverId": 12529015,
+    "coverUrl": "/covers/12529015.jpg"
   },
   {
     "title": "The Compound effect",
@@ -3820,8 +4062,9 @@
     "genres": [
       "Self-Help"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7115046-M.jpg",
-    "averageRating": 4
+    "averageRating": 4,
+    "coverId": 7115046,
+    "coverUrl": "/covers/7115046.jpg"
   },
   {
     "title": "The Crucible",
@@ -3835,8 +4078,9 @@
     "genres": [
       "Historical Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8431392-M.jpg",
-    "averageRating": 3.41
+    "averageRating": 3.41,
+    "coverId": 8431392,
+    "coverUrl": "/covers/8431392.jpg"
   },
   {
     "title": "The Cruel Prince",
@@ -3852,8 +4096,9 @@
       "Fantasy",
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8361789-M.jpg",
-    "averageRating": 4.01
+    "averageRating": 4.01,
+    "coverId": 8361789,
+    "coverUrl": "/covers/8361789.jpg"
   },
   {
     "title": "The Curious Incident of the Dog in the Night-Time",
@@ -3867,8 +4112,9 @@
     "genres": [
       "Mystery"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7890719-M.jpg",
-    "averageRating": 3.95
+    "averageRating": 3.95,
+    "coverId": 7890719,
+    "coverUrl": "/covers/7890719.jpg"
   },
   {
     "title": "The Da Vinci Code",
@@ -3883,8 +4129,9 @@
       "Thriller",
       "Mystery"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9255229-M.jpg",
-    "averageRating": 3.92
+    "averageRating": 3.92,
+    "coverId": 9255229,
+    "coverUrl": "/covers/9255229.jpg"
   },
   {
     "title": "The Demon-Haunted World",
@@ -3898,8 +4145,9 @@
     "genres": [
       "Science"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13129044-M.jpg",
-    "averageRating": 4.16
+    "averageRating": 4.16,
+    "coverId": 13129044,
+    "coverUrl": "/covers/13129044.jpg"
   },
   {
     "title": "The Diary of a Young Girl- Anne Frank",
@@ -3913,8 +4161,9 @@
     "genres": [
       "Biography"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13526331-M.jpg",
-    "averageRating": 4.21
+    "averageRating": 4.21,
+    "coverId": 13526331,
+    "coverUrl": "/covers/13526331.jpg"
   },
   {
     "title": "The Dispossessed",
@@ -3930,8 +4179,9 @@
       "Science Fiction",
       "Literary Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/6979680-M.jpg",
-    "averageRating": 4.49
+    "averageRating": 4.49,
+    "coverId": 6979680,
+    "coverUrl": "/covers/6979680.jpg"
   },
   {
     "title": "The Duke and I",
@@ -3945,8 +4195,9 @@
     "genres": [
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/6492549-M.jpg",
-    "averageRating": 3.82
+    "averageRating": 3.82,
+    "coverId": 6492549,
+    "coverUrl": "/covers/6492549.jpg"
   },
   {
     "title": "The Eye of the World",
@@ -3961,8 +4212,9 @@
     "genres": [
       "Fantasy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/980232-M.jpg",
-    "averageRating": 3.92
+    "averageRating": 3.92,
+    "coverId": 980232,
+    "coverUrl": "/covers/980232.jpg"
   },
   {
     "title": "The Eyes of Darkness",
@@ -3976,8 +4228,9 @@
     "genres": [
       "Horror"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12547107-M.jpg",
-    "averageRating": 3.87
+    "averageRating": 3.87,
+    "coverId": 12547107,
+    "coverUrl": "/covers/12547107.jpg"
   },
   {
     "title": "The Fault in Our Stars",
@@ -3992,8 +4245,9 @@
       "Young Adult",
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7418786-M.jpg",
-    "averageRating": 4.21
+    "averageRating": 4.21,
+    "coverId": 7418786,
+    "coverUrl": "/covers/7418786.jpg"
   },
   {
     "title": "The Fellowship of the Ring",
@@ -4009,8 +4263,9 @@
       "Adventure",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14627060-M.jpg",
-    "averageRating": 4.34
+    "averageRating": 4.34,
+    "coverId": 14627060,
+    "coverUrl": "/covers/14627060.jpg"
   },
   {
     "title": "The Final Empire",
@@ -4024,8 +4279,9 @@
     "genres": [
       "Adventure"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14658160-M.jpg",
-    "averageRating": 4.41
+    "averageRating": 4.41,
+    "coverId": 14658160,
+    "coverUrl": "/covers/14658160.jpg"
   },
   {
     "title": "The Four Agreements",
@@ -4039,8 +4295,9 @@
     "genres": [
       "Philosophy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/924521-M.jpg",
-    "averageRating": 3.9
+    "averageRating": 3.9,
+    "coverId": 924521,
+    "coverUrl": "/covers/924521.jpg"
   },
   {
     "title": "The Giver",
@@ -4055,8 +4312,9 @@
       "Dystopian",
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8352502-M.jpg",
-    "averageRating": 4.03
+    "averageRating": 4.03,
+    "coverId": 8352502,
+    "coverUrl": "/covers/8352502.jpg"
   },
   {
     "title": "The Giving Tree",
@@ -4071,8 +4329,9 @@
     "genres": [
       "Poetry"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/655727-M.jpg",
-    "averageRating": 4.18
+    "averageRating": 4.18,
+    "coverId": 655727,
+    "coverUrl": "/covers/655727.jpg"
   },
   {
     "title": "The God Delusion",
@@ -4086,8 +4345,9 @@
     "genres": [
       "Philosophy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/386467-M.jpg",
-    "averageRating": 3.88
+    "averageRating": 3.88,
+    "coverId": 386467,
+    "coverUrl": "/covers/386467.jpg"
   },
   {
     "title": "The God of Small Things",
@@ -4101,8 +4361,9 @@
     "genres": [
       "Literary Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10513792-M.jpg",
-    "averageRating": 3.81
+    "averageRating": 3.81,
+    "coverId": 10513792,
+    "coverUrl": "/covers/10513792.jpg"
   },
   {
     "title": "The Godfather",
@@ -4117,8 +4378,9 @@
       "Thriller",
       "Literary Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/6507069-M.jpg",
-    "averageRating": 4.29
+    "averageRating": 4.29,
+    "coverId": 6507069,
+    "coverUrl": "/covers/6507069.jpg"
   },
   {
     "title": "The Goldfinch",
@@ -4133,8 +4395,9 @@
     "genres": [
       "Literary Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8771366-M.jpg",
-    "averageRating": 3.99
+    "averageRating": 3.99,
+    "coverId": 8771366,
+    "coverUrl": "/covers/8771366.jpg"
   },
   {
     "title": "The Grapes of Wrath",
@@ -4148,8 +4411,9 @@
     "genres": [
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12715902-M.jpg",
-    "averageRating": 3.94
+    "averageRating": 3.94,
+    "coverId": 12715902,
+    "coverUrl": "/covers/12715902.jpg"
   },
   {
     "title": "The Great Gatsby",
@@ -4164,8 +4428,9 @@
       "Classics",
       "Literary Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10590366-M.jpg",
-    "averageRating": 3.99
+    "averageRating": 3.99,
+    "coverId": 10590366,
+    "coverUrl": "/covers/10590366.jpg"
   },
   {
     "title": "The Green Mile",
@@ -4180,8 +4445,9 @@
       "Mystery",
       "Horror"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9334567-M.jpg",
-    "averageRating": 4.31
+    "averageRating": 4.31,
+    "coverId": 9334567,
+    "coverUrl": "/covers/9334567.jpg"
   },
   {
     "title": "The Gunslinger",
@@ -4196,8 +4462,9 @@
       "Horror",
       "Fantasy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8396638-M.jpg",
-    "averageRating": 4.03
+    "averageRating": 4.03,
+    "coverId": 8396638,
+    "coverUrl": "/covers/8396638.jpg"
   },
   {
     "title": "The Handmaid's Tale",
@@ -4213,8 +4480,9 @@
       "Literary Fiction",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8231851-M.jpg",
-    "averageRating": 3.97
+    "averageRating": 3.97,
+    "coverId": 8231851,
+    "coverUrl": "/covers/8231851.jpg"
   },
   {
     "title": "The Hate U Give",
@@ -4228,8 +4496,9 @@
     "genres": [
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/11521588-M.jpg",
-    "averageRating": 4.35
+    "averageRating": 4.35,
+    "coverId": 11521588,
+    "coverUrl": "/covers/11521588.jpg"
   },
   {
     "title": "The Hating Game",
@@ -4243,8 +4512,9 @@
     "genres": [
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9247684-M.jpg",
-    "averageRating": 3.64
+    "averageRating": 3.64,
+    "coverId": 9247684,
+    "coverUrl": "/covers/9247684.jpg"
   },
   {
     "title": "The Help",
@@ -4260,8 +4530,9 @@
     "genres": [
       "Historical Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8387264-M.jpg",
-    "averageRating": 4.26
+    "averageRating": 4.26,
+    "coverId": 8387264,
+    "coverUrl": "/covers/8387264.jpg"
   },
   {
     "title": "The Hired Girl",
@@ -4276,8 +4547,9 @@
       "Historical Fiction",
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/11610624-M.jpg",
-    "averageRating": 4.32
+    "averageRating": 4.32,
+    "coverId": 11610624,
+    "coverUrl": "/covers/11610624.jpg"
   },
   {
     "title": "The Hitchhiker's Guide to the Galaxy",
@@ -4293,8 +4565,9 @@
       "Humour",
       "Adventure"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12986869-M.jpg",
-    "averageRating": 4.51
+    "averageRating": 4.51,
+    "coverId": 12986869,
+    "coverUrl": "/covers/12986869.jpg"
   },
   {
     "title": "The Hobbit",
@@ -4310,8 +4583,9 @@
       "Adventure",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14627509-M.jpg",
-    "averageRating": 4.29
+    "averageRating": 4.29,
+    "coverId": 14627509,
+    "coverUrl": "/covers/14627509.jpg"
   },
   {
     "title": "The Housemaid",
@@ -4326,8 +4600,9 @@
       "Mystery",
       "Thriller"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/15105883-M.jpg",
-    "averageRating": 3.63
+    "averageRating": 3.63,
+    "coverId": 15105883,
+    "coverUrl": "/covers/15105883.jpg"
   },
   {
     "title": "The Hunger Games",
@@ -4343,8 +4618,9 @@
       "Young Adult",
       "Science Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12646537-M.jpg",
-    "averageRating": 4.12
+    "averageRating": 4.12,
+    "coverId": 12646537,
+    "coverUrl": "/covers/12646537.jpg"
   },
   {
     "title": "The Immortal Life of Henrietta Lacks",
@@ -4359,8 +4635,9 @@
       "Science",
       "Non-Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8364866-M.jpg",
-    "averageRating": 4.22
+    "averageRating": 4.22,
+    "coverId": 8364866,
+    "coverUrl": "/covers/8364866.jpg"
   },
   {
     "title": "The Inheritance Games",
@@ -4375,8 +4652,9 @@
       "Thriller",
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10472357-M.jpg",
-    "averageRating": 4.25
+    "averageRating": 4.25,
+    "coverId": 10472357,
+    "coverUrl": "/covers/10472357.jpg"
   },
   {
     "title": "The Intelligent Investor",
@@ -4390,8 +4668,9 @@
     "genres": [
       "Business"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/36434-M.jpg",
-    "averageRating": 4.12
+    "averageRating": 4.12,
+    "coverId": 36434,
+    "coverUrl": "/covers/36434.jpg"
   },
   {
     "title": "The Jungle",
@@ -4406,8 +4685,9 @@
       "Classics",
       "Historical Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8231790-M.jpg",
-    "averageRating": 4.27
+    "averageRating": 4.27,
+    "coverId": 8231790,
+    "coverUrl": "/covers/8231790.jpg"
   },
   {
     "title": "The Lean Startup",
@@ -4421,8 +4701,9 @@
     "genres": [
       "Business"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7104760-M.jpg",
-    "averageRating": 3.91
+    "averageRating": 3.91,
+    "coverId": 7104760,
+    "coverUrl": "/covers/7104760.jpg"
   },
   {
     "title": "The Left Hand of Darkness",
@@ -4437,8 +4718,9 @@
       "Science Fiction",
       "Literary Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10618463-M.jpg",
-    "averageRating": 4.27
+    "averageRating": 4.27,
+    "coverId": 10618463,
+    "coverUrl": "/covers/10618463.jpg"
   },
   {
     "title": "The Lightning Thief",
@@ -4453,8 +4735,9 @@
       "Adventure",
       "Fantasy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7239831-M.jpg",
-    "averageRating": 4.29
+    "averageRating": 4.29,
+    "coverId": 7239831,
+    "coverUrl": "/covers/7239831.jpg"
   },
   {
     "title": "The Lion, the Witch and the Wardrobe",
@@ -4470,8 +4753,9 @@
       "Young Adult",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8441376-M.jpg",
-    "averageRating": 4.13
+    "averageRating": 4.13,
+    "coverId": 8441376,
+    "coverUrl": "/covers/8441376.jpg"
   },
   {
     "title": "The Long Haul",
@@ -4485,8 +4769,9 @@
     "genres": [
       "Humour"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7316502-M.jpg",
-    "averageRating": 4.35
+    "averageRating": 4.35,
+    "coverId": 7316502,
+    "coverUrl": "/covers/7316502.jpg"
   },
   {
     "title": "The Long Walk",
@@ -4501,8 +4786,9 @@
       "Dystopian",
       "Horror"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14653609-M.jpg",
-    "averageRating": 3.84
+    "averageRating": 3.84,
+    "coverId": 14653609,
+    "coverUrl": "/covers/14653609.jpg"
   },
   {
     "title": "The Lord of the Rings",
@@ -4516,8 +4802,9 @@
     "genres": [
       "Fantasy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14625765-M.jpg",
-    "averageRating": 4.45
+    "averageRating": 4.45,
+    "coverId": 14625765,
+    "coverUrl": "/covers/14625765.jpg"
   },
   {
     "title": "The Lost Hero",
@@ -4531,8 +4818,9 @@
     "genres": [
       "Adventure"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12848687-M.jpg",
-    "averageRating": 4.43
+    "averageRating": 4.43,
+    "coverId": 12848687,
+    "coverUrl": "/covers/12848687.jpg"
   },
   {
     "title": "The Lost Symbol",
@@ -4548,8 +4836,9 @@
       "Mystery",
       "Adventure"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8373389-M.jpg",
-    "averageRating": 3.63
+    "averageRating": 3.63,
+    "coverId": 8373389,
+    "coverUrl": "/covers/8373389.jpg"
   },
   {
     "title": "The Love Hypothesis",
@@ -4563,8 +4852,9 @@
     "genres": [
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10601402-M.jpg",
-    "averageRating": 4.11
+    "averageRating": 4.11,
+    "coverId": 10601402,
+    "coverUrl": "/covers/10601402.jpg"
   },
   {
     "title": "The Maddest Obsession",
@@ -4578,8 +4868,9 @@
     "genres": [
       "Thriller"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/11699161-M.jpg",
-    "averageRating": 4.11
+    "averageRating": 4.11,
+    "coverId": 11699161,
+    "coverUrl": "/covers/11699161.jpg"
   },
   {
     "title": "The Mark of Athena",
@@ -4593,8 +4884,9 @@
     "genres": [
       "Adventure"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12848680-M.jpg",
-    "averageRating": 4.46
+    "averageRating": 4.46,
+    "coverId": 12848680,
+    "coverUrl": "/covers/12848680.jpg"
   },
   {
     "title": "The Martian",
@@ -4609,8 +4901,9 @@
       "Thriller",
       "Science Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/11447888-M.jpg",
-    "averageRating": 4.4
+    "averageRating": 4.4,
+    "coverId": 11447888,
+    "coverUrl": "/covers/11447888.jpg"
   },
   {
     "title": "The Maze Runner",
@@ -4625,8 +4918,9 @@
       "Dystopian",
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10464801-M.jpg",
-    "averageRating": 4
+    "averageRating": 4,
+    "coverId": 10464801,
+    "coverUrl": "/covers/10464801.jpg"
   },
   {
     "title": "The Midnight Library",
@@ -4640,8 +4934,9 @@
     "genres": [
       "Science Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10313767-M.jpg",
-    "averageRating": 4.03
+    "averageRating": 4.03,
+    "coverId": 10313767,
+    "coverUrl": "/covers/10313767.jpg"
   },
   {
     "title": "The Mountain Is You",
@@ -4655,8 +4950,9 @@
     "genres": [
       "Self-Help"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13838236-M.jpg",
-    "averageRating": 3.49
+    "averageRating": 3.49,
+    "coverId": 13838236,
+    "coverUrl": "/covers/13838236.jpg"
   },
   {
     "title": "The Murder of Roger Ackroyd",
@@ -4671,8 +4967,9 @@
       "Mystery",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13151356-M.jpg",
-    "averageRating": 4.23
+    "averageRating": 4.23,
+    "coverId": 13151356,
+    "coverUrl": "/covers/13151356.jpg"
   },
   {
     "title": "The Mysterious Affair at Styles",
@@ -4687,8 +4984,9 @@
       "Mystery",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13699667-M.jpg",
-    "averageRating": 4.03
+    "averageRating": 4.03,
+    "coverId": 13699667,
+    "coverUrl": "/covers/13699667.jpg"
   },
   {
     "title": "The Myth of Sisyphus and Other Essays",
@@ -4702,8 +5000,9 @@
     "genres": [
       "Philosophy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12726570-M.jpg",
-    "averageRating": 4.3
+    "averageRating": 4.3,
+    "coverId": 12726570,
+    "coverUrl": "/covers/12726570.jpg"
   },
   {
     "title": "The Name of the Wind",
@@ -4718,8 +5017,9 @@
     "genres": [
       "Fantasy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/11480483-M.jpg",
-    "averageRating": 4.34
+    "averageRating": 4.34,
+    "coverId": 11480483,
+    "coverUrl": "/covers/11480483.jpg"
   },
   {
     "title": "The Obstacle is the Way",
@@ -4733,8 +5033,9 @@
     "genres": [
       "Philosophy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14428233-M.jpg",
-    "averageRating": 3.91
+    "averageRating": 3.91,
+    "coverId": 14428233,
+    "coverUrl": "/covers/14428233.jpg"
   },
   {
     "title": "The Odyssey",
@@ -4750,7 +5051,8 @@
       "Poetry",
       "Adventure"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12474938-M.jpg"
+    "coverId": 12474938,
+    "coverUrl": "/covers/12474938.jpg"
   },
   {
     "title": "The Outsiders",
@@ -4767,8 +5069,9 @@
       "Classics",
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7263662-M.jpg",
-    "averageRating": 4.37
+    "averageRating": 4.37,
+    "coverId": 7263662,
+    "coverUrl": "/covers/7263662.jpg"
   },
   {
     "title": "The Passage",
@@ -4784,8 +5087,9 @@
       "Horror",
       "Thriller"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8261369-M.jpg",
-    "averageRating": 3.88
+    "averageRating": 3.88,
+    "coverId": 8261369,
+    "coverUrl": "/covers/8261369.jpg"
   },
   {
     "title": "The Perks of Being a Wallflower",
@@ -4800,8 +5104,9 @@
       "Classics",
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14315052-M.jpg",
-    "averageRating": 4.24
+    "averageRating": 4.24,
+    "coverId": 14315052,
+    "coverUrl": "/covers/14315052.jpg"
   },
   {
     "title": "The Picture of Dorian Gray",
@@ -4816,8 +5121,9 @@
       "Classics",
       "Horror"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14314858-M.jpg",
-    "averageRating": 4.17
+    "averageRating": 4.17,
+    "coverId": 14314858,
+    "coverUrl": "/covers/14314858.jpg"
   },
   {
     "title": "The Pillars of the Earth",
@@ -4831,8 +5137,9 @@
     "genres": [
       "Thriller"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9269909-M.jpg",
-    "averageRating": 4.18
+    "averageRating": 4.18,
+    "coverId": 9269909,
+    "coverUrl": "/covers/9269909.jpg"
   },
   {
     "title": "The Power of Habit",
@@ -4846,8 +5153,9 @@
     "genres": [
       "Non-Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9078085-M.jpg",
-    "averageRating": 4.03
+    "averageRating": 4.03,
+    "coverId": 9078085,
+    "coverUrl": "/covers/9078085.jpg"
   },
   {
     "title": "The Power of Now",
@@ -4862,8 +5170,9 @@
     "genres": [
       "Philosophy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/551262-M.jpg",
-    "averageRating": 3.85
+    "averageRating": 3.85,
+    "coverId": 551262,
+    "coverUrl": "/covers/551262.jpg"
   },
   {
     "title": "The Power of Your Subconscious Mind",
@@ -4877,8 +5186,9 @@
     "genres": [
       "Non-Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/6553019-M.jpg",
-    "averageRating": 3.91
+    "averageRating": 3.91,
+    "coverId": 6553019,
+    "coverUrl": "/covers/6553019.jpg"
   },
   {
     "title": "The Prince",
@@ -4893,8 +5203,9 @@
       "Philosophy",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12726168-M.jpg",
-    "averageRating": 3.89
+    "averageRating": 3.89,
+    "coverId": 12726168,
+    "coverUrl": "/covers/12726168.jpg"
   },
   {
     "title": "The Psychology of Money",
@@ -4908,8 +5219,9 @@
     "genres": [
       "Business"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10389354-M.jpg",
-    "averageRating": 3.99
+    "averageRating": 3.99,
+    "coverId": 10389354,
+    "coverUrl": "/covers/10389354.jpg"
   },
   {
     "title": "The Return of the King",
@@ -4925,8 +5237,9 @@
       "Adventure",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14627062-M.jpg",
-    "averageRating": 4.45
+    "averageRating": 4.45,
+    "coverId": 14627062,
+    "coverUrl": "/covers/14627062.jpg"
   },
   {
     "title": "The Richest Man in Babylon",
@@ -4940,8 +5253,9 @@
     "genres": [
       "Business"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10491331-M.jpg",
-    "averageRating": 4.2
+    "averageRating": 4.2,
+    "coverId": 10491331,
+    "coverUrl": "/covers/10491331.jpg"
   },
   {
     "title": "The Rise and Fall of the Third Reich",
@@ -4956,8 +5270,9 @@
     "genres": [
       "History"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/6558536-M.jpg",
-    "averageRating": 4.16
+    "averageRating": 4.16,
+    "coverId": 6558536,
+    "coverUrl": "/covers/6558536.jpg"
   },
   {
     "title": "The Road",
@@ -4971,8 +5286,9 @@
     "genres": [
       "Dystopian"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/198120-M.jpg",
-    "averageRating": 3.89
+    "averageRating": 3.89,
+    "coverId": 198120,
+    "coverUrl": "/covers/198120.jpg"
   },
   {
     "title": "The Rudest Book Ever",
@@ -4987,8 +5303,9 @@
       "Philosophy",
       "Self-Help"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10874978-M.jpg",
-    "averageRating": 4.53
+    "averageRating": 4.53,
+    "coverId": 10874978,
+    "coverUrl": "/covers/10874978.jpg"
   },
   {
     "title": "The Scarlet Letter",
@@ -5003,8 +5320,9 @@
       "Classics",
       "Historical Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/5654516-M.jpg",
-    "averageRating": 3.42
+    "averageRating": 3.42,
+    "coverId": 5654516,
+    "coverUrl": "/covers/5654516.jpg"
   },
   {
     "title": "The Sea of Monsters",
@@ -5018,8 +5336,9 @@
     "genres": [
       "Adventure"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/108909-M.jpg",
-    "averageRating": 4.46
+    "averageRating": 4.46,
+    "coverId": 108909,
+    "coverUrl": "/covers/108909.jpg"
   },
   {
     "title": "The Second World War",
@@ -5033,8 +5352,9 @@
     "genres": [
       "History"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7347623-M.jpg",
-    "averageRating": 3.83
+    "averageRating": 3.83,
+    "coverId": 7347623,
+    "coverUrl": "/covers/7347623.jpg"
   },
   {
     "title": "The Secret",
@@ -5048,8 +5368,9 @@
     "genres": [
       "Self-Help"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/845815-M.jpg",
-    "averageRating": 3.66
+    "averageRating": 3.66,
+    "coverId": 845815,
+    "coverUrl": "/covers/845815.jpg"
   },
   {
     "title": "The Secret Garden",
@@ -5064,8 +5385,9 @@
       "Classics",
       "Mystery"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12622062-M.jpg",
-    "averageRating": 3.91
+    "averageRating": 3.91,
+    "coverId": 12622062,
+    "coverUrl": "/covers/12622062.jpg"
   },
   {
     "title": "The Secret History",
@@ -5079,8 +5401,9 @@
     "genres": [
       "Mystery"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/744854-M.jpg",
-    "averageRating": 4.04
+    "averageRating": 4.04,
+    "coverId": 744854,
+    "coverUrl": "/covers/744854.jpg"
   },
   {
     "title": "The Seven Husbands of Evelyn Hugo",
@@ -5094,8 +5417,9 @@
     "genres": [
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8354226-M.jpg",
-    "averageRating": 4.13
+    "averageRating": 4.13,
+    "coverId": 8354226,
+    "coverUrl": "/covers/8354226.jpg"
   },
   {
     "title": "The Shining",
@@ -5110,8 +5434,9 @@
       "Horror",
       "Thriller"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12376585-M.jpg",
-    "averageRating": 4.17
+    "averageRating": 4.17,
+    "coverId": 12376585,
+    "coverUrl": "/covers/12376585.jpg"
   },
   {
     "title": "The Silence of the Lambs",
@@ -5126,8 +5451,9 @@
       "Thriller",
       "Horror"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8580475-M.jpg",
-    "averageRating": 4.23
+    "averageRating": 4.23,
+    "coverId": 8580475,
+    "coverUrl": "/covers/8580475.jpg"
   },
   {
     "title": "The Silent Patient",
@@ -5141,8 +5467,9 @@
     "genres": [
       "Thriller"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9407338-M.jpg",
-    "averageRating": 4.05
+    "averageRating": 4.05,
+    "coverId": 9407338,
+    "coverUrl": "/covers/9407338.jpg"
   },
   {
     "title": "The Silver Eyes (Five Nights At Freddy's #1)",
@@ -5157,8 +5484,9 @@
     "genres": [
       "Horror"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8075533-M.jpg",
-    "averageRating": 4.59
+    "averageRating": 4.59,
+    "coverId": 8075533,
+    "coverUrl": "/covers/8075533.jpg"
   },
   {
     "title": "The Son of Neptune",
@@ -5172,8 +5500,9 @@
     "genres": [
       "Fantasy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13012024-M.jpg",
-    "averageRating": 4.31
+    "averageRating": 4.31,
+    "coverId": 13012024,
+    "coverUrl": "/covers/13012024.jpg"
   },
   {
     "title": "The Spanish Love Deception",
@@ -5187,8 +5516,9 @@
     "genres": [
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14425253-M.jpg",
-    "averageRating": 3.93
+    "averageRating": 3.93,
+    "coverId": 14425253,
+    "coverUrl": "/covers/14425253.jpg"
   },
   {
     "title": "The Stand",
@@ -5203,8 +5533,9 @@
       "Horror",
       "Thriller"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9255992-M.jpg",
-    "averageRating": 4.3
+    "averageRating": 4.3,
+    "coverId": 9255992,
+    "coverUrl": "/covers/9255992.jpg"
   },
   {
     "title": "The Strange Case of Dr. Jekyll and Mr. Hyde",
@@ -5219,8 +5550,9 @@
       "Classics",
       "Horror"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/295773-M.jpg",
-    "averageRating": 3.94
+    "averageRating": 3.94,
+    "coverId": 295773,
+    "coverUrl": "/covers/295773.jpg"
   },
   {
     "title": "The Strength in Our Scars",
@@ -5233,8 +5565,9 @@
     "genres": [
       "Poetry"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14602647-M.jpg",
-    "averageRating": 4
+    "averageRating": 4,
+    "coverId": 14602647,
+    "coverUrl": "/covers/14602647.jpg"
   },
   {
     "title": "The Time Machine",
@@ -5249,8 +5582,9 @@
       "Science Fiction",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9009316-M.jpg",
-    "averageRating": 4.04
+    "averageRating": 4.04,
+    "coverId": 9009316,
+    "coverUrl": "/covers/9009316.jpg"
   },
   {
     "title": "The Two Towers",
@@ -5266,8 +5600,9 @@
       "Adventure",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14627564-M.jpg",
-    "averageRating": 4.35
+    "averageRating": 4.35,
+    "coverId": 14627564,
+    "coverUrl": "/covers/14627564.jpg"
   },
   {
     "title": "The Wonderful Wizard of Oz",
@@ -5283,8 +5618,9 @@
       "Fantasy",
       "Adventure"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/552443-M.jpg",
-    "averageRating": 3.95
+    "averageRating": 3.95,
+    "coverId": 552443,
+    "coverUrl": "/covers/552443.jpg"
   },
   {
     "title": "The art of thinking clearly",
@@ -5298,8 +5634,9 @@
     "genres": [
       "Non-Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8270423-M.jpg",
-    "averageRating": 4.04
+    "averageRating": 4.04,
+    "coverId": 8270423,
+    "coverUrl": "/covers/8270423.jpg"
   },
   {
     "title": "The diary of a young girl",
@@ -5315,8 +5652,9 @@
       "Biography",
       "History"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13521319-M.jpg",
-    "averageRating": 2.17
+    "averageRating": 2.17,
+    "coverId": 13521319,
+    "coverUrl": "/covers/13521319.jpg"
   },
   {
     "title": "The personal MBA",
@@ -5330,8 +5668,9 @@
     "genres": [
       "Business"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/6713257-M.jpg",
-    "averageRating": 4.14
+    "averageRating": 4.14,
+    "coverId": 6713257,
+    "coverUrl": "/covers/6713257.jpg"
   },
   {
     "title": "The science of getting rich, or, financial success through creative thought",
@@ -5347,8 +5686,9 @@
     "genres": [
       "Non-Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/854989-M.jpg",
-    "averageRating": 4.14
+    "averageRating": 4.14,
+    "coverId": 854989,
+    "coverUrl": "/covers/854989.jpg"
   },
   {
     "title": "The untethered soul",
@@ -5362,8 +5702,9 @@
     "genres": [
       "Philosophy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10630553-M.jpg",
-    "averageRating": 4.41
+    "averageRating": 4.41,
+    "coverId": 10630553,
+    "coverUrl": "/covers/10630553.jpg"
   },
   {
     "title": "They Both Die at the End",
@@ -5377,8 +5718,9 @@
     "genres": [
       "Adventure"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9280553-M.jpg",
-    "averageRating": 4.1
+    "averageRating": 4.1,
+    "coverId": 9280553,
+    "coverUrl": "/covers/9280553.jpg"
   },
   {
     "title": "Things Fall Apart",
@@ -5392,8 +5734,9 @@
     "genres": [
       "Literary Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12816943-M.jpg",
-    "averageRating": 3.94
+    "averageRating": 3.94,
+    "coverId": 12816943,
+    "coverUrl": "/covers/12816943.jpg"
   },
   {
     "title": "Think Again",
@@ -5407,8 +5750,9 @@
     "genres": [
       "Non-Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10470266-M.jpg",
-    "averageRating": 3.71
+    "averageRating": 3.71,
+    "coverId": 10470266,
+    "coverUrl": "/covers/10470266.jpg"
   },
   {
     "title": "Think Like a Monk",
@@ -5422,8 +5766,9 @@
     "genres": [
       "Self-Help"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10355397-M.jpg",
-    "averageRating": 3.93
+    "averageRating": 3.93,
+    "coverId": 10355397,
+    "coverUrl": "/covers/10355397.jpg"
   },
   {
     "title": "Thirteen reasons why",
@@ -5438,8 +5783,9 @@
       "Mystery",
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/15162168-M.jpg",
-    "averageRating": 3.73
+    "averageRating": 3.73,
+    "coverId": 15162168,
+    "coverUrl": "/covers/15162168.jpg"
   },
   {
     "title": "Throne of Glass",
@@ -5453,8 +5799,9 @@
     "genres": [
       "Fantasy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13312488-M.jpg",
-    "averageRating": 4.16
+    "averageRating": 4.16,
+    "coverId": 13312488,
+    "coverUrl": "/covers/13312488.jpg"
   },
   {
     "title": "Through the Looking-Glass",
@@ -5469,8 +5816,9 @@
       "Classics",
       "Fantasy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/11272464-M.jpg",
-    "averageRating": 4.03
+    "averageRating": 4.03,
+    "coverId": 11272464,
+    "coverUrl": "/covers/11272464.jpg"
   },
   {
     "title": "To All the Boys I've Loved Before",
@@ -5484,8 +5832,9 @@
     "genres": [
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7370711-M.jpg",
-    "averageRating": 4.4
+    "averageRating": 4.4,
+    "coverId": 7370711,
+    "coverUrl": "/covers/7370711.jpg"
   },
   {
     "title": "To Kill a Mockingbird",
@@ -5500,8 +5849,9 @@
       "Classics",
       "Literary Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14351077-M.jpg",
-    "averageRating": 4.13
+    "averageRating": 4.13,
+    "coverId": 14351077,
+    "coverUrl": "/covers/14351077.jpg"
   },
   {
     "title": "Trading in the zone",
@@ -5515,8 +5865,9 @@
     "genres": [
       "Non-Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/460625-M.jpg",
-    "averageRating": 4.26
+    "averageRating": 4.26,
+    "coverId": 460625,
+    "coverUrl": "/covers/460625.jpg"
   },
   {
     "title": "Treasure Island",
@@ -5531,8 +5882,9 @@
       "Adventure",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13859660-M.jpg",
-    "averageRating": 3.78
+    "averageRating": 3.78,
+    "coverId": 13859660,
+    "coverUrl": "/covers/13859660.jpg"
   },
   {
     "title": "Twilight",
@@ -5548,8 +5900,9 @@
       "Horror",
       "Fantasy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12641977-M.jpg",
-    "averageRating": 3.69
+    "averageRating": 3.69,
+    "coverId": 12641977,
+    "coverUrl": "/covers/12641977.jpg"
   },
   {
     "title": "Twisted Games",
@@ -5563,8 +5916,9 @@
     "genres": [
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12821465-M.jpg",
-    "averageRating": 4.05
+    "averageRating": 4.05,
+    "coverId": 12821465,
+    "coverUrl": "/covers/12821465.jpg"
   },
   {
     "title": "Twisted Hate",
@@ -5578,8 +5932,9 @@
     "genres": [
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12928487-M.jpg",
-    "averageRating": 3.8
+    "averageRating": 3.8,
+    "coverId": 12928487,
+    "coverUrl": "/covers/12928487.jpg"
   },
   {
     "title": "Twisted Lies",
@@ -5594,8 +5949,9 @@
       "Mystery",
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14425197-M.jpg",
-    "averageRating": 4.09
+    "averageRating": 4.09,
+    "coverId": 14425197,
+    "coverUrl": "/covers/14425197.jpg"
   },
   {
     "title": "Twisted Love",
@@ -5609,8 +5965,9 @@
     "genres": [
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12940491-M.jpg",
-    "averageRating": 3.8
+    "averageRating": 3.8,
+    "coverId": 12940491,
+    "coverUrl": "/covers/12940491.jpg"
   },
   {
     "title": "Ugly Love",
@@ -5624,8 +5981,9 @@
     "genres": [
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12856728-M.jpg",
-    "averageRating": 4.01
+    "averageRating": 4.01,
+    "coverId": 12856728,
+    "coverUrl": "/covers/12856728.jpg"
   },
   {
     "title": "Ulysses",
@@ -5640,8 +5998,9 @@
       "Classics",
       "Literary Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/13136548-M.jpg",
-    "averageRating": 3.56
+    "averageRating": 3.56,
+    "coverId": 13136548,
+    "coverUrl": "/covers/13136548.jpg"
   },
   {
     "title": "Unravel me",
@@ -5655,8 +6014,9 @@
     "genres": [
       "Science Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12727567-M.jpg",
-    "averageRating": 3.88
+    "averageRating": 3.88,
+    "coverId": 12727567,
+    "coverUrl": "/covers/12727567.jpg"
   },
   {
     "title": "Verity",
@@ -5670,8 +6030,9 @@
     "genres": [
       "Romance"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8747160-M.jpg",
-    "averageRating": 3.88
+    "averageRating": 3.88,
+    "coverId": 8747160,
+    "coverUrl": "/covers/8747160.jpg"
   },
   {
     "title": "Vincent van Gogh",
@@ -5687,8 +6048,9 @@
     "genres": [
       "Biography"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/4703873-M.jpg",
-    "averageRating": 4.19
+    "averageRating": 4.19,
+    "coverId": 4703873,
+    "coverUrl": "/covers/4703873.jpg"
   },
   {
     "title": "War and Peace",
@@ -5703,8 +6065,9 @@
       "Historical Fiction",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12621906-M.jpg",
-    "averageRating": 4.23
+    "averageRating": 4.23,
+    "coverId": 12621906,
+    "coverUrl": "/covers/12621906.jpg"
   },
   {
     "title": "We Were Liars",
@@ -5718,8 +6081,9 @@
     "genres": [
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14425312-M.jpg",
-    "averageRating": 3.95
+    "averageRating": 3.95,
+    "coverId": 14425312,
+    "coverUrl": "/covers/14425312.jpg"
   },
   {
     "title": "We Were Never Meant To Be",
@@ -5732,8 +6096,9 @@
     "genres": [
       "Literary Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/15024571-M.jpg",
-    "averageRating": 3.53
+    "averageRating": 3.53,
+    "coverId": 15024571,
+    "coverUrl": "/covers/15024571.jpg"
   },
   {
     "title": "What If?",
@@ -5747,8 +6112,9 @@
     "genres": [
       "Science"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9083979-M.jpg",
-    "averageRating": 4.31
+    "averageRating": 4.31,
+    "coverId": 9083979,
+    "coverUrl": "/covers/9083979.jpg"
   },
   {
     "title": "When Breath Becomes Air",
@@ -5763,8 +6129,9 @@
       "Biography",
       "Non-Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/11463139-M.jpg",
-    "averageRating": 4.24
+    "averageRating": 4.24,
+    "coverId": 11463139,
+    "coverUrl": "/covers/11463139.jpg"
   },
   {
     "title": "When You're Ready, This Is How You Heal",
@@ -5777,8 +6144,9 @@
     "genres": [
       "Self-Help"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/15000579-M.jpg",
-    "averageRating": 4.23
+    "averageRating": 4.23,
+    "coverId": 15000579,
+    "coverUrl": "/covers/15000579.jpg"
   },
   {
     "title": "Where the Crawdads Sing",
@@ -5792,8 +6160,9 @@
     "genres": [
       "Mystery"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8362947-M.jpg",
-    "averageRating": 4.31
+    "averageRating": 4.31,
+    "coverId": 8362947,
+    "coverUrl": "/covers/8362947.jpg"
   },
   {
     "title": "Where the Red Fern Grows",
@@ -5807,8 +6176,9 @@
     "genres": [
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7996608-M.jpg",
-    "averageRating": 4.16
+    "averageRating": 4.16,
+    "coverId": 7996608,
+    "coverUrl": "/covers/7996608.jpg"
   },
   {
     "title": "Why Has Nobody Told Me This Before?",
@@ -5823,8 +6193,9 @@
       "Self-Help",
       "Non-Fiction"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12821544-M.jpg",
-    "averageRating": 3.5
+    "averageRating": 3.5,
+    "coverId": 12821544,
+    "coverUrl": "/covers/12821544.jpg"
   },
   {
     "title": "Why We Sleep",
@@ -5839,8 +6210,9 @@
     "genres": [
       "Science"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8814155-M.jpg",
-    "averageRating": 4.52
+    "averageRating": 4.52,
+    "coverId": 8814155,
+    "coverUrl": "/covers/8814155.jpg"
   },
   {
     "title": "Wings of Fire",
@@ -5854,8 +6226,9 @@
     "genres": [
       "Biography"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9153819-M.jpg",
-    "averageRating": 4.26
+    "averageRating": 4.26,
+    "coverId": 9153819,
+    "coverUrl": "/covers/9153819.jpg"
   },
   {
     "title": "Wonder",
@@ -5869,8 +6242,9 @@
     "genres": [
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8223160-M.jpg",
-    "averageRating": 4.29
+    "averageRating": 4.29,
+    "coverId": 8223160,
+    "coverUrl": "/covers/8223160.jpg"
   },
   {
     "title": "Wool",
@@ -5884,8 +6258,9 @@
     "genres": [
       "Dystopian"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/14369537-M.jpg",
-    "averageRating": 4.43
+    "averageRating": 4.43,
+    "coverId": 14369537,
+    "coverUrl": "/covers/14369537.jpg"
   },
   {
     "title": "Wrecking Ball",
@@ -5899,8 +6274,9 @@
     "genres": [
       "Humour"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9278304-M.jpg",
-    "averageRating": 4.01
+    "averageRating": 4.01,
+    "coverId": 9278304,
+    "coverUrl": "/covers/9278304.jpg"
   },
   {
     "title": "Wuthering Heights",
@@ -5915,8 +6291,9 @@
       "Romance",
       "Classics"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/12818862-M.jpg",
-    "averageRating": 4.1
+    "averageRating": 4.1,
+    "coverId": 12818862,
+    "coverUrl": "/covers/12818862.jpg"
   },
   {
     "title": "You Are a Badass",
@@ -5930,8 +6307,9 @@
     "genres": [
       "Self-Help"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/7436635-M.jpg",
-    "averageRating": 3.7
+    "averageRating": 3.7,
+    "coverId": 7436635,
+    "coverUrl": "/covers/7436635.jpg"
   },
   {
     "title": "You're Too Good to Feel This Bad",
@@ -5946,8 +6324,9 @@
       "Self-Help",
       "Philosophy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/11291723-M.jpg",
-    "averageRating": 3.82
+    "averageRating": 3.82,
+    "coverId": 11291723,
+    "coverUrl": "/covers/11291723.jpg"
   },
   {
     "title": "You've Reached Sam",
@@ -5961,8 +6340,9 @@
     "genres": [
       "Young Adult"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/11058809-M.jpg",
-    "averageRating": 4.02
+    "averageRating": 4.02,
+    "coverId": 11058809,
+    "coverUrl": "/covers/11058809.jpg"
   },
   {
     "title": "Zen and the Art of Motorcycle Maintenance",
@@ -5977,8 +6357,9 @@
     "genres": [
       "Philosophy"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/10673266-M.jpg",
-    "averageRating": 3.84
+    "averageRating": 3.84,
+    "coverId": 10673266,
+    "coverUrl": "/covers/10673266.jpg"
   },
   {
     "title": "Zero to One",
@@ -5994,8 +6375,9 @@
     "genres": [
       "Business"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/9002334-M.jpg",
-    "averageRating": 4.08
+    "averageRating": 4.08,
+    "coverId": 9002334,
+    "coverUrl": "/covers/9002334.jpg"
   },
   {
     "title": "the sun and her flowers",
@@ -6009,7 +6391,8 @@
     "genres": [
       "Poetry"
     ],
-    "coverUrl": "https://covers.openlibrary.org/b/id/8084615-M.jpg",
-    "averageRating": 4.04
+    "averageRating": 4.04,
+    "coverId": 8084615,
+    "coverUrl": "/covers/8084615.jpg"
   }
 ]

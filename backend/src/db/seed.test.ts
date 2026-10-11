@@ -1,5 +1,5 @@
 import { afterAll, beforeAll, describe, expect, it } from 'vitest'
-import { count, sql } from 'drizzle-orm'
+import { count, eq, like, sql } from 'drizzle-orm'
 import { createTestDb, truncateAll } from '../test/db.js'
 import { bookAuthors, books } from './schema/index.js'
 import { seedLibrary } from './seed-library.js'
@@ -32,6 +32,25 @@ describe('seedLibrary', () => {
     await seedLibrary(db)
     expect(await total(books)).toBe(bookCount)
     expect(await total(bookAuthors)).toBe(linkCount)
+  })
+
+  it('switches old Open Library cover URLs to self-hosted ones but keeps custom covers', async () => {
+    const seeded = await db.select({ isbn: books.isbn, coverUrl: books.coverUrl }).from(books).where(like(books.coverUrl, '/covers/%')).limit(2)
+    const [a, b] = seeded as [(typeof seeded)[number], (typeof seeded)[number]]
+    const id = Number(/\/covers\/(\d+)\.jpg$/.exec(a.coverUrl ?? '')?.[1])
+    expect(id).toBeGreaterThan(0)
+    await db
+      .update(books)
+      .set({ coverUrl: `https://covers.openlibrary.org/b/id/${id}-M.jpg` })
+      .where(eq(books.isbn, a.isbn!))
+    await db.update(books).set({ coverUrl: 'https://example.com/custom.jpg' }).where(eq(books.isbn, b.isbn!))
+
+    await seedLibrary(db)
+
+    const after = async (isbn: string | null) =>
+      first(await db.select({ coverUrl: books.coverUrl }).from(books).where(eq(books.isbn, isbn!))).coverUrl
+    expect(await after(a.isbn)).toBe(`/covers/${id}.jpg`)
+    expect(await after(b.isbn)).toBe('https://example.com/custom.jpg')
   })
 
   it('stores ratings between 0 and 5', async () => {

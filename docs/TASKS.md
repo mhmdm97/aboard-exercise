@@ -72,3 +72,4 @@ _Everything is built and verified (full Docker stack re-checked with zero CSP vi
 - [x] Part 2: Detail, BookForm, Auth, States, MobileScreens pages + View Transitions (card to detail cover, route cross-fade, results re-flow); restyle `ConfirmDialog` and the success toast; migrate remaining legacy token names (`--color-*`, `--space-*`) to the new ones
 
 - [x] Replace the hand-written seed with real Open Library data: `backend/scripts/fetch-seed-books.ts` (`npm run seed:fetch -w @library/backend`), 383 books, real ratings and cover IDs; `SeedBook` is explicit and `subtitle` is stored
+- [x] Self-host the 383 seed covers (`seed:covers`, `/covers/` nginx location, schema accepts local paths, reseed updates old URLs, docs)
