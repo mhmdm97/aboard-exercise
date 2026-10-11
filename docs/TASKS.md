@@ -8,7 +8,6 @@ Brief: `docs/EXERCISE.md`. Tags: **(R)** = required by the brief, **(S)** = sugg
 _Everything is built and verified (full Docker stack re-checked with zero CSP violations, backend tests stable over 5 runs, README and root DECISIONS refreshed). Left for the author:_
 - Write the `## AI usage` section of root `DECISIONS.md` from `docs/AI-USAGE-NOTES.md` (replace the TODO block), then delete `docs/AI-USAGE-NOTES.md`.
 - Done: the hand-written seed was replaced with real Open Library data (see section 5).
-- Optional: deploy it (brief marks it optional).
 - Write the submission email: frontend vs backend focus and why. Reply-all confirming receipt.
 - Final push and check CI is green (`gh run list --limit 1`).
 
@@ -59,7 +58,7 @@ _Everything is built and verified (full Docker stack re-checked with zero CSP vi
 - [x] Frontend Dockerfile (build, then serve static files via nginx, proxying `/api`)
 - [x] `docker-compose.yml`: db + backend + frontend; migrate + seed on start; `.env.example`
 - [x] CI: add backend job (lint, build, test); frontend tests job
-- [ ] Deployment (S, only if time allows)
+- [-] Deployment (S): dropped by the author; runs locally via `docker compose up --build`
 
 ## 4. Deliverables & wrap-up (reserve the last ~45 min)
 - [x] Root `DECISIONS.md` with exactly two sections: "Architecture & trade-offs" and "AI usage" (R). Source: docs/DECISIONS.md log + notes (draft; author to review, TODO block to fill)
