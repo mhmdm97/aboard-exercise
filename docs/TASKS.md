@@ -58,8 +58,8 @@ Backend: scaffold, schema, seed, auth/roles and book read endpoints done. Books 
 - [ ] Deployment (S, only if time allows)
 
 ## 4. Deliverables & wrap-up (reserve the last ~45 min)
-- [ ] Root `DECISIONS.md` with exactly two sections: "Architecture & trade-offs" and "AI usage" (R). Source: docs/DECISIONS.md log + notes
-- [ ] README: overview, setup + run (Docker and local), demo credentials, tests, how it was built (R)
+- [x] Root `DECISIONS.md` with exactly two sections: "Architecture & trade-offs" and "AI usage" (R). Source: docs/DECISIONS.md log + notes (draft; author to review, TODO block to fill)
+- [x] README: overview, setup + run (Docker and local), demo credentials, tests, how it was built (R) (draft; author to review)
 - [ ] Note for the submission email: frontend vs backend focus and why
 - [ ] Clean-clone run-through using only the README (`docker compose up`)
 - [ ] Final commit + push, CI green
