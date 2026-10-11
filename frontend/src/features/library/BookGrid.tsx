@@ -2,8 +2,8 @@ import { useEffect, useRef } from 'react'
 import type { BookDto } from '@library/shared'
 import { EmptyState } from '../../components/EmptyState/EmptyState'
 import { ErrorMessage } from '../../components/ErrorMessage/ErrorMessage'
-import { Spinner } from '../../components/Spinner/Spinner'
 import { BookCard } from '../books/BookCard'
+import { PAGE_SIZE } from '../books/api'
 import styles from './BookGrid.module.css'
 
 interface Props {
@@ -17,6 +17,19 @@ interface Props {
   isFetchingNextPage: boolean
   fetchNextPage: () => void
   onClearFilters: () => void
+}
+
+/** At most this many cards per page get a stagger delay (max 330ms), so long pages do not drag. */
+const MAX_STAGGER = 11
+
+function SkeletonCard() {
+  return (
+    <div className={styles.skeletonCard}>
+      <div className={`${styles.skel} ${styles.skelCover}`} />
+      <div className={`${styles.skel} ${styles.skelTitle}`} />
+      <div className={`${styles.skel} ${styles.skelMeta}`} />
+    </div>
+  )
 }
 
 export function BookGrid({
@@ -47,10 +60,11 @@ export function BookGrid({
   }, [hasNextPage, isFetchingNextPage, fetchNextPage])
 
   if (isLoading) {
+    // The skeleton only becomes visible after 150ms (CSS), so fast loads never flash it.
     return (
-      <div className={styles.grid} aria-busy="true" aria-label="Loading books">
+      <div className={`${styles.grid} ${styles.delayed}`} aria-busy="true" aria-label="Loading books">
         {Array.from({ length: 12 }, (_, i) => (
-          <div key={i} className={styles.skeleton} aria-hidden="true" />
+          <SkeletonCard key={i} />
         ))}
       </div>
     )
@@ -64,7 +78,7 @@ export function BookGrid({
         title="No books match your filters"
         description="Try a different search or remove some filters."
         action={
-          <button type="button" className="button" onClick={onClearFilters}>
+          <button type="button" className="btn btn-primary" onClick={onClearFilters}>
             Clear filters
           </button>
         }
@@ -74,21 +88,37 @@ export function BookGrid({
 
   return (
     <div aria-busy={isRefreshing}>
-      <p className={styles.count} aria-live="polite">
-        {total} {total === 1 ? 'book' : 'books'}
-      </p>
       <div className={`${styles.grid} ${isRefreshing ? styles.refreshing : ''}`}>
         {books.map((book, index) => (
-          <BookCard key={book.id} book={book} index={index} />
+          // --i restarts at 0 for every page, so a newly appended page staggers from its own first card.
+          <BookCard key={book.id} book={book} index={index} enterIndex={Math.min(index % PAGE_SIZE, MAX_STAGGER)} />
         ))}
       </div>
+      {isFetchingNextPage && (
+        <>
+          <div className={`${styles.grid} ${styles.moreSkeletons}`} aria-hidden="true">
+            {Array.from({ length: 4 }, (_, i) => (
+              <SkeletonCard key={i} />
+            ))}
+          </div>
+          <p role="status" className={styles.loadingMore}>
+            <span className={styles.spinner} aria-hidden="true" />
+            Loading more books…
+          </p>
+        </>
+      )}
       {error ? <ErrorMessage error={error} onRetry={fetchNextPage} /> : null}
       <div ref={sentinel} className={styles.footer}>
-        {isFetchingNextPage && <Spinner label="Loading more books…" />}
         {hasNextPage && !isFetchingNextPage && (
-          <button type="button" className="button" onClick={fetchNextPage}>
-            Load more
-          </button>
+          <>
+            <p className={styles.shown}>
+              Showing {books.length} of {total}
+            </p>
+            <button type="button" className="btn btn-secondary" onClick={fetchNextPage}>
+              Load more books
+            </button>
+            <p className={styles.hint}>More books load as you scroll; the button is the fallback.</p>
+          </>
         )}
       </div>
     </div>

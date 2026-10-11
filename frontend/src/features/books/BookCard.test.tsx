@@ -11,7 +11,8 @@ describe('BookCard', () => {
     expect(screen.getByRole('heading', { name: 'Dune' })).toBeInTheDocument()
     expect(screen.getByText('Frank Herbert')).toBeInTheDocument()
     expect(screen.getByText('1965')).toBeInTheDocument()
-    expect(screen.getByText('★ 4.3')).toBeInTheDocument()
+    expect(screen.getByText('4.3')).toBeInTheDocument()
+    expect(screen.getByText('Rated')).toBeInTheDocument()
     expect(screen.getAllByRole('listitem')).toHaveLength(2)
     expect(screen.getByRole('link')).toHaveAttribute('href', `/books/${sampleBook.id}`)
     const img = screen.getByAltText('Cover of Dune')
@@ -23,7 +24,10 @@ describe('BookCard', () => {
     renderWithProviders(<BookCard book={sampleBook} />)
     fireEvent.error(screen.getByAltText('Cover of Dune'))
     expect(screen.queryByAltText('Cover of Dune')).not.toBeInTheDocument()
-    expect(screen.getByTestId('fallback-cover')).toHaveTextContent('Dune')
+    const cover = screen.getByTestId('fallback-cover')
+    expect(cover).toHaveTextContent('Dune')
+    expect(cover).toHaveTextContent('Frank Herbert')
+    expect(cover).toHaveAccessibleName('Cover of Dune')
   })
 
   it('uses the fallback when there is no cover url', () => {

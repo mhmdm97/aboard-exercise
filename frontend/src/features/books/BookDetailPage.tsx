@@ -8,7 +8,7 @@ import { Spinner } from '../../components/Spinner/Spinner'
 import { useCurrentUser } from '../auth/api'
 import { FavouriteButton } from '../favourites/FavouriteButton'
 import { useBook, useDeleteBook } from './api'
-import { Cover } from './BookCard'
+import { Cover } from './Cover'
 import styles from './BookDetailPage.module.css'
 import { useDocumentTitle } from '../../hooks/useDocumentTitle'
 

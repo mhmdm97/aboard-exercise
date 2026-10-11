@@ -1,47 +1,141 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-3);
+  gap: 28px 16px;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 768px) {
   .grid {
-    grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
-    gap: var(--space-4);
+    grid-template-columns: repeat(auto-fill, minmax(176px, 1fr));
+    gap: 40px 28px;
   }
 }
 
-.count {
-  margin: 0 0 var(--space-3);
-  color: var(--color-text-muted);
+/* Old results stay on screen, dimmed, while a filter change loads. */
+.grid {
+  transition: opacity var(--dur-fast) var(--ease-out);
 }
 
 .refreshing {
-  opacity: 0.6;
+  opacity: 0.5;
+  pointer-events: none;
 }
 
-.skeleton {
-  aspect-ratio: 2 / 3.1;
-  border-radius: var(--radius-md);
-  background: var(--color-surface-alt);
-  animation: pulse 1.4s ease-in-out infinite;
+/* Skeleton cards */
+.skeletonCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-@keyframes pulse {
-  50% {
-    opacity: 0.5;
-  }
+.skel {
+  border-radius: var(--r-sm);
+  background: linear-gradient(100deg, var(--surface-2) 40%, var(--skel-hi) 50%, var(--surface-2) 60%);
+  background-size: 300% 100%;
+  animation: shimmer var(--dur-shimmer) linear infinite;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .skeleton {
-    animation: none;
-  }
+.skelCover {
+  aspect-ratio: 2 / 3;
+}
+
+.skelTitle {
+  height: 16px;
+  width: 80%;
+}
+
+.skelMeta {
+  height: 12px;
+  width: 55%;
+}
+
+.delayed {
+  animation: appear 1ms linear 150ms backwards;
+}
+
+.moreSkeletons {
+  margin-top: 28px;
+}
+
+.loadingMore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 16px 0 0;
+  color: var(--ink-2);
+  font-size: 15px;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 900ms linear infinite;
 }
 
 .footer {
   display: flex;
-  justify-content: center;
-  min-height: 3rem;
-  margin-top: var(--space-5);
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+
+.footer:empty {
+  display: none;
+}
+
+.shown,
+.hint {
+  margin: 0;
+  color: var(--ink-2);
+}
+
+.shown {
+  font-size: 14px;
+}
+
+.hint {
+  font-size: 13px;
+  text-align: center;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+}
+
+/* Reduced motion: static skeleton blocks and a static "Loading more…" label. */
+@media (prefers-reduced-motion: reduce) {
+  .skel {
+    animation: none;
+  }
+
+  .spinner {
+    animation: none;
+    border-right-color: currentColor;
+    border-radius: 50%;
+    opacity: 0.5;
+  }
 }

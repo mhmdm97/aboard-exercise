@@ -1,0 +1,64 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 4px 0;
+  list-style: none;
+}
+
+.item {
+  display: block;
+  animation: chipIn var(--dur-base) var(--ease-spring) backwards;
+}
+
+.chip {
+  white-space: nowrap;
+}
+
+.leaving {
+  overflow: hidden;
+  pointer-events: none;
+  animation: chipOut var(--dur-fast) var(--ease-in) forwards;
+}
+
+@keyframes chipIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+}
+
+/* Width collapses with the fade so the chips after it slide closed. */
+@keyframes chipOut {
+  from {
+    max-width: 24rem;
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    max-width: 0;
+    margin-right: -8px;
+    opacity: 0;
+    transform: scale(0.85);
+  }
+}
+
+/* Mobile: one scrolling row under the Filters button. */
+@media (max-width: 767px) {
+  .list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+}
+
+/* Reduced motion: chips appear and disappear instantly. */
+@media (prefers-reduced-motion: reduce) {
+  .item {
+    animation: none;
+  }
+
+  .leaving {
+    display: none;
+  }
+}

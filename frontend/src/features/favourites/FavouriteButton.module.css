@@ -1,5 +1,129 @@
-.heart { font: inherit; cursor: pointer; color: var(--color-text); background: var(--color-surface); border: 1px solid var(--color-border); }
-.heart:hover { color: var(--color-danger); }
-.active { color: var(--color-danger); }
-.icon { position: absolute; top: var(--space-2); right: var(--space-2); width: 2.5rem; height: 2.5rem; border-radius: 50%; font-size: 1.25rem; line-height: 1; }
-.full { padding: var(--space-2) var(--space-4); border-radius: var(--radius-md); }
+.heart {
+  position: relative;
+  cursor: pointer;
+  color: var(--ink);
+}
+
+.svg {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  transition: fill var(--dur-fast) var(--ease-out);
+}
+
+.active {
+  color: var(--accent);
+}
+
+.active .svg {
+  fill: currentColor;
+}
+
+/* Round button over a card cover; sits above the stretched card link. */
+.icon {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--heart-bg);
+  box-shadow: var(--shadow-sm);
+  font: inherit;
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+
+.icon:hover {
+  transform: scale(1.06);
+}
+
+.full.active {
+  color: var(--accent);
+}
+
+/* Heart pop and six-dot burst when switched on; a gentle dip when switched off. */
+.popOn .svg {
+  animation: pop var(--dur-morph) var(--ease-spring);
+}
+
+.popOn::before {
+  content: '';
+  position: absolute;
+  inset: 14px;
+  border-radius: 50%;
+  box-shadow:
+    0 -17px 0 -5px var(--accent),
+    15px -8px 0 -5px var(--accent),
+    15px 8px 0 -5px var(--accent),
+    0 17px 0 -5px var(--accent),
+    -15px 8px 0 -5px var(--accent),
+    -15px -8px 0 -5px var(--accent);
+  animation: burst 560ms var(--ease-out) both;
+  pointer-events: none;
+}
+
+.full.popOn::before {
+  inset: 12px auto auto 14px;
+  width: 20px;
+  height: 20px;
+}
+
+.popOff .svg {
+  animation: unpop 200ms var(--ease-out);
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.82);
+  }
+  60% {
+    transform: scale(1.22);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes unpop {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes burst {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.35);
+  }
+}
+
+/* Reduced motion: the fill colour change only. */
+@media (prefers-reduced-motion: reduce) {
+  .popOn .svg,
+  .popOff .svg {
+    animation: none;
+  }
+
+  .popOn::before {
+    display: none;
+  }
+
+  .icon:hover {
+    transform: none;
+  }
+}

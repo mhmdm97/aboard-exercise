@@ -1,0 +1,286 @@
+/*
+ * Shared UI primitives (global classes so every feature can reuse them).
+ * Buttons: .btn + .btn-primary | .btn-secondary | .btn-ghost | .btn-danger | .btn-danger-outline, .btn-icon, .btn-link
+ * Chips:   .chip (+ .on for a selected filter), .chip-filter (removable active-filter chip)
+ * Misc:    .badge, .tag, .eyebrow, .visually-hidden, .input / .select (+ .field-label)
+ * Touch targets are >= 44px (chips are 36px with a 4px invisible hit-area extension).
+ */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.eyebrow {
+  font: 600 var(--fs-label) / 1.4 var(--font-sans);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+/* Buttons */
+.btn,
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid transparent;
+  border-radius: var(--r-pill);
+  font: 600 15px / 1 var(--font-sans);
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  background: var(--accent);
+  color: var(--accent-ink);
+  transition:
+    transform var(--dur-instant) var(--ease-out),
+    background-color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out);
+}
+
+.btn:active,
+.button:active {
+  transform: scale(0.97);
+}
+
+.btn:disabled,
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-primary:hover,
+.button:hover,
+a.btn-primary:hover {
+  background: var(--accent-hover);
+  color: var(--accent-ink);
+}
+
+a.button,
+a.btn-primary {
+  color: var(--accent-ink);
+}
+
+.btn-secondary,
+a.btn-secondary {
+  background: var(--surface);
+  color: var(--ink);
+  border-color: var(--line-strong);
+}
+
+.btn-secondary:hover:not(:disabled),
+a.btn-secondary:hover {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+
+.btn-ghost,
+a.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+}
+
+.btn-ghost:hover:not(:disabled),
+a.btn-ghost:hover {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: var(--danger-ink);
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: var(--danger);
+  color: var(--danger-ink);
+  filter: brightness(0.92);
+}
+
+.btn-danger-outline {
+  background: transparent;
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+.btn-danger-outline:hover:not(:disabled) {
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.btn-icon {
+  width: 44px;
+  padding: 0;
+}
+
+.btn-link {
+  min-height: 44px;
+  padding: 0 4px;
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font: 600 14px / 1 var(--font-sans);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.btn-link:hover:not(:disabled) {
+  color: var(--ink);
+}
+
+.btn-link:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Chips (genre toggles) and removable active-filter chips */
+.chip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 0 13px;
+  border: 1px solid transparent;
+  border-radius: var(--r-pill);
+  background: var(--surface-2);
+  color: var(--ink-2);
+  font: 500 14px / 1 var(--font-sans);
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out);
+}
+
+.chip::after {
+  content: '';
+  position: absolute;
+  inset: -4px -2px;
+}
+
+.chip:hover {
+  color: var(--ink);
+  border-color: var(--line-strong);
+}
+
+.chip.on {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.chip .tick {
+  display: none;
+  width: 14px;
+  height: 14px;
+}
+
+.chip.on .tick {
+  display: block;
+  animation: tick-in var(--dur-fast) var(--ease-spring) backwards;
+}
+
+.chip-filter {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.chip-filter:hover {
+  color: var(--bg);
+  border-color: transparent;
+}
+
+@keyframes tick-in {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 8px;
+  border-radius: var(--r-pill);
+  background: var(--accent-soft);
+  color: var(--accent);
+  font: 700 11px / 1 var(--font-sans);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  padding: 0 9px;
+  border-radius: var(--r-pill);
+  background: var(--surface-2);
+  color: var(--ink-2);
+  font: 500 12px / 1 var(--font-sans);
+  white-space: nowrap;
+}
+
+/* Form controls */
+.field-label {
+  font: 600 14px / 1.3 var(--font-sans);
+  color: var(--ink);
+}
+
+.input,
+.select {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-md);
+  background: var(--surface);
+  color: var(--ink);
+  font: 400 16px / 1.4 var(--font-sans);
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+
+textarea.input {
+  padding-block: 10px;
+}
+
+.input::placeholder {
+  color: var(--ink-3);
+}
+
+.input:focus-visible,
+.select:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 1px;
+  border-color: var(--focus);
+}
+
+.input[aria-invalid='true'] {
+  border-color: var(--danger);
+}
+
+.select {
+  appearance: none;
+  padding-right: 36px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='1.75'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 18px;
+}

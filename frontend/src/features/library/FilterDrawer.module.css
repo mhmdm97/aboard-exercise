@@ -1,0 +1,138 @@
+.trigger {
+  padding-inline: 16px;
+}
+
+.count {
+  display: inline-grid;
+  place-items: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 11px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font: 700 12px / 1 var(--font-sans);
+}
+
+/* The drawer only exists below 768px; the sidebar replaces it above. */
+@media (min-width: 768px) {
+  .trigger {
+    display: none;
+  }
+
+  .layer {
+    display: none;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: var(--backdrop);
+  animation: fadeIn var(--dur-base) var(--ease-out) both;
+}
+
+.drawer {
+  position: fixed;
+  inset: 0 auto 0 0;
+  z-index: 51;
+  display: flex;
+  flex-direction: column;
+  width: min(344px, 100vw - 24px);
+  background: var(--bg);
+  color: var(--ink);
+  border-radius: 0 24px 24px 0;
+  box-shadow: var(--shadow-lg);
+  animation: drawerIn var(--dur-slow) var(--ease-out) both;
+}
+
+.closing .backdrop {
+  animation: fadeOut var(--dur-base) var(--ease-in) both;
+}
+
+.closing .drawer {
+  animation: drawerOut var(--dur-base) var(--ease-in) both;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 12px 8px 20px;
+}
+
+.title {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.title:focus {
+  outline: none;
+}
+
+.body {
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0 20px;
+}
+
+/* First group needs no divider under the heading. */
+.body > div > fieldset:first-child {
+  border-top: 0;
+}
+
+.foot {
+  display: flex;
+  gap: 10px;
+  padding: 14px 20px max(28px, env(safe-area-inset-bottom));
+  border-top: 1px solid var(--line);
+  background: var(--bg);
+}
+
+.clear {
+  flex: 1;
+}
+
+.show {
+  flex: 2;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes drawerIn {
+  from {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes drawerOut {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Reduced motion: opacity only, no slide. */
+@media (prefers-reduced-motion: reduce) {
+  .backdrop,
+  .drawer {
+    animation: fadeIn var(--dur-fast) linear both;
+  }
+
+  .closing .backdrop,
+  .closing .drawer {
+    animation: fadeOut var(--dur-fast) linear both;
+  }
+}

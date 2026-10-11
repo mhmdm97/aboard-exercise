@@ -31,13 +31,12 @@ describe('Layout', () => {
     expect(screen.getByRole('contentinfo')).toBeInTheDocument()
   })
 
-  it('toggles aria-expanded on the menu button', async () => {
+  it('links the logo to the library and marks the current page', async () => {
     mockApi({ 'GET /api/auth/me': unauthorized })
     renderLayout()
-    const button = screen.getByRole('button', { name: 'Menu' })
-    expect(button).toHaveAttribute('aria-expanded', 'false')
-    await userEvent.click(button)
-    expect(screen.getByRole('button', { name: 'Close menu' })).toHaveAttribute('aria-expanded', 'true')
+    expect(screen.getByRole('link', { name: 'Shelf, go to library' })).toHaveAttribute('href', '/')
+    expect(screen.getByRole('link', { name: 'Library' })).toHaveAttribute('aria-current', 'page')
+    expect(await screen.findByRole('link', { name: 'Register' })).toHaveAttribute('href', '/register')
   })
 
   it('shows name, role, favourites and logout for a member, but no Add book', async () => {

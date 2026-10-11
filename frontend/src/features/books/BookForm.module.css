@@ -2,7 +2,7 @@
 .fields { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-5); }
 .preview { display: flex; flex-direction: column; gap: var(--space-2); }
 .previewTitle { margin: 0; font-weight: 600; }
-.cover { width: min(14rem, 100%); aspect-ratio: 2 / 3; background: var(--color-surface-alt); border-radius: var(--radius-md); overflow: hidden; }
+.cover { width: min(14rem, 100%); }
 .banner { background: var(--color-danger-bg); color: var(--color-danger); border-radius: var(--radius-md); padding: var(--space-3); margin-bottom: var(--space-4); }
 .row { display: grid; gap: 0 var(--space-4); grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); }
 .group { border: 0; padding: 0; margin: 0 0 var(--space-4); min-width: 0; }

@@ -23,7 +23,7 @@ export function TextArea({ label, error, hint, className, ...input }: Props) {
       <textarea
         {...input}
         id={id}
-        className={className ? `${styles.input} ${className}` : styles.input}
+        className={className ? `input ${styles.input} ${className}` : `input ${styles.input}`}
         aria-invalid={error ? true : undefined}
         aria-describedby={describedBy}
       />

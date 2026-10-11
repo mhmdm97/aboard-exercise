@@ -10,7 +10,7 @@ import { ApiError } from '../../api/client'
 import { TextArea } from '../../components/TextField/TextArea'
 import { TextField } from '../../components/TextField/TextField'
 import { useAuthorSuggestions, useGenres, useSaveBook } from './api'
-import { Cover } from './BookCard'
+import { Cover } from './Cover'
 import styles from './BookForm.module.css'
 import { useDebouncedValue } from './useDebouncedValue'
 

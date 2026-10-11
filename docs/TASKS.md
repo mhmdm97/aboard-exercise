@@ -66,3 +66,7 @@ _Everything is built and the README run-through is done. Left for the author (al
 - [ ] Note for the submission email: frontend vs backend focus and why
 - [x] Clean-clone run-through using only the README (`docker compose up`). Local path verified from a fresh clone (npm ci, db:reset, dev, login via :5173 proxy, lint/typecheck/build/test all green: 17+53+46 tests); Docker path checked via `docker compose config` (ports, env vars, credentials match README); no README/DECISIONS inaccuracies found
 - [ ] Final commit + push, CI green
+
+## 5. "Shelf" visual redesign (spec in DECISIONS.md `[design]`)
+- [x] Part 1: tokens + self-hosted fonts, shared primitives (`components/ui/ui.css`), header, generated cloth covers, book card, Library page (search, sidebar, mobile drawer, active chips, grid, load more, skeletons, states) and their motion
+- [ ] Part 2: Detail, BookForm, Auth, States, MobileScreens pages + View Transitions (card to detail cover, route cross-fade, results re-flow); restyle `ConfirmDialog` and the success toast; migrate remaining legacy token names (`--color-*`, `--space-*`) to the new ones

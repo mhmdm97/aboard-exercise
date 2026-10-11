@@ -1,6 +1,6 @@
 .back { display: inline-block; margin-bottom: var(--space-4); }
 .layout { display: grid; gap: var(--space-5); grid-template-columns: 1fr; }
-.cover { width: min(16rem, 100%); aspect-ratio: 2 / 3; background: var(--color-surface-alt); border-radius: var(--radius-md); overflow: hidden; }
+.cover { width: min(16rem, 100%); }
 .title { margin-bottom: var(--space-1); }
 .subtitle { margin: 0 0 var(--space-2); font-size: var(--font-lg); color: var(--color-text-muted); }
 .authors { margin: 0 0 var(--space-3); font-weight: 600; }

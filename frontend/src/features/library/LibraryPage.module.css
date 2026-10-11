@@ -1,30 +1,129 @@
-.layout {
-  display: grid;
-  gap: var(--space-4);
-}
-
-.sidebar {
+.intro {
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.title {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.1;
+}
+
+.lede {
+  display: none;
+  margin: 0;
+  font-size: 17px;
+  color: var(--ink-2);
+}
+
+.search {
+  margin-bottom: 16px;
+}
+
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.results {
+  flex: 999 1 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Mobile: [Filters] ..... [count], then the chips on their own scrolling row. */
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+}
+
+.count {
+  margin: 0 0 0 auto;
+  font-size: 14px;
+  color: var(--ink-2);
+}
+
+.num {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.chips {
+  flex: 1 0 100%;
+  order: 3;
+  min-width: 0;
+}
+
+.chips:empty {
+  display: none;
+}
+
+.status:empty {
+  display: none;
+}
+
+.status {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  border-radius: var(--r-md);
+  background: var(--success-soft);
+  color: var(--success);
+  font-weight: 500;
 }
 
 @media (min-width: 768px) {
-  .layout {
-    grid-template-columns: 16rem minmax(0, 1fr);
-    align-items: start;
-    gap: var(--space-5);
+  .title {
+    font-size: 48px;
+    line-height: 1.05;
   }
 
-  .sidebar {
-    position: sticky;
-    top: var(--space-4);
+  .lede {
+    display: block;
+  }
+
+  .intro {
+    margin-bottom: 28px;
+  }
+
+  .search {
+    margin-bottom: 36px;
+  }
+
+  .layout {
+    flex-wrap: nowrap;
+  }
+
+  .results {
+    flex: 1 1 0;
+  }
+
+  .bar {
+    gap: 10px;
+  }
+
+  .count {
+    order: 0;
+    margin: 0 12px 0 0;
+    font-size: 15px;
+  }
+
+  .num {
+    font-size: 26px;
+  }
+
+  .chips {
+    flex: 0 1 auto;
+    order: 0;
   }
 }
-
-.status:empty { display: none; }
-.status { background: var(--color-surface-alt); border-radius: var(--radius-md); padding: var(--space-3); }
-
-.activeFilter { display: inline-flex; align-items: center; gap: var(--space-2); margin: 0 0 var(--space-3); padding: var(--space-1) var(--space-2) var(--space-1) var(--space-3); border: 1px solid var(--color-primary); border-radius: 999px; background: var(--color-surface-alt); font-size: var(--font-sm); }
-.activeFilter button { font: inherit; line-height: 1; padding: var(--space-1) var(--space-2); border: 0; border-radius: 999px; background: transparent; color: inherit; cursor: pointer; }
-.activeFilter button:hover { background: var(--color-danger-bg); color: var(--color-danger); }

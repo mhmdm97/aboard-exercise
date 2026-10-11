@@ -39,8 +39,8 @@ describe('LibraryPage', () => {
     mockApi([sampleBook])
     renderWithProviders(<LibraryPage />)
     expect(await screen.findByRole('heading', { name: 'Dune' })).toBeInTheDocument()
-    expect(screen.getByText('1 book')).toBeInTheDocument()
-    expect(await screen.findByRole('checkbox', { name: 'Science Fiction' })).toBeInTheDocument()
+    expect(screen.getByText('book', { selector: 'p' })).toHaveTextContent('1 book')
+    expect(await screen.findByRole('button', { name: 'Science Fiction', pressed: false })).toBeInTheDocument()
   })
 
   it('sends the author filter and shows a removable chip with the author name', async () => {
@@ -50,8 +50,8 @@ describe('LibraryPage', () => {
     expect(await screen.findByText('Author: Frank Herbert')).toBeInTheDocument()
     expect(booksCalls()[0]).toContain(`author=${id}`)
 
-    await userEvent.click(screen.getByRole('button', { name: 'Remove author filter' }))
-    expect(screen.queryByText(/Author: /)).not.toBeInTheDocument()
+    await userEvent.click(screen.getByRole('button', { name: 'Remove filter Author: Frank Herbert' }))
+    await waitFor(() => expect(screen.queryByText(/Author: /)).not.toBeInTheDocument())
     expect(router.state.location.search).toBe('')
   })
 
@@ -93,5 +93,26 @@ describe('LibraryPage', () => {
     renderWithProviders(<LibraryPage />)
     expect(await screen.findByRole('alert')).toHaveTextContent('Server exploded')
     expect(screen.getByRole('button', { name: 'Try again' })).toBeInTheDocument()
+  })
+})
+
+describe('LibraryPage filters', () => {
+  it('toggles a genre chip (aria-pressed) and keeps it in the URL', async () => {
+    mockApi([sampleBook])
+    const { router } = renderWithProviders(<LibraryPage />)
+    const chip = await screen.findByRole('button', { name: 'Science Fiction', pressed: false })
+    await userEvent.click(chip)
+    expect(router.state.location.search).toBe('?genre=sci-fi')
+    expect(screen.getByRole('button', { name: 'Science Fiction', pressed: true })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Remove filter Genre: Science Fiction' })).toBeInTheDocument()
+  })
+
+  it('sets the minimum rating from the segmented control', async () => {
+    mockApi([sampleBook])
+    const { router } = renderWithProviders(<LibraryPage />)
+    await screen.findByRole('heading', { name: 'Dune' })
+    await userEvent.click(screen.getByRole('radio', { name: '4+' }))
+    expect(router.state.location.search).toBe('?minRating=4')
+    expect(screen.getByRole('button', { name: 'Remove filter Rating 4+' })).toBeInTheDocument()
   })
 })

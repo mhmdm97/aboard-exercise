@@ -1,6 +1,9 @@
 import { useLocation } from 'react-router'
-import { useBooksInfinite } from '../books/api'
+import { useBooksInfinite, useGenres } from '../books/api'
+import { ActiveFilters } from './ActiveFilters'
+import { buildActiveChips } from './activeChips'
 import { BookGrid } from './BookGrid'
+import { FilterDrawer } from './FilterDrawer'
 import { FilterPanel } from './FilterPanel'
 import { SearchBar } from './SearchBar'
 import { useLibraryFilters } from './useLibraryFilters'
@@ -11,6 +14,7 @@ export function LibraryPage() {
   useDocumentTitle('Library')
   const { filters, setFilters, clearFilters, activeCount } = useLibraryFilters()
   const query = useBooksInfinite(filters)
+  const genres = useGenres()
   const state: unknown = useLocation().state
   const message =
     typeof state === 'object' && state !== null && 'message' in state && typeof state.message === 'string'
@@ -20,31 +24,44 @@ export function LibraryPage() {
   // The URL only carries the author id; the name comes from any loaded book by that author.
   const authorName = books.flatMap((b) => b.authors).find((a) => a.id === filters.author)?.name
   const total = query.data?.pages[0]?.total ?? 0
+  const chips = buildActiveChips(filters, genres.data, authorName)
+  const canClear = activeCount > 0 || !!filters.q
 
   return (
     <section>
-      <h1>Library</h1>
+      <div className={styles.intro}>
+        <h1 className={styles.title}>The Library</h1>
+        <p className={styles.lede}>Every book on the shelf. Filter by genre, year and rating, or just search.</p>
+      </div>
       <p role="status" aria-live="polite" className={styles.status}>
         {message}
       </p>
+      <div className={styles.search}>
+        <SearchBar q={filters.q} onChange={(q) => setFilters({ q })} />
+      </div>
       <div className={styles.layout}>
-        <div className={styles.sidebar}>
-          <SearchBar q={filters.q} onChange={(q) => setFilters({ q })} />
-          <FilterPanel filters={filters} activeCount={activeCount} onChange={setFilters} onClear={clearFilters} />
-        </div>
+        <FilterPanel filters={filters} canClear={canClear} onChange={setFilters} onClear={clearFilters} />
         <div className={styles.results}>
-          {filters.author && (
-            <p className={styles.activeFilter}>
-              <span>Author: {authorName ?? '…'}</span>
-              <button
-                type="button"
-                aria-label="Remove author filter"
-                onClick={() => setFilters({ author: undefined })}
-              >
-                ×
-              </button>
+          <div className={styles.bar}>
+            <FilterDrawer
+              filters={filters}
+              activeCount={activeCount}
+              total={total}
+              canClear={canClear}
+              onChange={setFilters}
+              onClear={clearFilters}
+            />
+            <p className={styles.count} aria-live="polite">
+              {!query.isPending && (
+                <>
+                  <strong className={styles.num}>{total}</strong> {total === 1 ? 'book' : 'books'}
+                </>
+              )}
             </p>
-          )}
+            <div className={styles.chips}>
+              <ActiveFilters chips={chips} onRemove={setFilters} />
+            </div>
+          </div>
           <BookGrid
             books={books}
             total={total}

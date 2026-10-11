@@ -12,7 +12,7 @@ export function ErrorMessage({ error, onRetry }: Props) {
     <div className={styles.error} role="alert">
       <p>{message}</p>
       {onRetry && (
-        <button type="button" className="button" onClick={onRetry}>
+        <button type="button" className="btn btn-secondary" onClick={onRetry}>
           Try again
         </button>
       )}

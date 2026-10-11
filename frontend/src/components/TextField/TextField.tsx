@@ -23,7 +23,7 @@ export function TextField({ label, error, hint, className, ...input }: Props) {
       <input
         {...input}
         id={id}
-        className={className ? `${styles.input} ${className}` : styles.input}
+        className={className ? `input ${styles.input} ${className}` : `input ${styles.input}`}
         aria-invalid={error ? true : undefined}
         aria-describedby={describedBy}
       />

@@ -1,0 +1,110 @@
+.fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  margin: 0;
+  padding: 18px 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+}
+
+.group legend {
+  float: left;
+  width: 100%;
+  margin-bottom: 0;
+  padding: 0;
+  font: 600 var(--fs-label) / 1.4 var(--font-sans);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hint {
+  margin: 0;
+  font-size: var(--fs-sm);
+  color: var(--ink-2);
+}
+
+.years {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.year {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.year::-webkit-outer-spin-button,
+.year::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+/* Segmented minimum-rating control (radio inputs are visually hidden, the label is the target). */
+.seg {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  padding: 3px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-pill);
+  background: var(--surface);
+}
+
+.segItem {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 38px;
+  border-radius: var(--r-pill);
+  color: var(--ink-2);
+  font: 600 13px / 1 var(--font-sans);
+  cursor: pointer;
+  transition:
+    background-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out);
+}
+
+.segItem:hover {
+  color: var(--ink);
+}
+
+.segOn,
+.segOn:hover {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.segItem:has(input:focus-visible) {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.sortRow {
+  display: flex;
+  gap: 8px;
+}
+
+.sortRow select {
+  flex: 1;
+  min-width: 0;
+}
