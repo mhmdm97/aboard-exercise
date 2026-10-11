@@ -4,7 +4,18 @@ import type { Database } from './client.js'
 import { authors, bookAuthors, bookGenres, books, genres } from './schema/index.js'
 import seedBooks from './seed/books.json' with { type: 'json' }
 
-type SeedBook = (typeof seedBooks)[number]
+interface SeedBook {
+  title: string
+  subtitle?: string
+  authors: string[]
+  isbn: string
+  publishedYear: number | null
+  pageCount?: number
+  description: string
+  genres: string[]
+  coverUrl: string
+  averageRating?: number
+}
 
 export const slugify = (name: string): string =>
   name
@@ -37,12 +48,13 @@ export async function seedLibrary(db: Database): Promise<{ books: number }> {
       .values(
         data.map((b) => ({
           title: b.title,
+          subtitle: b.subtitle,
           description: b.description,
           isbn: b.isbn,
           coverUrl: b.coverUrl,
           publishedYear: b.publishedYear,
           pageCount: b.pageCount,
-          averageRating: seedRating(b.isbn),
+          averageRating: b.averageRating ?? seedRating(b.isbn),
         })),
       )
       .onConflictDoNothing({ target: books.isbn })

@@ -2,7 +2,7 @@
 
 ## Architecture & trade-offs
 
-**Books, not movies.** Open Library serves covers by ISBN, so 351 seeded records get real covers without hosting images. Movie posters would have needed an API key and licensing thought.
+**Books, not movies.** Open Library has real book metadata and serves covers by cover ID, so 383 seeded records get real covers without hosting images. Movie posters would have needed an API key and licensing thought.
 
 **npm-workspaces monorepo with a `shared` Zod package.** `@library/shared` holds the schemas and DTO types. One definition drives API request validation, response serialisation, the OpenAPI document and the frontend form validation, so the two sides cannot drift. The alternative was hand-synced types plus a generated client, which is more moving parts for a one-day project. The cost is that `shared` ships as TS source, so the backend bundles it with tsup.
 
@@ -40,8 +40,8 @@ Production follow-ups: CSRF tokens; per-account lockout and a shared (Redis) rat
 
 ### Shortcuts I took and why
 
-- **Seed data is hand-written from memory.** The dev sandbox could not reach Open Library (proxy 403), so `books.json` (351 books, 21 genres) was written by hand, with cover URLs built from ISBNs. I validated and repaired the ISBN-13 check digits with a script, but some ISBNs may not match the exact edition, so some covers may be missing; the UI falls back to a generated cover. No fetch script is committed because I could not test it. Pre-1 AD works have `publishedYear = null`.
-- **Ratings are synthetic.** `averageRating` is derived deterministically (2.50 to 5.00) from a SHA-256 of the ISBN. It exists so the rating filter and sort have data; it is not real.
+- **Seed data is a snapshot.** `books.json` (383 books, 21 genres) is real Open Library data, fetched by a committed script (`npm run seed:fetch -w @library/backend`) and then checked in, so normal development and CI need no network. Titles, authors, years, page counts, descriptions and cover IDs come from Open Library; genres are mapped from its subjects with a fixed list of must-have titles, so they are my approximation. A few descriptions fall back to a one-line summary where Open Library has none. Pre-1 AD works would have `publishedYear = null`.
+- **Ratings are Open Library community averages** where a book has at least 5 ratings (all but 2 of the 383 here); the rest get a deterministic synthetic value (2.50 to 5.00 from a SHA-256 of the ISBN) so the rating filter and sort always have data.
 - **Offset pagination.** Simple and fine for 351 rows; it degrades on deep pages and can skip or repeat rows if data changes mid-scroll.
 - **No email verification or password reset**, and no admin management UI. The demo users are committed in the seed and README on purpose.
 - **Migrate and seed on container start.** Fine for one container, racy with several replicas.
@@ -64,7 +64,7 @@ Production follow-ups: CSRF tokens; per-account lockout and a shared (Redis) rat
 - **Relevance sorting.** The list endpoint needed a way to rank by relevance when searching. The shortcut was a hack in the request itself; I had it replaced by making `sort` optional in the shared schema, so the service picks relevance (with `q`) or title, and an explicit `sort` always wins. The frontend omits `sort` until the user picks one. See commit `4a4d8ff`.
 - **`useFieldArray` did not fit.** The natural choice for the repeating author field is `useFieldArray`, but it only holds arrays of objects and `authorNames` is a `string[]` in the shared schema. The form controls the list with `useWatch`/`setValue` instead of reshaping the shared contract to suit the form library.
 - **Docker was initially unverifiable.** The Dockerfiles and compose were first written without a run to prove them. I did not accept the task until a real `docker compose up` worked; the result, including the `node:22-slim` choice and the `COOKIE_SECURE` setting for plain http, is in the decisions log.
-- **Seed ISBNs.** The generated ISBNs had invalid check digits in places; they were validated and repaired by script. The remaining limitation (some editions or covers may not match) is stated above rather than hidden.
+- **Seed data.** The first seed was written from memory (the sandbox could not reach Open Library) and some ISBNs did not match real editions, so covers were missing. I had it replaced with data fetched from Open Library by a committed script, using cover IDs instead of ISBN lookups, and checked a random sample of covers against the live service.
 - **Unrequested major version.** I asked for react-router 7; the agent installed 8 without flagging it. The APIs used are unchanged, so I kept it, but logged it rather than letting the drift pass silently.
 - **Lockfile churn.** An early `npm install` in the sandbox rewrote `package-lock.json` for a different npm version (dropping platform `libc` metadata). It was unrelated to the change, so I reverted it before committing.
 

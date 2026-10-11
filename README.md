@@ -7,7 +7,7 @@ Mapped to the brief:
 - **Auth and roles**: register, log in, log out. `admin` can create, edit and delete books; `member` can browse and keep favourites. Routes and UI actions are guarded on both sides.
 - **Search**: debounced search over title, subtitle and author, typo tolerant (Postgres `pg_trgm`), ordered by relevance.
 - **Filtering and sorting**: genre (multi), author, year range, minimum rating, sort. Filters live in the URL, so views are shareable.
-- **Seeding**: 351 books, 21 genres, plus two demo users. Idempotent.
+- **Seeding**: 383 real books from Open Library (with covers and ratings), 21 genres, plus two demo users. Idempotent.
 - **CRUD forms** (admin): create, edit, delete with confirmation, client-side validation from the same Zod schemas the API uses.
 - **Favourites** (any logged-in user), infinite scroll, book detail page.
 - **Design**: a custom editorial look. Fraunces and Instrument Sans (self-hosted, so the strict CSP stays tight), a paper/oxblood light theme and an ink/rose dark theme, and generated cloth-style covers as the fallback for missing images. It follows the OS colour scheme, with a header toggle (System, Light, Dark) that is remembered and applied before first paint.
@@ -54,6 +54,14 @@ npm run dev                             # API :5000 (Swagger at /api/docs), web 
 ```
 
 Vite proxies `/api` to the backend on :5000, so there is no CORS setup in development. To start only one side, use `npm run dev -w @library/backend` or `npm run dev -w abroad-frontend`.
+
+The seed data is real Open Library data, committed as `backend/src/db/seed/books.json`, so normal use needs no network. To refresh it (needs internet, takes several minutes because requests are limited to 1 per second):
+
+```bash
+npm run seed:fetch -w @library/backend
+```
+
+Seeding is idempotent and keyed on ISBN, so seeding an existing database adds the new books and leaves old ones in place. For a clean database run `docker compose down -v && docker compose up -d db`, then `npm run db:reset -w @library/backend`.
 
 ## Tests & checks
 
@@ -127,7 +135,7 @@ I built this with Claude Code. An orchestrator session planned the work as small
 
 ## What I'd do next
 
-- Ingest real book metadata and covers (Open Library or similar) instead of the hand-written seed, and self-host cover images.
+- Self-host cover images instead of hotlinking Open Library.
 - Image upload for covers in the admin form.
 - Broader e2e coverage: more browsers, a mobile viewport, visual checks.
 - Session hardening: rotating sessions, CSRF tokens, password reset and email verification.

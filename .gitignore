@@ -25,3 +25,6 @@ Thumbs.db
 
 # Claude Code agent worktrees
 .claude/worktrees/
+
+# Open Library fetch cache (backend/scripts/fetch-seed-books.ts)
+backend/.cache/
