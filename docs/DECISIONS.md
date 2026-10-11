@@ -19,3 +19,4 @@ One line per entry, newest at the bottom. Format: `- [area] decision: reason`.
 - [backend] Backend tests live next to the code as `<feature>.test.ts`; `buildApp({ env, db })` takes its dependencies so tests use `app.inject()`.
 - [backend] Helmet CSP is disabled outside production so Swagger UI works; ESLint for backend+shared lives in the root `eslint.config.js` (frontend keeps its own).
 - [ci] Single CI job on Node 22 with a `postgres:16` service (`library_test`); `.gitignore` allows `.env.*.example` files.
+- [frontend] Router: react-router 8 data router (`createBrowserRouter`, routes in `src/routes.tsx`); TanStack Query defaults staleTime 30s, no retry on 4xx; devtools in dev only. Vitest + RTL + jsdom for frontend tests.
