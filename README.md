@@ -10,8 +10,14 @@ Mapped to the brief:
 - **Seeding**: 351 books, 21 genres, plus two demo users. Idempotent.
 - **CRUD forms** (admin): create, edit, delete with confirmation, client-side validation from the same Zod schemas the API uses.
 - **Favourites** (any logged-in user), infinite scroll, book detail page.
-- **Responsive** layout (mobile first, plain CSS modules).
-- **Tests**: backend integration tests against a real Postgres, shared-schema tests, frontend component tests (Vitest + React Testing Library).
+- **Design**: a custom editorial look. Fraunces and Instrument Sans (self-hosted, so the strict CSP stays tight), a paper/oxblood light theme and an ink/rose dark theme, and generated cloth-style covers as the fallback for missing images. It follows the OS colour scheme, with a header toggle (System, Light, Dark) that is remembered and applied before first paint.
+- **Motion**: plain CSS plus the View Transitions API, no animation library. Book cards reveal on scroll (one `IntersectionObserver`), the cover morphs between the grid and the detail page (also on browser back and forward), filter chips and dialogs animate in and out. `prefers-reduced-motion` removes it, and browsers without View Transitions just navigate instantly.
+- **Responsive** layout (mobile first, plain CSS modules) with a filter drawer on small screens.
+- **Accessibility**: axe reports 0 violations on the main screens in both themes and Lighthouse accessibility scores 100. Labelled controls, keyboard and focus handling, per-route page titles.
+- **Performance**: routes are code-split, and the first row of covers loads eagerly with `fetchpriority=high` (LCP) while the rest are lazy.
+- **Observability**: every response carries an `x-request-id` (nginx's id, or a generated one) that is also in the API logs; cookies and auth headers are redacted from logs.
+- **Security hardening**: server-side sessions, argon2, rate-limited login, Origin check on unsafe methods, helmet CSP, and an nginx CSP and security headers (see DECISIONS.md).
+- **Tests**: backend integration tests against a real Postgres, shared-schema tests, frontend component tests (Vitest + React Testing Library), and a Playwright end-to-end suite.
 - **Docker**: one command brings up db, API and the nginx-served frontend.
 - **API docs**: OpenAPI generated from the route schemas, Swagger UI at `/api/docs`.
 
@@ -69,10 +75,10 @@ A small Playwright suite (`e2e/`, Chromium only) covers browsing and filtering, 
 ```bash
 npm run build                       # the suite serves the built apps
 npx playwright install chromium     # once
-npm run test:e2e                    # needs Postgres (docker compose up -d db)
+npm run test:e2e                    # needs Postgres on localhost:5432 (docker compose up -d db)
 ```
 
-`npm test` does not run it. Set `DATABASE_URL` to use another Postgres, and `PW_CHROMIUM_PATH` to use an existing Chromium binary. CI runs it as a separate `e2e` job and uploads the HTML report when it fails.
+`npm test` does not run it. It is not wired to the Docker stack. Set `DATABASE_URL` to use another Postgres, and `PW_CHROMIUM_PATH` to use an existing Chromium binary. CI runs it as a separate `e2e` job and uploads the HTML report when it fails.
 
 ## Project structure
 
@@ -85,14 +91,16 @@ shared/     @library/shared: Zod schemas and DTO types used by API and frontend
 frontend/   React 19 + TypeScript + Vite
   src/api/                  fetch wrapper and one typed function per endpoint
   src/features/<feature>/   pages, components, hooks per feature
-  src/components/           shared UI (layout, route guards)
+  src/components/           shared UI (layout, route guards, UI primitives)
+  public/                   theme-init.js (no-flash theme), robots.txt, favicon
+e2e/        @library/e2e: Playwright specs and DB setup
 db-init/    creates the library_test database on first container start
 docs/       brief, task board, running decisions log (used as agent memory)
 ```
 
 ## API overview
 
-All routes are under `/api`. Errors always look like `{ "error": { "code", "message", "details?" } }`. Full schemas are in Swagger UI.
+All routes are under `/api`. Every response has an `x-request-id` header (a well-formed incoming one is reused). Errors always look like `{ "error": { "code", "message", "details?" } }`. Full schemas are in Swagger UI.
 
 | Method | Path | Access | Purpose |
 | --- | --- | --- | --- |
@@ -100,7 +108,7 @@ All routes are under `/api`. Errors always look like `{ "error": { "code", "mess
 | POST | `/auth/register` | public (rate limited) | Create a member account and log in |
 | POST | `/auth/login` | public (rate limited) | Log in (sets httpOnly `sid` cookie) |
 | POST | `/auth/logout` | public | Log out (idempotent) |
-| GET | `/auth/me` | public | `{ user }`, with `user: null` when anonymous (always 200) |
+| GET | `/auth/me` | public | Always 200 with `{ user }`; `user` is `null` when anonymous |
 | GET | `/books` | public | List with `q`, `genre`, `author`, year range, rating, `sort`, pagination |
 | GET | `/books/:id` | public | Book detail |
 | POST | `/books` | admin | Create a book |
@@ -121,7 +129,7 @@ I built this with Claude Code. An orchestrator session planned the work as small
 
 - Ingest real book metadata and covers (Open Library or similar) instead of the hand-written seed, and self-host cover images.
 - Image upload for covers in the admin form.
-- End-to-end browser tests (Playwright) in CI; today there are component and integration tests only.
+- Broader e2e coverage: more browsers, a mobile viewport, visual checks.
 - Session hardening: rotating sessions, CSRF tokens, password reset and email verification.
-- Cursor (keyset) pagination, observability (log shipping, metrics, tracing), and a deployed instance.
-- An accessibility audit and UI polish.
+- Cursor (keyset) pagination, and log shipping, metrics and tracing on top of the request ids.
+- A deployed instance behind HTTPS.

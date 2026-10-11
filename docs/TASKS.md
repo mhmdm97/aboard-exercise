@@ -5,10 +5,11 @@ Keep tasks small (≤ ~30 min). Update this file and commit after every task. Se
 Brief: `docs/EXERCISE.md`. Tags: **(R)** = required by the brief, **(S)** = suggested/optional.
 
 ## Next up
-_Everything is built and the README run-through is done. Left for the author (all in the repo's Section 4):_
-- Fill in the `TODO (author)` block in root `DECISIONS.md` (own examples of AI output you rejected or rewrote).
-- Write the email note on frontend vs backend focus and why.
-- Reply-all to the email confirming receipt.
+_Everything is built and verified (full Docker stack re-checked with zero CSP violations, backend tests stable over 5 runs, README and root DECISIONS refreshed). Left for the author:_
+- Write the `## AI usage` section of root `DECISIONS.md` from `docs/AI-USAGE-NOTES.md` (replace the TODO block), then delete `docs/AI-USAGE-NOTES.md`.
+- Optional: replace the hand-written seed with real data via a local agent (the sandbox cannot reach Open Library).
+- Optional: deploy it (brief marks it optional).
+- Write the submission email: frontend vs backend focus and why. Reply-all confirming receipt.
 - Final push and check CI is green (`gh run list --limit 1`).
 
 ## 0. Setup & decisions
