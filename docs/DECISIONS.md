@@ -15,3 +15,7 @@ One line per entry, newest at the bottom. Format: `- [area] decision: reason`.
 - [roles] `admin`: full CRUD on books (and lookups). `member`: browse/search/filter + personal favourites. Self-registration always creates `member`; admins come from the seed.
 - [tests] Vitest in all workspaces. Backend integration tests use `app.inject()` against a real Postgres test DB (`DATABASE_URL` of a test database); CI uses a Postgres service container. Frontend: Vitest + React Testing Library.
 - [frontend] react-router + TanStack Query for server state; react-hook-form + zodResolver with the shared schemas; plain CSS modules, mobile-first.
+- [versions] fastify 5.12, zod 4.6 (fastify-type-provider-zod 7 supports zod >=4.1.5), drizzle-orm 0.45, vitest 5, tsup 8; frontend dependency majors unchanged.
+- [backend] Backend tests live next to the code as `<feature>.test.ts`; `buildApp({ env, db })` takes its dependencies so tests use `app.inject()`.
+- [backend] Helmet CSP is disabled outside production so Swagger UI works; ESLint for backend+shared lives in the root `eslint.config.js` (frontend keeps its own).
+- [ci] Single CI job on Node 22 with a `postgres:16` service (`library_test`); `.gitignore` allows `.env.*.example` files.

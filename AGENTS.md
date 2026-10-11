@@ -31,33 +31,44 @@ AGENTS.md                 ← you are here (CLAUDE.md / GEMINI.md just point her
 docs/EXERCISE.md          ← the exercise brief, verbatim
 docs/TASKS.md             ← task board / progress log
 docs/DECISIONS.md         ← decisions & assumptions log
-backend/                  ← Node + TypeScript API (not created yet, see TASKS.md §1)
+backend/                  ← @library/backend: Fastify 5 + Drizzle (Postgres) API
+shared/                   ← @library/shared: Zod schemas + DTO types (TS source, used by backend + frontend)
 frontend/                 ← React 19 + TypeScript + Vite
-.github/workflows/ci.yml  ← CI: npm lint + build (add backend job when backend exists)
+docker-compose.yml        ← dev Postgres (db + library_test)
+.github/workflows/ci.yml  ← CI: npm ci, lint, typecheck, build, test (Postgres service)
 ```
 
 The original .NET boilerplate was removed: the brief requires a **Node** API.
 
 ## Commands
 
-Run from the repo root.
+Run from the repo root (npm workspaces; one `npm ci` / `npm install` at the root).
 
 | What | Command |
 | --- | --- |
-| Frontend install | `npm install --prefix frontend` |
-| Frontend dev (http://localhost:5173) | `npm run dev --prefix frontend` |
-| Frontend checks | `npm run lint --prefix frontend` and `npm run build --prefix frontend` |
-| Backend | _TBD once the Node stack is scaffolded (TASKS.md §1); update this table then_ |
+| Install | `npm ci` (or `npm install`) |
+| Dev Postgres | `docker compose up -d db` (creates `library` and `library_test`) |
+| Backend env | `cp backend/.env.example backend/.env` |
+| Dev (backend :5000 + frontend :5173) | `npm run dev` (or `npm run dev -w @library/backend` / `-w abroad-frontend`) |
+| Lint / typecheck / build / test, all workspaces | `npm run lint`, `npm run typecheck`, `npm run build`, `npm test` |
+| Backend tests only | `npm test -w @library/backend` (uses `DATABASE_URL`, default `.../library_test`) |
+| Generate / apply migrations | `npm run db:generate -w @library/backend`, `npm run db:migrate -w @library/backend` |
+| Swagger UI | http://localhost:5000/api/docs |
 
 `dev` servers are long-running: start them in the background or in a separate terminal, never block on them.
-**Definition of done for any task:** backend tests pass, frontend lint + build pass, the feature works when run.
+**Definition of done for any task:** `npm run lint`, `typecheck`, `build` and `test` pass from the root, the feature works when run.
 
 ## Backend conventions (Node + TypeScript)
 
-_To be written by the agent that scaffolds the backend (TASKS.md §1), once the stack is chosen and logged in DECISIONS.md._
-Until then: TypeScript strict, feature folders (`src/features/<feature>/` with routes, service, schemas, tests),
-thin route handlers with logic in services, validation at the edge, async all the way, no secrets in the repo.
-The API listens on port 5000 (the Vite proxy forwards `/api` there).
+- Fastify 5, ESM, TS strict, Zod via `fastify-type-provider-zod` (request validation, response serialization and OpenAPI all come from the same schemas).
+- `src/app.ts` exports `buildApp({ env, db })` (no listen); `src/server.ts` is the entry. Tests use `app.inject()`.
+- Feature folders: `src/features/<feature>/<feature>.routes.ts` (Fastify plugin, thin), `<feature>.service.ts` (logic, takes `db`),
+  and tests next to them as `<feature>.test.ts`. Register new routes inside the `/api` prefix block in `app.ts`.
+- DTO schemas shared with the frontend go in `shared/src` (`@library/shared`); backend-only schemas stay in the feature folder.
+- Errors always look like `{ error: { code, message, details? } }` (`src/plugins/errors.ts`; reuse `errorResponseSchema` in route response schemas). Don't throw for control flow where a typed reply works; `app.httpErrors.*` (sensible) is fine for 4xx.
+- Env is validated in `src/config/env.ts` (fails fast). Never read `process.env` elsewhere.
+- DB: Drizzle + `pg`; tables in `src/db/schema/`, migrations in `backend/drizzle/` (commit them). Tests hit a real Postgres (`library_test`).
+- Async all the way, no secrets in the repo. Port 5000 is fixed (the Vite proxy forwards `/api` there).
 
 ## Frontend conventions (React 19, TS, Vite)
 
