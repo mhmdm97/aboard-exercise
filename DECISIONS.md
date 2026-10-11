@@ -18,7 +18,7 @@
 
 **Frontend state.** TanStack Query for server state, including auth (`["auth","me"]`; `/api/auth/me` returns 200 with `user: null` for anonymous visitors), with no extra context layer. Library filters live in URL search params, so views are shareable and survive reload. Paging is not in the URL: infinite scroll restarts at page 1 whenever a filter changes. Forms use react-hook-form with the shared Zod schemas.
 
-**Testing.** Backend integration tests run `app.inject()` against a real Postgres (`library_test`), not mocks, because the interesting behaviour (trigram search, transactions, unique constraints) lives in the database. The cost is that tests need a running Postgres; CI uses a service container, and test files run serially because they share one DB. Shared schemas have unit tests, and the frontend has Vitest + React Testing Library component tests.
+**Testing.** Backend integration tests run `app.inject()` against a real Postgres (`library_test`), not mocks, because the interesting behaviour (trigram search, transactions, unique constraints) lives in the database. The cost is that tests need a running Postgres; CI uses a service container, and test files run serially because they share one DB. Shared schemas have unit tests, the frontend has Vitest + React Testing Library component tests, and a small Playwright suite (`e2e/`) drives the built app through the `vite preview` proxy against a dedicated `library_e2e` database. It exists because a dev-proxy Origin bug (403 on login) was invisible to `app.inject()` tests; it runs in CI as its own job, not in `npm test`.
 
 **Docker.** Multi-stage images on `node:22-slim` (glibc, so the argon2 prebuilds work) and `nginx:alpine`. nginx serves the SPA with fallback and proxies `/api`, which keeps the browser same-origin and avoids CORS. The backend entrypoint migrates, optionally seeds (`SEED_ON_START`, idempotent), then starts, as the non-root `node` user. `COOKIE_SECURE` defaults to true in production, but compose sets it false because secure cookies are never returned over plain http on localhost.
 
@@ -32,7 +32,7 @@ Production follow-ups: CSRF tokens; per-account lockout and a shared (Redis) rat
 - Cursor (keyset) pagination, a CDN for static assets, log shipping, metrics and tracing.
 - CSRF tokens, rotating sessions, email verification and password reset, an admin invite flow, secrets from a secret manager.
 - A deployed environment behind HTTPS (which also lets `COOKIE_SECURE=true` be the default again).
-- Browser end-to-end tests in CI.
+- Broader browser coverage: the e2e suite is a small smoke set (Chromium only, no mobile viewport, no visual checks).
 
 ### Shortcuts I took and why
 
@@ -41,7 +41,7 @@ Production follow-ups: CSRF tokens; per-account lockout and a shared (Redis) rat
 - **Offset pagination.** Simple and fine for 351 rows; it degrades on deep pages and can skip or repeat rows if data changes mid-scroll.
 - **No email verification or password reset**, and no admin management UI. The demo users are committed in the seed and README on purpose.
 - **Migrate and seed on container start.** Fine for one container, racy with several replicas.
-- **No end-to-end tests in CI.** I ran the app in a real browser with Playwright, but those runs are not committed.
+- **The end-to-end suite is small.** Four Playwright specs (browse, auth, favourites, admin) run in CI against the built app, but only on Chromium and only the main flows.
 - **Book updates are a full replace (PUT), last write wins**, with no optimistic concurrency.
 - **Accessibility and polish are partial.** Labels and semantics are in place, but I did no systematic audit and skipped animation.
 - **Helmet CSP is disabled outside production** so Swagger UI works (it is compatible with the production CSP too, covered by a test).

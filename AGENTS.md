@@ -51,6 +51,7 @@ Run from the repo root (npm workspaces; one `npm ci` / `npm install` at the root
 | Backend env | `cp backend/.env.example backend/.env` |
 | Dev (backend :5000 + frontend :5173) | `npm run dev` (or `npm run dev -w @library/backend` / `-w abroad-frontend`) |
 | Lint / typecheck / build / test, all workspaces | `npm run lint`, `npm run typecheck`, `npm run build`, `npm test` |
+| End-to-end tests (needs `npm run build` first) | `npm run test:e2e` (Playwright, Chromium; `npx playwright install chromium` once; creates and seeds `library_e2e`; ports 5100/5174) |
 | Backend tests only | `npm test -w @library/backend` (uses `DATABASE_URL`, default `.../library_test`) |
 | Generate / apply migrations | `npm run db:generate -w @library/backend`, `npm run db:migrate -w @library/backend` |
 | Seed (idempotent, 350 books) / migrate + seed | `npm run db:seed -w @library/backend` / `npm run db:reset -w @library/backend` |

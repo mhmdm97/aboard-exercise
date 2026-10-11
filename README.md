@@ -62,6 +62,18 @@ npm test
 
 Backend tests use a real Postgres. `DATABASE_URL` must point at the test database, which defaults to `library_test` and is created by `db-init/01-create-test-db.sql` when the compose `db` container first starts. A Vitest global setup migrates it, and test files run serially because they share it. CI (`.github/workflows/ci.yml`) runs the same four commands on Node 22 with a `postgres:16` service container.
 
+### End-to-end tests
+
+A small Playwright suite (`e2e/`, Chromium only) covers browsing and filtering, login/logout, favourites and admin book management. It runs the built backend and `vite preview` (whose `/api` proxy is the same as in dev, so Host/Origin handling is real) on ports 5100 and 5174, against its own `library_e2e` database that it creates, migrates and seeds itself.
+
+```bash
+npm run build                       # the suite serves the built apps
+npx playwright install chromium     # once
+npm run test:e2e                    # needs Postgres (docker compose up -d db)
+```
+
+`npm test` does not run it. Set `DATABASE_URL` to use another Postgres, and `PW_CHROMIUM_PATH` to use an existing Chromium binary. CI runs it as a separate `e2e` job and uploads the HTML report when it fails.
+
 ## Project structure
 
 ```
