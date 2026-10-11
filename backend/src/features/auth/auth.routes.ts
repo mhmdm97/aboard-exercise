@@ -17,7 +17,7 @@ import { SESSION_COOKIE, createSession, deleteSession } from './sessions.js'
 
 interface AuthRouteOptions {
   db: Database
-  env: Pick<Env, 'NODE_ENV' | 'SESSION_TTL_DAYS'>
+  env: Pick<Env, 'NODE_ENV' | 'SESSION_TTL_DAYS' | 'COOKIE_SECURE'>
 }
 
 // Verified against when the email is unknown, so response time doesn't reveal which emails exist.
@@ -32,7 +32,7 @@ export const authRoutes: FastifyPluginAsyncZod<AuthRouteOptions> = async (app, {
       httpOnly: true,
       sameSite: 'lax',
       path: '/',
-      secure: env.NODE_ENV === 'production',
+      secure: env.COOKIE_SECURE ?? env.NODE_ENV === 'production',
       maxAge: Math.round(env.SESSION_TTL_DAYS * 24 * 60 * 60),
     })
   }
