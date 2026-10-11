@@ -37,7 +37,7 @@ export function useCoverTransitionName(bookId: string | null): string | undefine
 /**
  * Go back one history entry. React Router's `navigate(-1)` takes no `viewTransition` option, so when transitions are
  * available this wraps it in `document.startViewTransition` itself, naming the detail cover so it morphs back into its
- * card. Otherwise it is a plain, instant `navigate(-1)`. (The browser's own back button is not animated.)
+ * card. Otherwise it is a plain, instant `navigate(-1)`. (The browser's back/forward buttons animate on their own: React Router replays the transitions it applied, see DECISIONS.md.)
  */
 export function useGoBack(bookId: string): () => void {
   const navigate = useNavigate()

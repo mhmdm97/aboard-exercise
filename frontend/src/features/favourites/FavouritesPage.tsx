@@ -1,7 +1,6 @@
 import { Link } from 'react-router'
-import { EmptyState } from '../../components/EmptyState/EmptyState'
+import { EmptyState, ShelfMark } from '../../components/EmptyState/EmptyState'
 import { ErrorMessage } from '../../components/ErrorMessage/ErrorMessage'
-import { HeartIcon } from '../../components/icons'
 import { Spinner } from '../../components/Spinner/Spinner'
 import { useDocumentTitle } from '../../hooks/useDocumentTitle'
 import { useRevealOnScroll } from '../../hooks/useRevealOnScroll'
@@ -39,7 +38,7 @@ export function FavouritesPage() {
         <ErrorMessage error={error} onRetry={() => void refetch()} />
       ) : books.length === 0 ? (
         <EmptyState
-          mark={<HeartIcon />}
+          mark={<ShelfMark heart />}
           title="Nothing saved yet"
           description="Tap the heart on any book and it will wait for you here."
           action={

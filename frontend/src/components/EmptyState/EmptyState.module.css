@@ -70,3 +70,21 @@
     font-size: 30px;
   }
 }
+
+/* Shelf illustration: the books rise in one after another; the leaning one settles last. */
+@media (prefers-reduced-motion: no-preference) {
+  .book {
+    animation: shelf-rise var(--dur-slow) var(--ease-out) both;
+  }
+
+  .lean {
+    animation: shelf-rise var(--dur-slow) var(--ease-spring) 160ms both;
+  }
+}
+
+@keyframes shelf-rise {
+  from {
+    opacity: 0;
+    translate: 0 8px;
+  }
+}

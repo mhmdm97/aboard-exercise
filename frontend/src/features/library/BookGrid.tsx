@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import type { BookDto } from '@library/shared'
-import { EmptyState } from '../../components/EmptyState/EmptyState'
+import { EmptyState, ShelfMark } from '../../components/EmptyState/EmptyState'
 import { ErrorMessage } from '../../components/ErrorMessage/ErrorMessage'
 import { BookCard } from '../books/BookCard'
 import { useRevealOnScroll } from '../../hooks/useRevealOnScroll'
@@ -73,6 +73,7 @@ export function BookGrid({
   if (books.length === 0) {
     return (
       <EmptyState
+        mark={<ShelfMark />}
         title="No books match your filters"
         description="Try a different search or remove some filters."
         action={

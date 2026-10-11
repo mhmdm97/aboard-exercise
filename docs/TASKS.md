@@ -50,7 +50,7 @@ _Everything is built and the README run-through is done. Left for the author (al
 - [x] Role-aware UI: hide/disable actions the user can't perform (R)
 - [x] Responsive design: mobile, tablet, desktop (R)
 - [x] Accessibility pass: labels, focus states, keyboard nav, alt text, contrast (S) (axe clean on /, detail, login, register, /books/new, /favourites in light + dark; per-route titles; reduced motion)
-- [ ] UI polish / animation (S)
+- [x] UI polish / animation (S) (theme toggle, back/forward view transitions via React Router, empty-state illustration)
 - [x] Frontend tests: Vitest + React Testing Library for key components/hooks (R)
 
 ## 3. Docker & CI (R)

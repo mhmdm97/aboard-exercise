@@ -1,6 +1,7 @@
 import { Link, NavLink, Outlet, ScrollRestoration, useLocation } from 'react-router'
 import { useCurrentUser, useLogout } from '../../features/auth/api'
 import { canViewTransition } from '../../hooks/viewTransition'
+import { ThemeToggle } from '../ThemeToggle/ThemeToggle'
 import styles from './Layout.module.css'
 
 const navClass = ({ isActive }: { isActive: boolean }) =>
@@ -67,6 +68,7 @@ export function Layout() {
             )}
           </nav>
           <div className={styles.actions}>
+            <ThemeToggle />
             {user ? (
               <>
                 <span className={styles.userName}>{user.name}</span>
