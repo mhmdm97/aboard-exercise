@@ -1,3 +1,4 @@
+import { useLocation } from 'react-router'
 import { useBooksInfinite } from '../books/api'
 import { BookGrid } from './BookGrid'
 import { FilterPanel } from './FilterPanel'
@@ -8,12 +9,20 @@ import styles from './LibraryPage.module.css'
 export function LibraryPage() {
   const { filters, setFilters, clearFilters, activeCount } = useLibraryFilters()
   const query = useBooksInfinite(filters)
+  const state: unknown = useLocation().state
+  const message =
+    typeof state === 'object' && state !== null && 'message' in state && typeof state.message === 'string'
+      ? state.message
+      : ''
   const books = query.data?.pages.flatMap((p) => p.items) ?? []
   const total = query.data?.pages[0]?.total ?? 0
 
   return (
     <section>
       <h1>Library</h1>
+      <p role="status" aria-live="polite" className={styles.status}>
+        {message}
+      </p>
       <div className={styles.layout}>
         <div className={styles.sidebar}>
           <SearchBar q={filters.q} onChange={(q) => setFilters({ q })} />

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { NavLink, Outlet } from 'react-router'
+import { useCurrentUser, useLogout } from '../../features/auth/api'
 import styles from './Layout.module.css'
 
 const navClass = ({ isActive }: { isActive: boolean }) =>
@@ -8,6 +9,8 @@ const navClass = ({ isActive }: { isActive: boolean }) =>
 export function Layout() {
   const [open, setOpen] = useState(false)
   const close = () => setOpen(false)
+  const { data: user } = useCurrentUser()
+  const logout = useLogout()
 
   return (
     <div className={styles.shell}>
@@ -36,13 +39,45 @@ export function Layout() {
             <NavLink to="/" end className={navClass} onClick={close}>
               Library
             </NavLink>
+            {user && (
+              <NavLink to="/favourites" className={navClass} onClick={close}>
+                Favourites
+              </NavLink>
+            )}
+            {user?.role === 'admin' && (
+              <NavLink to="/books/new" className={navClass} onClick={close}>
+                Add book
+              </NavLink>
+            )}
             <span className={styles.spacer} />
-            <NavLink to="/login" className={navClass} onClick={close}>
-              Log in
-            </NavLink>
-            <NavLink to="/register" className={navClass} onClick={close}>
-              Register
-            </NavLink>
+            {user ? (
+              <>
+                <span className={styles.user}>
+                  {user.name}
+                  <span className={styles.badge}>{user.role}</span>
+                </span>
+                <button
+                  type="button"
+                  className={styles.logout}
+                  disabled={logout.isPending}
+                  onClick={() => {
+                    close()
+                    logout.mutate()
+                  }}
+                >
+                  Log out
+                </button>
+              </>
+            ) : (
+              <>
+                <NavLink to="/login" className={navClass} onClick={close}>
+                  Log in
+                </NavLink>
+                <NavLink to="/register" className={navClass} onClick={close}>
+                  Register
+                </NavLink>
+              </>
+            )}
           </nav>
         </div>
       </header>

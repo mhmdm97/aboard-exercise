@@ -1,6 +1,6 @@
-import { keepPreviousData, useInfiniteQuery, useQuery } from '@tanstack/react-query'
-import type { BookListResponse, BookSort, GenreDto } from '@library/shared'
-import { apiGet } from '../../api/client'
+import { keepPreviousData, useInfiniteQuery, useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
+import type { BookDto, BookListResponse, BookSort, GenreDto } from '@library/shared'
+import { apiDelete, apiGet } from '../../api/client'
 
 export interface BookFilters {
   q: string
@@ -19,6 +19,7 @@ export const bookKeys = {
   all: ['books'] as const,
   list: (filters: BookFilters) => ['books', 'list', filters] as const,
   genres: ['genres'] as const,
+  detail: (id: string) => ['books', 'detail', id] as const,
 }
 
 export function buildBooksQuery(filters: BookFilters, page: number): string {
@@ -52,4 +53,20 @@ export function useBooksInfinite(filters: BookFilters) {
 
 export function useGenres() {
   return useQuery({ queryKey: bookKeys.genres, queryFn: fetchGenres, staleTime: 60 * 60 * 1000 })
+}
+
+export function useBook(id: string) {
+  return useQuery({ queryKey: bookKeys.detail(id), queryFn: () => apiGet<BookDto>(`/api/books/${id}`) })
+}
+
+export function useDeleteBook(id: string) {
+  const queryClient = useQueryClient()
+  return useMutation({
+    mutationFn: () => apiDelete(`/api/books/${id}`),
+    onSuccess: () => {
+      // Not awaited: the page navigates away right after, and refetches happen in the background.
+      void queryClient.invalidateQueries({ queryKey: ['books', 'list'] })
+      void queryClient.invalidateQueries({ queryKey: ['favourites'] })
+    },
+  })
 }

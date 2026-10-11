@@ -21,3 +21,6 @@
     top: var(--space-4);
   }
 }
+
+.status:empty { display: none; }
+.status { background: var(--color-surface-alt); border-radius: var(--radius-md); padding: var(--space-3); }
