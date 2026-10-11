@@ -52,3 +52,21 @@ describe('GET /api/health', () => {
     expect(res.json()).toMatchObject({ error: { code: 'NOT_FOUND' } })
   })
 })
+
+describe('request id', () => {
+  const get = (headers?: Record<string, string>) => app.inject({ method: 'GET', url: '/api/health', headers })
+
+  it('generates an x-request-id when none is sent', async () => {
+    expect((await get()).headers['x-request-id']).toMatch(/^[A-Za-z0-9._-]{1,64}$/)
+  })
+
+  it('echoes a valid incoming id', async () => {
+    expect((await get({ 'x-request-id': 'abc-123.DEF_4' })).headers['x-request-id']).toBe('abc-123.DEF_4')
+  })
+
+  it.each(['has space', 'a'.repeat(65), 'bad<script>', 'semi;colon'])('replaces an invalid incoming id (%s)', async (bad) => {
+    const id = (await get({ 'x-request-id': bad })).headers['x-request-id']
+    expect(id).not.toBe(bad)
+    expect(id).toMatch(/^[A-Za-z0-9._-]{1,64}$/)
+  })
+})

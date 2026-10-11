@@ -66,18 +66,20 @@ function escapeLike(value: string): string {
   return value.replace(/[\\%_]/g, '\\$&')
 }
 
-const FUZZY_THRESHOLD = 0.4
+// The fuzzy filter uses the index-supported `q <% col` operator, whose threshold is a GUC (default 0.6).
+// listBooks sets it to this value, transaction-locally.
+const FUZZY_THRESHOLD = '0.4'
 
 function searchConditions(q: string) {
   const like = `%${escapeLike(q)}%`
 
   const match = sql`(
     ${books.title} ilike ${like} or ${books.subtitle} ilike ${like}
-    or word_similarity(${q}, ${books.title}) > ${FUZZY_THRESHOLD}
+    or ${q} <% ${books.title}
     or exists (
       select 1 from ${bookAuthors} ba join ${authors} a on a.id = ba.author_id
       where ba.book_id = ${books.id}
-        and (a.name ilike ${like} or word_similarity(${q}, a.name) > ${FUZZY_THRESHOLD}))
+        and (a.name ilike ${like} or ${q} <% a.name))
   )`
 
   // Best similarity across title / subtitle / authors; substring title hits get a boost.
@@ -122,16 +124,19 @@ export async function listBooks(db: Database, query: BookListQuery): Promise<Boo
   if (sort !== 'title') orderBy.push(order === 'desc' ? desc(books.title) : asc(books.title))
   orderBy.push(asc(books.id))
 
-  const [rows, [countRow]] = await Promise.all([
-    db
+  // set_config(..., true) is transaction-local, so it is safe with the connection pool.
+  const [rows, [countRow]] = await db.transaction(async (tx) => {
+    if (search) await tx.execute(sql`select set_config('pg_trgm.word_similarity_threshold', ${FUZZY_THRESHOLD}, true)`)
+    const rows = await tx
       .select()
       .from(books)
       .where(where)
       .orderBy(...orderBy)
       .limit(pageSize)
-      .offset((page - 1) * pageSize),
-    db.select({ total: sql<number>`count(*)::int` }).from(books).where(where),
-  ])
+      .offset((page - 1) * pageSize)
+    const count = await tx.select({ total: sql<number>`count(*)::int` }).from(books).where(where)
+    return [rows, count] as const
+  })
   const total = countRow?.total ?? 0
 
   return {

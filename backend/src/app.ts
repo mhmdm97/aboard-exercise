@@ -4,6 +4,7 @@ import sensible from '@fastify/sensible'
 import rateLimit from '@fastify/rate-limit'
 import swagger from '@fastify/swagger'
 import swaggerUi from '@fastify/swagger-ui'
+import { randomUUID } from 'node:crypto'
 import Fastify, { type FastifyInstance } from 'fastify'
 import {
   jsonSchemaTransform,
@@ -20,6 +21,8 @@ import { healthRoutes } from './features/health/health.routes.js'
 import { authPlugin } from './plugins/auth.js'
 import { registerErrorHandling } from './plugins/errors.js'
 
+const REQUEST_ID_PATTERN = /^[A-Za-z0-9._-]{1,64}$/
+
 export interface AppOptions {
   env: Pick<Env, 'NODE_ENV' | 'CORS_ORIGIN' | 'SESSION_TTL_DAYS'>
   db: Database
@@ -27,6 +30,13 @@ export interface AppOptions {
 
 export async function buildApp({ env, db }: AppOptions): Promise<FastifyInstance> {
   const app = Fastify({
+    // Reuse a well-formed incoming id (e.g. from nginx); anything else is replaced, so logs can't be injected into.
+    requestIdHeader: false,
+    requestIdLogLabel: 'requestId', // top-level form is deprecated in 5.12 but typed; logController isn't in the types yet
+    genReqId: (req) => {
+      const incoming = req.headers['x-request-id']
+      return typeof incoming === 'string' && REQUEST_ID_PATTERN.test(incoming) ? incoming : randomUUID()
+    },
     logger:
       env.NODE_ENV === 'test'
         ? false
@@ -41,6 +51,10 @@ export async function buildApp({ env, db }: AppOptions): Promise<FastifyInstance
   app.setValidatorCompiler(validatorCompiler)
   app.setSerializerCompiler(serializerCompiler)
   registerErrorHandling(app)
+
+  app.addHook('onRequest', async (req, reply) => {
+    reply.header('x-request-id', req.id)
+  })
 
   // CSRF defence in depth on top of SameSite=Lax: reject unsafe requests whose Origin is another site.
   app.addHook('onRequest', async (req) => {

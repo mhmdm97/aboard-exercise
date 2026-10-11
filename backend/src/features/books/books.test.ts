@@ -109,6 +109,10 @@ describe('GET /api/books', () => {
     expect((await titles('?q=hary poter'))[0]).toBe("Harry Potter and the Philosopher's Stone")
   })
 
+  it('tolerates typos in author names', async () => {
+    expect((await titles('?q=tolkein')).sort()).toEqual(['The Fellowship of the Ring', 'The Hobbit'])
+  })
+
   it('treats LIKE wildcards literally', async () => {
     expect(await titles('?q=%25')).toEqual([])
   })
