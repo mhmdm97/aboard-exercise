@@ -78,8 +78,8 @@ export function BookGrid({
         {total} {total === 1 ? 'book' : 'books'}
       </p>
       <div className={`${styles.grid} ${isRefreshing ? styles.refreshing : ''}`}>
-        {books.map((book) => (
-          <BookCard key={book.id} book={book} />
+        {books.map((book, index) => (
+          <BookCard key={book.id} book={book} index={index} />
         ))}
       </div>
       {error ? <ErrorMessage error={error} onRetry={fetchNextPage} /> : null}

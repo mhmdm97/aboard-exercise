@@ -11,7 +11,21 @@ function hueFromTitle(title: string): number {
   return hash
 }
 
-export function Cover({ book }: { book: BookDto }) {
+/** Covers at or before this index in a list load eagerly (above the fold); the first few also get high fetch priority. */
+const EAGER_COVERS = 8
+const HIGH_PRIORITY_COVERS = 4
+
+interface CoverProps {
+  book: BookDto
+  /** Position in the list; omit for a lazy cover. */
+  index?: number
+  /** Force eager + high priority (the detail page's main cover). */
+  priority?: boolean
+}
+
+export function Cover({ book, index = Infinity, priority = false }: CoverProps) {
+  const eager = priority || index < EAGER_COVERS
+  const high = priority || index < HIGH_PRIORITY_COVERS
   const [failed, setFailed] = useState(false)
   const authors = book.authors.map((a) => a.name).join(', ')
 
@@ -32,7 +46,11 @@ export function Cover({ book }: { book: BookDto }) {
       className={styles.image}
       src={coverSrc(book.coverUrl)}
       alt={`Cover of ${book.title}`}
-      loading="lazy"
+      width={200}
+      height={300}
+      loading={eager ? 'eager' : 'lazy'}
+      fetchPriority={high ? 'high' : undefined}
+      decoding="async"
       onError={() => setFailed(true)}
       onLoad={(e) => {
         if (e.currentTarget.naturalWidth <= 1) setFailed(true)
@@ -41,13 +59,13 @@ export function Cover({ book }: { book: BookDto }) {
   )
 }
 
-export function BookCard({ book }: { book: BookDto }) {
+export function BookCard({ book, index }: { book: BookDto; index?: number }) {
   const authors = book.authors.map((a) => a.name).join(', ')
   return (
     <div className={styles.wrapper}>
       <Link to={`/books/${book.id}`} className={styles.card}>
         <div className={styles.cover}>
-          <Cover book={book} />
+          <Cover book={book} index={index} />
         </div>
         <div className={styles.body}>
           <h2 className={styles.title}>{book.title}</h2>

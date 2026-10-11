@@ -41,3 +41,21 @@ describe('coverSrc', () => {
     )
   })
 })
+
+describe('cover loading priority', () => {
+  it('loads the first covers eagerly with high priority and later ones lazily', () => {
+    const cover = (index: number) => {
+      const { unmount } = renderWithProviders(<BookCard book={sampleBook} index={index} />)
+      const img = screen.getByAltText('Cover of Dune')
+      const attrs = { loading: img.getAttribute('loading'), priority: img.getAttribute('fetchpriority') }
+      expect(img).toHaveAttribute('decoding', 'async')
+      expect(img).toHaveAttribute('width', '200')
+      expect(img).toHaveAttribute('height', '300')
+      unmount()
+      return attrs
+    }
+    expect(cover(0)).toEqual({ loading: 'eager', priority: 'high' })
+    expect(cover(5)).toEqual({ loading: 'eager', priority: null })
+    expect(cover(20)).toEqual({ loading: 'lazy', priority: null })
+  })
+})

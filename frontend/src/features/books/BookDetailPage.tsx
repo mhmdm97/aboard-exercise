@@ -65,7 +65,7 @@ export function BookDetailPage() {
       <BackLink />
       <div className={styles.layout}>
         <div className={styles.cover}>
-          <Cover book={book} />
+          <Cover book={book} priority />
         </div>
         <div className={styles.info}>
           <h1 className={styles.title}>{book.title}</h1>
